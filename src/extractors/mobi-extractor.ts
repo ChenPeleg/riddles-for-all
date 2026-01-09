@@ -45,7 +45,7 @@ export class MobiExtractor implements IExtractor {
       // Clean up the extracted text
       text = text
         .replace(/\s+/g, ' ')  // Normalize whitespace
-        .replace(/(.)\1{4,}/g, '$1') // Remove repeated characters
+        .replace(/(.)\1{9,}/g, '$1$1$1') // Remove long sequences of repeated characters (10+), keep 3
         .trim();
 
       return {

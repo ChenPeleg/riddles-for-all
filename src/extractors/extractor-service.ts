@@ -61,12 +61,17 @@ export class ExtractorService {
         const result = await this.extractFromFile(filePath);
         results.push(result);
       } catch (error) {
+        const ext = path.extname(filePath).toLowerCase();
+        let format: 'epub' | 'pdf' | 'mobi' = 'pdf'; // default
+        if (ext === '.epub') format = 'epub';
+        else if (ext === '.mobi') format = 'mobi';
+        
         console.error(`Error extracting ${filePath}:`, error);
         results.push({
           book: {
             id: path.basename(filePath),
             title: path.basename(filePath),
-            format: path.extname(filePath).slice(1) as any,
+            format: format,
             filePath: filePath,
           },
           text: '',
