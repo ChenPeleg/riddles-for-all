@@ -14,7 +14,7 @@ Build a TypeScript-based riddle management system that:
 ## Implementation Phases
 
 1. ✅ **Phase 1: Project Setup** - See [plan_01_project_setup.md](./plan_01_project_setup.md)
-2. ❌ **Phase 2: Text Extraction** - See [plan_02_text_extraction.md](./plan_02_text_extraction.md)
+2. ✅ **Phase 2: Text Extraction** - See [plan_02_text_extraction.md](./plan_02_text_extraction.md)
 3. ❌ **Phase 3: Riddle Parsing & Data Structure** - See [plan_03_riddle_parsing.md](./plan_03_riddle_parsing.md)
 4. ❌ **Phase 4: Data Storage** - See [plan_04_data_storage.md](./plan_04_data_storage.md)
 5. ❌ **Phase 5: Search Functionality** - See [plan_05_search_functionality.md](./plan_05_search_functionality.md)

@@ -17,9 +17,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jszip": "^3.4.0",
     "@types/node": "^20.0.0",
+    "@types/pdf-parse": "^1.1.5",
     "commander": "^11.0.0",
     "epubjs": "^0.3.0",
+    "jszip": "^3.10.1",
     "nodemon": "^3.0.0",
     "pdf-parse": "^1.1.1",
     "ts-node": "^10.9.0",
