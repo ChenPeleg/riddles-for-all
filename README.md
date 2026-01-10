@@ -1,295 +1,169 @@
-# Riddles Management System
+# Riddles Management System 🧩
 
-A TypeScript-based riddle management system for extracting, parsing, and searching riddles from various book formats (EPUB, PDF, MOBI).
+A TypeScript-based riddle management system that extracts, parses, stores, and provides search over riddles sourced from EPUB, PDF, and MOBI books. This repository includes backend scripts for extraction/parsing, a CLI for searching and browsing, and a React + Vite frontend for a static website.
 
-## Project Status
+---
 
-### ✅ Completed Phases
+## Quick Start ✅
 
-1. **Phase 1: Project Setup** - TypeScript configuration, dependencies, and project structure
-2. **Phase 2: Text Extraction** - Extract text from EPUB, PDF, and MOBI formats
-3. **Phase 3: Riddle Parsing** - Parse riddles from extracted text with automatic categorization
-4. **Phase 4: Data Storage** - Store riddles in JSON format for frontend consumption
-5. **Phase 5: Search Functionality** - Search engine with filtering capabilities, fuzzy matching, and pagination
-6. **Phase 6: User Interface** - CLI interface for browsing and searching riddles
-7. **Phase 7: Testing & Refinement** - Sample data generation and CLI testing
+### Prerequisites
+- Node.js 18+ and npm
+- Optional but recommended: Visual Studio Code
 
-## Usage
+### Clone & Install
+
+```bash
+git clone https://your-repo-url.git
+cd riddles
+npm install
+```
 
 ### Generate Sample Data (for testing)
 
 ```bash
-npm run sample
+npm run backend:sample
 ```
 
-This generates sample riddles for testing the search and CLI features.
+### Extract Text from Book Files
 
-### Extract Text from Books
+Place book files (EPUB, PDF, MOBI) into the `resources/` directory and run:
 
 ```bash
-npm run extract
+npm run backend:extract
 ```
 
-This will extract text from all book files in the `resources/` directory and save them as `.txt` files in the `data/` directory.
+This extracts text into `data/` and prepares it for parsing.
 
 ### Parse Riddles and Generate JSON
 
 ```bash
-npm run parse
+npm run backend:parse
 ```
 
-This will:
-- Parse riddles from all `.txt` files in the `data/` directory
-- Automatically categorize riddles by tags (math, logic, wordplay, visual, nature, everyday, tricky)
-- Generate JSON files:
-  - `riddles-all.json` - All riddles in one file
-  - `riddles-{book-name}.json` - Riddles grouped by source book
+This parses the extracted text into structured JSON files (see `public/data/` and `data/`).
 
-### Search and Browse Riddles (CLI)
-
-#### Show Statistics
+### Start the Frontend (Development)
 
 ```bash
-npm run cli stats
-```
-
-Display statistics about the riddle collection including total count, sources, tags, and difficulty distribution.
-
-#### Search Riddles
-
-```bash
-# Search by keyword
-npm run cli search -- -k "keyboard"
-
-# Search with filters
-npm run cli search -- -k "water" -t logic,nature
-
-# Search by source
-npm run cli search -- -s "Classic Riddles"
-
-# Search by difficulty
-npm run cli search -- -d easy
-
-# Disable fuzzy matching for exact search
-npm run cli search -- -k "key" --no-fuzzy
-
-# Pagination
-npm run cli search -- -k "what" -l 5 -o 10
-```
-
-#### List Riddles
-
-```bash
-# List all riddles (first 10)
-npm run cli list
-
-# List with custom limit
-npm run cli list -- -l 5
-
-# List from specific source
-npm run cli list -- -s "Sample Riddles Collection"
-```
-
-#### View Specific Riddle
-
-```bash
-npm run cli view riddle-001
-```
-
-#### Interactive Search Mode
-
-```bash
-npm run cli interactive
-# or
-npm run cli i
-```
-
-Type your search queries interactively and see results immediately. Type `exit` to quit.
-
-#### List Sources
-
-```bash
-npm run cli sources
-```
-
-Shows all available riddle sources with riddle counts.
-
-#### List Tags
-
-```bash
-npm run cli tags
-```
-
-Shows all available tags with riddle counts.
-
-### Build the Project
-
-```bash
-npm run build
-```
-
-## Project Structure
-
-```
-riddles/
-├── src/
-│   ├── extractors/       # Text extraction from different formats
-│   ├── parsers/          # Riddle parsing logic
-│   ├── storage/          # JSON storage utilities
-│   ├── search/           # Search engine with fuzzy matching
-│   ├── cli/              # Command-line interface
-│   └── types/            # TypeScript type definitions
-├── scripts/
-│   ├── extract-and-import.ts    # Extract text from books
-│   ├── parse-and-store.ts       # Parse and store riddles
-│   └── generate-sample-data.ts  # Generate sample data for testing
-├── data/                 # Extracted text and JSON files
-├── resources/            # Source book files (EPUB, PDF, MOBI)
-└── plans/                # Project planning documents
-```
-
-## Data Format
-
-Riddles are stored in JSON with the following structure:
-
-```json
-{
-  "metadata": {
-    "totalRiddles": 142,
-    "sources": ["Book Title 1", "Book Title 2"],
-    "generatedAt": "2026-01-10T09:15:57.795Z",
-    "version": "1.0.0"
-  },
-  "riddles": [
-    {
-      "id": "riddle-81bee7f4",
-      "question": "What has keys but no locks?",
-      "answer": "A piano",
-      "source": {
-        "book": "Book Title"
-      },
-      "tags": ["wordplay", "general"]
-    }
-  ]
-}
-```
-
-## Features
-
-### Search Engine
-- **Full-text search** across riddle questions, answers, and tags
-- **Fuzzy matching** to handle typos and variations
-- **Advanced filtering** by source, category, tags, and difficulty
-- **Pagination** for large result sets
-- **Scoring system** to rank results by relevance
-
-### CLI Interface
-- **Search command** - Search riddles with various filters
-- **List command** - Browse riddles with optional filtering
-- **View command** - View detailed information about specific riddles
-- **Stats command** - Display collection statistics
-- **Interactive mode** - Real-time search as you type
-- **Sources/Tags commands** - Browse available sources and tags
-
-### Data Management
-- Extract text from EPUB, PDF, and MOBI formats
-- Automatic riddle parsing and categorization
-- JSON storage for frontend consumption
-- Support for multiple book sources
-
-## Current Statistics
-
-- **Total Riddles Parsed**: 142
-- **Books Processed**: 6
-- **Categories**: math, logic, wordplay, visual, nature, everyday, tricky
-
-## Frontend Website 🚧
-
-The project now includes a React-based frontend for browsing and searching riddles.
-
-### Development
-
-```bash
-# Start the frontend development server
 npm run dev
+```
 
-# Build the frontend for production
+Open `http://localhost:5173/` to view the frontend.
+
+### Build & Preview Production Frontend
+
+```bash
 npm run build
-
-# Preview the production build
 npm run preview
 ```
 
-The frontend will be available at `http://localhost:5173/riddles/`
+---
 
-### Frontend Structure
+## CLI: Search and Browse Riddles 🔎
 
-```
-frontend/
-├── components/       # Reusable UI components (coming soon)
-├── pages/           # Page components (Home, Search, RiddleDetail, etc.)
-├── services/        # Data loading and search services (coming soon)
-├── hooks/           # Custom React hooks (coming soon)
-├── types/           # TypeScript type definitions (coming soon)
-├── styles/          # Global styles
-└── utils/           # Utility functions (coming soon)
-```
+The project includes a CLI for working with the riddle dataset. Use `npm run cli -- <command>` to pass commands and arguments.
 
-### Deployment
+Examples:
 
-The frontend is configured to deploy automatically to GitHub Pages via GitHub Actions when you push to the main branch.
-
-## Development
+- Show statistics
 
 ```bash
-# Install dependencies
-npm install
-
-# Build the project
-npm run build
-
-# Generate sample data (for testing)
-npm run sample
-
-# Run extraction (requires book files in resources/)
-npm run extract
-
-# Parse and store riddles
-npm run parse
-
-# CLI commands
-npm run cli stats
-npm run cli search -- -k "your keyword"
-npm run cli list
-npm run cli interactive
+npm run cli -- stats
 ```
 
-## CLI Command Reference
+- Search by keyword with filters (note the `--` to forward args to the script)
 
-| Command | Description | Example |
-|---------|-------------|---------|
-| `stats` | Show collection statistics | `npm run cli stats` |
-| `search` | Search riddles by keyword and filters | `npm run cli search -- -k "water"` |
-| `list` | List riddles with optional filters | `npm run cli list -- -l 5` |
-| `view` | View a specific riddle by ID | `npm run cli view riddle-001` |
-| `interactive` | Interactive search mode | `npm run cli interactive` |
-| `sources` | List all available sources | `npm run cli sources` |
-| `tags` | List all available tags | `npm run cli tags` |
+```bash
+npm run cli -- search -- -k "water" -t logic,nature
+```
 
-### Search Options
+- List riddles
 
-| Option | Description | Example |
-|--------|-------------|---------|
-| `-k, --keyword` | Search keyword | `-k "keyboard"` |
-| `-s, --source` | Filter by source book | `-s "Classic Riddles"` |
-| `-t, --tags` | Filter by tags (comma-separated) | `-t logic,wordplay` |
-| `-c, --category` | Filter by category | `-c wordplay` |
-| `-d, --difficulty` | Filter by difficulty | `-d easy` |
-| `--no-fuzzy` | Disable fuzzy matching | `--no-fuzzy` |
-| `--case-sensitive` | Enable case-sensitive search | `--case-sensitive` |
-| `-l, --limit` | Maximum results | `-l 20` |
-| `-o, --offset` | Pagination offset | `-o 10` |
+```bash
+npm run cli -- list -- -l 10
+```
+
+- View a specific riddle
+
+```bash
+npm run cli -- view riddle-001
+```
+
+- Interactive search mode
+
+```bash
+npm run cli -- interactive
+```
+
+---
+
+## Important npm scripts 🔧
+
+| Script | What it does |
+|--------|--------------|
+| `npm run dev` | Start the frontend dev server (Vite) |
+| `npm run build` | Build TypeScript and the frontend for production |
+| `npm run preview` | Preview the production build |
+| `npm run backend:extract` | Extract text from books in `resources/` |
+| `npm run backend:parse` | Parse extracted text into JSON files |
+| `npm run backend:sample` | Generate sample data for testing |
+| `npm run cli -- <cmd>` | Run CLI commands (search, list, stats, interactive, etc.) |
+
+---
+
+## Project Structure 📁
+
+```
+├── src/                    # Backend source: extractors, parsers, search, CLI
+├── scripts/                # Standalone scripts (extract, parse, sample)
+├── public/data/            # Generated JSON datasets (frontend consumption)
+├── data/                   # Extracted text and working files
+├── resources/              # Place book files here (EPUB, PDF, MOBI)
+├── frontend/               # React + Vite frontend
+├── plans/                  # Project planning & roadmap
+└── package.json            # Scripts and dependencies
+```
+
+---
+
+## How it works (brief) 💡
+
+1. Extract: Book files in `resources/` are processed by extractors (EPUB/PDF/MOBI) to produce text.
+2. Parse: Parser detects riddle question/answer pairs and tags them (math, wordplay, logic, etc.).
+3. Store: Structured JSON files are generated and placed in `public/data/` or `data/` for frontend/CLI consumption.
+4. Search: A search engine supports fuzzy matching, filtering, and pagination.
+
+---
+
+## Contributing 🙌
+
+- Add new book files to `resources/` and run the extract/parse scripts.
+- Add/modify parser rules in `src/parsers/` to improve riddle detection.
+- For frontend work, update `frontend/` and run `npm run dev`.
+
+Please follow the existing planning docs in `plans/` when proposing or implementing larger changes.
+
+---
+
+## Troubleshooting & Tips ⚠️
+
+- If `ts-node` errors occur, ensure you have compatible Node and `npm install` completed.
+- For extraction failures with certain book files, try converting to EPUB or use a different source.
+
+---
+
+## Resources & Roadmap
+
+- Planning docs: `plans/` (phases, detailed tasks)
+- Sample data: `public/data/riddles-sample-riddles-collection.json`
+- Frontend roadmap: `plans/plan_08_frontend_website.md`
+
+---
 
 ## License
 
 ISC
+
+---
+
+If you'd like, I can also update the `plans/README.md` to reference this Quick Start and add a short contributor checklist—want me to do that next?
