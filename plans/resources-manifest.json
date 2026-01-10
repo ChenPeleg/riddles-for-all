@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Gym For The Brain - 300 Riddles For Adults To Workout Their Mind Using Reason And Lateral Thinking.epub",
+    "path": "C:\\Projects\\riddles\\resources\\Gym For The Brain - 300 Riddles For Adults To Workout Their Mind Using Reason And Lateral Thinking.epub",
+    "size": 158096,
+    "ext": ".epub",
+    "mime": "application/epub+zip",
+    "drm_suspected": false,
+    "drm_reason": null
+  },
+  {
+    "name": "Riddle Me This - The Ultimate Collection Of Riddles & Brain Teasers.epub",
+    "path": "C:\\Projects\\riddles\\resources\\Riddle Me This - The Ultimate Collection Of Riddles & Brain Teasers.epub",
+    "size": 347915,
+    "ext": ".epub",
+    "mime": "application/epub+zip",
+    "drm_suspected": false,
+    "drm_reason": null
+  },
+  {
+    "name": "Riddle Me This - The Ultimate Collection Of Riddles & Brain Teasers.jpg",
+    "path": "C:\\Projects\\riddles\\resources\\Riddle Me This - The Ultimate Collection Of Riddles & Brain Teasers.jpg",
+    "size": 119812,
+    "ext": ".jpg",
+    "mime": "image/jpeg",
+    "drm_suspected": false,
+    "drm_reason": null
+  },
+  {
+    "name": "The Best Fun Riddles & Trick Questions for Smart Kids and Family - 3 Books in 1 - 700 Jokes, Math.pdf",
+    "path": "C:\\Projects\\riddles\\resources\\The Best Fun Riddles & Trick Questions for Smart Kids and Family - 3 Books in 1 - 700 Jokes, Math.pdf",
+    "size": 1168729,
+    "ext": ".pdf",
+    "mime": "application/pdf",
+    "drm_suspected": false,
+    "drm_reason": null
+  },
+  {
+    "name": "The Little Book of Riddles.mobi",
+    "path": "C:\\Projects\\riddles\\resources\\The Little Book of Riddles.mobi",
+    "size": 725063,
+    "ext": ".mobi",
+    "mime": null,
+    "drm_suspected": false,
+    "drm_reason": null
+  },
+  {
+    "name": "The Ultimate Riddles Book Word Riddles, Brain Teasers, Logic Puzzles, Math Problems, Trick Questions, and More!.mobi",
+    "path": "C:\\Projects\\riddles\\resources\\The Ultimate Riddles Book Word Riddles, Brain Teasers, Logic Puzzles, Math Problems, Trick Questions, and More!.mobi",
+    "size": 1228959,
+    "ext": ".mobi",
+    "mime": null,
+    "drm_suspected": true,
+    "drm_reason": "DRM-like tokens in header"
+  },
+  {
+    "name": "Word Games, Riddles and Logic Tests - Tax Your Brain and Boost Your English.pdf",
+    "path": "C:\\Projects\\riddles\\resources\\Word Games, Riddles and Logic Tests - Tax Your Brain and Boost Your English.pdf",
+    "size": 1281017,
+    "ext": ".pdf",
+    "mime": "application/pdf",
+    "drm_suspected": false,
+    "drm_reason": null
+  }
+]
