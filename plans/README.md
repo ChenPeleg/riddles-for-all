@@ -37,7 +37,7 @@ All backend phases have been successfully completed:
 ### Planning Documents
 
 - **[plan_00_overview.md](./plan_00_overview.md)** - Project overview, goals, and technical considerations
-- **[plan_01_overoll_plan.md](./plan_01_overoll_plan.md)** - Overall plan with links to all phases
+- **[plan_01_overall_plan.md](./plan_01_overall_plan.md)** - Overall plan with links to all phases
 - **[plan_01_project_setup.md](./plan_01_project_setup.md)** - Phase 1: TypeScript setup and dependencies
 - **[plan_02_text_extraction.md](./plan_02_text_extraction.md)** - Phase 2: Extract text from books
 - **[plan_03_riddle_parsing.md](./plan_03_riddle_parsing.md)** - Phase 3: Parse and structure riddles
@@ -95,7 +95,7 @@ All backend phases have been successfully completed:
 If you're new to this project, start here:
 
 1. **Read [plan_00_overview.md](./plan_00_overview.md)** - Understand project goals and architecture
-2. **Review [plan_01_overoll_plan.md](./plan_01_overoll_plan.md)** - See the complete roadmap
+2. **Review [plan_01_overall_plan.md](./plan_01_overall_plan.md)** - See the complete roadmap
 3. **Check individual phase files** - Deep dive into specific implementations
 4. **Review the [main README](../README.md)** - Learn how to use the project
 
@@ -140,7 +140,7 @@ When adding new features or phases:
 1. Update the relevant phase document
 2. Add checkmarks (✅) when tasks are complete
 3. Update this README if new phases are added
-4. Keep the [plan_01_overoll_plan.md](./plan_01_overoll_plan.md) in sync
+4. Keep the [plan_01_overall_plan.md](./plan_01_overall_plan.md) in sync
 
 ## Document Conventions
 

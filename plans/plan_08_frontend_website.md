@@ -4,66 +4,77 @@
 
 Build a static frontend-only website that consumes the processed riddle data (JSON files). The website will load JSON data files statically and provide a user-friendly interface for browsing and searching riddles.
 
+**Technology Stack:** React + Vite + TypeScript + React Router (Hash Router)  
+**Deployment:** GitHub Pages via GitHub Actions
+
 ## Goals
 
-- Create a modern, responsive web interface
+- Create a modern, responsive web interface using React
 - Load and display riddles from static JSON files
 - Implement client-side search functionality
 - Support filtering by source, tags, category, and difficulty
 - Provide an interactive and engaging user experience
-- Deploy as a static site (e.g., GitHub Pages, Netlify, Vercel)
+- Deploy to GitHub Pages with automated CI/CD
 
-## Step 16: Technology Stack Selection ⏸️
+## Step 16: Technology Stack Selection ✅
 
-Choose appropriate frontend technologies:
+**Chosen Stack: React + Vite + React Router**
 
-### Recommended Options:
+### Selected Technologies:
 
-**Option A: Vanilla JS/HTML/CSS**
-- ✅ No build step required
-- ✅ Simple and lightweight
-- ✅ Easy to deploy as static files
-- ❌ More manual DOM manipulation
-- ❌ Less structured for larger applications
-
-**Option B: React/TypeScript**
+**React with TypeScript**
 - ✅ Component-based architecture
 - ✅ Type safety with TypeScript
 - ✅ Rich ecosystem and tooling
-- ✅ Can use existing TypeScript types
-- ❌ Requires build step
-- ❌ Larger bundle size
+- ✅ Can reuse existing TypeScript types from backend
+- ✅ Large community and extensive documentation
 
-**Option C: Vue.js/TypeScript**
-- ✅ Progressive framework
-- ✅ Simple and intuitive
-- ✅ Good TypeScript support
-- ✅ Smaller bundle size than React
-- ❌ Requires build step
+**Vite**
+- ✅ Lightning-fast development server
+- ✅ Instant HMR (Hot Module Replacement)
+- ✅ Optimized production builds
+- ✅ Modern build tool with excellent React support
+- ✅ TypeScript support out of the box
 
-**Option D: Svelte/TypeScript**
-- ✅ Compiles to vanilla JS
+**React Router (Hash Router)**
+- ✅ Client-side routing for SPA
+- ✅ Hash-based routing for GitHub Pages compatibility
+- ✅ No server configuration needed
+- ✅ Works seamlessly with static hosting
+
+### Why This Stack:
+
+1. **GitHub Pages Compatibility**: Hash router works perfectly with GitHub Pages without requiring server-side configuration
+2. **Modern Development**: Vite provides excellent DX with fast builds and HMR
+3. **Type Safety**: TypeScript ensures code quality and can reuse types from the backend
+4. **Ecosystem**: React has the largest ecosystem for UI components and libraries
+5. **Performance**: Vite optimizes bundle size and enables code splitting
+
+### Alternative Options Considered:
+
+**Vanilla JS/HTML/CSS**
+- ❌ More manual DOM manipulation required
+- ❌ Less structured for larger applications
+
+**Vue.js/TypeScript**
+- ✅ Good framework but less familiar
+- ❌ Smaller ecosystem compared to React
+
+**Svelte/TypeScript**
 - ✅ Excellent performance
-- ✅ Small bundle size
-- ✅ Built-in reactivity
-- ❌ Requires build step
-- ❌ Smaller ecosystem
-
-### Decision Criteria:
-- Development speed
-- Performance requirements
-- Team familiarity
-- Maintenance considerations
-- Deployment simplicity
+- ❌ Smaller ecosystem and less team familiarity
 
 ## Step 17: Project Setup ⏸️
 
 - [ ] Create `frontend/` directory in repository
-- [ ] Initialize frontend project with chosen technology
-- [ ] Set up TypeScript configuration (if applicable)
-- [ ] Configure build tools (webpack, vite, or similar)
-- [ ] Set up development server with hot reload
-- [ ] Configure static JSON file loading
+- [ ] Initialize Vite + React + TypeScript project: `npm create vite@latest frontend -- --template react-ts`
+- [ ] Install React Router: `npm install react-router-dom`
+- [ ] Configure HashRouter for GitHub Pages
+- [ ] Set up base path in `vite.config.ts` for deployment
+- [ ] Configure static JSON file loading from `/data` directory
+- [ ] Copy riddle JSON files to `frontend/public/data/`
+- [ ] Set up GitHub Actions workflow for automated deployment
+- [ ] Configure `gh-pages` branch for deployment
 
 ## Step 18: UI/UX Design ⏸️
 
@@ -209,19 +220,81 @@ Choose appropriate frontend technologies:
 - [ ] Create user guide (if needed)
 - [ ] Add inline code documentation
 
-## Step 26: Deployment ⏸️
+## Step 26: Deployment to GitHub Pages ⏸️
 
-- [ ] Choose deployment platform:
-  - GitHub Pages
-  - Netlify
-  - Vercel
-  - Cloudflare Pages
-- [ ] Configure build pipeline
-- [ ] Set up continuous deployment
-- [ ] Configure custom domain (optional)
-- [ ] Test production build
-- [ ] Deploy to production
-- [ ] Set up analytics (optional)
+**Deployment Platform: GitHub Pages via GitHub Actions**
+
+### Setup Requirements:
+
+- [ ] **Configure Vite for GitHub Pages**
+  - Set base path in `vite.config.ts`: `base: '/riddles/'` (or your repo name)
+  - Ensure HashRouter is used in React Router
+  - Test build output locally
+
+- [ ] **Create GitHub Actions Workflow**
+  - Create `.github/workflows/deploy.yml`
+  - Configure workflow to run on push to `main` branch
+  - Build the frontend with `npm run build`
+  - Deploy to `gh-pages` branch using `peaceiris/actions-gh-pages@v3`
+
+- [ ] **Configure Repository Settings**
+  - Enable GitHub Pages in repository settings
+  - Set source to `gh-pages` branch
+  - Configure custom domain (optional)
+
+- [ ] **Verify Deployment**
+  - Test production build locally: `npm run build && npm run preview`
+  - Push to main branch and verify GitHub Actions runs
+  - Verify site is accessible at `https://username.github.io/riddles/`
+  - Test all routes and functionality on deployed site
+
+### Example GitHub Actions Workflow:
+
+```yaml
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+      
+      - name: Install dependencies
+        working-directory: ./frontend
+        run: npm ci
+      
+      - name: Build
+        working-directory: ./frontend
+        run: npm run build
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./frontend/dist
+          cname: your-custom-domain.com  # Optional
+```
+
+### Additional Configuration:
+
+- [ ] Add `.nojekyll` file to `public/` directory to prevent Jekyll processing
+- [ ] Configure 404.html for client-side routing fallback (copy index.html as 404.html)
+- [ ] Set up analytics (Google Analytics, Plausible, etc.) - optional
+- [ ] Monitor deployment with GitHub Actions status badges in README
 
 ## Step 27: Future Enhancements 💡
 
@@ -258,46 +331,110 @@ Ideas for future iterations:
 
 ## Technical Architecture
 
+**Stack: React + Vite + TypeScript + React Router**
+
+### Project Structure:
+
 ```
 frontend/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml          # GitHub Actions deployment workflow
 ├── public/
-│   ├── data/                 # Copy of riddles JSON files
+│   ├── data/                   # Copy of riddles JSON files
 │   │   ├── riddles-all.json
 │   │   └── riddles-*.json
-│   ├── assets/
-│   │   ├── images/
-│   │   ├── icons/
-│   │   └── fonts/
-│   └── index.html
+│   ├── .nojekyll               # Prevent Jekyll processing on GitHub Pages
+│   └── favicon.ico
 ├── src/
-│   ├── components/           # Reusable UI components
+│   ├── components/             # Reusable UI components
 │   │   ├── Navigation/
+│   │   │   ├── Navigation.tsx
+│   │   │   └── Navigation.module.css
 │   │   ├── Search/
+│   │   │   ├── SearchBar.tsx
+│   │   │   ├── SearchFilters.tsx
+│   │   │   └── Search.module.css
 │   │   ├── RiddleCard/
+│   │   │   ├── RiddleCard.tsx
+│   │   │   └── RiddleCard.module.css
 │   │   ├── RiddleList/
+│   │   │   ├── RiddleList.tsx
+│   │   │   └── RiddleList.module.css
 │   │   ├── CategoryBrowser/
+│   │   │   ├── CategoryBrowser.tsx
+│   │   │   └── CategoryBrowser.module.css
 │   │   └── Statistics/
-│   ├── pages/                # Page components
+│   │       ├── Statistics.tsx
+│   │       └── Statistics.module.css
+│   ├── pages/                  # Page components for routing
 │   │   ├── Home.tsx
 │   │   ├── Search.tsx
 │   │   ├── RiddleDetail.tsx
 │   │   ├── Categories.tsx
 │   │   └── Sources.tsx
-│   ├── services/             # Business logic
-│   │   ├── dataLoader.ts
-│   │   ├── searchEngine.ts
-│   │   └── localStorage.ts
-│   ├── types/                # TypeScript definitions
+│   ├── services/               # Business logic
+│   │   ├── dataLoader.ts       # Load JSON files
+│   │   ├── searchEngine.ts     # Client-side search (port from backend)
+│   │   └── localStorage.ts     # Favorites, history, preferences
+│   ├── hooks/                  # Custom React hooks
+│   │   ├── useRiddles.ts
+│   │   ├── useSearch.ts
+│   │   └── useFavorites.ts
+│   ├── types/                  # TypeScript definitions (copied from backend)
 │   │   └── riddle.ts
-│   ├── styles/               # Global styles
-│   │   ├── global.css
-│   │   └── variables.css
-│   ├── utils/                # Utility functions
+│   ├── styles/                 # Global styles
+│   │   ├── index.css           # Global styles
+│   │   └── variables.css       # CSS variables
+│   ├── utils/                  # Utility functions
 │   │   └── helpers.ts
-│   └── App.tsx               # Main application component
+│   ├── App.tsx                 # Main app with HashRouter
+│   ├── main.tsx                # Entry point
+│   └── vite-env.d.ts           # Vite types
+├── .gitignore
+├── index.html
 ├── package.json
 ├── tsconfig.json
+├── tsconfig.node.json
+├── vite.config.ts              # Vite configuration with base path
 └── README.md
+```
+
+### Key Configuration Files:
+
+**vite.config.ts:**
+```typescript
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  plugins: [react()],
+  base: '/riddles/', // Replace with your repo name
+  build: {
+    outDir: 'dist',
+  },
+})
+```
+
+**App.tsx (with HashRouter):**
+```typescript
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Search from './pages/Search'
+// ... other imports
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/riddle/:id" element={<RiddleDetail />} />
+        {/* ... other routes */}
+      </Routes>
+    </Router>
+  )
+}
 ```
 
 ## Success Criteria
@@ -312,18 +449,31 @@ frontend/
 
 ## Resources & References
 
-- [Create React App](https://create-react-app.dev/)
-- [Vite](https://vitejs.dev/)
-- [Vue.js](https://vuejs.org/)
-- [Svelte](https://svelte.dev/)
-- [GitHub Pages](https://pages.github.com/)
-- [Netlify](https://www.netlify.com/)
-- [Web Accessibility Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)
+### Selected Stack Documentation:
+- [Vite Official Documentation](https://vitejs.dev/)
+- [React Official Documentation](https://react.dev/)
+- [React Router Documentation](https://reactrouter.com/)
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
+- [Vite + React + TypeScript Template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts)
+
+### Deployment:
+- [GitHub Pages Documentation](https://pages.github.com/)
+- [GitHub Actions for Pages](https://github.com/peaceiris/actions-gh-pages)
+- [Vite Static Deploy Guide](https://vitejs.dev/guide/static-deploy.html)
+
+### Additional Resources:
+- [Web Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/WCAG21/quickref/)
+- [React Accessibility](https://react.dev/learn/accessibility)
+- [CSS Modules](https://github.com/css-modules/css-modules)
+- [React Hooks](https://react.dev/reference/react)
 
 ## Notes
 
-- This phase is currently paused as it represents the next major milestone
-- All backend work (Phases 1-7) must be complete before starting this phase
+- Technology stack has been selected: **React + Vite + TypeScript + React Router**
+- Deployment platform chosen: **GitHub Pages via GitHub Actions**
+- All backend work (Phases 1-7) is complete
 - The frontend will be entirely static and consume pre-generated JSON files
-- No server-side code or API required - purely client-side application
-- JSON data files should be copied to the frontend's public/data directory during build
+- No server-side code or API required - purely client-side SPA
+- Hash-based routing ensures compatibility with GitHub Pages
+- JSON data files should be copied to `frontend/public/data/` directory
+- Automated deployment via GitHub Actions on push to main branch
