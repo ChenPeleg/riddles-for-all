@@ -15,6 +15,9 @@ dist/
 # Data files (if they contain extracted content)
 data/*.json
 data/*.txt
+data/raw/*.json
+data/raw/*.txt
+data/*.txt
 !data/.gitkeep
 
 # IDE
