@@ -39,7 +39,7 @@ async function main() {
 
   // Extract text from all books
   const extractorService = new ExtractorService();
-  
+
   console.log('Starting extraction...\n');
 
   // Attempt to load resources manifest for DRM hints
