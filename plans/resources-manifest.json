@@ -6,7 +6,17 @@
     "ext": ".epub",
     "mime": "application/epub+zip",
     "drm_suspected": false,
-    "drm_reason": null
+    "drm_reason": null,
+    "parsing": {
+      "strategy": "numbered-with-answer-key",
+      "questionDelimiter": "\\d+[\\.)]\\s+",
+      "answerMarkers": [
+        "Answer Key",
+        "Answers:",
+        "Answer:"
+      ],
+      "notes": "Questions in 'Chapter One' are numbered; answers are in an Answer Key section at the end."
+    }
   },
   {
     "name": "Riddle Me This - The Ultimate Collection Of Riddles & Brain Teasers.epub",
@@ -15,7 +25,17 @@
     "ext": ".epub",
     "mime": "application/epub+zip",
     "drm_suspected": false,
-    "drm_reason": null
+    "drm_reason": null,
+    "parsing": {
+      "strategy": "lot-answers",
+      "lotSize": 20,
+      "questionDelimiter": "\\d+[\\.)]\\s+",
+      "answerMarkers": [
+        "Answers:",
+        "Answer:"
+      ],
+      "notes": "Questions are grouped in lots of 20; answers follow each lot under 'Answers:'."
+    }
   },
   {
     "name": "Riddle Me This - The Ultimate Collection Of Riddles & Brain Teasers.jpg",
@@ -33,7 +53,18 @@
     "ext": ".pdf",
     "mime": "application/pdf",
     "drm_suspected": false,
-    "drm_reason": null
+    "drm_reason": null,
+    "parsing": {
+      "strategy": "chapter-based",
+      "questionDelimiter": "\\d+[\\.)]\\s+|\\d+\\.",
+      "answerMarkers": [
+        "Response:",
+        "Response",
+        "Answers:",
+        "Answer:"
+      ],
+      "notes": "Math riddles often use 'Response:'; also contains numbered sections and chapter-based Q/A."
+    }
   },
   {
     "name": "The Little Book of Riddles.mobi",
@@ -42,7 +73,11 @@
     "ext": ".mobi",
     "mime": null,
     "drm_suspected": false,
-    "drm_reason": null
+    "drm_reason": null,
+    "parsing": {
+      "strategy": "needs-cleanup",
+      "notes": "Extraction produced noisy/binary artifacts. Run cleanup or alternate extractor before parsing. Fallback: attempt numbered parsing after cleanup."
+    }
   },
   {
     "name": "The Ultimate Riddles Book Word Riddles, Brain Teasers, Logic Puzzles, Math Problems, Trick Questions, and More!.mobi",
@@ -51,7 +86,11 @@
     "ext": ".mobi",
     "mime": null,
     "drm_suspected": true,
-    "drm_reason": "DRM-like tokens in header"
+    "drm_reason": "DRM-like tokens in header",
+    "parsing": {
+      "strategy": "skipped",
+      "reason": "DRM-like tokens in header"
+    }
   },
   {
     "name": "Word Games, Riddles and Logic Tests - Tax Your Brain and Boost Your English.pdf",
@@ -60,6 +99,11 @@
     "ext": ".pdf",
     "mime": "application/pdf",
     "drm_suspected": false,
-    "drm_reason": null
+    "drm_reason": null,
+    "parsing": {
+      "strategy": "numbered",
+      "questionDelimiter": "\\d+[\\.)]\\s+",
+      "notes": "Various chapters with numbered riddles; generic numbered parser is appropriate."
+    }
   }
 ]
