@@ -28,9 +28,20 @@ All backend phases have been successfully completed:
 6. **Phase 6: User Interface** - CLI for testing and data management
 7. **Phase 7: Testing & Refinement** - Sample data and testing
 
-### 🚧 Frontend Development (Planned)
+### 🚧 Frontend Development (In Progress)
 
 8. **Phase 8: Frontend Website** - Static website for browsing riddles
+   - ✅ Step 16: Technology Stack Selection (React + Vite + TypeScript)
+   - ✅ Step 17: Project Setup (Complete)
+   - ⏸️ Step 18: UI/UX Design
+   - ⏸️ Step 19: Core Components
+   - ⏸️ Step 20: Data Integration
+   - ⏸️ Step 21: Search Implementation
+   - ⏸️ Step 22: Features & Enhancements
+   - ⏸️ Step 23: Styling & Polish
+   - ⏸️ Step 24: Testing
+   - ⏸️ Step 25: Documentation
+   - ⏸️ Step 26: Deployment to GitHub Pages
 
 ## Quick Navigation
 

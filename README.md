@@ -203,9 +203,41 @@ Riddles are stored in JSON with the following structure:
 - **Books Processed**: 6
 - **Categories**: math, logic, wordplay, visual, nature, everyday, tricky
 
-## Future Goals
+## Frontend Website 🚧
 
-Build a frontend-only website that consumes the processed riddle data. The extraction and processing tools serve as a one-time build step to generate static JSON data files.
+The project now includes a React-based frontend for browsing and searching riddles.
+
+### Development
+
+```bash
+# Start the frontend development server
+npm run dev
+
+# Build the frontend for production
+npm run build
+
+# Preview the production build
+npm run preview
+```
+
+The frontend will be available at `http://localhost:5173/riddles/`
+
+### Frontend Structure
+
+```
+frontend/
+├── components/       # Reusable UI components (coming soon)
+├── pages/           # Page components (Home, Search, RiddleDetail, etc.)
+├── services/        # Data loading and search services (coming soon)
+├── hooks/           # Custom React hooks (coming soon)
+├── types/           # TypeScript type definitions (coming soon)
+├── styles/          # Global styles
+└── utils/           # Utility functions (coming soon)
+```
+
+### Deployment
+
+The frontend is configured to deploy automatically to GitHub Pages via GitHub Actions when you push to the main branch.
 
 ## Development
 

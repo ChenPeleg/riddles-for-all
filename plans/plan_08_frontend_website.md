@@ -64,17 +64,18 @@ Build a static frontend-only website that consumes the processed riddle data (JS
 - ✅ Excellent performance
 - ❌ Smaller ecosystem and less team familiarity
 
-## Step 17: Project Setup ⏸️
+## Step 17: Project Setup ✅
 
-- [ ] Create `frontend/` directory in repository
-- [ ] Initialize Vite + React + TypeScript project: `npm create vite@latest frontend -- --template react-ts`
-- [ ] Install React Router: `npm install react-router-dom`
-- [ ] Configure HashRouter for GitHub Pages
-- [ ] Set up base path in `vite.config.ts` for deployment
-- [ ] Configure static JSON file loading from `/data` directory
-- [ ] Copy riddle JSON files to `frontend/public/data/`
-- [ ] Set up GitHub Actions workflow for automated deployment
-- [ ] Configure `gh-pages` branch for deployment
+- [x] Create `frontend/` directory in repository
+- [x] Install React Router with `npm install react-router-dom`
+- [x] Configure HashRouter for GitHub Pages
+- [x] Set up base path in `vite.config.ts` for deployment
+- [x] Configure static JSON file loading from `/data` directory
+- [x] Copy riddle JSON files to `public/data/`
+- [x] Set up GitHub Actions workflow for automated deployment
+- [x] Create basic page components (Home, Search, RiddleDetail, Categories, Sources)
+- [x] Configure unified package.json (backend as devDependencies)
+- [x] Test build process successfully
 
 ## Step 18: UI/UX Design ⏸️
 
