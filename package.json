@@ -2,7 +2,6 @@
   "name": "riddles",
   "version": "1.0.0",
   "description": "A TypeScript-based riddle management system for extracting and searching riddles from various book formats",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
