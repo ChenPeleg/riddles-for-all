@@ -42,6 +42,35 @@ npm run backend:parse
 
 This parses the extracted text into structured JSON files (see `public/data/` and `data/`).
 
+### Per-book parsing instructions (metadata) 🔧
+
+Some books require custom parsing rules (different numbering, grouped answer sections, noisy extraction). You can specify per-book parsing instructions in the book metadata so the parser can use heuristics suited to that book.
+
+Recommended metadata field: `parsing` (object). Supported fields:
+
+- `strategy` (string): e.g. `numbered`, `lot-answers`, `chapter-based`, `needs-cleanup`, `skipped`
+- `questionDelimiter` (string, regex): regex used to split/questions (as a string)
+- `answerMarkers` (array of strings): words or headings that mark answers (e.g. `"Answers:"`, `"Response:"`)
+- `lotSize` (number): for `lot-answers` strategy (e.g. 20)
+- `questionSectionStart` / `questionSectionEnd` (string): optional markers for bounded sections
+- `notes` (string): free-form guidance for humans or fallback logic
+
+Example in `data/raw/<book>/metadata.json`:
+
+```json
+"parsing": {
+  "strategy": "lot-answers",
+  "lotSize": 20,
+  "questionDelimiter": "\\d+[\\.)]\\s+",
+  "answerMarkers": ["Answers:"]
+}
+```
+
+Notes:
+- The parser will use the provided `parsing` fields to pick heuristics (e.g., use lot parsing when `lotSize` is set). If no `parsing` is present, the parser falls back to generic numbered and QA heuristics.
+- For noisy or binary-extracted files, set `strategy` to `needs-cleanup` and include `notes` so a human or a cleanup step can be run first.
+
+
 ### Start the Frontend (Development)
 
 ```bash

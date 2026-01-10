@@ -12,7 +12,7 @@ async function main() {
   console.log('=== Riddle Parsing and Storage Tool ===\n');
 
   const dataDir = path.join(__dirname, '../data');
-  
+
   // Check if data directory exists
   if (!fs.existsSync(dataDir)) {
     console.log('Error: Data directory does not exist. Please run extraction first.');
@@ -45,32 +45,49 @@ async function main() {
   for (const filePath of files) {
     const fileName = path.basename(filePath, '.txt');
     console.log(`Processing: ${fileName}`);
-    
+
     try {
       const text = fs.readFileSync(filePath, 'utf-8');
-      
+
       if (text.length === 0) {
         console.log(`  ⚠ File is empty, skipping`);
         console.log();
         continue;
       }
 
-      const result = parser.parseRiddles(text, fileName);
-      
+      // Attempt to load per-book metadata parsing instructions (data/raw/<id>/metadata.json)
+      const metaPath = path.join(__dirname, '../data/raw', fileName, 'metadata.json');
+      let parsingOptions: any = undefined;
+      try {
+        if (fs.existsSync(metaPath)) {
+          const rawMeta = fs.readFileSync(metaPath, 'utf-8');
+          const meta = JSON.parse(rawMeta);
+          if (meta.parsing) {
+            parsingOptions = meta.parsing;
+            console.log(`  ℹ Using parsing strategy: ${parsingOptions.strategy || 'default'}`);
+          }
+        }
+      } catch (e) {
+        // ignore metadata read errors and proceed with default parsing
+        console.warn(`  ⚠ Could not read metadata for ${fileName}: ${e instanceof Error ? e.message : String(e)}`);
+      }
+
+      const result = parser.parseRiddles(text, fileName, parsingOptions);
+
       console.log(`  ✓ Parsed ${result.riddles.length} riddles`);
-      
+
       if (result.errors.length > 0) {
         console.log(`  ⚠ Encountered ${result.errors.length} error(s):`);
         result.errors.forEach(error => console.log(`    - ${error}`));
         totalErrors += result.errors.length;
       }
-      
+
       allRiddles.push(...result.riddles);
     } catch (error) {
       console.log(`  ❌ Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
       totalErrors++;
     }
-    
+
     console.log();
   }
 
@@ -80,31 +97,31 @@ async function main() {
   // Store riddles in JSON format
   if (allRiddles.length > 0) {
     console.log('Saving riddles to JSON files...\n');
-    
+
     const storage = new JsonStorage(dataDir);
-    
+
     // Save all riddles in a single file
     storage.saveRiddles(allRiddles, 'riddles-all.json');
-    
+
     // Save riddles grouped by source
     storage.saveRiddlesBySource(allRiddles);
-    
+
     console.log('\nStorage complete!');
     console.log('\nSummary:');
     console.log(`  Total riddles: ${allRiddles.length}`);
-    
+
     // Show breakdown by source
     const bySource = new Map<string, number>();
     for (const riddle of allRiddles) {
       const count = bySource.get(riddle.source.book) || 0;
       bySource.set(riddle.source.book, count + 1);
     }
-    
+
     console.log('\n  Riddles by source:');
     for (const [source, count] of bySource) {
       console.log(`    - ${source}: ${count}`);
     }
-    
+
     // Show breakdown by tags
     const byTag = new Map<string, number>();
     for (const riddle of allRiddles) {
@@ -115,7 +132,7 @@ async function main() {
         }
       }
     }
-    
+
     console.log('\n  Riddles by category:');
     const sortedTags = [...byTag.entries()].sort((a, b) => b[1] - a[1]);
     for (const [tag, count] of sortedTags.slice(0, 10)) {
