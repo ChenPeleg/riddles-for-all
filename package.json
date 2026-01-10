@@ -8,7 +8,11 @@
     "dev": "ts-node src/index.ts",
     "watch": "nodemon --exec ts-node src/index.ts",
     "extract": "ts-node scripts/extract-and-import.ts",
-    "parse": "ts-node scripts/parse-and-store.ts"
+    "parse": "ts-node scripts/parse-and-store.ts",
+    "sample": "ts-node scripts/generate-sample-data.ts",
+    "cli": "ts-node src/cli/index.ts",
+    "search": "npm run cli search",
+    "riddles": "npm run cli"
   },
   "keywords": [
     "riddles",
