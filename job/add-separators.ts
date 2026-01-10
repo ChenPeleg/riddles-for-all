@@ -49,75 +49,75 @@ export default class AddSeparators {
                 }
             }
 
-                // Chapter Two / answers formatting
-                let formattedAnswers = '';
-                let chTwoHeading = '';
-                let rest = '';
+            // Chapter Two / answers formatting
+            let formattedAnswers = '';
+            let chTwoHeading = '';
+            let rest = '';
 
-                if (chapterTwoIndex !== -1) {
-                    // find where the answers end (use "Conclusion" or end of file)
-                    const chTwoStart = chapterTwoIndex;
-                    const chTwoEnd = conclusionIndex !== -1 ? conclusionIndex : raw.length;
-                    const chapterTwoBlock = raw.slice(chTwoStart, chTwoEnd);
+            if (chapterTwoIndex !== -1) {
+                // find where the answers end (use "Conclusion" or end of file)
+                const chTwoStart = chapterTwoIndex;
+                const chTwoEnd = conclusionIndex !== -1 ? conclusionIndex : raw.length;
+                const chapterTwoBlock = raw.slice(chTwoStart, chTwoEnd);
 
-                    // keep heading (e.g., "Chapter Two: Answer Key")
-                    const firstLineEnd = chapterTwoBlock.indexOf(' ');
-                    // we'll keep the whole heading up to the first capitalized answer roughly
-                    // but simpler: split after the heading phrase
-                    const headingMatch = chapterTwoBlock.match(/Chapter Two:\s*Answer Key\s*/i);
-                    if (headingMatch) {
-                        chTwoHeading = headingMatch[0];
-                        const answersText = chapterTwoBlock.slice(headingMatch[0].length).trim();
+                // keep heading (e.g., "Chapter Two: Answer Key")
+                const firstLineEnd = chapterTwoBlock.indexOf(' ');
+                // we'll keep the whole heading up to the first capitalized answer roughly
+                // but simpler: split after the heading phrase
+                const headingMatch = chapterTwoBlock.match(/Chapter Two:\s*Answer Key\s*/i);
+                if (headingMatch) {
+                    chTwoHeading = headingMatch[0];
+                    const answersText = chapterTwoBlock.slice(headingMatch[0].length).trim();
 
-                        // Heuristic: split on capitalized-word boundaries (start of each answer)
-                        // Match sequences that start with a capital letter and continue until next capital letter
-                        const answerMatches = answersText.match(/[A-Z][^A-Z]*/g);
-                        if (answerMatches && answerMatches.length > 0) {
-                            formattedAnswers = answerMatches.map(a => a.trim()).join('\n\n---\n\n');
-                        } else {
-                            // fallback: keep as-is
-                            formattedAnswers = answersText;
-                        }
+                    // Heuristic: split on capitalized-word boundaries (start of each answer)
+                    // Match sequences that start with a capital letter and continue until next capital letter
+                    const answerMatches = answersText.match(/[A-Z][^A-Z]*/g);
+                    if (answerMatches && answerMatches.length > 0) {
+                        formattedAnswers = answerMatches.map(a => a.trim()).join('\n\n---\n\n');
                     } else {
-                        // no heading match, keep raw block
-                        formattedAnswers = chapterTwoBlock.trim();
+                        // fallback: keep as-is
+                        formattedAnswers = answersText;
                     }
-
-                    // rest (from conclusion onwards)
-                    rest = conclusionIndex !== -1 ? raw.slice(conclusionIndex) : '';
                 } else {
-                    // no chapter two: keep the rest as empty
-                    rest = raw.slice(chOneEnd);
+                    // no heading match, keep raw block
+                    formattedAnswers = chapterTwoBlock.trim();
                 }
 
-                // Reconstruct final content
-                const outParts: string[] = [];
-                outParts.push(pre.trim());
-                outParts.push('\n\n');
-                outParts.push('Chapter One: (formatted riddles)\n\n');
-                outParts.push(formattedRiddles);
-
-                if (chapterTwoIndex !== -1) {
-                    outParts.push('\n\n---\n\n');
-                    outParts.push(chTwoHeading.trim());
-                    outParts.push('\n\n');
-                    outParts.push(formattedAnswers);
-                }
-
-                if (rest && rest.trim()) {
-                    outParts.push('\n\n---\n\n');
-                    outParts.push(rest.trim());
-                }
-
-                const out = outParts.join('');
-
-                await writeFile(this.outputPath, out, 'utf8');
-                console.log(`Wrote formatted file to ${this.outputPath}`);
-            } catch (err) {
-                console.error('Error:', (err as Error).message);
-                throw err;
+                // rest (from conclusion onwards)
+                rest = conclusionIndex !== -1 ? raw.slice(conclusionIndex) : '';
+            } else {
+                // no chapter two: keep the rest as empty
+                rest = raw.slice(chOneEnd);
             }
+
+            // Reconstruct final content
+            const outParts: string[] = [];
+            outParts.push(pre.trim());
+            outParts.push('\n\n');
+            outParts.push('Chapter One: (formatted riddles)\n\n');
+            outParts.push(formattedRiddles);
+
+            if (chapterTwoIndex !== -1) {
+                outParts.push('\n\n---\n\n');
+                outParts.push(chTwoHeading.trim());
+                outParts.push('\n\n');
+                outParts.push(formattedAnswers);
+            }
+
+            if (rest && rest.trim()) {
+                outParts.push('\n\n---\n\n');
+                outParts.push(rest.trim());
+            }
+
+            const out = outParts.join('');
+
+            await writeFile(this.outputPath, out, 'utf8');
+            console.log(`Wrote formatted file to ${this.outputPath}`);
+        } catch (err) {
+            console.error('Error:', (err as Error).message);
+            throw err;
         }
+    }
 }
 
 // run when executed directly
