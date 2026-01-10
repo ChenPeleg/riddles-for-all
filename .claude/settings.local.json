@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(npm install)",
-      "Bash(npm run backend:sample:*)"
+      "Bash(npm run backend:sample:*)",
+      "Bash(ls:*)",
+      "Bash(npm run build:*)"
     ]
   }
 }
