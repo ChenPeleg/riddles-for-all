@@ -110,16 +110,16 @@ export class JsonStorage {
   getStatistics(filename: string = 'riddles.json'): {
     total: number;
     bySource: Record<string, number>;
-    byTag: Record<string, number>;
-    withAnswers: number;
+    byCategory: Record<string, number>;
+    withSolutions: number;
   } {
     const riddles = this.loadRiddles(filename);
     
     const stats = {
       total: riddles.length,
       bySource: {} as Record<string, number>,
-      byTag: {} as Record<string, number>,
-      withAnswers: 0,
+      byCategory: {} as Record<string, number>,
+      withSolutions: 0,
     };
 
     for (const riddle of riddles) {
@@ -127,16 +127,16 @@ export class JsonStorage {
       const source = riddle.source.book;
       stats.bySource[source] = (stats.bySource[source] || 0) + 1;
 
-      // Count by tags
-      if (riddle.tags) {
-        for (const tag of riddle.tags) {
-          stats.byTag[tag] = (stats.byTag[tag] || 0) + 1;
+      // Count by categories
+      if (riddle.categories) {
+        for (const category of riddle.categories) {
+          stats.byCategory[category] = (stats.byCategory[category] || 0) + 1;
         }
       }
 
-      // Count riddles with answers
-      if (riddle.answer) {
-        stats.withAnswers++;
+      // Count riddles with solutions
+      if (riddle.solution) {
+        stats.withSolutions++;
       }
     }
 

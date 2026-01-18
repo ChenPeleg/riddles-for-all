@@ -95,11 +95,11 @@ export class RiddleParser {
 
         riddles.push({
           id,
-          question: questionText,
+          text: questionText,
           source: {
             book: bookTitle,
           },
-          tags: this.extractTags(questionText),
+          categories: this.extractCategories(questionText),
         });
       }
     }
@@ -144,12 +144,12 @@ export class RiddleParser {
 
               riddles.push({
                 id,
-                question,
-                answer,
+                text: question,
+                solution: answer,
                 source: {
                   book: bookTitle,
                 },
-                tags: this.extractTags(question),
+                categories: this.extractCategories(question),
               });
             }
           }
@@ -248,11 +248,11 @@ export class RiddleParser {
         const id = this.generateId(bookTitle, q.num);
         const r: Riddle = {
           id,
-          question: q.text,
+          text: q.text,
           source: { book: bookTitle },
-          tags: this.extractTags(q.text),
+          categories: this.extractCategories(q.text),
         };
-        if (answerText) r.answer = answerText;
+        if (answerText) r.solution = answerText;
         riddles.push(r);
       }
 
@@ -309,14 +309,14 @@ export class RiddleParser {
   }
 
   /**
-   * Extract tags from riddle text based on keywords
+   * Extract categories from riddle text based on keywords
    */
-  private extractTags(text: string): string[] {
-    const tags: string[] = [];
+  private extractCategories(text: string): string[] {
+    const categoriesList: string[] = [];
     const lowerText = text.toLowerCase();
 
     // Define keyword patterns for categorization
-    const categories: { [k: string]: string[] } = {
+    const categoriesMap: { [k: string]: string[] } = {
       math: ['number', 'calculate', 'plus', 'minus', 'multiply', 'divide', 'equation'],
       logic: ['logical', 'think', 'reasoning', 'deduce', 'infer'],
       wordplay: ['letter', 'word', 'spell', 'alphabet', 'rhyme'],
@@ -326,18 +326,18 @@ export class RiddleParser {
       tricky: ['trick', 'catch', 'impossible', 'paradox'],
     };
 
-    for (const [category, keywords] of Object.entries(categories)) {
+    for (const [category, keywords] of Object.entries(categoriesMap)) {
       if (keywords.some(keyword => lowerText.includes(keyword))) {
-        tags.push(category);
+        categoriesList.push(category);
       }
     }
 
-    // Add a general tag if no specific category found
-    if (tags.length === 0) {
-      tags.push('general');
+    // Add a general category if no specific category found
+    if (categoriesList.length === 0) {
+      categoriesList.push('general');
     }
 
-    return tags;
+    return categoriesList;
   }
 }
 
