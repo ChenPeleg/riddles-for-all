@@ -125,8 +125,8 @@ async function main() {
     // Show breakdown by tags
     const byTag = new Map<string, number>();
     for (const riddle of allRiddles) {
-      if (riddle.tags) {
-        for (const tag of riddle.tags) {
+      if (riddle.categories) {
+        for (const tag of riddle.categories) {
           const count = byTag.get(tag) || 0;
           byTag.set(tag, count + 1);
         }
