@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "totalRiddles": 9,
+    "sources": [
+      "Classic Riddles"
+    ],
+    "generatedAt": "2026-01-18T18:13:34.060Z",
+    "version": "1.0.0"
+  },
+  "riddles": [
+    {
+      "id": "riddle-002",
+      "text": "What comes once in a minute, twice in a moment, but never in a thousand years?",
+      "solution": "The letter M",
+      "categories": [
+        "wordplay",
+        "tricky"
+      ],
+      "difficulty": "medium",
+      "source": {
+        "book": "Classic Riddles"
+      }
+    },
+    {
+      "id": "riddle-004",
+      "text": "I am not alive, but I grow; I don't have lungs, but I need air; I don't have a mouth, but water kills me. What am I?",
+      "solution": "Fire",
+      "categories": [
+        "logic",
+        "nature"
+      ],
+      "difficulty": "medium",
+      "source": {
+        "book": "Classic Riddles"
+      }
+    },
+    {
+      "id": "riddle-006",
+      "text": "What gets wetter the more it dries?",
+      "solution": "A towel",
+      "categories": [
+        "wordplay",
+        "everyday"
+      ],
+      "difficulty": "easy",
+      "source": {
+        "book": "Classic Riddles"
+      }
+    },
+    {
+      "id": "riddle-008",
+      "text": "What has many teeth but cannot bite?",
+      "solution": "A comb",
+      "categories": [
+        "wordplay",
+        "everyday"
+      ],
+      "difficulty": "easy",
+      "source": {
+        "book": "Classic Riddles"
+      }
+    },
+    {
+      "id": "riddle-010",
+      "text": "The more you take, the more you leave behind. What are they?",
+      "solution": "Footsteps",
+      "categories": [
+        "logic",
+        "everyday"
+      ],
+      "difficulty": "medium",
+      "source": {
+        "book": "Classic Riddles"
+      }
+    },
+    {
+      "id": "riddle-011",
+      "text": "What can you catch but not throw?",
+      "solution": "A cold",
+      "categories": [
+        "wordplay",
+        "tricky"
+      ],
+      "difficulty": "easy",
+      "source": {
+        "book": "Classic Riddles"
+      }
+    },
+    {
+      "id": "riddle-013",
+      "text": "What goes up but never comes down?",
+      "solution": "Your age",
+      "categories": [
+        "logic",
+        "everyday"
+      ],
+      "difficulty": "easy",
+      "source": {
+        "book": "Classic Riddles"
+      }
+    },
+    {
+      "id": "riddle-015",
+      "text": "What has to be broken before you can use it?",
+      "solution": "An egg",
+      "categories": [
+        "wordplay",
+        "everyday"
+      ],
+      "difficulty": "easy",
+      "source": {
+        "book": "Classic Riddles"
+      }
+    },
+    {
+      "id": "riddle-018",
+      "text": "What is full of holes but still holds water?",
+      "solution": "A sponge",
+      "categories": [
+        "wordplay",
+        "everyday"
+      ],
+      "difficulty": "easy",
+      "source": {
+        "book": "Classic Riddles"
+      }
+    }
+  ]
+}

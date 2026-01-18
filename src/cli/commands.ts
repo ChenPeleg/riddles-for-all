@@ -16,11 +16,9 @@ const storage = new JsonStorage();
 export function searchCommand(program: Command): void {
   program
     .command('search')
-    .description('Search riddles by keyword, tags, source, etc.')
     .option('-k, --keyword <keyword>', 'Search keyword')
     .option('-s, --source <source>', 'Filter by source book')
-    .option('-t, --tags <tags>', 'Filter by tags (comma-separated)')
-    .option('-c, --category <category>', 'Filter by category')
+    .option('-c, --categories <categories>', 'Filter by categories (comma-separated)')
     .option('-d, --difficulty <difficulty>', 'Filter by difficulty (easy, medium, hard)')
     .option('--no-fuzzy', 'Disable fuzzy matching')
     .option('--case-sensitive', 'Enable case-sensitive search')
@@ -34,8 +32,7 @@ export function searchCommand(program: Command): void {
         const query: SearchQuery = {};
         if (options.keyword) query.keyword = options.keyword;
         if (options.source) query.source = options.source;
-        if (options.tags) query.tags = options.tags.split(',').map((t: string) => t.trim());
-        if (options.category) query.category = options.category;
+        if (options.categories) query.categories = options.categories.split(',').map((c: string) => c.trim());
         if (options.difficulty) query.difficulty = options.difficulty;
 
         const result = searchEngine.search(query, {
@@ -50,16 +47,16 @@ export function searchCommand(program: Command): void {
 
         result.results.forEach((searchResult, index) => {
           const { riddle, score, matches } = searchResult;
-          console.log(`${index + 1 + result.offset}. [Score: ${score}] ${riddle.question}`);
+          console.log(`${index + 1 + result.offset}. [Score: ${score}] ${riddle.text}`);
           
-          if (riddle.answer) {
-            console.log(`   💡 Answer: ${riddle.answer}`);
+          if (riddle.solution) {
+            console.log(`   💡 Solution: ${riddle.solution}`);
           }
           
           console.log(`   📚 Source: ${riddle.source.book}`);
           
-          if (riddle.tags && riddle.tags.length > 0) {
-            console.log(`   🏷️  Tags: ${riddle.tags.join(', ')}`);
+          if (riddle.categories && riddle.categories.length > 0) {
+            console.log(`   🏷️  Categories: ${riddle.categories.join(', ')}`);
           }
           
           if (matches.length > 0) {
@@ -103,13 +100,13 @@ export function listCommand(program: Command): void {
         console.log(`\n📖 Listing ${toShow.length} of ${filtered.length} riddle(s)\n`);
 
         toShow.forEach((riddle, index) => {
-          console.log(`${index + 1}. ${riddle.question}`);
-          if (riddle.answer) {
-            console.log(`   💡 Answer: ${riddle.answer}`);
+          console.log(`${index + 1}. ${riddle.text}`);
+          if (riddle.solution) {
+            console.log(`   💡 Solution: ${riddle.solution}`);
           }
           console.log(`   📚 Source: ${riddle.source.book}`);
-          if (riddle.tags && riddle.tags.length > 0) {
-            console.log(`   🏷️  Tags: ${riddle.tags.join(', ')}`);
+          if (riddle.categories && riddle.categories.length > 0) {
+            console.log(`   🏷️  Categories: ${riddle.categories.join(', ')}`);
           }
           console.log('');
         });
@@ -143,19 +140,16 @@ export function viewCommand(program: Command): void {
 
         console.log('\n📝 Riddle Details:\n');
         console.log(`ID: ${riddle.id}`);
-        console.log(`Question: ${riddle.question}`);
-        if (riddle.answer) {
-          console.log(`Answer: ${riddle.answer}`);
+        console.log(`Text: ${riddle.text}`);
+        if (riddle.solution) {
+          console.log(`Solution: ${riddle.solution}`);
         }
         console.log(`Source: ${riddle.source.book}`);
-        if (riddle.category) {
-          console.log(`Category: ${riddle.category}`);
-        }
         if (riddle.difficulty) {
           console.log(`Difficulty: ${riddle.difficulty}`);
         }
-        if (riddle.tags && riddle.tags.length > 0) {
-          console.log(`Tags: ${riddle.tags.join(', ')}`);
+        if (riddle.categories && riddle.categories.length > 0) {
+          console.log(`Categories: ${riddle.categories.join(', ')}`);
         }
         console.log('');
       } catch (error) {
@@ -180,22 +174,22 @@ export function statsCommand(program: Command): void {
 
         console.log('\n📊 Riddle Collection Statistics:\n');
         console.log(`Total Riddles: ${stats.total}`);
-        console.log(`With Answers: ${stats.withAnswers} (${Math.round((stats.withAnswers / stats.total) * 100)}%)`);
+        console.log(`With Solutions: ${stats.withSolutions} (${Math.round((stats.withSolutions / stats.total) * 100)}%)`);
         
         console.log('\n📚 By Source:');
         Object.entries(stats.bySource)
-          .sort(([, a], [, b]) => b - a)
+          .sort(([, a], [, b]) => (b as number) - (a as number))
           .forEach(([source, count]) => {
             console.log(`  • ${source}: ${count}`);
           });
 
-        if (Object.keys(stats.byTag).length > 0) {
-          console.log('\n🏷️  By Tag:');
-          Object.entries(stats.byTag)
-            .sort(([, a], [, b]) => b - a)
+        if (Object.keys(stats.byCategory).length > 0) {
+          console.log('\n🏷️  By Category:');
+          Object.entries(stats.byCategory)
+            .sort(([, a], [, b]) => (b as number) - (a as number))
             .slice(0, 10)
-            .forEach(([tag, count]) => {
-              console.log(`  • ${tag}: ${count}`);
+            .forEach(([cat, count]) => {
+              console.log(`  • ${cat}: ${count}`);
             });
         }
 
@@ -255,9 +249,9 @@ export function interactiveCommand(program: Command): void {
 
             result.results.forEach((searchResult, index) => {
               const { riddle } = searchResult;
-              console.log(`${index + 1}. ${riddle.question}`);
-              if (riddle.answer) {
-                console.log(`   💡 Answer: ${riddle.answer}`);
+              console.log(`${index + 1}. ${riddle.text}`);
+              if (riddle.solution) {
+                console.log(`   💡 Solution: ${riddle.solution}`);
               }
               console.log(`   📚 Source: ${riddle.source.book}`);
               console.log('');
@@ -306,26 +300,26 @@ export function sourcesCommand(program: Command): void {
 }
 
 /**
- * Tags command - list all available tags
+ * Categories command - list all available categories
  */
-export function tagsCommand(program: Command): void {
+export function categoriesCommand(program: Command): void {
   program
-    .command('tags')
-    .description('List all available tags')
+    .command('categories')
+    .description('List all available categories')
     .action(() => {
       try {
         const riddles = storage.loadRiddles('riddles-all.json');
         const searchEngine = new SearchEngine(riddles);
-        const tags = searchEngine.getTags();
+        const categories = searchEngine.getCategories();
 
-        console.log('\n🏷️  Available Tags:\n');
-        tags.sort().forEach((tag, index) => {
-          const count = riddles.filter((r) => r.tags?.includes(tag)).length;
-          console.log(`${index + 1}. ${tag} (${count} riddles)`);
+        console.log('\n🏷️  Available Categories:\n');
+        categories.sort().forEach((cat, index) => {
+          const count = riddles.filter((r) => r.categories?.includes(cat)).length;
+          console.log(`${index + 1}. ${cat} (${count} riddles)`);
         });
         console.log('');
       } catch (error) {
-        console.error('❌ Error listing tags:', (error as Error).message);
+        console.error('❌ Error listing categories:', (error as Error).message);
         process.exit(1);
       }
     });

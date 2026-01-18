@@ -4,6 +4,7 @@
 
 import { JsonStorage } from '../src/storage/json-storage';
 import { Riddle } from '../src/types/riddle';
+import * as path from 'path';
 
 const storage = new JsonStorage();
 
@@ -128,15 +129,71 @@ const sampleRiddles: Riddle[] = [
     difficulty: 'easy',
     source: { book: 'Classic Riddles' },
   },
+  {
+    id: 'riddle-014',
+    text: 'I have branches, but no fruit, trunk or leaves. What am I?',
+    solution: 'A bank',
+    categories: ['wordplay', 'everyday'],
+    difficulty: 'easy',
+    source: { book: 'Sample Riddles Collection' },
+  },
+  {
+    id: 'riddle-015',
+    text: 'What has to be broken before you can use it?',
+    solution: 'An egg',
+    categories: ['wordplay', 'everyday'],
+    difficulty: 'easy',
+    source: { book: 'Classic Riddles' },
+  },
+  {
+    id: 'riddle-016',
+    text: 'I\'m tall when I\'m young, and I\'m short when I\'m old. What am I?',
+    solution: 'A candle',
+    categories: ['wordplay', 'everyday'],
+    difficulty: 'easy',
+    source: { book: 'Sample Riddles Collection' },
+  },
+  {
+    id: 'riddle-017',
+    text: 'What bulan has 28 days?',
+    solution: 'All of them',
+    categories: ['tricky', 'logic'],
+    difficulty: 'medium',
+    source: { book: 'Sample Riddles Collection' },
+  },
+  {
+    id: 'riddle-018',
+    text: 'What is full of holes but still holds water?',
+    solution: 'A sponge',
+    categories: ['wordplay', 'everyday'],
+    difficulty: 'easy',
+    source: { book: 'Classic Riddles' },
+  },
+  {
+    id: 'riddle-019',
+    text: 'What question can you never answer yes to?',
+    solution: 'Are you asleep yet?',
+    categories: ['tricky', 'logic'],
+    difficulty: 'medium',
+    source: { book: 'Sample Riddles Collection' },
+  },
 ];
 
 // Generate the sample data
 console.log('🎲 Generating sample riddles...\n');
+
+// Save to backend data directory
 storage.saveRiddles(sampleRiddles, 'riddles-all.json');
 storage.saveRiddlesBySource(sampleRiddles);
 
+// Save to frontend public data directory
+const frontendDataDir = path.join(__dirname, '../public/data');
+const frontendStorage = new JsonStorage(frontendDataDir);
+frontendStorage.saveRiddles(sampleRiddles, 'riddles-all.json');
+frontendStorage.saveRiddlesBySource(sampleRiddles);
+
 console.log('\n✅ Sample data generated successfully!');
-console.log(`   Created riddles-all.json with ${sampleRiddles.length} riddles`);
+console.log(`   Created riddles-all.json with ${sampleRiddles.length} riddles in both data/ and public/data/`);
 console.log(`   Created ${new Set(sampleRiddles.map(r => r.source.book)).size} source-specific files`);
 console.log('\n💡 You can now test the CLI with:');
 console.log('   npm run cli stats');
