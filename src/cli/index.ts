@@ -12,7 +12,7 @@ import {
   statsCommand,
   interactiveCommand,
   sourcesCommand,
-  tagsCommand,
+  categoriesCommand,
 } from './commands';
 
 const program = new Command();
@@ -29,7 +29,7 @@ viewCommand(program);
 statsCommand(program);
 interactiveCommand(program);
 sourcesCommand(program);
-tagsCommand(program);
+categoriesCommand(program);
 
 // Parse command-line arguments
 program.parse(process.argv);

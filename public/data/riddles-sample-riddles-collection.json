@@ -1,18 +1,19 @@
 {
   "metadata": {
-    "totalRiddles": 11,
+    "totalRiddles": 7,
     "sources": [
       "Sample Riddles Collection"
     ],
-    "generatedAt": "2026-01-18T18:13:34.059Z",
+    "generatedAt": "2026-01-18T18:21:18.213Z",
     "version": "1.0.0"
   },
   "riddles": [
     {
       "id": "riddle-001",
-      "text": "What has keys but no locks, space but no room, and you can enter but not go inside?",
-      "solution": "A keyboard",
-      "categories": [
+      "question": "What has keys but no locks, space but no room, and you can enter but not go inside?",
+      "answer": "A keyboard",
+      "category": "wordplay",
+      "tags": [
         "wordplay",
         "everyday",
         "technology"
@@ -23,9 +24,10 @@
     },
     {
       "id": "riddle-003",
-      "text": "What has a head and a tail but no body?",
-      "solution": "A coin",
-      "categories": [
+      "question": "What has a head and a tail but no body?",
+      "answer": "A coin",
+      "category": "wordplay",
+      "tags": [
         "wordplay",
         "everyday"
       ],
@@ -36,9 +38,10 @@
     },
     {
       "id": "riddle-005",
-      "text": "What can travel around the world while staying in a corner?",
-      "solution": "A stamp",
-      "categories": [
+      "question": "What can travel around the world while staying in a corner?",
+      "answer": "A stamp",
+      "category": "wordplay",
+      "tags": [
         "wordplay",
         "everyday"
       ],
@@ -49,9 +52,10 @@
     },
     {
       "id": "riddle-007",
-      "text": "If you have me, you want to share me. If you share me, you haven't got me. What am I?",
-      "solution": "A secret",
-      "categories": [
+      "question": "If you have me, you want to share me. If you share me, you haven't got me. What am I?",
+      "answer": "A secret",
+      "category": "logic",
+      "tags": [
         "logic",
         "tricky"
       ],
@@ -62,91 +66,42 @@
     },
     {
       "id": "riddle-009",
-      "text": "What begins with T, ends with T, and has T in it?",
-      "solution": "A teapot",
-      "categories": [
+      "question": "What begins with T, ends with T, and has T in it?",
+      "answer": "A teapot",
+      "category": "wordplay",
+      "tags": [
         "wordplay",
         "tricky"
       ],
       "difficulty": "medium",
-      "source": {
-        "book": "Sample Riddles Collection"
-      }
-    },
-    {
-      "id": "riddle-010",
-      "text": "What has one eye but cannot see?",
-      "solution": "A needle",
-      "categories": [
-        "wordplay",
-        "everyday"
-      ],
-      "difficulty": "easy",
       "source": {
         "book": "Sample Riddles Collection"
       }
     },
     {
       "id": "riddle-012",
-      "text": "I have cities but no houses, forests but no trees, and water but no fish. What am I?",
-      "solution": "A map",
-      "categories": [
-        "logic",
-        "tricky"
+      "question": "What has one eye but cannot see?",
+      "answer": "A needle",
+      "category": "wordplay",
+      "tags": [
+        "wordplay",
+        "everyday"
       ],
-      "difficulty": "hard",
+      "difficulty": "easy",
       "source": {
         "book": "Sample Riddles Collection"
       }
     },
     {
       "id": "riddle-014",
-      "text": "I have branches, but no fruit, trunk or leaves. What am I?",
-      "solution": "A bank",
-      "categories": [
-        "wordplay",
-        "everyday"
+      "question": "I have cities but no houses, forests but no trees, and water but no fish. What am I?",
+      "answer": "A map",
+      "category": "logic",
+      "tags": [
+        "logic",
+        "tricky"
       ],
-      "difficulty": "easy",
-      "source": {
-        "book": "Sample Riddles Collection"
-      }
-    },
-    {
-      "id": "riddle-016",
-      "text": "I'm tall when I'm young, and I'm short when I'm old. What am I?",
-      "solution": "A candle",
-      "categories": [
-        "wordplay",
-        "everyday"
-      ],
-      "difficulty": "easy",
-      "source": {
-        "book": "Sample Riddles Collection"
-      }
-    },
-    {
-      "id": "riddle-017",
-      "text": "What bulan has 28 days?",
-      "solution": "All of them",
-      "categories": [
-        "tricky",
-        "logic"
-      ],
-      "difficulty": "medium",
-      "source": {
-        "book": "Sample Riddles Collection"
-      }
-    },
-    {
-      "id": "riddle-019",
-      "text": "What question can you never answer yes to?",
-      "solution": "Are you asleep yet?",
-      "categories": [
-        "tricky",
-        "logic"
-      ],
-      "difficulty": "medium",
+      "difficulty": "hard",
       "source": {
         "book": "Sample Riddles Collection"
       }

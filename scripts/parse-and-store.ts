@@ -122,21 +122,21 @@ async function main() {
       console.log(`    - ${source}: ${count}`);
     }
 
-    // Show breakdown by tags
-    const byTag = new Map<string, number>();
+    // Show breakdown by categories
+    const byCategory = new Map<string, number>();
     for (const riddle of allRiddles) {
-      if (riddle.tags) {
-        for (const tag of riddle.tags) {
-          const count = byTag.get(tag) || 0;
-          byTag.set(tag, count + 1);
+      if (riddle.categories) {
+        for (const category of riddle.categories) {
+          const count = byCategory.get(category) || 0;
+          byCategory.set(category, count + 1);
         }
       }
     }
 
     console.log('\n  Riddles by category:');
-    const sortedTags = [...byTag.entries()].sort((a, b) => b[1] - a[1]);
-    for (const [tag, count] of sortedTags.slice(0, 10)) {
-      console.log(`    - ${tag}: ${count}`);
+    const sortedCategories = [...byCategory.entries()].sort((a, b) => b[1] - a[1]);
+    for (const [category, count] of sortedCategories.slice(0, 10)) {
+      console.log(`    - ${category}: ${count}`);
     }
   } else {
     console.log('No riddles were parsed. Please check the input files.');
