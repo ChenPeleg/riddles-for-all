@@ -4,11 +4,12 @@
 
 export interface Riddle {
   id: string;
-  question: string;
-  answer?: string;
-  category?: string;
+  text: string;
+  clue?: string;
+  image?: string;
+  solution?: string;
+  categories: string[];
   difficulty?: 'easy' | 'medium' | 'hard';
-  tags?: string[];
   source: {
     book: string;
     page?: number;

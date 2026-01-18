@@ -4,6 +4,7 @@
 
 import { JsonStorage } from '../src/storage/json-storage';
 import { Riddle } from '../src/types/riddle';
+import * as path from 'path';
 
 const storage = new JsonStorage();
 
@@ -11,147 +12,188 @@ const storage = new JsonStorage();
 const sampleRiddles: Riddle[] = [
   {
     id: 'riddle-001',
-    question: 'What has keys but no locks, space but no room, and you can enter but not go inside?',
-    answer: 'A keyboard',
-    category: 'wordplay',
-    tags: ['wordplay', 'everyday', 'technology'],
+    text: 'What has keys but no locks, space but no room, and you can enter but not go inside?',
+    solution: 'A keyboard',
+    categories: ['wordplay', 'everyday', 'technology'],
     source: { book: 'Sample Riddles Collection' },
   },
   {
     id: 'riddle-002',
-    question: 'What comes once in a minute, twice in a moment, but never in a thousand years?',
-    answer: 'The letter M',
-    category: 'wordplay',
-    tags: ['wordplay', 'tricky'],
+    text: 'What comes once in a minute, twice in a moment, but never in a thousand years?',
+    solution: 'The letter M',
+    categories: ['wordplay', 'tricky'],
     difficulty: 'medium',
     source: { book: 'Classic Riddles' },
   },
   {
     id: 'riddle-003',
-    question: 'What has a head and a tail but no body?',
-    answer: 'A coin',
-    category: 'wordplay',
-    tags: ['wordplay', 'everyday'],
+    text: 'What has a head and a tail but no body?',
+    solution: 'A coin',
+    categories: ['wordplay', 'everyday'],
     difficulty: 'easy',
     source: { book: 'Sample Riddles Collection' },
   },
   {
     id: 'riddle-004',
-    question: 'I am not alive, but I grow; I don\'t have lungs, but I need air; I don\'t have a mouth, but water kills me. What am I?',
-    answer: 'Fire',
-    category: 'logic',
-    tags: ['logic', 'nature'],
+    text: 'I am not alive, but I grow; I don\'t have lungs, but I need air; I don\'t have a mouth, but water kills me. What am I?',
+    solution: 'Fire',
+    categories: ['logic', 'nature'],
     difficulty: 'medium',
     source: { book: 'Classic Riddles' },
   },
   {
     id: 'riddle-005',
-    question: 'What can travel around the world while staying in a corner?',
-    answer: 'A stamp',
-    category: 'wordplay',
-    tags: ['wordplay', 'everyday'],
+    text: 'What can travel around the world while staying in a corner?',
+    solution: 'A stamp',
+    categories: ['wordplay', 'everyday'],
     difficulty: 'easy',
     source: { book: 'Sample Riddles Collection' },
   },
   {
     id: 'riddle-006',
-    question: 'What gets wetter the more it dries?',
-    answer: 'A towel',
-    category: 'wordplay',
-    tags: ['wordplay', 'everyday'],
+    text: 'What gets wetter the more it dries?',
+    solution: 'A towel',
+    categories: ['wordplay', 'everyday'],
     difficulty: 'easy',
     source: { book: 'Classic Riddles' },
   },
   {
     id: 'riddle-007',
-    question: 'If you have me, you want to share me. If you share me, you haven\'t got me. What am I?',
-    answer: 'A secret',
-    category: 'logic',
-    tags: ['logic', 'tricky'],
+    text: 'If you have me, you want to share me. If you share me, you haven\'t got me. What am I?',
+    solution: 'A secret',
+    categories: ['logic', 'tricky'],
     difficulty: 'medium',
     source: { book: 'Sample Riddles Collection' },
   },
   {
     id: 'riddle-008',
-    question: 'What has many teeth but cannot bite?',
-    answer: 'A comb',
-    category: 'wordplay',
-    tags: ['wordplay', 'everyday'],
+    text: 'What has many teeth but cannot bite?',
+    solution: 'A comb',
+    categories: ['wordplay', 'everyday'],
     difficulty: 'easy',
     source: { book: 'Classic Riddles' },
   },
   {
     id: 'riddle-009',
-    question: 'What begins with T, ends with T, and has T in it?',
-    answer: 'A teapot',
-    category: 'wordplay',
-    tags: ['wordplay', 'tricky'],
+    text: 'What begins with T, ends with T, and has T in it?',
+    solution: 'A teapot',
+    categories: ['wordplay', 'tricky'],
     difficulty: 'medium',
     source: { book: 'Sample Riddles Collection' },
   },
   {
     id: 'riddle-010',
-    question: 'The more you take, the more you leave behind. What are they?',
-    answer: 'Footsteps',
-    category: 'logic',
-    tags: ['logic', 'everyday'],
+    text: 'The more you take, the more you leave behind. What are they?',
+    solution: 'Footsteps',
+    categories: ['logic', 'everyday'],
     difficulty: 'medium',
     source: { book: 'Classic Riddles' },
   },
   {
     id: 'riddle-011',
-    question: 'What can run but never walks, has a mouth but never talks, has a head but never weeps, has a bed but never sleeps?',
-    answer: 'A river',
-    category: 'nature',
-    tags: ['wordplay', 'nature'],
+    text: 'What can run but never walks, has a mouth but never talks, has a head but never weeps, has a bed but never sleeps?',
+    solution: 'A river',
+    categories: ['wordplay', 'nature'],
     difficulty: 'hard',
     source: { book: 'Nature Riddles' },
   },
   {
-    id: 'riddle-012',
-    question: 'What has one eye but cannot see?',
-    answer: 'A needle',
-    category: 'wordplay',
-    tags: ['wordplay', 'everyday'],
+    id: 'riddle-010',
+    text: 'What has one eye but cannot see?',
+    solution: 'A needle',
+    categories: ['wordplay', 'everyday'],
     difficulty: 'easy',
     source: { book: 'Sample Riddles Collection' },
   },
   {
+    id: 'riddle-011',
+    text: 'What can you catch but not throw?',
+    solution: 'A cold',
+    categories: ['wordplay', 'tricky'],
+    difficulty: 'easy',
+    source: { book: 'Classic Riddles' },
+  },
+  {
+    id: 'riddle-012',
+    text: 'I have cities but no houses, forests but no trees, and water but no fish. What am I?',
+    solution: 'A map',
+    categories: ['logic', 'tricky'],
+    difficulty: 'hard',
+    source: { book: 'Sample Riddles Collection' },
+  },
+  {
     id: 'riddle-013',
-    question: 'What can you catch but not throw?',
-    answer: 'A cold',
-    category: 'wordplay',
-    tags: ['wordplay', 'tricky'],
+    text: 'What goes up but never comes down?',
+    solution: 'Your age',
+    categories: ['logic', 'everyday'],
     difficulty: 'easy',
     source: { book: 'Classic Riddles' },
   },
   {
     id: 'riddle-014',
-    question: 'I have cities but no houses, forests but no trees, and water but no fish. What am I?',
-    answer: 'A map',
-    category: 'logic',
-    tags: ['logic', 'tricky'],
-    difficulty: 'hard',
+    text: 'I have branches, but no fruit, trunk or leaves. What am I?',
+    solution: 'A bank',
+    categories: ['wordplay', 'everyday'],
+    difficulty: 'easy',
     source: { book: 'Sample Riddles Collection' },
   },
   {
     id: 'riddle-015',
-    question: 'What goes up but never comes down?',
-    answer: 'Your age',
-    category: 'logic',
-    tags: ['logic', 'everyday'],
+    text: 'What has to be broken before you can use it?',
+    solution: 'An egg',
+    categories: ['wordplay', 'everyday'],
     difficulty: 'easy',
     source: { book: 'Classic Riddles' },
+  },
+  {
+    id: 'riddle-016',
+    text: 'I\'m tall when I\'m young, and I\'m short when I\'m old. What am I?',
+    solution: 'A candle',
+    categories: ['wordplay', 'everyday'],
+    difficulty: 'easy',
+    source: { book: 'Sample Riddles Collection' },
+  },
+  {
+    id: 'riddle-017',
+    text: 'What bulan has 28 days?',
+    solution: 'All of them',
+    categories: ['tricky', 'logic'],
+    difficulty: 'medium',
+    source: { book: 'Sample Riddles Collection' },
+  },
+  {
+    id: 'riddle-018',
+    text: 'What is full of holes but still holds water?',
+    solution: 'A sponge',
+    categories: ['wordplay', 'everyday'],
+    difficulty: 'easy',
+    source: { book: 'Classic Riddles' },
+  },
+  {
+    id: 'riddle-019',
+    text: 'What question can you never answer yes to?',
+    solution: 'Are you asleep yet?',
+    categories: ['tricky', 'logic'],
+    difficulty: 'medium',
+    source: { book: 'Sample Riddles Collection' },
   },
 ];
 
 // Generate the sample data
 console.log('🎲 Generating sample riddles...\n');
+
+// Save to backend data directory
 storage.saveRiddles(sampleRiddles, 'riddles-all.json');
 storage.saveRiddlesBySource(sampleRiddles);
 
+// Save to frontend public data directory
+const frontendDataDir = path.join(__dirname, '../public/data');
+const frontendStorage = new JsonStorage(frontendDataDir);
+frontendStorage.saveRiddles(sampleRiddles, 'riddles-all.json');
+frontendStorage.saveRiddlesBySource(sampleRiddles);
+
 console.log('\n✅ Sample data generated successfully!');
-console.log(`   Created riddles-all.json with ${sampleRiddles.length} riddles`);
+console.log(`   Created riddles-all.json with ${sampleRiddles.length} riddles in both data/ and public/data/`);
 console.log(`   Created ${new Set(sampleRiddles.map(r => r.source.book)).size} source-specific files`);
 console.log('\n💡 You can now test the CLI with:');
 console.log('   npm run cli stats');

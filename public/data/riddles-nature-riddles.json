@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "totalRiddles": 1,
+    "sources": [
+      "Nature Riddles"
+    ],
+    "generatedAt": "2026-01-18T18:13:34.060Z",
+    "version": "1.0.0"
+  },
+  "riddles": [
+    {
+      "id": "riddle-011",
+      "text": "What can run but never walks, has a mouth but never talks, has a head but never weeps, has a bed but never sleeps?",
+      "solution": "A river",
+      "categories": [
+        "wordplay",
+        "nature"
+      ],
+      "difficulty": "hard",
+      "source": {
+        "book": "Nature Riddles"
+      }
+    }
+  ]
+}
