@@ -4,9 +4,9 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { RiddleParser } from '../parsers';
-import { JsonStorage } from '../storage';
-import { Riddle } from '../types/riddle';
+import { RiddleParser } from '../parsers/index.js';
+import { JsonStorage } from '../storage/index.js';
+import { Riddle } from '../types/riddle.js';
 
 async function main() {
   console.log('=== Riddle Parsing and Storage Tool ===\n');

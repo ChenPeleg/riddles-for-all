@@ -2,7 +2,7 @@
  * Interface for text extractors
  */
 
-import { ExtractionResult } from './riddle';
+import { ExtractionResult } from './riddle.js';
 
 export interface IExtractor {
   /**

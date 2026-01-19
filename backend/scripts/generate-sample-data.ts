@@ -2,8 +2,8 @@
  * Script to generate sample riddles for testing
  */
 
-import { JsonStorage } from '../storage/json-storage';
-import { Riddle } from '../types/riddle';
+import { JsonStorage } from '../storage/json-storage.js';
+import { Riddle } from '../types/riddle.js';
 import * as path from 'path';
 
 const storage = new JsonStorage();

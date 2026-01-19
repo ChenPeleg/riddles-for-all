@@ -2,7 +2,7 @@
  * Riddle parser to extract riddles from extracted text
  */
 
-import { Riddle } from '../types/riddle';
+import { Riddle } from '../types/riddle.js';
 import * as crypto from 'crypto';
 
 export interface ParserResult {

@@ -4,11 +4,11 @@
  */
 
 import * as path from 'path';
-import { IExtractor } from '../types/extractor';
-import { ExtractionResult } from '../types/riddle';
-import { EpubExtractor } from './epub-extractor';
-import { PdfExtractor } from './pdf-extractor';
-import { MobiExtractor } from './mobi-extractor';
+import { IExtractor } from '../types/extractor.js';
+import { ExtractionResult } from '../types/riddle.js';
+import { EpubExtractor } from './epub-extractor.js';
+import { PdfExtractor } from './pdf-extractor.js';
+import { MobiExtractor } from './mobi-extractor.js';
 
 export class ExtractorService {
   private epubExtractor: EpubExtractor;
