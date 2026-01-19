@@ -24,7 +24,7 @@ export interface RiddleCollection {
 export class JsonStorage {
   private dataDir: string;
 
-  constructor(dataDir: string = path.join(__dirname, '../../data/json')) {
+  constructor(dataDir: string = path.join(__dirname, '../../data/02-json')) {
     this.dataDir = dataDir;
   }
 

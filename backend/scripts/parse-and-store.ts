@@ -15,9 +15,9 @@ const __dirname = path.dirname(__filename);
 async function main() {
   console.log('=== Riddle Parsing and Storage Tool ===\n');
 
-  const dataDir = path.join(__dirname, '../data');
-  const rawDir = path.join(dataDir, 'raw');
-  const jsonDir = path.join(dataDir, 'json');
+  const dataDir = path.join(__dirname, '../../data');
+  const rawDir = path.join(dataDir, '01-raw');
+  const jsonDir = path.join(dataDir, '02-json');
 
   // Check if raw directory exists
   if (!fs.existsSync(rawDir)) {
@@ -31,7 +31,7 @@ async function main() {
     .map(name => path.join(rawDir, name));
 
   if (bookDirs.length === 0) {
-    console.log('No book directories found in data/raw. Please run extraction first.');
+    console.log('No book directories found in data/01-raw. Please run extraction first.');
     return;
   }
 
