@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
+import riddlesData from '../data/riddles-all.json';
 
 export interface Riddle {
   id: string;
@@ -22,28 +23,10 @@ interface RiddleContextType {
 const RiddleContext = createContext<RiddleContextType | undefined>(undefined);
 
 export function RiddleProvider({ children }: { children: ReactNode }) {
-  const [riddles, setRiddles] = useState<Riddle[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    fetch('riddles-all.json')
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error('Failed to fetch riddles');
-        }
-        return res.json();
-      })
-      .then((data) => {
-        setRiddles(data.riddles || []);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error('Error fetching riddles:', err);
-        setError(err.message);
-        setLoading(false);
-      });
-  }, []);
+  // Use the imported data directly
+  const [riddles] = useState<Riddle[]>(riddlesData.riddles as Riddle[]);
+  const [loading] = useState(false);
+  const [error] = useState<string | null>(null);
 
   return (
     <RiddleContext.Provider value={{ riddles, loading, error }}>

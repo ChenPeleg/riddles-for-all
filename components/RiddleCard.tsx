@@ -17,43 +17,61 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
   const [showSolution, setShowSolution] = useState(false);
 
   return (
-    <div className="border border-gray-100 rounded-2xl p-6 my-4 bg-white shadow-md hover:shadow-lg transition-all duration-200">
-      <div className="flex justify-between items-start mb-4">
+    <div className="card-hover border border-surface-200 rounded-3xl p-8 mb-6 bg-white shadow-sm animate-fade-in">
+      <div className="flex justify-between items-center mb-6">
         <div className="flex flex-wrap gap-2">
           {riddle.categories.map(cat => (
-            <span key={cat} className="text-xs px-3 py-1 bg-gray-100 rounded-full text-gray-600 font-medium">
+            <span key={cat} className="text-[10px] px-2.5 py-1 bg-surface-100 rounded-lg text-surface-800 font-bold uppercase tracking-widest">
               {cat}
             </span>
           ))}
         </div>
-        <span className={`text-xs font-bold uppercase tracking-wider ${
-          riddle.difficulty === 'hard' ? 'text-red-500' : 
-          riddle.difficulty === 'medium' ? 'text-orange-500' : 'text-green-500'
-        }`}>
-          {riddle.difficulty || 'easy'}
-        </span>
+        <div className="flex items-center gap-2">
+           <div className={`w-2 h-2 rounded-full ${
+            riddle.difficulty === 'hard' ? 'bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.5)]' : 
+            riddle.difficulty === 'medium' ? 'bg-orange-500 shadow-[0_0_8px_rgba(249,115,22,0.5)]' : 'bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]'
+          }`}></div>
+          <span className={`text-[10px] font-black uppercase tracking-widest ${
+            riddle.difficulty === 'hard' ? 'text-red-500' : 
+            riddle.difficulty === 'medium' ? 'text-orange-500' : 'text-emerald-500'
+          }`}>
+            {riddle.difficulty || 'easy'}
+          </span>
+        </div>
       </div>
 
-      <p className="text-lg leading-relaxed mb-6 text-gray-800">
+      <h3 className="text-xl md:text-2xl font-medium leading-relaxed mb-8 text-surface-900 tracking-tight">
         {riddle.text}
-      </p>
+      </h3>
 
-      {showSolution ? (
-        <div className="p-4 bg-blue-50 rounded-xl border-l-4 border-blue-500 mt-4 animate-in fade-in slide-in-from-top-2 duration-300">
-          <p className="font-bold text-blue-700 mb-2">Solution:</p>
-          <p className="text-gray-900 text-lg leading-relaxed">{riddle.solution || 'No solution provided.'}</p>
+      <div className="relative">
+        {!showSolution ? (
+          <button 
+            onClick={() => setShowSolution(true)}
+            className="group relative w-full inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-brand-primary rounded-2xl shadow-md"
+          >
+            <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-brand-primary group-hover:translate-x-0 ease">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+            </span>
+            <span className="absolute flex items-center justify-center w-full h-full text-brand-primary transition-all duration-300 transform group-hover:translate-x-full ease">Reveal Solution</span>
+            <span className="relative invisible">Reveal Solution</span>
+          </button>
+        ) : (
+          <div className="p-6 bg-brand-primary/5 rounded-2xl border-2 border-brand-primary/20 mt-4 animate-fade-in">
+            <div className="flex items-center gap-2 mb-3">
+              <svg className="w-5 h-5 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+              <p className="font-bold text-brand-primary uppercase tracking-widest text-[10px]">The Solution</p>
+            </div>
+            <p className="text-surface-900 text-lg md:text-xl font-medium leading-relaxed">{riddle.solution || 'No solution provided.'}</p>
+          </div>
+        )}
+      </div>
+
+      <div className="mt-8 pt-6 border-t border-surface-100 flex items-center justify-between">
+        <div className="text-[10px] text-surface-400 font-bold uppercase tracking-widest flex items-center gap-1.5">
+          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+          {riddle.source.book}
         </div>
-      ) : (
-        <button 
-          onClick={() => setShowSolution(true)}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-semibold shadow-md shadow-blue-600/20 transition-all active:scale-95"
-        >
-          Reveal Solution
-        </button>
-      )}
-
-      <div className="mt-6 pt-4 border-t border-gray-50 text-xs text-gray-400 font-medium italic">
-        Source: {riddle.source.book}
       </div>
     </div>
   );
