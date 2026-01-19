@@ -4,8 +4,8 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { JsonStorage } from '../src/storage/json-storage';
-import { Riddle } from '../src/types/riddle';
+import { JsonStorage } from '../backend/storage/json-storage';
+import { Riddle } from '../backend/types/riddle';
 
 async function main() {
   console.log('=== Riddle Merging Tool ===\n');

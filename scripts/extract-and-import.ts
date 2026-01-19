@@ -5,7 +5,7 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { ExtractorService } from '../src/extractors';
+import { ExtractorService } from '../backend/extractors';
 
 async function main() {
   console.log('=== Riddle Text Extraction Tool ===\n');
