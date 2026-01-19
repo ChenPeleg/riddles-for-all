@@ -20,6 +20,8 @@
     "types": ["node"]
   },
   "include": [
-    "backend/**/*", "scripts/**/*"],
+    "backend/**/*",
+    "backend/scripts/**/*"
+  ],
   "exclude": ["node_modules", "dist"]
 }

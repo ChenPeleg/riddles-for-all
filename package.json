@@ -9,9 +9,9 @@
     "backend:build": "tsc",
     "backend:dev": "ts-node backend/index.ts",
     "backend:watch": "nodemon --exec ts-node backend/index.ts",
-    "backend:extract": "ts-node scripts/extract-and-import.ts",
-    "backend:parse": "ts-node scripts/parse-and-store.ts",
-    "backend:sample": "ts-node scripts/generate-sample-data.ts",
+    "backend:extract": "ts-node backend/scripts/extract-and-import.ts",
+    "backend:parse": "ts-node backend/scripts/parse-and-store.ts",
+    "backend:sample": "ts-node backend/scripts/generate-sample-data.ts",
     "cli": "ts-node backend/cli/index.ts",
     "search": "npm run cli search",
     "riddles": "npm run cli"
