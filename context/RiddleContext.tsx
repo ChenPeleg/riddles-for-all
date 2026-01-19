@@ -27,7 +27,7 @@ export function RiddleProvider({ children }: { children: ReactNode }) {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('/riddles/data/riddles-all.json')
+    fetch('riddles-all.json')
       .then((res) => {
         if (!res.ok) {
           throw new Error('Failed to fetch riddles');
