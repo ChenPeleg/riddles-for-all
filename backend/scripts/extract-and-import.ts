@@ -14,8 +14,8 @@ const __dirname = path.dirname(__filename);
 async function main() {
   console.log('=== Riddle Text Extraction Tool ===\n');
 
-  const resourcesDir = path.join(__dirname, '../resources');
-  const dataDir = path.join(__dirname, '../data');
+  const resourcesDir = path.join(__dirname, '../../resources');
+  const dataDir = path.join(__dirname, '../../data');
 
   // Ensure data directory exists
   if (!fs.existsSync(dataDir)) {
@@ -111,10 +111,6 @@ async function main() {
       fs.writeFileSync(path.join(rawDir, 'raw.txt'), result.text || '', 'utf-8');
       fs.writeFileSync(path.join(rawDir, 'metadata.json'), JSON.stringify(meta, null, 2), 'utf-8');
 
-      // Also keep compatibility with previous behavior by writing data/<book-id>.txt
-      const outputFileName = `${result.book.id}.txt`;
-      fs.writeFileSync(path.join(dataDir, outputFileName), result.text || '', 'utf-8');
-
       if (result.error) {
         console.log(`  ❌ Error: ${result.error}`);
       } else {
@@ -127,7 +123,6 @@ async function main() {
         console.log(`  Preview: ${preview}...`);
         console.log(`  ✓ Saved raw: ${path.join('data', 'raw', rawDirName, 'raw.txt')}`);
         console.log(`  ✓ Saved metadata: ${path.join('data', 'raw', rawDirName, 'metadata.json')}`);
-        console.log(`  ✓ Saved to: data/${outputFileName}`);
       }
     } catch (error) {
       console.log(`  ❌ Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
