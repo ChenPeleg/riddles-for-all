@@ -4,9 +4,13 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
 import { RiddleParser } from '../parsers/index.js';
 import { JsonStorage } from '../storage/index.js';
 import { Riddle } from '../types/riddle.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 async function main() {
   console.log('=== Riddle Parsing and Storage Tool ===\n');

@@ -4,8 +4,12 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { JsonStorage } from '../storage/json-storage';
-import { Riddle } from '../types/riddle';
+import { fileURLToPath } from 'url';
+import { JsonStorage } from '../storage/json-storage.js';
+import { Riddle } from '../types/riddle.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 async function main() {
   console.log('=== Riddle Merging Tool ===\n');

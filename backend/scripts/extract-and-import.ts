@@ -5,7 +5,11 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
 import { ExtractorService } from '../extractors/index.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 async function main() {
   console.log('=== Riddle Text Extraction Tool ===\n');
