@@ -19,6 +19,9 @@
     "noFallthroughCasesInSwitch": true,
     "types": ["node"]
   },
-  "include": ["src/**/*", "scripts/**/*"],
+  "include": [
+    "backend/**/*",
+    "backend/scripts/**/*"
+  ],
   "exclude": ["node_modules", "dist"]
 }
