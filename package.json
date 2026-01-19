@@ -1,6 +1,7 @@
 {
   "name": "riddles",
   "version": "1.0.0",
+  "type": "module",
   "description": "A TypeScript-based riddle management system for extracting and searching riddles from various book formats",
   "scripts": {
     "dev": "vite",
@@ -31,6 +32,7 @@
     "react-router-dom": "^6.22.0"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.1.18",
     "@types/jszip": "^3.4.0",
     "@types/node": "^20.0.0",
     "@types/pdf-parse": "^1.1.5",
@@ -42,8 +44,9 @@
     "jszip": "^3.10.1",
     "nodemon": "^3.0.0",
     "pdf-parse": "^1.1.1",
-    "ts-node": "^10.9.0",
+    "tailwindcss": "^4.1.18",
+    "ts-node": "^1.7.1",
     "typescript": "^5.0.0",
-    "vite": "^5.4.11"
+    "vite": "^7.3.1"
   }
 }

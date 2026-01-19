@@ -17,77 +17,61 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
   const [showSolution, setShowSolution] = useState(false);
 
   return (
-    <div style={{
-      border: '1px solid #ddd',
-      borderRadius: '12px',
-      padding: '1.5rem',
-      margin: '1rem 0',
-      backgroundColor: '#fff',
-      boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
-      transition: 'transform 0.2s ease',
-    }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-        <div style={{ display: 'flex', gap: '0.5rem' }}>
+    <div className="card-hover border border-surface-200 rounded-3xl p-8 mb-6 bg-white shadow-sm animate-fade-in">
+      <div className="flex justify-between items-center mb-6">
+        <div className="flex flex-wrap gap-2">
           {riddle.categories.map(cat => (
-            <span key={cat} style={{
-              fontSize: '0.75rem',
-              padding: '0.2rem 0.6rem',
-              backgroundColor: '#f0f0f0',
-              borderRadius: '12px',
-              color: '#666'
-            }}>
+            <span key={cat} className="text-[10px] px-2.5 py-1 bg-surface-100 rounded-lg text-surface-800 font-bold uppercase tracking-widest">
               {cat}
             </span>
           ))}
         </div>
-        <span style={{
-          fontSize: '0.8rem',
-          color: riddle.difficulty === 'hard' ? '#e53e3e' : 
-                 riddle.difficulty === 'medium' ? '#dd6b20' : '#38a169',
-          fontWeight: 'bold',
-          textTransform: 'uppercase'
-        }}>
-          {riddle.difficulty || 'easy'}
-        </span>
+        <div className="flex items-center gap-2">
+           <div className={`w-2 h-2 rounded-full ${
+            riddle.difficulty === 'hard' ? 'bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.5)]' : 
+            riddle.difficulty === 'medium' ? 'bg-orange-500 shadow-[0_0_8px_rgba(249,115,22,0.5)]' : 'bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]'
+          }`}></div>
+          <span className={`text-[10px] font-black uppercase tracking-widest ${
+            riddle.difficulty === 'hard' ? 'text-red-500' : 
+            riddle.difficulty === 'medium' ? 'text-orange-500' : 'text-emerald-500'
+          }`}>
+            {riddle.difficulty || 'easy'}
+          </span>
+        </div>
       </div>
 
-      <p style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '1.5rem', color: '#2d3748' }}>
+      <h3 className="text-xl md:text-2xl font-medium leading-relaxed mb-8 text-surface-900 tracking-tight">
         {riddle.text}
-      </p>
+      </h3>
 
-      {showSolution ? (
-        <div style={{
-          padding: '1rem',
-          backgroundColor: '#f7fafc',
-          borderRadius: '8px',
-          borderLeft: '4px solid #4299e1',
-          marginTop: '1rem'
-        }}>
-          <p style={{ fontWeight: 'bold', margin: '0 0 0.5rem 0', color: '#2b6cb0' }}>Solution:</p>
-          <p style={{ margin: 0, fontSize: '1.05rem' }}>{riddle.solution || 'No solution provided.'}</p>
+      <div className="relative">
+        {!showSolution ? (
+          <button 
+            onClick={() => setShowSolution(true)}
+            className="group relative w-full inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-brand-primary rounded-2xl shadow-md"
+          >
+            <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-brand-primary group-hover:translate-x-0 ease">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+            </span>
+            <span className="absolute flex items-center justify-center w-full h-full text-brand-primary transition-all duration-300 transform group-hover:translate-x-full ease">Reveal Solution</span>
+            <span className="relative invisible">Reveal Solution</span>
+          </button>
+        ) : (
+          <div className="p-6 bg-brand-primary/5 rounded-2xl border-2 border-brand-primary/20 mt-4 animate-fade-in">
+            <div className="flex items-center gap-2 mb-3">
+              <svg className="w-5 h-5 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+              <p className="font-bold text-brand-primary uppercase tracking-widest text-[10px]">The Solution</p>
+            </div>
+            <p className="text-surface-900 text-lg md:text-xl font-medium leading-relaxed">{riddle.solution || 'No solution provided.'}</p>
+          </div>
+        )}
+      </div>
+
+      <div className="mt-8 pt-6 border-t border-surface-100 flex items-center justify-between">
+        <div className="text-[10px] text-surface-400 font-bold uppercase tracking-widest flex items-center gap-1.5">
+          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+          {riddle.source.book}
         </div>
-      ) : (
-        <button 
-          onClick={() => setShowSolution(true)}
-          style={{
-            backgroundColor: '#4299e1',
-            color: 'white',
-            border: 'none',
-            padding: '0.6rem 1.2rem',
-            borderRadius: '6px',
-            cursor: 'pointer',
-            fontWeight: '600',
-            transition: 'background-color 0.2s'
-          }}
-          onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#3182ce'}
-          onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#4299e1'}
-        >
-          Reveal Solution
-        </button>
-      )}
-
-      <div style={{ marginTop: '1.5rem', fontSize: '0.8rem', color: '#a0aec0', borderTop: '1px solid #edf2f7', paddingTop: '0.8rem' }}>
-        Source: {riddle.source.book}
       </div>
     </div>
   );
