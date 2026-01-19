@@ -3,7 +3,7 @@
  * Provides full-text search, filtering, and fuzzy matching capabilities
  */
 
-import { Riddle } from '../types/riddle';
+import { Riddle } from '../types/riddle.js';
 
 export interface SearchQuery {
   keyword?: string;

@@ -13,7 +13,7 @@ import {
   interactiveCommand,
   sourcesCommand,
   categoriesCommand,
-} from './commands';
+} from './commands.js';
 
 const program = new Command();
 

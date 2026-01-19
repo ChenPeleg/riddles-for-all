@@ -5,7 +5,7 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { Riddle } from '../types/riddle';
+import { Riddle } from '../types/riddle.js';
 
 export interface RiddleCollection {
   metadata: {
