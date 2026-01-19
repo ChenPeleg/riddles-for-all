@@ -10,7 +10,7 @@ function App() {
   return (
     <RiddleProvider>
       <Router>
-        <div className="min-h-screen flex flex-col bg-gray-50">
+        <div className="min-h-screen">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/search" element={<Search />} />
