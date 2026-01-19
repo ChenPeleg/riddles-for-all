@@ -36,23 +36,16 @@ function Search() {
   );
 
   return (
-    <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
-      <h1>Search Riddles</h1>
+    <div className="p-8 max-w-3xl mx-auto">
+      <h1 className="text-3xl font-bold mb-8">Search Riddles</h1>
       
-      <div style={{ marginBottom: '2rem' }}>
+      <div className="mb-8">
         <input 
           type="text" 
           placeholder="Search by text or category..." 
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          style={{
-            width: '100%',
-            padding: '0.8rem',
-            fontSize: '1rem',
-            borderRadius: '8px',
-            border: '1px solid #cbd5e0',
-            outline: 'none'
-          }}
+          className="w-full p-4 text-lg rounded-xl border border-gray-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
         />
       </div>
 
@@ -60,12 +53,14 @@ function Search() {
         <p>Loading riddles...</p>
       ) : (
         <div>
-          <p style={{ color: '#718096', marginBottom: '1rem' }}>
+          <p className="text-gray-500 mb-4">
             Found {filteredRiddles.length} riddles
           </p>
-          {filteredRiddles.map(riddle => (
-            <RiddleCard key={riddle.id} riddle={riddle} />
-          ))}
+          <div className="space-y-4">
+            {filteredRiddles.map(riddle => (
+              <RiddleCard key={riddle.id} riddle={riddle} />
+            ))}
+          </div>
         </div>
       )}
     </div>

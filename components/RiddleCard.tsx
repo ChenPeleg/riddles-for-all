@@ -17,76 +17,42 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
   const [showSolution, setShowSolution] = useState(false);
 
   return (
-    <div style={{
-      border: '1px solid #ddd',
-      borderRadius: '12px',
-      padding: '1.5rem',
-      margin: '1rem 0',
-      backgroundColor: '#fff',
-      boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
-      transition: 'transform 0.2s ease',
-    }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-        <div style={{ display: 'flex', gap: '0.5rem' }}>
+    <div className="border border-gray-100 rounded-2xl p-6 my-4 bg-white shadow-md hover:shadow-lg transition-all duration-200">
+      <div className="flex justify-between items-start mb-4">
+        <div className="flex flex-wrap gap-2">
           {riddle.categories.map(cat => (
-            <span key={cat} style={{
-              fontSize: '0.75rem',
-              padding: '0.2rem 0.6rem',
-              backgroundColor: '#f0f0f0',
-              borderRadius: '12px',
-              color: '#666'
-            }}>
+            <span key={cat} className="text-xs px-3 py-1 bg-gray-100 rounded-full text-gray-600 font-medium">
               {cat}
             </span>
           ))}
         </div>
-        <span style={{
-          fontSize: '0.8rem',
-          color: riddle.difficulty === 'hard' ? '#e53e3e' : 
-                 riddle.difficulty === 'medium' ? '#dd6b20' : '#38a169',
-          fontWeight: 'bold',
-          textTransform: 'uppercase'
-        }}>
+        <span className={`text-xs font-bold uppercase tracking-wider ${
+          riddle.difficulty === 'hard' ? 'text-red-500' : 
+          riddle.difficulty === 'medium' ? 'text-orange-500' : 'text-green-500'
+        }`}>
           {riddle.difficulty || 'easy'}
         </span>
       </div>
 
-      <p style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '1.5rem', color: '#2d3748' }}>
+      <p className="text-lg leading-relaxed mb-6 text-gray-800">
         {riddle.text}
       </p>
 
       {showSolution ? (
-        <div style={{
-          padding: '1rem',
-          backgroundColor: '#f7fafc',
-          borderRadius: '8px',
-          borderLeft: '4px solid #4299e1',
-          marginTop: '1rem'
-        }}>
-          <p style={{ fontWeight: 'bold', margin: '0 0 0.5rem 0', color: '#2b6cb0' }}>Solution:</p>
-          <p style={{ margin: 0, fontSize: '1.05rem' }}>{riddle.solution || 'No solution provided.'}</p>
+        <div className="p-4 bg-blue-50 rounded-xl border-l-4 border-blue-500 mt-4 animate-in fade-in slide-in-from-top-2 duration-300">
+          <p className="font-bold text-blue-700 mb-2">Solution:</p>
+          <p className="text-gray-900 text-lg leading-relaxed">{riddle.solution || 'No solution provided.'}</p>
         </div>
       ) : (
         <button 
           onClick={() => setShowSolution(true)}
-          style={{
-            backgroundColor: '#4299e1',
-            color: 'white',
-            border: 'none',
-            padding: '0.6rem 1.2rem',
-            borderRadius: '6px',
-            cursor: 'pointer',
-            fontWeight: '600',
-            transition: 'background-color 0.2s'
-          }}
-          onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#3182ce'}
-          onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#4299e1'}
+          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-semibold shadow-md shadow-blue-600/20 transition-all active:scale-95"
         >
           Reveal Solution
         </button>
       )}
 
-      <div style={{ marginTop: '1.5rem', fontSize: '0.8rem', color: '#a0aec0', borderTop: '1px solid #edf2f7', paddingTop: '0.8rem' }}>
+      <div className="mt-6 pt-4 border-t border-gray-50 text-xs text-gray-400 font-medium italic">
         Source: {riddle.source.book}
       </div>
     </div>

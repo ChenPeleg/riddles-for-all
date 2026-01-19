@@ -4,12 +4,11 @@ import Search from './pages/Search'
 import RiddleDetail from './pages/RiddleDetail'
 import Categories from './pages/Categories'
 import Sources from './pages/Sources'
-import './App.css'
 
 function App() {
   return (
     <Router>
-      <div className="app">
+      <div className="min-h-screen flex flex-col bg-gray-50">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<Search />} />
