@@ -1,32 +1,18 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import RiddleCard from '../components/RiddleCard'
-
-interface Riddle {
-  id: string;
-  text: string;
-  solution?: string;
-  categories: string[];
-  difficulty?: string;
-  source: {
-    book: string;
-  };
-}
+import { useRiddles } from '../context/RiddleContext'
 
 function Home() {
-  const [randomRiddle, setRandomRiddle] = useState<Riddle | null>(null);
+  const { riddles, loading } = useRiddles();
+  const [randomRiddle, setRandomRiddle] = useState(null as any);
 
   useEffect(() => {
-    fetch('/riddles/data/riddles-all.json')
-      .then(res => res.json())
-      .then(data => {
-        if (data.riddles && data.riddles.length > 0) {
-          const randomIndex = Math.floor(Math.random() * data.riddles.length);
-          setRandomRiddle(data.riddles[randomIndex]);
-        }
-      })
-      .catch(err => console.error('Error fetching riddles for home:', err));
-  }, []);
+    if (riddles.length > 0 && !randomRiddle) {
+      const randomIndex = Math.floor(Math.random() * riddles.length);
+      setRandomRiddle(riddles[randomIndex]);
+    }
+  }, [riddles, randomRiddle]);
 
   return (
     <div className="p-8 max-w-3xl mx-auto">

@@ -1,34 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import RiddleCard from '../components/RiddleCard';
-
-interface Riddle {
-  id: string;
-  text: string;
-  solution?: string;
-  categories: string[];
-  difficulty?: string;
-  source: {
-    book: string;
-  };
-}
+import { useRiddles } from '../context/RiddleContext';
 
 function Search() {
-  const [riddles, setRiddles] = useState<Riddle[]>([]);
-  const [loading, setLoading] = useState(true);
+  const { riddles, loading } = useRiddles();
   const [searchTerm, setSearchTerm] = useState('');
-
-  useEffect(() => {
-    fetch('/riddles/data/riddles-all.json')
-      .then(res => res.json())
-      .then(data => {
-        setRiddles(data.riddles);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error('Error fetching riddles:', err);
-        setLoading(false);
-      });
-  }, []);
 
   const filteredRiddles = riddles.filter(r => 
     r.text.toLowerCase().includes(searchTerm.toLowerCase()) ||
