@@ -2,4 +2,6 @@
  * Parsers module exports
  */
 
-export { RiddleParser, ParserResult } from './riddle-parser.js';
+import { RiddleParser } from './riddle-parser.js';
+export { RiddleParser };
+export type { ParserResult } from './riddle-parser.js';

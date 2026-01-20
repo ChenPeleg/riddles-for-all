@@ -5,8 +5,8 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
-import { RiddleParser } from '../parsers/index.js';
-import { JsonStorage } from '../storage/index.js';
+import { RiddleParser } from '../parsers/riddle-parser.js';
+import { JsonStorage } from '../storage/json-storage.js';
 import { Riddle } from '../types/riddle.js';
 
 const __filename = fileURLToPath(import.meta.url);
