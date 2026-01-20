@@ -37,7 +37,7 @@ jobs:
       - name: Copy data to public
         run: |
           mkdir -p public/data
-          cp data/02-json/*.json public/data/
+          cp data/04-process/*.json public/data/
 
       - name: Build frontend
         run: npm run build

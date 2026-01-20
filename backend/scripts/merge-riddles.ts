@@ -21,9 +21,10 @@ async function main() {
   const storage = new JsonStorage(dataDir);
   const examplesStorage = new JsonStorage(examplesDir);
   const publicStorage = new JsonStorage(publicDataDir);
+  const processStorage = new JsonStorage(path.join(__dirname, '../../data/04-process'));
 
-  // 1. Load newly parsed riddles from data/
-  console.log('Loading parsed riddles from data/riddles-all.json...');
+  // 1. Load newly parsed riddles from 02-json/
+  console.log('Loading parsed riddles from data/02-json/riddles-all.json...');
   const newRiddles = storage.loadRiddles('riddles-all.json');
   console.log(`Loaded ${newRiddles.length} riddles.`);
 
@@ -55,12 +56,12 @@ async function main() {
   
   examplesStorage.saveRiddles(allMerged, 'riddles-all.json');
   publicStorage.saveRiddles(allMerged, 'riddles-all.json');
-  storage.saveRiddles(allMerged, 'riddles-all.json');
+  processStorage.saveRiddles(allMerged, 'riddles-all.json');
   
   // Also update source-specific files in all locations
   examplesStorage.saveRiddlesBySource(allMerged);
   publicStorage.saveRiddlesBySource(allMerged);
-  storage.saveRiddlesBySource(allMerged);
+  processStorage.saveRiddlesBySource(allMerged);
 
   console.log('\n✅ Merging complete!');
 }
