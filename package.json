@@ -15,6 +15,7 @@
     "backend:sample": "tsx backend/scripts/generate-sample-data.ts",
     "backend:merge": "tsx backend/scripts/merge-riddles.ts",
     "cli": "tsx backend/cli/index.ts",
+    "pipeline": "tsx backend/scripts/pipeline.ts",
     "search": "npm run cli search",
     "riddles": "npm run cli"
   },
