@@ -14,9 +14,9 @@ const __dirname = path.dirname(__filename);
 async function main() {
   console.log('=== Riddle Merging Tool ===\n');
 
-  const dataDir = path.join(__dirname, '../data');
-  const examplesDir = path.join(__dirname, '../examples');
-  const publicDataDir = path.join(__dirname, '../public/data');
+  const dataDir = path.join(__dirname, '../../data/02-json');
+  const examplesDir = path.join(__dirname, '../../examples');
+  const publicDataDir = path.join(__dirname, '../../public/data');
 
   const storage = new JsonStorage(dataDir);
   const examplesStorage = new JsonStorage(examplesDir);

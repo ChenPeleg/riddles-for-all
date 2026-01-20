@@ -191,7 +191,7 @@ storage.saveRiddles(sampleRiddles, 'riddles-all.json');
 storage.saveRiddlesBySource(sampleRiddles);
 
 // Save to frontend public data directory
-const frontendDataDir = path.join(__dirname, '../public/data');
+const frontendDataDir = path.join(__dirname, '../../public/data');
 const frontendStorage = new JsonStorage(frontendDataDir);
 frontendStorage.saveRiddles(sampleRiddles, 'riddles-all.json');
 frontendStorage.saveRiddlesBySource(sampleRiddles);
