@@ -25,15 +25,17 @@ const STAGES = {
 
 async function main() {
   const args = process.argv.slice(2);
-  const stageIndex = args.indexOf('--stage');
+  const stageIndexes = args.reduce((acc, arg, i) => {
+    if (arg === '--stage') acc.push(parseInt(args[i + 1]));
+    return acc;
+  }, [] as number[]);
   const fileIndex = args.indexOf('--file');
   const allFlag = args.includes('--all');
 
-  const targetStage = stageIndex !== -1 ? parseInt(args[stageIndex + 1]) : null;
   const targetFile = fileIndex !== -1 ? args[fileIndex + 1] : null;
 
-  if (!allFlag && !targetStage) {
-    console.log('Usage: npm run pipeline -- --stage <number> [--file <filename>] or --all');
+  if (!allFlag && stageIndexes.length === 0) {
+    console.log('Usage: npm run pipeline -- --stage <number> [--stage <number>...] [--file <filename>] or --all');
     process.exit(1);
   }
 
@@ -43,8 +45,10 @@ async function main() {
     for (let s = 2; s <= 6; s++) {
       await runStage(s, targetFile);
     }
-  } else if (targetStage) {
-    await runStage(targetStage, targetFile);
+  } else if (stageIndexes.length > 0) {
+    for (const stage of stageIndexes.sort((a, b) => a - b)) {
+      await runStage(stage, targetFile);
+    }
   }
 }
 
@@ -109,19 +113,29 @@ async function stage3_TypeAssignment(fileName: string | null) {
     
     console.log(`[Stage 3] Detecting type for ${bookId}...`);
     const content = JSON.parse(fs.readFileSync(initialPath, 'utf-8'));
+    const rawContent = content.rawContent;
     
-    // Simple heuristic for now, or just default to 'riddle-then-answer'
-    let strategy = 'riddle-then-answer';
-    if (content.rawContent.includes('Answer Key')) {
-      strategy = 'riddle-then-answer';
+    // Heuristic for strategy
+    let strategy = 'numbered';
+    let questionDelimiter = '\\d+[\\.\\)]\\s+';
+    let answerMarkers = ['Answer Key', 'Chapter Two: Answer Key', 'Answers:', 'Solutions:'];
+
+    if (rawContent.includes('Answer Key') || rawContent.includes('Answers:')) {
+       // Check if answers are likely in lots
+       if (rawContent.match(/Answers\s+to\s+Chapter/i) || rawContent.match(/Answers\s+\d+-\d+/i)) {
+         strategy = 'lot-answers';
+       } else {
+         strategy = 'riddle-then-answer';
+       }
     }
     
     const typeInfo = {
       bookId,
       strategy,
       hints: {
-        questionDelimiter: '\\d+[\\.\\)]\\s+',
-        answerMarkers: ['Answer Key', 'Chapter Two: Answer Key']
+        questionDelimiter,
+        answerMarkers,
+        lotSize: 20 // Default lot size
       }
     };
     
@@ -163,13 +177,74 @@ async function stage4_Process(fileName: string | null) {
 }
 
 async function stage5_Review(fileName: string | null) {
-  // Logic to move from 04-process to 05-review
-  console.log('[Stage 5] Review logic placeholder - normally would wait for human sign-off.');
+  const processDir = path.join(__dirname, '../../data/04-process');
+  const reviewDir = path.join(__dirname, '../../data/05-review');
+  
+  const books = fileName ? [fileName] : fs.readdirSync(processDir).filter(f => fs.statSync(path.join(processDir, f)).isDirectory());
+  
+  for (const bookId of books) {
+    const processedPath = path.join(processDir, bookId, 'processed.json');
+    if (!fs.existsSync(processedPath)) continue;
+    
+    console.log(`[Stage 5] Reviewing ${bookId}...`);
+    const riddles = JSON.parse(fs.readFileSync(processedPath, 'utf-8'));
+    
+    // In a real app, this is where a human would check.
+    // We'll just move it to review folder to signify it's ready.
+    const outDir = path.join(reviewDir, bookId);
+    if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+    fs.writeFileSync(path.join(outDir, 'reviewed.json'), JSON.stringify(riddles, null, 2));
+    console.log(`  ✓ Moved to review: ${riddles.length} riddles`);
+  }
 }
 
 async function stage6_Store(fileName: string | null) {
-  // Logic to move from 05-review to 06-store and update riddles-all.json
-  console.log('[Stage 6] Storage logic placeholder.');
+  const reviewDir = path.join(__dirname, '../../data/05-review');
+  const storeDir = path.join(__dirname, '../../data/06-store');
+  const publicDataDir = path.join(__dirname, '../../public/data');
+  const examplesDir = path.join(__dirname, '../../examples');
+  
+  const books = fileName ? [fileName] : fs.readdirSync(reviewDir).filter(f => fs.statSync(path.join(reviewDir, f)).isDirectory());
+  
+  // Load existing riddles to merge
+  let allRiddles: any[] = [];
+  const globalPath = path.join(publicDataDir, 'riddles-all.json');
+  if (fs.existsSync(globalPath)) {
+    allRiddles = JSON.parse(fs.readFileSync(globalPath, 'utf-8'));
+  }
+
+  const riddleMap = new Map();
+  allRiddles.forEach(r => riddleMap.set(r.id, r));
+
+  for (const bookId of books) {
+    const reviewedPath = path.join(reviewDir, bookId, 'reviewed.json');
+    if (!fs.existsSync(reviewedPath)) continue;
+    
+    console.log(`[Stage 6] Storing ${bookId}...`);
+    const bookRiddles = JSON.parse(fs.readFileSync(reviewedPath, 'utf-8'));
+    
+    bookRiddles.forEach((r: any) => riddleMap.set(r.id, r));
+    
+    // Save book-specific file in store
+    const outDir = path.join(storeDir, bookId);
+    if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+    fs.writeFileSync(path.join(outDir, 'final.json'), JSON.stringify(bookRiddles, null, 2));
+  }
+
+  const mergedRiddles = Array.from(riddleMap.values());
+  
+  // Save to 06-store/riddles-all.json
+  fs.writeFileSync(path.join(storeDir, 'riddles-all.json'), JSON.stringify(mergedRiddles, null, 2));
+  
+  // Update public/data and examples
+  if (!fs.existsSync(publicDataDir)) fs.mkdirSync(publicDataDir, { recursive: true });
+  fs.writeFileSync(path.join(publicDataDir, 'riddles-all.json'), JSON.stringify(mergedRiddles, null, 2));
+  
+  if (fs.existsSync(examplesDir)) {
+    fs.writeFileSync(path.join(examplesDir, 'riddles-all.json'), JSON.stringify(mergedRiddles, null, 2));
+  }
+
+  console.log(`  ✓ Successfully stored total of ${mergedRiddles.length} riddles.`);
 }
 
 main().catch(console.error);
