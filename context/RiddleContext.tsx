@@ -1,18 +1,7 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
-import riddlesData from '../public/data/riddles-all.json';
 
-export interface Riddle {
-  id: string;
-  text: string;
-  solution?: string;
-  categories: string[];
-  image?: string;
-  clue?: string;
-  difficulty?: string;
-  source: {
-    book: string;
-  };
-}
+import { riddlesData } from '../assets/riddles-all';
+import { Riddle } from '../models/riddle';
 
 interface RiddleContextType {
   riddles: Riddle[];
