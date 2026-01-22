@@ -6,6 +6,8 @@ import type { Riddle } from "../models/riddle";
 let questionsRaw = "";
 let answersRaw = "";
 
+const debug = false;
+
 const isNode =
   typeof process !== "undefined" &&
   !!(process.versions && process.versions.node);
@@ -66,7 +68,10 @@ function parseNumberedEntries(raw: string) {
       entryIndex++;
     }
   }
-  // console.log(entries);
+
+  if (!debug) {
+    return entries.map((e) => e.replace(/^\d+\.\s*/, "").trim());
+  }
 
   return entries;
 }
