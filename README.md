@@ -140,16 +140,26 @@ npm run cli -- interactive
 
 ---
 
+---
+
 ## Project Structure 📁
 
 ```
-├── src/                    # Backend source: extractors, parsers, search, CLI
-├── scripts/                # Standalone scripts (extract, parse, sample)
-├── public/data/            # Generated JSON datasets (frontend consumption)
-├── data/                   # Extracted text and working files
-├── resources/              # Place book files here (EPUB, PDF, MOBI)
-├── frontend/               # React + Vite frontend
-├── plans/                  # Project planning & roadmap
+├── backend/                # Backend logic: extractors, parsers, search, CLI
+│   ├── cli/               # CLI implementation
+│   ├── extractors/        # Text extraction from PDF/EPUB
+│   ├── parsers/           # Riddle detection and parsing logic
+│   ├── scripts/           # Extraction and parsing entry points
+│   └── search/            # Search engine logic
+├── components/             # React UI components
+├── context/                # React Context for global state (Riddles)
+├── pages/                  # React page components (Home, Search, etc.)
+├── styles/                 # Global styles and Tailwind configuration
+├── data/                   # Raw and intermediate extraction files
+├── public/data/            # Final generated riddle collections (JSON)
+├── resources/              # Input book files (EPUB, PDF, etc.)
+├── App.tsx                 # Main React App component
+├── main.tsx                # React entry point
 └── package.json            # Scripts and dependencies
 ```
 
@@ -157,10 +167,12 @@ npm run cli -- interactive
 
 ## How it works (brief) 💡
 
-1. Extract: Book files in `resources/` are processed by extractors (EPUB/PDF/MOBI) to produce text.
-2. Parse: Parser detects riddle question/answer pairs and tags them (math, wordplay, logic, etc.).
-3. Store: Structured JSON files are generated and placed in `public/data/` or `data/` for frontend/CLI consumption.
-4. Search: A search engine supports fuzzy matching, filtering, and pagination.
+1. **Extract**: Book files placed in `resources/` are processed by backend extractors (EPUB/PDF/MOBI) to produce raw text, which is saved in `data/raw/`.
+2. **Parse**: The backend parser processes raw text, identifying riddle-answer pairs. It uses heuristics or metadata-driven strategies (like `lot-answers`).
+3. **Store**: Structured JSON collections are generated and saved in `public/data/` for the frontend and `data/` for the CLI.
+4. **Browse/Search**: 
+   - **Frontend**: A React application (using Vite) loads the JSON data and provides a modern UI for browsing categories, searching, and viewing riddle details.
+   - **CLI**: A command-line tool provides direct access to stats, search, and listing from the terminal.
 
 ---
 

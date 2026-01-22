@@ -5,13 +5,17 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { ExtractorService } from '../extractors';
+import { fileURLToPath } from 'url';
+import { ExtractorService } from '../extractors/index.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 async function main() {
   console.log('=== Riddle Text Extraction Tool ===\n');
 
-  const resourcesDir = path.join(__dirname, '../resources');
-  const dataDir = path.join(__dirname, '../data');
+  const resourcesDir = path.join(__dirname, '../../resources');
+  const dataDir = path.join(__dirname, '../../data');
 
   // Ensure data directory exists
   if (!fs.existsSync(dataDir)) {
@@ -65,7 +69,7 @@ async function main() {
     const manifestEntry = manifestMap.get(fileName);
     const ext = path.extname(fileName).toLowerCase();
     const rawDirName = sanitize(path.basename(fileName, ext));
-    const rawDir = path.join(dataDir, 'raw', rawDirName);
+    const rawDir = path.join(dataDir, '01-raw', rawDirName);
 
     // Ensure raw directory exists
     fs.mkdirSync(rawDir, { recursive: true });
@@ -83,7 +87,7 @@ async function main() {
         extractedAt: new Date().toISOString(),
       };
       fs.writeFileSync(path.join(rawDir, 'metadata.json'), JSON.stringify(meta, null, 2), 'utf-8');
-      console.log(`  ✓ Metadata written to: ${path.join('data', 'raw', rawDirName, 'metadata.json')}`);
+      console.log(`  ✓ Metadata written to: ${path.join('data', '01-raw', rawDirName, 'metadata.json')}`);
       console.log();
       continue;
     }
@@ -103,13 +107,9 @@ async function main() {
         error: result.error || null,
       };
 
-      // Save raw text and metadata to data/raw/<book-id>/
+      // Save raw text and metadata to data/01-raw/<book-id>/
       fs.writeFileSync(path.join(rawDir, 'raw.txt'), result.text || '', 'utf-8');
       fs.writeFileSync(path.join(rawDir, 'metadata.json'), JSON.stringify(meta, null, 2), 'utf-8');
-
-      // Also keep compatibility with previous behavior by writing data/<book-id>.txt
-      const outputFileName = `${result.book.id}.txt`;
-      fs.writeFileSync(path.join(dataDir, outputFileName), result.text || '', 'utf-8');
 
       if (result.error) {
         console.log(`  ❌ Error: ${result.error}`);
@@ -121,9 +121,8 @@ async function main() {
           console.log(`  ✓ Page count: ${result.pageCount}`);
         }
         console.log(`  Preview: ${preview}...`);
-        console.log(`  ✓ Saved raw: ${path.join('data', 'raw', rawDirName, 'raw.txt')}`);
-        console.log(`  ✓ Saved metadata: ${path.join('data', 'raw', rawDirName, 'metadata.json')}`);
-        console.log(`  ✓ Saved to: data/${outputFileName}`);
+        console.log(`  ✓ Saved raw: ${path.join('data', '01-raw', rawDirName, 'raw.txt')}`);
+        console.log(`  ✓ Saved metadata: ${path.join('data', '01-raw', rawDirName, 'metadata.json')}`);
       }
     } catch (error) {
       console.log(`  ❌ Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
@@ -137,7 +136,7 @@ async function main() {
         error: error instanceof Error ? error.message : String(error),
       };
       fs.writeFileSync(path.join(rawDir, 'metadata.json'), JSON.stringify(meta, null, 2), 'utf-8');
-      console.log(`  ✓ Wrote metadata with error to: ${path.join('data', 'raw', rawDirName, 'metadata.json')}`);
+      console.log(`  ✓ Wrote metadata with error to: ${path.join('data', '01-raw', rawDirName, 'metadata.json')}`);
     }
 
     console.log();

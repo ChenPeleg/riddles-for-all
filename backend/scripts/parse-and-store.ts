@@ -4,34 +4,40 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { RiddleParser } from '../parsers';
-import { JsonStorage } from '../storage';
-import { Riddle } from '../types/riddle';
+import { fileURLToPath } from 'url';
+import { RiddleParser } from '../parsers/riddle-parser.js';
+import { JsonStorage } from '../storage/json-storage.js';
+import { Riddle } from '../types/riddle.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 async function main() {
   console.log('=== Riddle Parsing and Storage Tool ===\n');
 
-  const dataDir = path.join(__dirname, '../data');
+  const dataDir = path.join(__dirname, '../../data');
+  const rawDir = path.join(dataDir, '01-raw');
+  const jsonDir = path.join(dataDir, '02-json');
 
-  // Check if data directory exists
-  if (!fs.existsSync(dataDir)) {
-    console.log('Error: Data directory does not exist. Please run extraction first.');
+  // Check if raw directory exists
+  if (!fs.existsSync(rawDir)) {
+    console.log('Error: Raw data directory does not exist. Please run extraction first.');
     return;
   }
 
-  // Get all text files from data directory
-  const files = fs.readdirSync(dataDir)
-    .filter(file => path.extname(file).toLowerCase() === '.txt')
-    .map(file => path.join(dataDir, file));
+  // Get all subdirectories from raw directory
+  const bookDirs = fs.readdirSync(rawDir)
+    .filter(name => fs.statSync(path.join(rawDir, name)).isDirectory())
+    .map(name => path.join(rawDir, name));
 
-  if (files.length === 0) {
-    console.log('No text files found in data directory. Please run extraction first.');
+  if (bookDirs.length === 0) {
+    console.log('No book directories found in data/01-raw. Please run extraction first.');
     return;
   }
 
-  console.log(`Found ${files.length} text file(s) to parse:\n`);
-  files.forEach((file, index) => {
-    console.log(`  ${index + 1}. ${path.basename(file)}`);
+  console.log(`Found ${bookDirs.length} book(s) to parse:\n`);
+  bookDirs.forEach((dir, index) => {
+    console.log(`  ${index + 1}. ${path.basename(dir)}`);
   });
   console.log();
 
@@ -42,9 +48,18 @@ async function main() {
 
   console.log('Starting parsing...\n');
 
-  for (const filePath of files) {
-    const fileName = path.basename(filePath, '.txt');
-    console.log(`Processing: ${fileName}`);
+  for (const bookDir of bookDirs) {
+    const bookId = path.basename(bookDir);
+    const filePath = path.join(bookDir, 'raw.txt');
+    const metaPath = path.join(bookDir, 'metadata.json');
+
+    console.log(`Processing: ${bookId}`);
+
+    if (!fs.existsSync(filePath)) {
+      console.log(`  ⚠ No raw.txt found in ${bookId}, skipping`);
+      console.log();
+      continue;
+    }
 
     try {
       const text = fs.readFileSync(filePath, 'utf-8');
@@ -55,8 +70,7 @@ async function main() {
         continue;
       }
 
-      // Attempt to load per-book metadata parsing instructions (data/raw/<id>/metadata.json)
-      const metaPath = path.join(__dirname, '../data/raw', fileName, 'metadata.json');
+      // Attempt to load per-book metadata parsing instructions
       let parsingOptions: any = undefined;
       try {
         if (fs.existsSync(metaPath)) {
@@ -69,10 +83,10 @@ async function main() {
         }
       } catch (e) {
         // ignore metadata read errors and proceed with default parsing
-        console.warn(`  ⚠ Could not read metadata for ${fileName}: ${e instanceof Error ? e.message : String(e)}`);
+        console.warn(`  ⚠ Could not read metadata for ${bookId}: ${e instanceof Error ? e.message : String(e)}`);
       }
 
-      const result = parser.parseRiddles(text, fileName, parsingOptions);
+      const result = parser.parseRiddles(text, bookId, parsingOptions);
 
       console.log(`  ✓ Parsed ${result.riddles.length} riddles`);
 
@@ -98,7 +112,7 @@ async function main() {
   if (allRiddles.length > 0) {
     console.log('Saving riddles to JSON files...\n');
 
-    const storage = new JsonStorage(dataDir);
+    const storage = new JsonStorage(jsonDir);
 
     // Save all riddles in a single file
     storage.saveRiddles(allRiddles, 'riddles-all.json');

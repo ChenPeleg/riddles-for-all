@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
-import riddlesData from '../data/riddles-all.json';
+import riddlesData from '../public/data/riddles-all.json';
 
 export interface Riddle {
   id: string;

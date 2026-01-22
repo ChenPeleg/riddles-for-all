@@ -2,4 +2,4 @@
  * Storage module exports
  */
 
-export { JsonStorage, RiddleCollection } from './json-storage';
+export { JsonStorage, RiddleCollection } from './json-storage.js';

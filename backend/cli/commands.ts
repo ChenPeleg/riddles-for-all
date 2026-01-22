@@ -4,8 +4,8 @@
 
 import { Command } from 'commander';
 import * as path from 'path';
-import { JsonStorage } from '../storage/json-storage';
-import { SearchEngine, SearchQuery } from '../search/search-engine';
+import { JsonStorage } from '../storage/json-storage.js';
+import { SearchEngine, SearchQuery } from '../search/search-engine.js';
 import * as readline from 'readline';
 
 const storage = new JsonStorage();

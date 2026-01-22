@@ -4,22 +4,27 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { JsonStorage } from '../storage/json-storage';
-import { Riddle } from '../types/riddle';
+import { fileURLToPath } from 'url';
+import { JsonStorage } from '../storage/json-storage.js';
+import { Riddle } from '../types/riddle.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 async function main() {
   console.log('=== Riddle Merging Tool ===\n');
 
-  const dataDir = path.join(__dirname, '../data');
-  const examplesDir = path.join(__dirname, '../examples');
-  const publicDataDir = path.join(__dirname, '../public/data');
+  const dataDir = path.join(__dirname, '../../data/02-json');
+  const examplesDir = path.join(__dirname, '../../examples');
+  const publicDataDir = path.join(__dirname, '../../public/data');
 
   const storage = new JsonStorage(dataDir);
   const examplesStorage = new JsonStorage(examplesDir);
   const publicStorage = new JsonStorage(publicDataDir);
+  const processStorage = new JsonStorage(path.join(__dirname, '../../data/04-process'));
 
-  // 1. Load newly parsed riddles from data/
-  console.log('Loading parsed riddles from data/riddles-all.json...');
+  // 1. Load newly parsed riddles from 02-json/
+  console.log('Loading parsed riddles from data/02-json/riddles-all.json...');
   const newRiddles = storage.loadRiddles('riddles-all.json');
   console.log(`Loaded ${newRiddles.length} riddles.`);
 
@@ -51,12 +56,12 @@ async function main() {
   
   examplesStorage.saveRiddles(allMerged, 'riddles-all.json');
   publicStorage.saveRiddles(allMerged, 'riddles-all.json');
-  storage.saveRiddles(allMerged, 'riddles-all.json');
+  processStorage.saveRiddles(allMerged, 'riddles-all.json');
   
   // Also update source-specific files in all locations
   examplesStorage.saveRiddlesBySource(allMerged);
   publicStorage.saveRiddlesBySource(allMerged);
-  storage.saveRiddlesBySource(allMerged);
+  processStorage.saveRiddlesBySource(allMerged);
 
   console.log('\n✅ Merging complete!');
 }

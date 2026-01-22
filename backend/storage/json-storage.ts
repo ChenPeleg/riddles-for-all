@@ -5,7 +5,11 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { Riddle } from '../types/riddle';
+import { fileURLToPath } from 'url';
+import { Riddle } from '../types/riddle.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export interface RiddleCollection {
   metadata: {
@@ -20,7 +24,7 @@ export interface RiddleCollection {
 export class JsonStorage {
   private dataDir: string;
 
-  constructor(dataDir: string = path.join(__dirname, '../../data')) {
+  constructor(dataDir: string = path.join(__dirname, '../../data/04-process')) {
     this.dataDir = dataDir;
   }
 
