@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
-import riddlesData from '../public/data/riddles-all.json';
 
+import {riddlesData} from '../assets/riddles-all';
+ 
 export interface Riddle {
   id: string;
   text: string;
