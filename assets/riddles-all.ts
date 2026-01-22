@@ -1,4 +1,14 @@
-export const riddlesData = {
+import type { Riddle } from "../models/riddle";
+
+export const riddlesData: {
+  metadata: {
+    totalRiddles: number;
+    sources: string[];
+    generatedAt: string;
+    version: string;
+  };
+  riddles: Riddle[];
+} = {
   metadata: {
     totalRiddles: 21,
     sources: ["Sample Riddles Collection", "Classic Riddles", "Nature Riddles"],

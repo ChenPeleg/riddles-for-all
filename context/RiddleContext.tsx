@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 import { riddlesData } from '../assets/riddles-all';
+import { riddlesDataGym } from '../assets/gym-for-the-brain';
 import { Riddle } from '../models/riddle';
 
 interface RiddleContextType {
@@ -11,9 +12,12 @@ interface RiddleContextType {
 
 const RiddleContext = createContext<RiddleContextType | undefined>(undefined);
 
+const allRiddles: Riddle[] = [...riddlesData.riddles, ...riddlesDataGym.riddles];
+
 export function RiddleProvider({ children }: { children: ReactNode }) {
+
   // Use the imported data directly
-  const [riddles] = useState<Riddle[]>(riddlesData.riddles as Riddle[]);
+  const [riddles] = useState<Riddle[]>(allRiddles as Riddle[]);
   const [loading] = useState(false);
   const [error] = useState<string | null>(null);
 
