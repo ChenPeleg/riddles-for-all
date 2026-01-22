@@ -95,3 +95,33 @@ export const riddlesData: {
     return r;
   }),
 };
+
+// When run under Node, write a generated TS file similar to `riddles-all.ts`.
+if (isNode) {
+  try {
+    // Prefer CommonJS `require` when available for simplicity.
+    const fs =
+      typeof (globalThis as any).require === "function"
+        ? (globalThis as any).require("fs")
+        : await import("fs");
+    const path =
+      typeof (globalThis as any).require === "function"
+        ? (globalThis as any).require("path")
+        : await import("path");
+
+    const outPath = path.join(process.cwd(), "assets", "gym-for-the-brain.ts");
+
+    const fileHeader = `import type { Riddle } from "../models/riddle";\n\n`;
+    const exportDecl = `export const riddlesData: {\n  metadata: {\n    totalRiddles: number;\n    sources: string[];\n    generatedAt: string;\n    version: string;\n  };\n  riddles: Riddle[];\n} = `;
+
+    const body = JSON.stringify(riddlesData, null, 2);
+    const fileContent = fileHeader + exportDecl + body + ";\n";
+
+    fs.writeFileSync(outPath, fileContent, "utf8");
+    // eslint-disable-next-line no-console
+    console.log("Wrote generated riddles to:", outPath);
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.warn("Could not write gym-for-the-brain.ts:", err);
+  }
+}

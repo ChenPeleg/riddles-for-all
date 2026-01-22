@@ -51,13 +51,14 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
           }`}>
             {riddle.difficulty || 'easy'}
           </span>
-          {/* Done toggle button */}
+
           <button
             onClick={toggleDone}
             aria-pressed={done}
             title={done ? 'Mark as not done' : 'Mark as done'}
             className="ml-2 inline-flex items-center justify-center p-2 rounded-lg hover:bg-surface-100"
           >
+              done
             {done ? (
               <svg className="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
             ) : (
