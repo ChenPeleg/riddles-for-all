@@ -17,7 +17,8 @@
     "cli": "tsx backend/cli/index.ts",
     "pipeline": "tsx backend/scripts/pipeline.ts",
     "search": "npm run cli search",
-    "riddles": "npm run cli"
+    "riddles": "npm run cli",
+    "backend:clear": "git clean -fdX data/"
   },
   "keywords": [
     "riddles",
