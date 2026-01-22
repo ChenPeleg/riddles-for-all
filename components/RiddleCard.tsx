@@ -1,16 +1,9 @@
 import { useState } from 'react';
 
+import { Riddle } from '../models/riddle';
+
 interface RiddleProps {
-  riddle: {
-    id: string;
-    text: string;
-    solution?: string;
-    categories: string[];
-    difficulty?: string;
-    source: {
-      book: string;
-    };
-  };
+  riddle: Riddle;
 }
 
 const RiddleCard = ({ riddle }: RiddleProps) => {
