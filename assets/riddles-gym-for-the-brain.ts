@@ -10,25 +10,33 @@ const isNode =
   !!(process.versions && process.versions.node);
 if (isNode) {
   try {
-    // Use require in a try/catch so bundlers that don't provide `fs` won't break.
     // Resolve paths relative to the process cwd so this works when run from project root.
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const fs = (globalThis as any).require
-      ? (globalThis as any).require("fs")
-      : require("fs");
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const path = (globalThis as any).require
-      ? (globalThis as any).require("path")
-      : require("path");
     const base = process.cwd();
-    questionsRaw = fs.readFileSync(
-      path.join(base, "assets", "Gym for the Brain.questions.txt"),
-      "utf8",
-    );
-    answersRaw = fs.readFileSync(
-      path.join(base, "assets", "Gym for the Brain.answers.txt"),
-      "utf8",
-    );
+    // If a synchronous `require` is available (CommonJS environment), prefer it for simplicity.
+    if (typeof (globalThis as any).require === "function") {
+      const fs = (globalThis as any).require("fs");
+      const path = (globalThis as any).require("path");
+      questionsRaw = fs.readFileSync(
+        path.join(base, "assets", "Gym for the Brain.questions.txt"),
+        "utf8",
+      );
+      answersRaw = fs.readFileSync(
+        path.join(base, "assets", "Gym for the Brain.answers.txt"),
+        "utf8",
+      );
+    } else {
+      // ESM environment: use dynamic import with top-level await.
+      const fs = await import("fs");
+      const path = await import("path");
+      questionsRaw = fs.readFileSync(
+        path.join(base, "assets", "Gym for the Brain.questions.txt"),
+        "utf8",
+      );
+      answersRaw = fs.readFileSync(
+        path.join(base, "assets", "Gym for the Brain.answers.txt"),
+        "utf8",
+      );
+    }
   } catch (err) {
     // If reading fails, leave strings empty and warn. Callers can handle empty data.
     // eslint-disable-next-line no-console

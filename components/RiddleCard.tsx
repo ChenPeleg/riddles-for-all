@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { Riddle } from '../models/riddle';
 
@@ -8,6 +8,27 @@ interface RiddleProps {
 
 const RiddleCard = ({ riddle }: RiddleProps) => {
   const [showSolution, setShowSolution] = useState(false);
+  // Track whether this riddle is marked done (persisted in localStorage)
+  const [done, setDone] = useState<boolean>(false);
+
+  useEffect(() => {
+    try {
+      const v = typeof window !== 'undefined' ? localStorage.getItem(`riddle_done_${riddle.id}`) : null;
+      setDone(v === 'true');
+    } catch (e) {
+      // ignore localStorage errors
+    }
+  }, [riddle.id]);
+
+  const toggleDone = () => {
+    const newDone = !done;
+    setDone(newDone);
+    try {
+      localStorage.setItem(`riddle_done_${riddle.id}`, newDone ? 'true' : 'false');
+    } catch (e) {
+      // ignore localStorage write errors
+    }
+  };
 
   return (
     <div className="card-hover border border-surface-200 rounded-3xl p-8 mb-6 bg-white shadow-sm animate-fade-in">
@@ -30,10 +51,23 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
           }`}>
             {riddle.difficulty || 'easy'}
           </span>
-        </div>
-      </div>
+          {/* Done toggle button */}
+          <button
+            onClick={toggleDone}
+            aria-pressed={done}
+            title={done ? 'Mark as not done' : 'Mark as done'}
+            className="ml-2 inline-flex items-center justify-center p-2 rounded-lg hover:bg-surface-100"
+          >
+            {done ? (
+              <svg className="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+            ) : (
+              <svg className="w-4 h-4 text-surface-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4"></path></svg>
+            )}
+          </button>
+         </div>
+       </div>
 
-      <h3 className="text-xl md:text-2xl font-medium leading-relaxed mb-8 text-surface-900 tracking-tight">
+      <h3 className={`text-xl md:text-2xl font-medium leading-relaxed mb-8 text-surface-900 tracking-tight ${done ? 'opacity-60 line-through' : ''}`}>
         {riddle.text}
       </h3>
 
