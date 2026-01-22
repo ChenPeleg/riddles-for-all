@@ -56,15 +56,17 @@ function parseNumberedEntries(raw: string) {
   let entryIndex = 1;
   const entries: string[] = [];
   const lines = raw.split("\n");
-  for (let i = 0; i < lines.length; ) {
+  for (let i = 0; i < lines.length; i++) {
     const line = lines[i].trim();
+    console.log({ line, entryIndex });
     if (!line.startsWith(`${entryIndex}.`)) {
       entries[entryIndex - 1] = entries[entryIndex - 1] + "\n" + line + "\n";
     } else {
       entries[entryIndex - 1] = line;
+      entryIndex++;
     }
   }
-  console.log(entries);
+  // console.log(entries);
 
   return entries;
 }
