@@ -1,3 +1,4 @@
+import { link } from "fs";
 import type { Riddle } from "../models/riddle";
 
 // Read the original text files from disk when running under Node.
@@ -52,12 +53,19 @@ if (isNode) {
 }
 
 function parseNumberedEntries(raw: string) {
+  let entryIndex = 1;
   const entries: string[] = [];
-  const re = /\d+\.\s+([\s\S]*?)(?=\n\d+\.\s|$)/g;
-  let m: RegExpExecArray | null;
-  while ((m = re.exec(raw))) {
-    entries.push(m[1].trim().replace(/\r/g, "").replace(/\n+/g, " "));
+  const lines = raw.split("\n");
+  for (let i = 0; i < lines.length; ) {
+    const line = lines[i].trim();
+    if (!line.startsWith(`${entryIndex}.`)) {
+      entries[entryIndex - 1] = entries[entryIndex - 1] + "\n" + line + "\n";
+    } else {
+      entries[entryIndex - 1] = line;
+    }
   }
+  console.log(entries);
+
   return entries;
 }
 
