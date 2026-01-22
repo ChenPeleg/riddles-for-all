@@ -64,7 +64,13 @@ function parseNumberedEntries(raw: string) {
 const questions = parseNumberedEntries(questionsRaw);
 const answers = parseNumberedEntries(answersRaw);
 
-const count = Math.max(questions.length, answers.length);
+if (questions.length !== answers.length) {
+  // eslint-disable-next-line no-console
+  console.warn(
+    `questions/answers length mismatch: ${questions.length} questions, ${answers.length} answers — truncating to smallest.`,
+  );
+}
+const count = Math.min(questions.length, answers.length);
 
 export const riddlesData: {
   metadata: {
