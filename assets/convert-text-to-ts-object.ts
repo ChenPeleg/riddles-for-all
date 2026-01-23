@@ -1,5 +1,5 @@
 import { link } from "fs";
-import type { Riddle } from "../models/riddle";
+import type { Riddle } from "../src/models/riddle";
 
 // Read the original text files from disk when running under Node.
 // This avoids bundling the .txt files via static imports.
