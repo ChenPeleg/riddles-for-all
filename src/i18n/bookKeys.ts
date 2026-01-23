@@ -18,3 +18,13 @@ export function displayBookTitle(raw: string, t: (key: string) => string) {
   if (translated.startsWith('books.')) return raw;
   return translated;
 }
+
+// New helper: create a stable slug for a raw book title. Prefer the i18n key map when available.
+export function getBookSlug(raw: string) {
+  const key = BOOK_KEY_MAP[raw];
+  if (key) return key;
+  return raw
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}

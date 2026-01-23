@@ -5,6 +5,7 @@ import RiddleDetail from './pages/RiddleDetail'
 import Categories from './pages/Categories'
 import Sources from './pages/Sources'
 import { RiddleProvider } from './context/RiddleContext'
+import BookReader from './pages/BookReader'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/riddle/:id" element={<RiddleDetail />} />
             <Route path="/categories" element={<Categories />} />
             <Route path="/sources" element={<Sources />} />
+            <Route path="/books/:slug" element={<BookReader />} />
           </Routes>
         </div>
       </Router>
