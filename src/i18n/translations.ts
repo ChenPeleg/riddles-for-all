@@ -77,6 +77,20 @@ export const translations: Record<Lang, Record<string, any>> = {
       license: 'License',
       last_updated: 'Last updated',
     },
+    // Added translations for book names
+    books: {
+      gym_for_the_brain:
+        'Gym for the Brain - 300 Riddles For Adults To Workout Their Mind Using Reason And Lateral Thinking',
+      riddle_me_this:
+        'Riddle Me This - The Ultimate Collection Of Riddles & Brain Teasers',
+      the_best_fun_riddles:
+        'The Best Fun Riddles & Trick Questions for Smart Kids and Family - 3 Books in 1 - 700 Jokes, Math',
+      the_little_book_of_riddles: 'The Little Book of Riddles',
+      the_ultimate_riddles_book:
+        'The Ultimate Riddles Book: Word Riddles, Brain Teasers, Logic Puzzles, Math Problems, Trick Questions, and More!',
+      word_games_riddles:
+        'Word Games, Riddles and Logic Tests - Tax Your Brain and Boost Your English',
+    },
     sources: {
       heading: 'Discover Sources',
       description: 'Browse the unique collections that power our riddles.',
@@ -179,6 +193,19 @@ export const translations: Record<Lang, Record<string, any>> = {
       author: 'מחבר',
       license: 'רישיון',
       last_updated: 'עודכן לאחרונה',
+    },
+    // Hebrew translations for book names
+    books: {
+      gym_for_the_brain:
+        'חדר כושר למוח - 300 חידות למבוגרים לאימון המחשבה באמצעות היגיון וחשיבה יצירתית',
+      riddle_me_this: 'חידו אותי - האוסף האולטימטיבי של חידות ואתגרים',
+      the_best_fun_riddles:
+        'החידות הכיפיות הטובות ביותר ושאלות תכסיס למשפחה וילדים - 3 ספרים ב-1 - 700 בדיחות ומתמטיקה',
+      the_little_book_of_riddles: 'הספר הקטן של חידות',
+      the_ultimate_riddles_book:
+        'הספר האולטימטיבי של חידות: חידות מילים, חידות מוח, פאזלים לוגיים, בעיות מתמטיקה, שאלות תכסיס ועוד!',
+      word_games_riddles:
+        'משחקי מילים, חידות ובדיקות לוגיקה - אתגר את מוחך ושפר את האנגלית שלך',
     },
     sources: {
       heading: 'גלה מקורות',
