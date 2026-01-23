@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useMemo, useState, useEffect } from 'react';
+import { useParams, Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useRiddles } from '../context/RiddleContext';
 import RiddleCard from '../components/RiddleCard';
 import { getBookSlug, displayBookTitle } from '../i18n/bookKeys';
@@ -10,6 +10,7 @@ function BookReader() {
   const { riddles } = useRiddles();
   const { t } = useTranslationLegacy();
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
 
   // Find riddles that match the slug (use same slug generation)
   const bookRiddles = useMemo(() => {
@@ -18,6 +19,30 @@ function BookReader() {
   }, [riddles, slug]);
 
   const [index, setIndex] = useState(0);
+
+  // Initialize index from `page` search param when riddles load or slug changes
+  useEffect(() => {
+    if (!slug) return;
+    if (bookRiddles.length === 0) {
+      setIndex(0);
+      return;
+    }
+
+    const raw = searchParams.get('page');
+    const p = raw ? parseInt(raw, 10) : NaN;
+    if (!isNaN(p)) {
+      const idx = Math.max(0, Math.min(bookRiddles.length - 1, p - 1));
+      setIndex(idx);
+    } else {
+      setIndex(0);
+    }
+  }, [slug, bookRiddles, searchParams]);
+
+  // Keep the URL search param in sync with the current index
+  useEffect(() => {
+    // store 1-based page in URL
+    setSearchParams({ page: String(index + 1) }, { replace: true });
+  }, [index, setSearchParams]);
 
   if (!slug) return <div className="p-6">{t('book.no_slug')}</div>;
 
