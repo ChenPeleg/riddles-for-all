@@ -89,6 +89,14 @@ export const translations: Record<Lang, Record<string, any>> = {
       select_prompt: 'Select a category above to reveal its mysteries.',
       loading: 'Loading categories...',
       riddles_count: '{count} riddles',
+      labels: {
+        wordplay: 'Wordplay',
+        everyday: 'Everyday',
+        technology: 'Technology',
+        tricky: 'Tricky',
+        logic: 'Logic',
+        nature: 'Nature',
+      },
     },
     riddle_detail: {
       title: 'Riddle Detail',
@@ -183,6 +191,14 @@ export const translations: Record<Lang, Record<string, any>> = {
       select_prompt: 'בחר קטגוריה לעיל כדי לחשוף את חידותיה.',
       loading: 'טוען קטגוריות...',
       riddles_count: '{count} חידות',
+      labels: {
+        wordplay: 'משחקי מילים',
+        everyday: 'יומיומי',
+        technology: 'טכנולוגיה',
+        tricky: 'מתוחכם',
+        logic: 'לוגיקה',
+        nature: 'טבע',
+      },
     },
     riddle_detail: {
       title: 'פרטי חידה',
