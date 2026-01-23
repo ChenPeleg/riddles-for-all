@@ -19,7 +19,8 @@ export const riddlesData: {
     {
       id: "riddle-001",
       text: "What has keys but no locks, space but no room, and you can enter but not go inside?",
-      textHe: "מה יש לו מקשים אך אין לו מנעולים, יש בו רווח אך אין לו חדר, ואתה יכול להיכנס אליו אך לא להיכנס פנימה?",
+      textHe:
+        "מה יש לו מקשים אך אין לו מנעולים, יש בו רווח אך אין לו חדר, ואתה יכול להיכנס אליו אך לא להיכנס פנימה?",
       solution: "A keyboard",
       solutionHe: "מקלדת",
       categories: ["wordplay", "everyday", "technology"],
@@ -54,7 +55,8 @@ export const riddlesData: {
     {
       id: "riddle-004",
       text: "I am not alive, but I grow; I don't have lungs, but I need air; I don't have a mouth, but water kills me. What am I?",
-      textHe: "אני לא חי, אבל אני גדל; אין לי ריאות אך אני צריך אוויר; אין לי פה אבל מים הורגים אותי. מה אני?",
+      textHe:
+        "אני לא חי, אבל אני גדל; אין לי ריאות אך אני צריך אוויר; אין לי פה אבל מים הורגים אותי. מה אני?",
       solution: "Fire",
       solutionHe: "אש",
       categories: ["logic", "nature"],
@@ -90,7 +92,8 @@ export const riddlesData: {
     {
       id: "riddle-007",
       text: "If you have me, you want to share me. If you share me, you haven't got me. What am I?",
-      textHe: "אם יש לך אותי, תרצה לחלוק אותי. אם תחלוק אותי, כבר אין לך אותי. מה אני?",
+      textHe:
+        "אם יש לך אותי, תרצה לחלוק אותי. אם תחלוק אותי, כבר אין לך אותי. מה אני?",
       solution: "A secret",
       solutionHe: "סוד",
       categories: ["logic", "tricky"],
@@ -124,7 +127,7 @@ export const riddlesData: {
       },
     },
     {
-      id: "riddle-010",
+      id: "riddle-0100",
       text: "The more you take, the more you leave behind. What are they?",
       textHe: "ככל שלוקחים יותר, משאירים יותר מאחור. מה הם?",
       solution: "Footsteps",
@@ -136,9 +139,10 @@ export const riddlesData: {
       },
     },
     {
-      id: "riddle-011",
+      id: "riddle-0110",
       text: "What can run but never walks, has a mouth but never talks, has a head but never weeps, has a bed but never sleeps?",
-      textHe: "מה יכול לרוץ אבל לעולם לא הולך, יש לו פה אבל אף פעם אינו מדבר, יש לו ראש אבל אינו בוכה, יש לו מיטה אבל אינו ישן?",
+      textHe:
+        "מה יכול לרוץ אבל לעולם לא הולך, יש לו פה אבל אף פעם אינו מדבר, יש לו ראש אבל אינו בוכה, יש לו מיטה אבל אינו ישן?",
       solution: "A river",
       solutionHe: "נהר",
       categories: ["wordplay", "nature"],
@@ -174,7 +178,8 @@ export const riddlesData: {
     {
       id: "riddle-012",
       text: "I have cities but no houses, forests but no trees, and water but no fish. What am I?",
-      textHe: "יש לי ערים אבל אין לי בתים, יערות אבל אין לי עצים, ומים אבל אין לי דגים. מה אני?",
+      textHe:
+        "יש לי ערים אבל אין לי בתים, יערות אבל אין לי עצים, ומים אבל אין לי דגים. מה אני?",
       solution: "A map",
       solutionHe: "מפה",
       categories: ["logic", "tricky"],
