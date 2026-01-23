@@ -7,7 +7,7 @@ import {useTranslationLegacy} from '../hooks/useTranslationLegacy';
 
 function Home() {
     const {riddles} = useRiddles();
-    const {t} = useTranslationLegacy();
+    const {t, isRTL} = useTranslationLegacy();
     const [randomRiddle, setRandomRiddle] = useState(null as any);
 
     useEffect(() => {
@@ -75,10 +75,22 @@ function Home() {
                             aria-label={t('home.next_riddle')}
                             className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium border border-surface-200 rounded-2xl bg-white hover:bg-surface-100 transition"
                         >
-                            <span>{t('home.next_riddle') || 'Next'}</span>
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
+                            {/* In RTL, show caret on the left and point it left; otherwise text then right caret */}
+                            {isRTL ? (
+                                <>
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 5l-7 7 7 7" />
+                                    </svg>
+                                    <span>{t('home.next_riddle') || 'Next'}</span>
+                                </>
+                            ) : (
+                                <>
+                                    <span>{t('home.next_riddle') || 'Next'}</span>
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </>
+                            )}
                         </button>
                     </div>
                 </div>
@@ -123,7 +135,6 @@ function Home() {
                             <svg className="w-16 h-16 text-brand-accent" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 11.55C9.64 9.35 6.48 8 3 8v11c3.48 0 6.64 1.35 9 3.55 2.36-2.2 5.52-3.55 9-3.55V8c-3.48 0-6.64 1.35-9 3.55zM12 8c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3"/>
-                            </svg>
                         </div>
                         <h3 className="text-xl font-bold text-surface-900 mb-2">{t('navigation.sources')}</h3>
                         <p className="text-surface-600 text-sm leading-relaxed">{t('home.sources_card_desc')}</p>
