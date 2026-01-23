@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import RiddleCard from '../../components/RiddleCard'
 import { useRiddles } from '../../context/RiddleContext'
-import { useTranslation } from '../../hooks/useTranslation'
+import { useTranslations } from '../../hooks/useTranslations'
 import LanguageToggle from '../../components/LanguageToggle'
 
 function Home() {
   const { riddles } = useRiddles();
-  const { t } = useTranslation();
+  const { t } = useTranslations();
   const [randomRiddle, setRandomRiddle] = useState(null as any);
 
   useEffect(() => {

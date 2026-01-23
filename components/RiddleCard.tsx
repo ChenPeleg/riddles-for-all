@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 
 import { Riddle } from '../src/models/riddle';
-import { useTranslation } from '../hooks/useTranslation';
+import { useTranslations } from '../hooks/useTranslations';
 
 interface RiddleProps {
   riddle: Riddle;
 }
 
 const RiddleCard = ({ riddle }: RiddleProps) => {
-  const { t, lang, isRTL } = useTranslation();
+  const { t, lang, isRTL } = useTranslations();
   const [showSolution, setShowSolution] = useState(false);
   // Track whether this riddle is marked done (persisted in localStorage)
   const [done, setDone] = useState<boolean>(false);

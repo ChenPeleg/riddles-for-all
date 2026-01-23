@@ -1,8 +1,8 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-import { riddlesData } from '../assets/riddles-all';
-import { riddlesDataGym } from '../assets/gym-for-the-brain';
-import { riddlesDataGymHe } from '../assets/gym-for-the-brain.he';
+import { riddlesData } from '../src/assets/riddles-all';
+import { riddlesDataGym } from '../src/assets/gym-for-the-brain';
+import { riddlesDataGymHe } from '../src/assets/gym-for-the-brain.he';
 import { Riddle } from '../src/models/riddle';
 
 interface RiddleContextType {

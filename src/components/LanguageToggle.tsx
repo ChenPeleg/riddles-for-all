@@ -1,8 +1,8 @@
 import React from 'react';
-import { useTranslation } from '../hooks/useTranslation';
+import { useTranslationLegacy } from '../hooks/useTranslationLegacy';
 
 const LanguageToggle: React.FC = () => {
-  const { lang, setLang, t } = useTranslation();
+  const { lang, setLang, t } = useTranslationLegacy();
 
   const toggle = () => setLang(lang === 'en' ? 'he' : 'en');
 
