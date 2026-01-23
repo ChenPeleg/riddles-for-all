@@ -20,6 +20,17 @@ export const translations: Record<Lang, Record<string, any>> = {
       sources_card_desc: 'Browse the unique collections that power our riddles.',
       next_riddle: 'Next',
     },
+    // Nav translations used by NavBar component
+    nav: {
+      skip_to_content: 'Skip to content',
+      main_nav: 'Main navigation',
+      open_menu: 'Open menu',
+      close_menu: 'Close menu',
+      home: 'Home',
+      search: 'Search',
+      categories: 'Categories',
+      sources: 'Sources',
+    },
     navigation: {
       search: 'Search',
       categories: 'Categories',
@@ -145,6 +156,17 @@ export const translations: Record<Lang, Record<string, any>> = {
       categories_card_desc: 'חקור חידות מקובצות לפי נושאים וקטגוריות.',
       sources_card_desc: 'עיין באוספים הייחודיים שמניעים את החידות שלנו.',
       next_riddle: 'הבא',
+    },
+    // Nav translations used by NavBar component
+    nav: {
+      skip_to_content: 'דלג לתוכן',
+      main_nav: 'ניווט ראשי',
+      open_menu: 'פתח תפריט',
+      close_menu: 'סגור תפריט',
+      home: 'בית',
+      search: 'חפש',
+      categories: 'קטגוריות',
+      sources: 'מקורות',
     },
     navigation: {
       search: 'חפש',
