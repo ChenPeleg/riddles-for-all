@@ -3,12 +3,27 @@ import { Link } from 'react-router-dom';
 import { useRiddles } from '../context/RiddleContext';
 import RiddleCard from '../components/RiddleCard';
 import { useTranslationLegacy } from '../hooks/useTranslationLegacy';
-import { displayBookTitle } from '../i18n/bookKeys';
+import { displayBookTitle, BOOK_KEY_MAP } from '../i18n/bookKeys';
 
 function Sources() {
   const { riddles, loading } = useRiddles();
   const { t } = useTranslationLegacy();
   const [selectedSource, setSelectedSource] = useState<string | null>(null);
+
+  // Simple helper to produce a stable book slug. Prefer the i18n key map when available.
+  const getBookSlug = (raw: string) => {
+    const key = BOOK_KEY_MAP[raw];
+    if (key) return key;
+    return raw
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '');
+  };
+
+  const gotoLabel = (() => {
+    const s = t('sources.goto_book');
+    return typeof s === 'string' && s.startsWith('sources.') ? 'Go to book' : s;
+  })();
 
   if (loading) return (
     <div className="min-h-screen bg-surface-50 flex items-center justify-center">
@@ -36,9 +51,18 @@ function Sources() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 animate-fade-in [animation-delay:100ms]">
           {sources.map(source => (
-            <button
+            // Changed from <button> to a div with role=button so we can safely nest a Link inside.
+            <div
               key={source}
+              role="button"
+              tabIndex={0}
               onClick={() => setSelectedSource(source === selectedSource ? null : source)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  setSelectedSource(source === selectedSource ? null : source);
+                  e.preventDefault();
+                }
+              }}
               className={`group p-6 rounded-4xl border-2 text-left transition-all duration-300 relative overflow-hidden ${
                 selectedSource === source
                   ? 'bg-brand-accent text-white border-brand-accent shadow-[0_12px_24px_-8px_rgba(245,158,11,0.4)] scale-105 z-10'
@@ -52,7 +76,17 @@ function Sources() {
                 {t('sources.source_label')}
               </div>
               <div className={`font-bold text-lg leading-tight line-clamp-2`}>{displayBookTitle(source, t)}</div>
-            </button>
+
+              <div className="mt-4">
+                <Link
+                  to={`/books/${getBookSlug(source)}`}
+                  onClick={(e) => e.stopPropagation()}
+                  className="text-sm font-medium text-brand-accent hover:underline"
+                >
+                  {gotoLabel}
+                </Link>
+              </div>
+            </div>
           ))}
         </div>
 
