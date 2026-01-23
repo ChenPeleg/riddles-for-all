@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 
-import {Riddle} from '../src/models/riddle';
-import {useTranslationLegacy} from '../src/hooks/useTranslationLegacy';
+import {Riddle} from '../models/riddle';
+import {useTranslationLegacy} from '../hooks/useTranslationLegacy';
 
 interface RiddleProps {
     riddle: Riddle;

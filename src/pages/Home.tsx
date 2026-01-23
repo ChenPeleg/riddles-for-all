@@ -1,8 +1,8 @@
 import {Link} from 'react-router-dom'
 import {useEffect, useState} from 'react'
-import RiddleCard from '../../components/RiddleCard'
-import {useRiddles} from '../../context/RiddleContext'
-import LanguageToggle from '../../components/LanguageToggle'
+import RiddleCard from '../components/RiddleCard'
+import {useRiddles} from '../context/RiddleContext'
+import LanguageToggle from '../components/LanguageToggle'
 import {useTranslationLegacy} from '../hooks/useTranslationLegacy';
 
 function Home() {

@@ -4,7 +4,7 @@ import Search from './pages/Search'
 import RiddleDetail from './pages/RiddleDetail'
 import Categories from './pages/Categories'
 import Sources from './pages/Sources'
-import { RiddleProvider } from '../context/RiddleContext'
+import { RiddleProvider } from './context/RiddleContext'
 
 function App() {
   return (
