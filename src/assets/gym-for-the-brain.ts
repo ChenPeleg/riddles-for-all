@@ -240,7 +240,9 @@ export const riddlesDataGym: {
     {
       id: "gym-21",
       text: "The eyes will harvest, but the hand will sow.",
+      textHe: "העיניים יקצורו, אך היד תזרע.",
       solution: "To write and to read",
+      solutionHe: "לכתוב ולקרוא",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -249,7 +251,9 @@ export const riddlesDataGym: {
     {
       id: "gym-22",
       text: "The first will appear higher, while the second is wet. The whole can be something that ties, but there is also a writer’s cramp.",
+      textHe: "הראשון ייראה גבוה יותר, והשני רטוב. הכל יכול להיות משהו שקושר, אך גם יש 'כּוֹאֵב' לכותב.",
       solution: "A hyphen",
+      solutionHe: "מקף",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -258,8 +262,11 @@ export const riddlesDataGym: {
     {
       id: "gym-23",
       text: "I have left my campsite, and I hiked south, then east. I continue to the north for 3 miles each time, exactly. When I came back to my campsite, I saw a bear. What color is it?",
+      textHe: "עזבתי את מחנתי והלכתי דרומה, ואז מזרחה. המשכתי צפונה 3 מיל בכל פעם וחזרתי למחנה — ראיתי דוב. מה צבעו?",
       solution:
         "White. It is a polar bear, because the only place you could hike that way and end up where you started is the North Pole. Polar bears are the only bears on that part of the Earth.",
+      solutionHe:
+        "לבן. מדובר בדוב קוטב, כי המקום היחיד שבו המסלול הזה מחזיר אותך לנקודת ההתחלה הוא בקוטב הצפוני. בדובי הקוטב היחידים באזור זה.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -268,8 +275,11 @@ export const riddlesDataGym: {
     {
       id: "gym-24",
       text: "If I have at least one daughter, I have less than ten daughters, or I have more than ten daughters. Only one of these statements is true. How many do I really have?",
+      textHe: "אם יש לי לפחות בת אחת, יש לי פחות מעשר בנות, או שיש לי יותר מעשר בנות. רק אחת מההצהרות נכונה. כמה יש לי באמת?",
       solution:
         "If I have daughters, then two statements are true. Therefore, I do not have any daughters at all.",
+      solutionHe:
+        "אם היו לי בנות, שתי ההצהרות היו נכונות. לכן אין לי בנות בכלל.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -278,7 +288,9 @@ export const riddlesDataGym: {
     {
       id: "gym-25",
       text: "Some say I am green; some say I am red or yellow. Some play with what we are,and others spray us instead. What is it that we are?",
+      textHe: "יש שאומרים שאני ירוק; אחרים שאומרים שאני אדום או צהוב. יש שמשחקים במה שאנחנו, ואחרים מרססים אותנו. מה אנחנו?",
       solution: "We are pepper.",
+      solutionHe: "פלפל",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -287,7 +299,9 @@ export const riddlesDataGym: {
     {
       id: "gym-26",
       text: "You use me to stop, but you can take me to smoke. I stop, and I am a stop. I am the pool’s first stroke. What am I?",
+      textHe: "אתה משתמש בי לעצור, אבל אתה יכול לקחת אותי כדי לעשן. אני מפסיק, ואני עצירה. אני המהלך הראשון בבריכה. מה אני?",
       solution: "Brake/break",
+      solutionHe: "בלם/הפסקה (משחק מילים)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -296,7 +310,9 @@ export const riddlesDataGym: {
     {
       id: "gym-27",
       text: "What would be the most romantic part of the ocean?",
+      textHe: "מה תהיה החלק הכי רומנטי של הים?",
       solution: "The buoy meeting the gull.",
+      solutionHe: "המעגן שמפגש עם השחף.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -305,7 +321,9 @@ export const riddlesDataGym: {
     {
       id: "gym-28",
       text: "A man found a photograph. His friend joins him and asks who is in it. The first man explains that he has no siblings, but in the photo, the man’s parent is his parent’s son.Can you deduce who it is in the photo?",
+      textHe: "איש מצא תמונה. חברו מצטרף ושואל מי בתמונה. האיש אומר שאין לו אחים, אך בתמונה, האדם של ההורה שלו הוא בן ההורה שלו. מי זה בתמונה?",
       solution: "His son",
+      solutionHe: "בנו",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -314,7 +332,9 @@ export const riddlesDataGym: {
     {
       id: "gym-29",
       text: "A woman was standing at the side of a river. Her cat is on the other. She calls to the pet, and the pet crosses. Not a single drop of water has touched the pet, and there were no devices in place to help the cat cross. How did her cat manage the task?",
+      textHe: "אשה עמדה לצד נהר. החתול שלה נמצא מעברו. היא קוראת לחתול, והחתול חצה. לא טיפה מים נגעה בו, ולא היו מכשירים שעזרו לו. איך זה קרה?",
       solution: "The river was frozen.",
+      solutionHe: "הנהר היה קפוא.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -323,8 +343,10 @@ export const riddlesDataGym: {
     {
       id: "gym-30",
       text: "Can you determine which is the odd one out? Snap, letter, mood, or stun?",
+      textHe: "האם תוכלו לזהות מי שונה? Snap, letter, mood, או stun?",
       solution:
         "Letter. It’s the only one that doesn’t make sense when you read it backward.",
+      solutionHe: "'Letter' — היחיד שלא יוצא משמעותי כאשר קוראים אותו לאחור.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -333,7 +355,9 @@ export const riddlesDataGym: {
     {
       id: "gym-31",
       text: "If a sundial has the least amount of moving parts of any timepiece, what has the most?",
+      textHe: "אם לשעון שמש יש הכי מעט חלקים נעים מכל שעון, מה יש בו הכי הרבה?",
       solution: "An hourglass, because of the grains of sand in it.",
+      solutionHe: "שעון חול, בגלל גרגרי החול שבו.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -342,7 +366,9 @@ export const riddlesDataGym: {
     {
       id: "gym-32",
       text: "What word has five letters but will become smaller if you add a duo of letters to it?",
+      textHe: "איזו מילה בת חמש אותיות אך תהיה 'קטנה' אם תוסיף לה שתי אותיות?",
       solution: "Short",
+      solutionHe: "Short (קצר)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -351,8 +377,10 @@ export const riddlesDataGym: {
     {
       id: "gym-33",
       text: "If your parents have six sons and you are one of them, and each son has one sister, how many people are in your family?",
+      textHe: "אם להוריך יש שישה בנים ואתה אחד מהם, ולכל בן יש אחות אחת, כמה אנשים יש במשפחה?",
       solution:
         "Nine. There would be two parents, one daughter, and the six sons.",
+      solutionHe: "תשעה: שני הורים, בת אחת וששת הבנים.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -361,7 +389,9 @@ export const riddlesDataGym: {
     {
       id: "gym-34",
       text: "You have a class of students. Fourteen of the students are boys. Eight of the students wear blue shirts. Two of the students are neither male, nor wearing a blue shirt. If five of the children are boys who wear a blue shirt, then how many children would be in the class?",
+      textHe: "יש לך כיתה: 14 תלמידים הם בנים. 8 לובשים חולצות כחולות. שניים אינם זכר ואינם לובשים כחול. אם חמישה ילדים הם בנים שלובשים כחול — כמה ילדים בכיתה?",
       solution: "Nineteen",
+      solutionHe: "תשעה עשר",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -370,7 +400,9 @@ export const riddlesDataGym: {
     {
       id: "gym-35",
       text: "If Paul has a height of nine feet,and he works in a butcher shop while wearing size-twelve shoes, what would he weigh?",
+      textHe: "אם לפול יש גובה של תשע רגל והוא עובד בקצביה ונעליו מידה 12, מה הוא ישקול?",
       solution: "Meat",
+      solutionHe: "בשר",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -379,7 +411,9 @@ export const riddlesDataGym: {
     {
       id: "gym-36",
       text: "What has no legs, is brown, and has a head and tail?",
+      textHe: "מה אין לו רגליים, חום, ויש לו ראש וזנב?",
       solution: "A penny",
+      solutionHe: "מטבע (פני)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -388,7 +422,9 @@ export const riddlesDataGym: {
     {
       id: "gym-37",
       text: "If a monkey and a squirrel are both climbing at the same time, which one will reach the banana first?",
+      textHe: "אם קוף וסנאי מטפסים בו‑זמנית, מי יגיע לבננה ראשון?",
       solution: "Neither. It's a coconut tree, and not a banana tree.",
+      solutionHe: "אף אחד — זה עץ קוקוס, לא עץ בננות.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -397,7 +433,9 @@ export const riddlesDataGym: {
     {
       id: "gym-38",
       text: "What is something that will cease to have its head every morning, but will be able to have it again when nightfall arrives?",
+      textHe: "מהו דבר שמוותר על ה'ראש' שלו כל בוקר, ושב לחדש אותו בלילה?",
       solution: "A pillow",
+      solutionHe: "כרית",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -406,8 +444,11 @@ export const riddlesDataGym: {
     {
       id: "gym-39",
       text: "You have one jug of milk, and you need to measure a single cup. How can you achieve this if you only have a three-cup measuring container and a five-cup container?",
+      textHe: "יש לך כד חלב ואתה צריך למדוד ספל אחד, אך יש לך רק כלי של 3 כוסות וכלי של 5 כוסות. איך תמדוד ספל אחד?",
       solution:
         "You will need to fill the 3-cup container and then pour the 3 cups into the 5 cups. Repeat the process and fill the 5cups all the way, and what’s left from the 3 cups would equal a single cup.",
+      solutionHe:
+        "ממלאים את המיכל של 3 כוסות ויוצקים אותו ל-5. חוזרים על הפעולה — לאחר שמילאתם את ה-5, מה שישאר בכלי ה-3 יהיה בדיוק כוס אחת.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -416,7 +457,9 @@ export const riddlesDataGym: {
     {
       id: "gym-40",
       text: "If two fathers go fishing with their two sons, and they each catch a fish, why did they only bring home three fish?",
+      textHe: "אם שני אבות הולכים לדוג עם שני בניהם וכל אחד תפס דג, מדוע חזרו רק עם שלושה דגים?",
       solution: "The group has a grandfather, father, and son.",
+      solutionHe: "הקבוצה כללה סבא, אב ובן (שלושה אנשים).",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
