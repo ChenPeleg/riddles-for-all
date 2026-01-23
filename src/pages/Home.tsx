@@ -28,7 +28,7 @@ function Home() {
                     <LanguageToggle/>
                 </div>
                 <h1 className="text-5xl md:text-7xl font-bold text-surface-900 mb-6 tracking-tight">
-                    {t('common.title')} <span className="text-brand-primary">Collection</span>
+                    {t('common.title')} <span className="text-brand-primary">{t('home.collection_suffix')}</span>
                 </h1>
                 <p className="text-lg md:text-xl text-surface-800 max-w-2xl mx-auto leading-relaxed">
                     {t('common.description')}
@@ -58,7 +58,7 @@ function Home() {
                             </svg>
                         </div>
                         <h3 className="text-xl font-bold text-surface-900 mb-2">{t('navigation.search')}</h3>
-                        <p className="text-surface-600 text-sm leading-relaxed">{t('navigation.search')}</p>
+                        <p className="text-surface-600 text-sm leading-relaxed">{t('home.search_card_desc')}</p>
                     </div>
                 </Link>
                 <Link to="/categories" className="group no-underline">
@@ -69,7 +69,7 @@ function Home() {
                             </svg>
                         </div>
                         <h3 className="text-xl font-bold text-surface-900 mb-2">{t('navigation.categories')}</h3>
-                        <p className="text-surface-600 text-sm leading-relaxed">{t('navigation.categories')}</p>
+                        <p className="text-surface-600 text-sm leading-relaxed">{t('home.categories_card_desc')}</p>
                     </div>
                 </Link>
                 <Link to="/sources" className="group no-underline">
@@ -77,11 +77,11 @@ function Home() {
                         <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                             <svg className="w-16 h-16 text-brand-accent" fill="currentColor" viewBox="0 0 24 24">
                                 <path
-                                    d="M12 11.55C9.64 9.35 6.48 8 3 8v11c3.48 0 6.64 1.35 9 3.55 2.36-2.2 5.52-3.55 9-3.55V8c-3.48 0-6.64 1.35-9 3.55zM12 8c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3z"/>
+                                    d="M12 11.55C9.64 9.35 6.48 8 3 8v11c3.48 0 6.64 1.35 9 3.55 2.36-2.2 5.52-3.55 9-3.55V8c-3.48 0-6.64 1.35-9 3.55zM12 8c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3"/>
                             </svg>
                         </div>
                         <h3 className="text-xl font-bold text-surface-900 mb-2">{t('navigation.sources')}</h3>
-                        <p className="text-surface-600 text-sm leading-relaxed">{t('navigation.sources')}</p>
+                        <p className="text-surface-600 text-sm leading-relaxed">{t('home.sources_card_desc')}</p>
                     </div>
                 </Link>
             </nav>

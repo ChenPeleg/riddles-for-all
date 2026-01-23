@@ -76,6 +76,24 @@ export const translations: Record<Lang, Record<string, any>> = {
       license: 'License',
       last_updated: 'Last updated',
     },
+    sources: {
+      heading: 'Discover Sources',
+      description: 'Browse the unique collections that power our riddles.',
+      source_label: 'Source Book',
+      riddles_count: '{count} riddles',
+      select_book_prompt: 'Select a book above to explore its contents.',
+    },
+    categories: {
+      heading: 'Browse by Categories',
+      description: 'Explore riddles grouped by topic and theme.',
+      select_prompt: 'Select a category above to reveal its mysteries.',
+      loading: 'Loading categories...',
+      riddles_count: '{count} riddles',
+    },
+    riddle_detail: {
+      title: 'Riddle Detail',
+      showing_id: 'Showing riddle ID: {id}',
+    },
   },
   he: {
     common: {
@@ -151,6 +169,24 @@ export const translations: Record<Lang, Record<string, any>> = {
       author: 'מחבר',
       license: 'רישיון',
       last_updated: 'עודכן לאחרונה',
+    },
+    sources: {
+      heading: 'גלה מקורות',
+      description: 'עיין באוספים הייחודיים שמניעים את החידות שלנו.',
+      source_label: 'ספר מקור',
+      riddles_count: '{count} חידות',
+      select_book_prompt: 'בחר ספר לעיל כדי לגלות את תכניו.',
+    },
+    categories: {
+      heading: 'עיין לפי קטגוריות',
+      description: 'חקור חידות מקובצות לפי נושאים וקטגוריות.',
+      select_prompt: 'בחר קטגוריה לעיל כדי לחשוף את חידותיה.',
+      loading: 'טוען קטגוריות...',
+      riddles_count: '{count} חידות',
+    },
+    riddle_detail: {
+      title: 'פרטי חידה',
+      showing_id: 'מוצגת חידה עם מזהה: {id}',
     },
   },
 };
