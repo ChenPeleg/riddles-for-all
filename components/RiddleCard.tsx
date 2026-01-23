@@ -8,7 +8,7 @@ interface RiddleProps {
 }
 
 const RiddleCard = ({ riddle }: RiddleProps) => {
-  const { t } = useTranslation();
+  const { t, lang, isRTL } = useTranslation();
   const [showSolution, setShowSolution] = useState(false);
   // Track whether this riddle is marked done (persisted in localStorage)
   const [done, setDone] = useState<boolean>(false);
@@ -32,8 +32,13 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
     }
   };
 
+  // Choose Hebrew fields when language is Hebrew and a Hebrew value exists; otherwise fall back to English
+  const displayText = (lang === 'he' && riddle.textHe) ? riddle.textHe : riddle.text;
+  const displaySolution = (lang === 'he' && riddle.solutionHe) ? riddle.solutionHe : riddle.solution;
+  const displayClue = (lang === 'he' && riddle.clueHe) ? riddle.clueHe : riddle.clue;
+
   return (
-    <div className="card-hover border border-surface-200 rounded-3xl p-8 mb-6 bg-white shadow-sm animate-fade-in">
+    <div dir={isRTL ? 'rtl' : 'ltr'} className="card-hover border border-surface-200 rounded-3xl p-8 mb-6 bg-white shadow-sm animate-fade-in">
       <div className="flex justify-between items-center mb-6">
         <div className="flex flex-wrap gap-2">
           {riddle.categories.map(cat => (
@@ -70,8 +75,8 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
          </div>
        </div>
 
-      <h3 className={`text-xl md:text-2xl font-medium leading-relaxed mb-8 text-surface-900 tracking-tight ${done ? 'opacity-60 line-through' : ''}`}>
-        {riddle.text}
+      <h3 className={`text-xl md:text-2xl font-medium leading-relaxed mb-8 text-surface-900 tracking-tight ${done ? 'opacity-60 line-through' : ''} ${isRTL ? 'text-right' : ''}`}>
+        {displayText}
       </h3>
 
       <div className="relative">
@@ -92,7 +97,7 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
               <svg className="w-5 h-5 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
               <p className="font-bold text-brand-primary uppercase tracking-widest text-[10px]">{t('riddle.solution_title')}</p>
             </div>
-            <p className="text-surface-900 text-lg md:text-xl font-medium leading-relaxed">{riddle.solution || t('riddle.no_solution')}</p>
+            <p className={`text-surface-900 text-lg md:text-xl font-medium leading-relaxed ${isRTL ? 'text-right' : ''}`}>{displaySolution || t('riddle.no_solution')}</p>
           </div>
         )}
       </div>
