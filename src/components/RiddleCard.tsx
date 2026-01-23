@@ -39,7 +39,8 @@ const RiddleCard = ({riddle}: RiddleProps) => {
     // Choose Hebrew fields when language is Hebrew and a Hebrew value exists; otherwise fall back to English
     const displayText = (lang === 'he' && riddle.textHe) ? riddle.textHe : riddle.text;
     const displaySolution = (lang === 'he' && riddle.solutionHe) ? riddle.solutionHe : riddle.solution;
-    const displayClue = (lang === 'he' && riddle.clueHe) ? riddle.clueHe : riddle.clue;
+    const difficultyKey = riddle.difficulty || 'easy';
+    const difficultyLabel = t(`riddle.difficulties.${difficultyKey}`);
 
     return (<div dir={isRTL ? 'rtl' : 'ltr'}
                  className="card-hover border border-surface-200 rounded-3xl p-8 mb-6 bg-white shadow-sm animate-fade-in">
@@ -55,7 +56,7 @@ const RiddleCard = ({riddle}: RiddleProps) => {
                         className={`w-2 h-2 rounded-full ${riddle.difficulty === 'hard' ? 'bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.5)]' : riddle.difficulty === 'medium' ? 'bg-orange-500 shadow-[0_0_8px_rgba(249,115,22,0.5)]' : 'bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]'}`}></div>
                     <span
                         className={`text-[10px] font-black uppercase tracking-widest ${riddle.difficulty === 'hard' ? 'text-red-500' : riddle.difficulty === 'medium' ? 'text-orange-500' : 'text-emerald-500'}`}>
-            {riddle.difficulty || 'easy'}
+            {difficultyLabel}
           </span>
 
                     <button
