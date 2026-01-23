@@ -1,8 +1,9 @@
-import React, {createContext, ReactNode, useContext, useState} from 'react';
+import React, {createContext, ReactNode, useContext, useMemo, useState} from 'react';
 
 import {riddlesData} from '../assets/riddles-all';
 import {riddlesDataGym} from '../assets/gym-for-the-brain';
 import {Riddle} from '../models/riddle';
+import { useI18n } from './I18nContext';
 
 interface RiddleContextType {
     riddles: Riddle[];
@@ -17,8 +18,19 @@ const allRiddles: Riddle[] = [...riddlesData.riddles, ...riddlesDataGym.riddles]
 
 export function RiddleProvider({children}: { children: ReactNode }) {
 
-    // Use the imported data directly
-    const [riddles] = useState<Riddle[]>(allRiddles as Riddle[]);
+    const { lang } = useI18n();
+
+    // Filter riddles according to current language. If Hebrew, only include riddles that have Hebrew text.
+    const riddles = useMemo<Riddle[]>(() => {
+        if (lang === 'he') {
+            return allRiddles.filter(r => {
+                // consider textHe presence and non-empty
+                return Boolean(r.textHe && String(r.textHe).trim().length > 0);
+            });
+        }
+        return allRiddles;
+    }, [lang]);
+
     const [loading] = useState(false);
     const [error] = useState<string | null>(null);
 

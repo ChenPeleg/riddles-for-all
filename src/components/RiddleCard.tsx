@@ -69,17 +69,16 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
           ))}
         </div>
         <div className="flex flex-col md:flex-row items-start md:items-center gap-2">
-            <div></div>
-          <div
-            className={`w-2 h-2 rounded-full ${riddle.difficulty === "hard" ? "bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.5)]" : riddle.difficulty === "medium" ? "bg-orange-500 shadow-[0_0_8px_rgba(249,115,22,0.5)]" : "bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]"}`}
-          ></div>
-          <span
-            className={`text-[10px] font-black uppercase tracking-widest ${riddle.difficulty === "hard" ? "text-red-500" : riddle.difficulty === "medium" ? "text-orange-500" : "text-emerald-500"}`}
-          >
-            {difficultyLabel}
-          </span>
-
-          <button
+          <div className="flex flex-row items-center justify-between md:justify-center  gap-2 mt-3 md:mt-0">
+            <div
+              className={`w-2 h-2 rounded-full ${riddle.difficulty === "hard" ? "bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.5)]" : riddle.difficulty === "medium" ? "bg-orange-500 shadow-[0_0_8px_rgba(249,115,22,0.5)]" : "bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]"}`}
+            ></div>
+            <span
+              className={`text-[10px] font-black uppercase tracking-widest ${riddle.difficulty === "hard" ? "text-red-500" : riddle.difficulty === "medium" ? "text-orange-500" : "text-emerald-500"}`}
+            >
+              {difficultyLabel}
+            </span>
+                  <button
             onClick={toggleDone}
             aria-pressed={done}
             title={done ? t("riddle.mark_not_done") : t("riddle.mark_done")}
@@ -128,6 +127,8 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
               </>
             )}
           </button>
+          </div>
+    
         </div>
       </div>
 
