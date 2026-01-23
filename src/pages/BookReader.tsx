@@ -72,8 +72,22 @@ function BookReader() {
         <RiddleCard riddle={riddle} />
 
         <div className="flex items-center gap-4 mt-8">
-          <button onClick={goPrev} disabled={index === 0} className="px-4 py-2 rounded-lg bg-white border border-surface-200">{t('book.prev')}</button>
-          <button onClick={goNext} disabled={index === bookRiddles.length - 1} className="px-4 py-2 rounded-lg bg-white border border-surface-200">{t('book.next')}</button>
+          <button
+            onClick={goPrev}
+            disabled={index === 0}
+            className={`px-4 py-2 rounded-lg bg-white border border-surface-200 ${index === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:cursor-pointer'}`}
+          >
+            {t('book.prev')}
+          </button>
+
+          <button
+            onClick={goNext}
+            disabled={index === bookRiddles.length - 1}
+            className={`px-4 py-2 rounded-lg bg-white border border-surface-200 ${index === bookRiddles.length - 1 ? 'opacity-50 cursor-not-allowed' : 'hover:cursor-pointer'}`}
+          >
+            {t('book.next')}
+          </button>
+
           <Link to="/sources" className="ml-auto text-sm text-brand-accent hover:underline">{t('book.back_to_sources')}</Link>
         </div>
       </div>

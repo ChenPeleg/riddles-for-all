@@ -7,7 +7,7 @@ import { displayBookTitle, BOOK_KEY_MAP } from '../i18n/bookKeys';
 
 function Sources() {
   const { riddles, loading } = useRiddles();
-  const { t } = useTranslationLegacy();
+  const { t, isRTL } = useTranslationLegacy();
   const [selectedSource, setSelectedSource] = useState<string | null>(null);
 
   // Simple helper to produce a stable book slug. Prefer the i18n key map when available.
@@ -42,7 +42,7 @@ function Sources() {
       <div className="max-w-5xl mx-auto px-6 py-12">
         <header className="mb-12 animate-fade-in">
           <Link to="/" className="inline-flex items-center gap-2 text-surface-400 hover:text-brand-accent transition-colors mb-8 group">
-            <svg className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path></svg>
+            <svg className={`w-5 h-5 transform ${isRTL ? 'group-hover:translate-x-1' : 'group-hover:-translate-x-1'} transition-transform`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path></svg>
             <span className="text-xs font-bold uppercase tracking-widest">{t('navigation.back_to_home')}</span>
           </Link>
           <h1 className="text-4xl md:text-5xl font-bold text-surface-900 tracking-tight mb-4">{t('sources.heading').split(' ')[0]} <span className="text-brand-accent">{t('navigation.sources')}</span></h1>
@@ -63,13 +63,13 @@ function Sources() {
                   e.preventDefault();
                 }
               }}
-              className={`group p-6 rounded-4xl border-2 text-left transition-all duration-300 relative overflow-hidden ${
+              className={`group p-6 rounded-4xl border-2 ${isRTL ? 'text-right' : 'text-left'} transition-all duration-300 relative overflow-hidden ${
                 selectedSource === source
                   ? 'bg-brand-accent text-white border-brand-accent shadow-[0_12px_24px_-8px_rgba(245,158,11,0.4)] scale-105 z-10'
                   : 'bg-white text-surface-900 border-surface-200 hover:border-brand-accent/30 active:scale-95'
               }`}
             >
-               <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+               <div className={`absolute top-0 ${isRTL ? 'left-0' : 'right-0'} p-4 opacity-5 group-hover:opacity-10 transition-opacity`}>
                 <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 11.55C9.64 9.35 6.48 8 3 8v11c3.48 0 6.64 1.35 9 3.55 2.36-2.2 5.52-3.55 9-3.55V8c-3.48 0-6.64 1.35-9 3.55zM12 8c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3z"/></svg>
               </div>
               <div className={`text-[10px] font-black uppercase tracking-[0.2em] mb-3 ${selectedSource === source ? 'text-white/70' : 'text-surface-400'}`}>
