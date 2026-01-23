@@ -3,7 +3,7 @@ import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { riddlesData } from '../assets/riddles-all';
 import { riddlesDataGym } from '../assets/gym-for-the-brain';
 import { riddlesDataGymHe } from '../assets/gym-for-the-brain.he';
-import { Riddle } from '../models/riddle';
+import { Riddle } from '../src/models/riddle';
 
 interface RiddleContextType {
   riddles: Riddle[];

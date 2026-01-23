@@ -1,4 +1,4 @@
-import type { Riddle } from "../models/riddle";
+import type { Riddle } from "../src/models/riddle";
 
 export const riddlesDataGymHe: Record<string, Partial<Pick<Riddle, "textHe" | "solutionHe" | "clueHe">>> = {
   "gym-1": {

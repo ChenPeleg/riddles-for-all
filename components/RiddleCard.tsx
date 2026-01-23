@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import { Riddle } from '../models/riddle';
+import { Riddle } from '../src/models/riddle';
 import { useTranslation } from '../hooks/useTranslation';
 
 interface RiddleProps {

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useRiddles } from '../context/RiddleContext';
-import RiddleCard from '../components/RiddleCard';
+import { useRiddles } from '../../context/RiddleContext';
+import RiddleCard from '../../components/RiddleCard';
 
 function Sources() {
   const { riddles, loading } = useRiddles();
