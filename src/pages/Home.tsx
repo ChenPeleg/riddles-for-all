@@ -135,6 +135,7 @@ function Home() {
                             <svg className="w-16 h-16 text-brand-accent" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 11.55C9.64 9.35 6.48 8 3 8v11c3.48 0 6.64 1.35 9 3.55 2.36-2.2 5.52-3.55 9-3.55V8c-3.48 0-6.64 1.35-9 3.55zM12 8c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3"/>
+                            </svg>
                         </div>
                         <h3 className="text-xl font-bold text-surface-900 mb-2">{t('navigation.sources')}</h3>
                         <p className="text-surface-600 text-sm leading-relaxed">{t('home.sources_card_desc')}</p>
