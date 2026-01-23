@@ -123,7 +123,7 @@ export const translations: Record<Lang, Record<string, any>> = {
       title: 'חידות',
       tagline: 'חידות מוח האולטימטיביות',
       description:
-        'תאמינו את המוח שלכם עם אוסף נבחר של חידות ותעלומות. מאתגר את המחשבה, חידה אחרי חידה.',
+        'אימןם המוח באמצעות אוסף נבחר של חידות ותעלומות. מאתגר את המחשבה, חידה אחרי חידה.',
       toggle_language: 'החלף שפה',
       toggle_to_he: 'עברית',
       toggle_to_en: 'English',
