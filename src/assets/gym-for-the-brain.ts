@@ -30,7 +30,7 @@ export const riddlesDataGym: {
     {
       id: "gym-2",
       text: "What has both wheels and flies but is not an aircraft?",
-      textHe: "מה יש לו גלגלים ויש עליו זבובים אך אינו מטוס?",
+      textHe: "מה יש לו גלגלים ויש עליו זבובים אךiano לא מטוס?",
       solution: "A garbage truck",
       solutionHe: "משאית זבל",
       categories: ["gym-for-the-brain"],
@@ -288,7 +288,7 @@ export const riddlesDataGym: {
     {
       id: "gym-25",
       text: "Some say I am green; some say I am red or yellow. Some play with what we are,and others spray us instead. What is it that we are?",
-      textHe: "יש שאומרים שאני ירוק; אחרים שאומרים שאני אדום או צהוב. יש שמשחקים במה שאנחנו, ואחרים מרססים אותנו. מה אנחנו?",
+      textHe: "יש שאומרים שאני ירוק; אחרים שאומרים שאני אדום או צהוב. יש ש משחקים במה שאנחנו, ואחרים מרססים אותנו. מה אנחנו?",
       solution: "We are pepper.",
       solutionHe: "פלפל",
       categories: ["gym-for-the-brain"],
@@ -576,8 +576,10 @@ export const riddlesDataGym: {
     {
       id: "gym-53",
       text: "A woman in a hotel room is startled by a knock on the door. When she opens it, a man apologizes and explains that he thought it was his own room. When he leaves, the woman instantly locks the door and phones hotel security. Why was she so frightened of the man?",
+      textHe: "אישה בחדר במלון נבהלה כשהדופק בדלת. כשפתחה, גבר התנצל והסביר שחשב שזה החדר שלו. כשהוא עזב, האישה מיד נעלת את הדלת והתקשרה לאבטחה של המלון. מדוע היא כל כך נבהלה מהגבר?",
       solution:
         "No one would ever knock on their own hotel room door, and the man did.",
+      solutionHe: "כי אדם בדרך כלל לא ידפוק על דלת חדרו שלו — העובדה שהוא דפק הראתה שמשהו לא בסדר.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2039,9 +2041,9 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-213",
-      text: 'Three men walk into a motel. The room they want is 30 dollars. Each guy pays ten dollars. Once they get to their room, the manager realizes that the room was only supposed to be 25 dollars. He sends an employee with five 1 dollar bills. On the way to the room, the employee thinks, "I can\'t split five 1s between 3 guys." So, he pockets 2 of the dollars and gives each of the men a dollar. Now, the men have only paid 9 dollars each. 9X3=27, and the employee pocketed 2 dollars, which makes',
+      text: 'Three men walk into a motel. The room they want is 30 dollars. Each guy pays ten dollars. Once they get to their room, the manager realizes that the room was only supposed to be 25 dollars. He sends an employee with five 1 dollar bills. On the way to the room, the employee thinks, "I can't split five 1s between 3 guys." So, he pockets 2 of the dollars and gives each of the men a dollar. Now, the men have only paid 9 dollars each. 9X3=27, and the employee pocketed 2 dollars, which makes',
       solution:
-        "There is no lost dollar: The order of operation was not followed. The employee still had 5 dollars to bring to the men.",
+      "There is no lost dollar: The order of operation was not followed. The employee still had 5 dollars to bring to the men.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
