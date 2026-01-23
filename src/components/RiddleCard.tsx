@@ -93,7 +93,7 @@ const RiddleCard = ({riddle}: RiddleProps) => {
                 </div>
             </div>
 
-            <h3 className={`text-xl md:text-2xl font-medium leading-relaxed mb-8 text-surface-900 tracking-tight ${done ? 'opacity-60 line-through' : ''} ${isRTL ? 'text-right' : ''}`}>
+            <h3 className={`text-xl md:text-2xl font-medium leading-relaxed mb-8 text-surface-900 tracking-tight ${done ? 'opacity-60' : ''} ${isRTL ? 'text-right' : ''}`}>
                 {displayText}
             </h3>
 
