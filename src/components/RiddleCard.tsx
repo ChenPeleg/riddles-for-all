@@ -27,6 +27,11 @@ const RiddleCard = ({riddle}: RiddleProps) => {
         }
     }, [riddle.id]);
 
+    // Hide solution when the riddle changes
+    useEffect(() => {
+        setShowSolution(false);
+    }, [riddle.id]);
+
     const toggleDone = () => {
         const newDone = !done;
         setDone(newDone);
