@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 
 import { Riddle } from '../models/riddle';
+import { useTranslation } from '../hooks/useTranslation';
 
 interface RiddleProps {
   riddle: Riddle;
 }
 
 const RiddleCard = ({ riddle }: RiddleProps) => {
+  const { t, lang, isRTL } = useTranslation();
   const [showSolution, setShowSolution] = useState(false);
   // Track whether this riddle is marked done (persisted in localStorage)
   const [done, setDone] = useState<boolean>(false);
@@ -30,8 +32,13 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
     }
   };
 
+  // Choose Hebrew fields when language is Hebrew and a Hebrew value exists; otherwise fall back to English
+  const displayText = (lang === 'he' && riddle.textHe) ? riddle.textHe : riddle.text;
+  const displaySolution = (lang === 'he' && riddle.solutionHe) ? riddle.solutionHe : riddle.solution;
+  const displayClue = (lang === 'he' && riddle.clueHe) ? riddle.clueHe : riddle.clue;
+
   return (
-    <div className="card-hover border border-surface-200 rounded-3xl p-8 mb-6 bg-white shadow-sm animate-fade-in">
+    <div dir={isRTL ? 'rtl' : 'ltr'} className="card-hover border border-surface-200 rounded-3xl p-8 mb-6 bg-white shadow-sm animate-fade-in">
       <div className="flex justify-between items-center mb-6">
         <div className="flex flex-wrap gap-2">
           {riddle.categories.map(cat => (
@@ -55,7 +62,7 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
           <button
             onClick={toggleDone}
             aria-pressed={done}
-            title={done ? 'Mark as not done' : 'Mark as done'}
+            title={done ? t('riddle.mark_not_done') : t('riddle.mark_done')}
             className="ml-2 inline-flex items-center justify-center p-2 rounded-lg hover:bg-surface-100"
           >
 
@@ -68,8 +75,8 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
          </div>
        </div>
 
-      <h3 className={`text-xl md:text-2xl font-medium leading-relaxed mb-8 text-surface-900 tracking-tight ${done ? 'opacity-60 line-through' : ''}`}>
-        {riddle.text}
+      <h3 className={`text-xl md:text-2xl font-medium leading-relaxed mb-8 text-surface-900 tracking-tight ${done ? 'opacity-60 line-through' : ''} ${isRTL ? 'text-right' : ''}`}>
+        {displayText}
       </h3>
 
       <div className="relative">
@@ -81,16 +88,16 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
             <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-brand-primary group-hover:translate-x-0 ease">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
             </span>
-            <span className="absolute flex items-center justify-center w-full h-full text-brand-primary transition-all duration-300 transform group-hover:translate-x-full ease">Reveal Solution</span>
-            <span className="relative invisible">Reveal Solution</span>
+            <span className="absolute flex items-center justify-center w-full h-full text-brand-primary transition-all duration-300 transform group-hover:translate-x-full ease">{t('riddle.reveal_solution')}</span>
+            <span className="relative invisible">{t('riddle.reveal_solution')}</span>
           </button>
         ) : (
           <div className="p-6 bg-brand-primary/5 rounded-2xl border-2 border-brand-primary/20 mt-4 animate-fade-in">
             <div className="flex items-center gap-2 mb-3">
               <svg className="w-5 h-5 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-              <p className="font-bold text-brand-primary uppercase tracking-widest text-[10px]">The Solution</p>
+              <p className="font-bold text-brand-primary uppercase tracking-widest text-[10px]">{t('riddle.solution_title')}</p>
             </div>
-            <p className="text-surface-900 text-lg md:text-xl font-medium leading-relaxed">{riddle.solution || 'No solution provided.'}</p>
+            <p className={`text-surface-900 text-lg md:text-xl font-medium leading-relaxed ${isRTL ? 'text-right' : ''}`}>{displaySolution || t('riddle.no_solution')}</p>
           </div>
         )}
       </div>

@@ -19,7 +19,9 @@ export const riddlesDataGym: {
     {
       id: "gym-1",
       text: "What is one time that a man can have an empty coat pocket, but have something in it at the same time?",
+      textHe: "באיזה מקרה כיס מעיל יכול להיות ריק ובאותו הזמן להכיל משהו?",
       solution: "When there is a hole in it",
+      solutionHe: "כשיש בו חור",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -28,7 +30,9 @@ export const riddlesDataGym: {
     {
       id: "gym-2",
       text: "What has both wheels and flies but is not an aircraft?",
+      textHe: "מה יש לו גלגלים ויש עליו זבובים אך אינו מטוס?",
       solution: "A garbage truck",
+      solutionHe: "משאית זבל",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -37,7 +41,9 @@ export const riddlesDataGym: {
     {
       id: "gym-3",
       text: "There are two of us, and we are sisters.We are on different sides of a road, but we are unable to view each other. Can you tell what we are?",
+      textHe: "יש אותנו שתי אחיות בצדדים שונים של הדרך, אך איננו יכולות לראות אחת את השנייה. מי אנחנו?",
       solution: "Eyes",
+      solutionHe: "העיניים",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -46,7 +52,9 @@ export const riddlesDataGym: {
     {
       id: "gym-4",
       text: "Can you deduce what has a corkscrew on one side and a power socket on the other?",
+      textHe: "מה יש לו פקק פותחן בצד אחד ושקע חשמל בצד השני?",
       solution: "A pig",
+      solutionHe: "חזיר",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -55,7 +63,9 @@ export const riddlesDataGym: {
     {
       id: "gym-5",
       text: "Who buys this but has no use for it, makes it but doesn’t need it, and uses it but can’t feel it or see it? What is the item?",
+      textHe: "מי קונה את זה אך אין לו שימוש, מי עושה את זה אך אינו זקוק לו, ומי משתמש בו אך לא יכול להרגיש או לראות אותו? מה הפריט?",
       solution: "A coffin",
+      solutionHe: "ארון קבורה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -64,7 +74,9 @@ export const riddlesDataGym: {
     {
       id: "gym-6",
       text: "When I am in the first stages of my life, I am taller than I will be than when I am in my last stages. Can you deduce what I am?",
+      textHe: "בשלבי החיים הראשונים אני גבוה יותר ממה שאהיה בסופו. מה אני?",
       solution: "A candle",
+      solutionHe: "נר",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -73,7 +85,9 @@ export const riddlesDataGym: {
     {
       id: "gym-7",
       text: "If you dropped me from a tall building, I would be fine. If you put me in the water, I would die. What am I?",
+      textHe: "אם תזרוק אותי מבניין גבוה אהיה בסדר; אם תשים אותי במים, אני אמות. מה אני?",
       solution: "A piece of paper",
+      solutionHe: "נייר",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -82,7 +96,9 @@ export const riddlesDataGym: {
     {
       id: "gym-8",
       text: "What type of room has no windows or doors?",
+      textHe: "איזה סוג חדר אין לו חלונות או דלתות?",
       solution: "A mushroom",
+      solutionHe: "פטרייה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -91,7 +107,9 @@ export const riddlesDataGym: {
     {
       id: "gym-9",
       text: "What can you feed to make it live, but give it a drink and it will die?",
+      textHe: "מה ניתן להאכיל כדי שיחיה, אבל אם תתן לו לשתות — הוא ימות?",
       solution: "A fire",
+      solutionHe: "אש",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -100,7 +118,9 @@ export const riddlesDataGym: {
     {
       id: "gym-10",
       text: "A prisoner was told, “If you tell the truth, I am going to shoot you; if you tell a lie, I am going to stab you.” What should the prisoner say to save his life?",
+      textHe: "לאסיר נאמר: 'אם תגיד אמת אני ארה אותך; אם תשקר אני אדקור אותך.' מה עליו לומר כדי להציל את חייו?",
       solution: "You will stab me",
+      solutionHe: "אתה תדקור אותי",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -109,7 +129,9 @@ export const riddlesDataGym: {
     {
       id: "gym-11",
       text: "I have water, but no fish live in it. I have mountains, but with no trees to speak of. I have towns, but I have no homes. Do you see what it is that I am?",
+      textHe: "יש לי מים אך אין לי דגים; יש לי הרים אך אין לי עצים; יש לי ערים אך אין לי בתים. מה אני?",
       solution: "A map",
+      solutionHe: "מפה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -118,7 +140,9 @@ export const riddlesDataGym: {
     {
       id: "gym-12",
       text: "I am in the middle of April and March, but I am not at the beginning or end of either month. What am I?",
-      solution: "The letter “R”",
+      textHe: "אני באמצע של אפריל ומרץ, אך לא בתחילת או בסוף אף אחד מהם. מה אני?",
+      solution: 'The letter "R"',
+      solutionHe: "האות 'R' (באנגלית)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -127,7 +151,9 @@ export const riddlesDataGym: {
     {
       id: "gym-13",
       text: "I am surrounded by wood, but I came from a mine. Everyone always uses me. What am I?",
+      textHe: "אני מוקף בעץ אך באתי ממכרה. כולם תמיד משתמשים בי. מה אני?",
       solution: "Pencil lead",
+      solutionHe: "ליבת עיפרון",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -136,7 +162,9 @@ export const riddlesDataGym: {
     {
       id: "gym-14",
       text: "What is something that belongs to you that everyone else uses?",
+      textHe: "מה שייך לך אך כולם משתמשים בו?",
       solution: "Your name",
+      solutionHe: "שמך",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -145,7 +173,9 @@ export const riddlesDataGym: {
     {
       id: "gym-15",
       text: "Think of what snow looks like, then think of what clouds look like. Before you think of anything else, what does a cow drink?",
+      textHe: "תחשבו איך נראה שלג ואז איך נראים עננים. לפני שתחשבו על משהו אחר — מה שותה פרה?",
       solution: "Water",
+      solutionHe: "מים",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -154,8 +184,10 @@ export const riddlesDataGym: {
     {
       id: "gym-16",
       text: "How is the number seven different from the other numbers between one and ten?",
+      textHe: "איך המספר seven שונה מהמספרים האחרים מאחד עד עשר?",
       solution:
         "The number seven consists of two syllables, while the others only contain one.",
+      solutionHe: "באנגלית המילה 'seven' מורכבת משתי הברות בעוד האחרים הברות אחת",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -164,7 +196,9 @@ export const riddlesDataGym: {
     {
       id: "gym-17",
       text: "You eat me first, but then you get eaten. Can you deduce what I am?",
+      textHe: "אתה אוכל אותי קודם, ואז אתה ניזון ממני. מה אני?",
       solution: "A fishhook",
+      solutionHe: "קרס דייג",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -173,7 +207,9 @@ export const riddlesDataGym: {
     {
       id: "gym-18",
       text: "What will always be in a minute and twice in a moment, but it will not be present in a thousand years?",
-      solution: "The letter “M”",
+      textHe: "מה תמיד יהיה בדקה ופעמיים ברגע, אך לא יהיה באלף שנים?",
+      solution: 'The letter "M"',
+      solutionHe: "האות 'M'",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -182,7 +218,9 @@ export const riddlesDataGym: {
     {
       id: "gym-19",
       text: "How is it possible to have you stand physically behind your mother, while she is standing behind you as well?",
+      textHe: "איך אפשר לעמוד מאחורי אמך פיזית, ובו‑זמנית שהיא עומדת מאחוריך?",
       solution: "Stand back to back to your mother.",
+      solutionHe: "לעמוד גב אל גב",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -191,7 +229,9 @@ export const riddlesDataGym: {
     {
       id: "gym-20",
       text: "I run, and it runs. When I stop, it still runs. What is it that I am speaking of?",
+      textHe: "אני רץ, והוא רץ. כשאני עוצר, הוא עדיין רץ. על מה מדובר?",
       solution: "My watch",
+      solutionHe: "השעון שלי",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -658,8 +698,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-71",
-      text: "If I am something that is always being responded to, though I never speak with a question, what am I?",
-      solution: "A doorbell",
+      text: "If a sundial has the least amount of moving parts of any timepiece, what has the most?",
+      solution: "An hourglass, because of the grains of sand in it.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -667,8 +707,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-72",
-      text: "I have hands, but I am unable to clap. What am I?",
-      solution: "A clock",
+      text: "What word has five letters but will become smaller if you add a duo of letters to it?",
+      solution: "Short",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -676,8 +716,9 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-73",
-      text: "I am present in the sun, but I am not in the rain. I have one color but more than one size. I can fly, though I am stuck at the bottom. I feel no pain and do no harm. What am I?",
-      solution: "I am a shadow.",
+      text: "If your parents have six sons and you are one of them, and each son has one sister, how many people are in your family?",
+      solution:
+        "Nine. There would be two parents, one daughter, and the six sons.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -685,8 +726,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-74",
-      text: "I do not have breath, but I am alive. I am always drinking but never thirsty. What am I?",
-      solution: "I am a fish.",
+      text: "You have a class of students. Fourteen of the students are boys. Eight of the students wear blue shirts. Two of the students are neither male, nor wearing a blue shirt. If five of the children are boys who wear a blue shirt, then how many children would be in the class?",
+      solution: "Nineteen",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -694,9 +735,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-75",
-      text: "I close one eye, though you beg me to keep it open. I have three eyes in total but only one leg. What am I?",
-      solution:
-        "I am a traffic light. You beg the light to stay green as you approach.",
+      text: "If Paul has a height of nine feet,and he works in a butcher shop while wearing size-twelve shoes, what would he weigh?",
+      solution: "Meat",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -704,9 +744,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-76",
-      text: "What is a word in English that has nine letters but can remain a word at each step when you remove one letter from it, even to the point of a single letter remaining? You should list each letter as you are removing them, and you should list the resulting word at each step you make.",
-      solution:
-        "Startling is the beginning word. When you remove the “l”, it turns to “starting.” From there, you will need to take away the “t” to turn the word into“staring.” If you keep going from there, you can turn it into “sting,” then “sing”,“sin”,“in”, and then, finally, “I” when you’ve reached the final word.",
+      text: "What has no legs, is brown, and has a head and tail?",
+      solution: "A penny",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -714,8 +753,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-77",
-      text: "I am always present in eternity, the final part of the time. I am at the start of the end and also of place. What am I?",
-      solution: "The letter “E”",
+      text: "If a monkey and a squirrel are both climbing at the same time, which one will reach the banana first?",
+      solution: "Neither. It's a coconut tree, and not a banana tree.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -723,8 +762,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-78",
-      text: "Until you measure me, you will not know me. You will miss me when you cannot have any more of me. When I fly away, you will be saddened. What am I?",
-      solution: "Time",
+      text: "What is something that will cease to have its head every morning, but will be able to have it again when nightfall arrives?",
+      solution: "A pillow",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -732,8 +771,9 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-79",
-      text: "I have four legs, but I am not able to walk. I am covered in flowers on a special occasion, but I have no soil for them to grow. I hold food many times throughout the day, both large and small. What am I?",
-      solution: "A table",
+      text: "You have one jug of milk, and you need to measure a single cup. How can you achieve this if you only have a three-cup measuring container and a five-cup container?",
+      solution:
+        "You will need to fill the 3-cup container and then pour the 3 cups into the 5 cups. Repeat the process and fill the 5cups all the way, and what’s left from the 3 cups would equal a single cup.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -741,8 +781,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-80",
-      text: "I hurt the most when I am lost, but I hurt when I'm not had at all. In some cases, I am the hardest to express, but I can also be the easiest that you find to ignore. I am something that can be given to many or just one. Can you deduce what I am?",
-      solution: "I am love.",
+      text: "If two fathers go fishing with their two sons, and they each catch a fish, why did they only bring home three fish?",
+      solution: "The group has a grandfather, father, and son.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -750,8 +790,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-81",
-      text: "The fighters are lined up and placed with gratification. There is a duo of lines that will stand alongside each other. A single component will be able to deduce whether the other rows are going to be divided or united. What is the thing that we are talking about?",
-      solution: "A zipper",
+      text: "I was a stone inside the tree; I help your words live. If you push me when I stand, I will have less, the more that I move around.Can you deduce what I am?",
+      solution: "A pencil",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -759,8 +799,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-82",
-      text: "I cannot breathe, but I can jump and skip. I am able to run great distances, but I cannot eat. I can stretch, and I can swim over vast lakes, but I do not drink. I can stand, and I can fall asleep. I can play, and I can grow, but I do not think or have a mind of my own. You see me, but I cannot see at all. What am I?",
-      solution: "A leg",
+      text: "There is light, and it’s the only place I can live. If light shines on me, however, I will die.",
+      solution: "A shadow",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -768,8 +808,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-83",
-      text: "Within me, I am able to clean all that is old and what is bad. The juice that I make is golden. If I die, you will need to assemble a filter machine to replace me and the beans that I resemble. What do you think I am?",
-      solution: "A kidney",
+      text: "What sits when it stands up and jumps when it walks?",
+      solution: "A kangaroo",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -777,9 +817,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-84",
-      text: "Two politicians sit at a table and discuss business. They each order the same drink. One politician, named Tommy, drinks his right away and orders another. He drinks his second in a gulp, but decides to wait before he orders another. The other politician, named Tony, sips his drink but suddenly falls forward and dies. Both men were set up to be assassinated. Why, then, did Tony die, and why did Tommy live?",
-      solution:
-        "Both men in this riddle were given drinks with poison. However, the poison was in the ice. Tommy had finished his drink at a rapid pace, and the ice was still intact. Because the ice stayed intact, the poison wasn't released, which is why he lived. Tony died because he was sipping his drink, and the ice had time to melt and release the poison that killed him.",
+      text: "What has to be broken before you can use it?",
+      solution: "An egg",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -787,8 +826,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-85",
-      text: "I am never fat, but I can be very thin. You always need me around, but I never crowd you, and I give you your space. You can use a lot of me, especially if you like to talk. I am always around for you, but the ability to view me will not happen. What am I?",
-      solution: "Air",
+      text: "What begins and ends with a T and has T inside it?",
+      solution: "A teapot",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -796,8 +835,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-86",
-      text: "I am a danger to everyone, and I am a true cause for you to be alarmed. If you see me, you could lose your life, your home, or those that are precious to you. When you hear me, you could lose your job in an instant. What am I?",
-      solution: "Fire",
+      text: "What is something that you can hold without using your arms?",
+      solution: "Your breath",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -805,9 +844,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-87",
-      text: "If I order a sword that is priced at $400, but I live in an area where I cannot have a package longer than 9 feet, and my sword is 9 feet and 1 inches, how would it be mailed to me without breaking the rules of the country that I am in? I would like my sword to arrive in one piece.",
-      solution:
-        "Get a package that is 9 feet on each of the sides and then place the sword diagonally in the box. It can be placed inside with plenty of room to spare. Therefore, it would not break any of the rules, and I would have it mailed to me on time.",
+      text: "It has been around for years, but it is never older than a month. What is it?",
+      solution: "The moon",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -815,8 +853,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-88",
-      text: "Duels are of evil and good, but I am a fighter of good. If you watched your words, I would be revealed. I am considered to be a king of the night sky that is black. What am I?",
-      solution: "Dark",
+      text: "What has a single thumb, four fingers, but is not alive?",
+      solution: "A glove",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -824,8 +862,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-89",
-      text: "I can take you up, or I can take you down. You can reach great heights with me, or you can be at the bottom. What am I?",
-      solution: "I am a flight of stairs.",
+      text: "Three doctors said that James was their brother. James himself has said he has no brothers. Is James lying, or is the doctor lying?",
+      solution: "No one was lying. The three doctors were James’ sisters.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -833,9 +871,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-90",
-      text: "I am old, and I have been around for ages. I have a mighty roar. I am able to run forever, though I never move at all. What am I?",
-      solution:
-        "A waterfall.While the water runs, the waterfall remains still because it never moves or changes location.",
+      text: "If you remove the first and second from me and then remove all of the others, I will still be unchanged. Can you deduce what it is that I am?",
+      solution: "A postman",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -843,8 +880,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-91",
-      text: "You're supposed to keep me as straight as possible, though you can very rarely do so. For much of the time, I am curved or slightly bent, and your sadness or depression can cause me to bend even further. If you keep bending me over and over again, or if you bend me for too long, you may find that I am unable to straighten out again. What am I?",
-      solution: "Your posture",
+      text: "I am a box that has no locks but holds keys. My keys have the power to unlock your deepest senses. What am I?",
+      solution: "A piano",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -852,8 +889,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-92",
-      text: "I can be dull, or I can shine brightly. I am many different sizes. I can be large in size, and I can also be small. I can be curved, or I can be pointy. I can be sharp, or I can be unsharpened. You see me every day, but it is only when you need me that I become apparent in your mind. What am I?",
-      solution: "A knife",
+      text: "What has a single eye but is unable to see?",
+      solution: "A needle",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -861,8 +898,9 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-93",
-      text: "I am visited by people every day from all over the world. They can come and visit me because I stay in one place. Some stay with me for a few minutes, although some stay with me for an hour. Most of the people who meet me think that I am dirty, but they never want to be without me because they need me around. Whenever people come to see me, they open themselves up and reveal a part of themselves that they don't show to other people. Who or what am I?",
-      solution: "A toilet",
+      text: "A woman in a hotel room is startled by a knock on the door. When she opens it, a man apologizes and explains that he thought it was his own room. When he leaves, the woman instantly locks the door and phones hotel security. Why was she so frightened of the man?",
+      solution:
+        "No one would ever knock on their own hotel room door, and the man did.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -870,9 +908,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-94",
-      text: "There was a driver for a businessman who was going the wrong way down a street that was one way. On his way, he passes 7 police officers who watch him go the wrong way down a one-way street, yet none of them make a move to stop him, or even speak to him angrily. Instead, they smiled, waved, and wished him well. Why did none of the 7 police officers stop him?",
-      solution:
-        "The driver wasn't driving. He was walking. Therefore, no crime was committed.",
+      text: "I have the ability to fly, but I do not have wings. I am able to weep; however, I do not have what is necessary to see. The dark will always follow me, no matter where I go. Can you deduce what I am?",
+      solution: "Clouds",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -880,8 +917,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-95",
-      text: "A ruler of a kingdom has a wine bottle supply that is the number equivalent to a hundred and ten products. One bottle has been filled with poison. One single taste of the wine with poison is enough to kill a person. Not wanting to be poisoned himself, the king asks the jailer to identify the poisoned wine by testing them on prisoners. It takes a full day for the poison to take effect. The dungeons have been filled, so he can test it on as many prisoners as he needs to. What is the minimum number of prisoners who have to be tested with the wine?",
-      solution: "Only ten",
+      text: "I am often bought for consumption, but no one will ever consume me. Can you guess what I am?",
+      solution: "Cutlery and plates",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -889,8 +926,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-96",
-      text: "Many people can perceive me, though no one experiences the joy of being able to view me. When you speak to me, I will respond, but only if you make the first move. What am I?",
-      solution: "An echo",
+      text: "I am hard at the beginning and soft in the middle, and if you use me to blow, you will need to have a good amount of air. What am I?",
+      solution: "Gum",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -898,8 +935,9 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-97",
-      text: "A cleaner of windows is high above the ground, placed at the 12th level at a hotel. Upon stumbling, he begins to tumble downward. Though there is no equipment to prevent dangerous activity, he is fine. This is impressive, but how did it happen?",
-      solution: "He was cleaning windows on the inside, not the outside.",
+      text: "Mr. Owens was killed on a Friday afternoon. His wife said she was reading a magazine and was innocent. The chef claimed that he was making breakfast and was innocent, as well. The maid had been folding clothes, and the butler was taking a shower as his mother was helping the gardener plant carrots in the garden. Who killed Mr. Owens?",
+      solution:
+        "The chef because he said he was making breakfast. Mr. Owens was killed in the afternoon, not in the morning.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -907,8 +945,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-98",
-      text: "I'm only made for one person, but my purpose is for two. I can be worn for many years, but sadly, I'm usually only worn for a few. You're supposed to keep me on forever, but that isn't always the case. You will never need me unless you say that you do. What am I?",
-      solution: "A wedding ring",
+      text: "What is a seven-letter word that becomes a one when you remove four?",
+      solution: "Someone",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -916,8 +954,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-99",
-      text: "I get used every day, whether a lot or a little, although you are kind enough to let me rest at night. I have a twin with me at all times, and I'm never alone. For some reason, you always cover me up instead of letting me go. I am not alive, but I do have a soul, and so does my twin. What am I?",
-      solution: "A foot. The “twin” is the other foot.",
+      text: "I've been all around the world, and yet I never leave the corner. What am I?",
+      solution: "A stamp",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -925,9 +963,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-100",
-      text: "You are sitting at a table, trying to enjoy your dinner, and you notice that there are 22 flies on your table. You begin swatting right away, and you are able to kill 10 flies. How many flies are there left on the table after you killed 10?",
-      solution:
-        "The only flies that are remaining on a table are the 10 that you killed. The others would naturally fly away when you started swatting.",
+      text: "What is something that you have that, the more you make, the more you leave behind?",
+      solution: "Fingerprints",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -935,9 +972,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-101",
-      text: "A student has missed more school than any other student, and the principal has called him into his office and asked him why he’s missing so many school days. The student angrily replies that there isn't enough time for him to attend because he needs a certain length of sleep every day, and he calculates that he would need 122 days of sleep. After calculating, weekends count for over 100 days in the year and summer vacation is 2 months. He also declares that if he spent an hour on each meal, that would accumulate to 45 days in a year. He further calculates that he would need at least 2 hours to relax and to do whatever he wanted to do in a day, which adds another month to his schedule. He then says that if you add all of that, it would only leave him 4 days for school. The principal is confused and rightly so, but he is unable to figure out why. What is wrong with the student's argument to confuse the principal?",
-      solution:
-        "The reason that the principle is confused is that the student has double-counted a lot of his days. So his math, while smart, is potentially incorrect in many ways. A lot of the time that he would be sleeping or relaxing occurs during the weekends and during the summer. Weekends occur during the summer and during the year, so his calculations were getting counted more times than they needed to be counted. Instead of counting them once, he was counting them several times. Another thing that he forgot is that school does not last all day. Schools in many countries only last for 6 or 8 hours per day, which means you have the rest of the day to do whatever it is that you would need to do. In that case, the 4 days that he was actually calculating for school would be 16 days or more: If his school was 6 hours per day, those 4 days would only represent 16 days of school. So the principle is confused because the student’s calculation of time was wrong.",
+      text: "What is something that breaks as soon as you speak its name?",
+      solution: "Silence",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -945,9 +981,9 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-102",
-      text: 'There was once a king who had 3 wise men, and he told them that they must close their eyes. When their eyes are closed, he goes around and put a glove on each one of them. "I have put a red or yellow glove on each of you," he says to them. "I will not tell you what color the glove is, but one of you has the red one." "Open your eyes," he commands. "You may not speak to each other at all, but within a single hour, I want one of you to call out the color of your glove. If you are unable to do this, or if one of you says the wrong color, you will all be exiled from my kingdom immediately." Instantly, they began to look at each other\'s gloves. After standing for the entire hour in silence, all three men figure out the color of their gloves and speak at once. If you\'re assuming that all of these men and the others have perfect logic and they are all able to think at the same time with the same speed to figure out who had what color, what then are the colors of the 3 men\'s gloves?',
+      text: "A King has no heirs and no Queen, and he holds a contest to see who his heir will be. He gives each child of the kingdom a seed and promises that whichever child has the largest and most beautiful plant will earn the throne. It's a metaphor for his kingdom. At the end of the contest, each of the children came back to the palace with an enormous and beautiful plant in their hand, each expecting to be the next ruler. He looks at all the children's plants, but finally decides that a little girl who has an empty pot is going to be the next Queen of the kingdom. If he had promised that the one with the most beautiful plant would win, why did he choose the little girl over all of the other children who had plants that grew?",
       solution:
-        "They all had red gloves. There were only 3 possible combinations, and we knew that they couldn't all have yellow gloves because the king had already said at least one of them had a red glove, so from there, you can start the process of elimination and learn that they would be able to identify that they all had a red glove.",
+        "The king had given each child a fake seed so that none of the plants would grow, and the little girl had been the only one honest enough to not switch the seeds to make herself look better.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -955,9 +991,9 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-103",
-      text: "An offense had occurred on Baker avenue. Police thought that a man, Kyle Ferguson, was to blame. They believed that someone running on a pathway was suddenly stabbed in the chest. The suspect had brown hair with bright blue eyes, and he wore the same suit that Kyle Ferguson was wearing. The suit that he was wearing was a Gucci suit. When questioned about his involvement in the crime, Kyle said that he was innocent, and that he was walking through the pathway when someone who was wearing a suit just like his came up behind the victim and stabbed the victim. He claimed he was scared and ran home as quickly as his feet would take him so that his own life would not be taken as well. When the police asked him to give a description of the murderer, he repeated that he had the same suit on as the one he was wearing, but the other man had bushy black hair, a full beard, and a baggy and torn suit. Instantly, the policeman knew that Kyle was lying. How was it possible that they were able to tell that Kyle wasn't telling the truth?",
+      text: "At a funeral for her mother, a woman met a man she had never seen before. Upon seeing the man, she immediately fell in love at first sight. When the funeral is over, she tried to find him, but couldn’t. Several days after the funeral, she killed her sister. Why would she kill her sister?",
       solution:
-        "They were able to deduce that Kyle was not telling the truth because the man was stabbed in the chest. When Kyle was interviewed by the police, he had said that the man was stabbed from behind.",
+        "She killed her sister because she wanted to see the man again, and she figured out that the only way she would be able to see him again was at her sister's funeral.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -965,9 +1001,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-104",
-      text: "Mrs. Benson teaches 2nd-grade students. One of the attendees decided to take the apple that was sitting on her desk. To figure out who had done it, Mrs. Benson had narrowed the suspects down to: Paige, Bonnie, and Heather. Each of the students gave the same statement, except for one. Both Paige and Bonnie said that they didn't do it. Only Heather blamed someone else, and she said that Bonnie didn’t do it either. She knows that only one of the children is telling the truth, but who is telling the truth about who took the apple?",
-      solution:
-        "The thief was Paige. Bonnie was telling the truth when she said she did not steal it, and Heather was lying, so she says the Bonnie didn't do it either to reinforce that fact. Paige was lying, so she did it.",
+      text: "What is the type of dress that you were never able to wear?",
+      solution: "An address",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -975,8 +1010,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-105",
-      text: "A woman puts on a clean shirt every night before she goes to bed. On the first night, she puts on a blue shirt and then sleeps for 5 hours. For every hour more that she sleeps, she decides to put on a different shirt. The next night, she follows a scale that contains different colors. The colors are: Blue, black, red, green, white, pink, orange, brown, purple, yellow, gray, neon green, tan and, finally, teal. After she does this, every hour less than the night before, she will put on a different color, going backwards on the scale that she has created. If she decides to wear a blue shirt, it is because, she slept more hours than the night before. She does this because if she had slept fewer hours than the previous night, she would skip it and wear the teal shirt instead. However, if she continues to go backward on the scale, and she had to wear blue but would not wear it, she would still be counting blue from the scale, backward. The second night, the woman decides to wear a blue shirt because she hadn't slept any more or less hours than she had the previous night. The night that she wears a blue shirt, she sleeps for 6 hours. The night after, she sleeps for",
-      solution: "On the twelfth night, she will wear blue again.",
+      text: "What would you find at the end of a rainbow?",
+      solution: "The letter “W”",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -984,9 +1019,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-106",
-      text: "There is a kingdom with poison, and everyone knows that the only way that you can cure yourself is to drink an even stronger poison to neutralize the poison that you've already drunk. The king doesn't want to die and wishes to make the strongest poison possible so that, anytime he gets poisoned, the poison that he takes will neutralize any other poison that he has been given. In order to make sure that this can happen correctly, he ordered two chemists to come to his kingdom. They are the best chemists in the land, and have proven their value. Their names are: Stewart and Lenny. The king is going to have them both create a poison as strong as they can make it, and after they've completed their poison, he will then have others to drink them and then their own. Whoever dies has created the weaker poison. Stewart knows that Lenny is much better at making poison than he is, so he knows that he is more likely to die. Using this knowledge, Stewart makes a plan to ensure that he will live, but that Lenny will die. On the day of the contest, Lenny realizes that Stewart knew that he had no chance of beating him, so Lenny quickly thinks of a plan that will ensure that he will live, and Stewart will die instead. In the end, Lenny is the one who lives, while Stewart is the one who dies. The king is left unhappy because he didn't get what he wanted. What happened?",
-      solution:
-        "The reason that Stewart dies is that when he deduced he was about to lose, he found out that the only way he could live was to replace his poison with something that isn’t poison at all, and then he would need to drink the poison of his own before the contest. In this way, he would be drinking his weaker poison and neutralizing it with Lenny's stronger poison. So he drinks the non-poison that he submitted to the contest of the best poison maker. Once Lenny realized that this was the only way that Stewart could save himself, he figures out that he would be able to save himself by either drinking a poison that is weaker before the contest so that his poison would neutralize it during the contest itself or submit a poison that is a non-poison to the contest like Stewart did. If he were drinking the weaker poison before the contest, they would both live, and the king would realize that they were disobeying his orders; they could both either be exiled or killed. But by submitting a poison that is not a poison to the contest, Stewart would end up drinking the weaker poison before the contest and that the two non-poisons that they submitted to the contest would still make him die, but the king would be none the wiser, but he still would not get what he wanted because the two poisons were not poison at all.",
+      text: "If you have this and then share it with other people, it's instantly gone. What is it?",
+      solution: "A secret",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -994,9 +1028,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-107",
-      text: "On a Friday night, you and your buddies are bored, so they have decided to give you a dare involving a house that is known to be haunted and dangerous. You walk up to the front door, and you're scared because you have no idea what's behind it. When you go in, you find a long hallway that leads into a musty room that has three separate doors. You try to turn back, but the doors close behind you and get locked. No one can hear you screaming for help, and the room is dark. You look for a light source and try to turn it on, but the power is out, so it doesn't work. You're terrified, but now, you have no choice but to follow the hallway to the three doors, and you must make a choice. Behind the first door is an electric chair that you have to sit in. Behind the second door, there's a bottomless pit that has no end, and behind the last door, there's a pool full of acid. You have to go into one of the rooms, and you have to face the danger. Which of the three doors should you go through?",
-      solution:
-        "You should choose the first door and sit in the seat. Because there is no power, when you are in the seat, it is not going to have any effect on you or your body when the other rooms would.",
+      text: "If you open me, you cannot see me without the use of a mirror. If you close me, you will not be able to see me at all. What am I?",
+      solution: "Eyes",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1004,9 +1037,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-108",
-      text: "You have a grandparent who is an inventor, and he has a pink and green tablet for you. Ingested together, they will grant you immortality. On the night he invented it, he gives you two of the pink pills and two of the green pills, just in case one of them is lost, or one of them doesn't work. As he's your grandfather and he loves you, he gives you a special warning: If you overdose, you will get the opposite, and you will die. You put the pills in your purse, and you leave and go home. Unfortunately, on the way home, you are abducted by kidnappers, and they blindfold you. They throw you in the back of their car. At this point, you remember the pills that your grandfather invented. You take them out because you have retained motion in your arms. You are only able to breathe for a few moments longer. The problem is, you cannot tell in the dark, which is the pink tablet and which is the green tablet. Unfortunately, even if you remove your blindfold, there are no lights, so you are unable to see. Given the circumstances that you're in, how can you successfully eat one tablet that's pink and one tablet that's green so that you can make sure that you survive?",
-      solution:
-        "The only way that you would be able to survive is to eat half of every pill. Your grandfather gave you 2 pink pills and 2 green pills. So if you split each pill in half, then it won't matter that you can't see them because half of 4 pills is 2 pills.",
+      text: "What type of tree can you carry in your hand?",
+      solution: "A palm tree",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1014,8 +1046,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-109",
-      text: "My stalk is placed securely wherever my presence is allowed. My back end appendage is curly. I mature to a part of my full height as you dot me. Not a single word can I speak, yet I can communicate in any dialect you wish. I'm not a seed, but birds love me. I have a speech impediment that affects me. I can say “aged”, but I cannot say the word “wage”; I can say the word “cage”, but I cannot say the word “page”. I reside on the main road that is built well. You will be able to view my companions here as they are committed. I am well-constructed; however, I am not rotated, and I’m a tool for learning. To understand what I am, you must calculate me before you start. What am I?",
-      solution: "I am musical notes.",
+      text: "What is something that rich people need, poor people have, and if you eat it, you die?",
+      solution: "Nothing",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1023,9 +1055,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-110",
-      text: "There is a small town that is known for having two barbershops. Each of these barbershops has only one hairstylist, and they reside in conflicting areas of the town. One area is well-known, and one is judged for its appearance. The hairstylist in the first part of the town is always clean, and the air is fresh. The floors are always washed, and there's no hair on the floor. The barber is extremely friendly, and he is always smiling. Also, he is well put-together, and his hair is well-done. The stylist in the conflicting part of the town is not well put-together. The shop has filth. The stylist wears an unhappy face. His hair is not well-made at all, and you can see stains and tears on his shirt. His skin is oily, indicating that he’s not able to wash his face. Newcomers come to the town and hear about both stylists, and get information about both. After doing so, they decide to visit the second stylist with the bad hair, instead of the first. Why would they do this?",
-      solution:
-        "The reason that they went to the bad barbershop is that the clean cut barber with the immaculate hair has his hair styled by the unkempt",
+      text: "I am able to be cracked, and I am able to be made. You can play me, or you can tell me. What am I?",
+      solution: "I am a joke.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1033,9 +1064,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-111",
-      text: "There is a circular jail that has a single warden. He is extremely hyper one day; he runs around and begins to open cells. They have 100 cells in this jail, and they are numbered from 1 to",
-      solution:
-        "The cells that would still be open are 1,4, 9, 16, 25, 36, 49, 64, 81, and, of course, the 100th cell. Only the cells that have 2 of the same factors would be open because they are opened and closed the same number of times. Because they have the same factor twice, this makes their number of factors odd.",
+      text: "If a sundial has the least amount of moving parts of any timepiece, what has the most?",
+      solution: "An hourglass, because of the grains of sand in it.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1043,9 +1073,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-112",
-      text: "A bank is being robbed, and one of the robbers says to one of the bank tellers that she has to give him all of the money. But their bank teller explains to him that she doesn't have access to it. After she's done speaking, the phone rings, and the robber tells her to answer it and that she better not give them away, or he will kill her. When she picks up the phone, she realizes it's her mother. She asks her mother if this was an emergency situation. Then she asks her mother if she could please call her once she gets home. She then states she needs help painting before she hangs up the phone. The robbers continue to try and get into the vaults but without success. Twenty minutes later, the police show up with the teller's mother and arrests all of the robbers who are in the bank. How did the police know about the robbery?",
-      solution:
-        "The police knew about the robbery because when the teller was talking to her mother, she used the mute button on the phone, so the only words her mother actually heard her say were “emergency,”“call,” and the word “help.” The teller's mother immediately called the police and told the police that there was a problem at the bank, which led the police to go to the bank to see what was wrong.",
+      text: "What word has five letters but will become smaller if you add a duo of letters to it?",
+      solution: "Short",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1053,9 +1082,9 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-113",
-      text: "A man named Adam has three daughters who are unmarried. The oldest daughter always tells the truth, while the youngest daughter always lies. The middle child either tells the truth or lies. One day, a very rich and handsome young man comes to Adam's house and says that he wants to marry one of his daughters. Naturally, he wants to marry the oldest or the youngest so that he will always be able to tell if she is lying or telling the truth to him. Their father agrees and understands the reasoning behind his logic, but he says that he will only allow him to ask one of the girls a question, and it has to be a yes or no question. Once he does this, he can decide which one he is going to marry. Unfortunately for the handsome man, all of the daughters look the same age. What question would he ask one of the daughters at random to be able to figure out which daughter is the youngest or the oldest, so he knows which daughter tells the truth or which one lies?",
+      text: "If your parents have six sons and you are one of them, and each son has one sister, how many people are in your family?",
       solution:
-        "What he should ask is the question: “Is she older than her?” and when he asks this, he should always pick the younger daughter based on what he knows. If he asked the older daughter this question, and she had said yes, then he would know who the youngest daughter is because the older daughter always tells the truth. If he asks and she says “no,” then the youngest daughter is the other one. If he had asked his questions to the younger daughter, and she says “yes,” then he already knows that she's lying, and he would pick the oldest instead. If he had asked the youngest, and she said “no,” then he would pick the other one like in the first case because you would know that she’s still lying. However, if he asked the middle daughter, it wouldn't matter because both would be acceptable choices.",
+        "Nine. There would be two parents, one daughter, and the six sons.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1063,9 +1092,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-114",
-      text: "You are visiting your best friend who tells about a tale of how he attempted to impress a beautiful young woman with a story, but instead got slapped across his mouth. He wants you to see why he got slapped, because he doesn't understand. His story is as follows. “On a hot and windless day, we were in a bunker, and one of us yelled that the enemy is coming. We immediately began to open fire and defended our bunker, leaving 100 men dead before they were able to retreat. I was checking out a dead captain's glasses when a shout came that more men were coming, and the captain ordered us to open fire with our mortars. I yelled for ceasefire immediately, realizing that they were Americans after I had seen their flag-waving back and forth. Later, a colonel, who was American, thanked me for it.” What is wrong with this story?",
-      solution:
-        "At the beginning of the story, it was said that the day was windless. In the end, it said the flag was waving back and forth. Because it was windless, the flag would have been completely still, and it wouldn't have",
+      text: "You have a class of students. Fourteen of the students are boys. Eight of the students wear blue shirts. Two of the students are neither male, nor wearing a blue shirt. If five of the children are boys who wear a blue shirt, then how many children would be in the class?",
+      solution: "Nineteen",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1073,9 +1101,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-115",
-      text: "Tristan's teacher asked him: If she gave him 2 cats and then 2 more and 2 more after that, how many would he have? Right away, Tristan said, “7.” His teacher then asked him, more slowly, that if she gave him 2 cats, then 2 more and 2 more, how many would he have? Again, he gave her the same answer, and again, she asked him the same question. He replies, “6.” Happy that he seemed to understand what was going on, she asks him one more time that if she gave him 2 cats, and then 2 more and 2 more, how many would he have? Thinking for a second, he replied again, “7” and seemed upset that the teacher couldn't understand where his math was coming from. Johnny is not wrong, and his teacher is wrong, but why?",
-      solution:
-        "The answer is that Johnny already had one cat, so when she asked him how many,he would have 7 if he was given 6, because 6 + 1 is 7.",
+      text: "If Paul has a height of nine feet,and he works in a butcher shop while wearing size-twelve shoes, what would he weigh?",
+      solution: "Meat",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1083,9 +1110,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-116",
-      text: "Ben was the most powerful man on the globe, and he had the skill to lift something that weighed 1,000 kg easily. He even boasted that he was able to pick up 5 women at once without feeling a single ounce of pain. One day, there was a weightlifting show that was well known, so the top 5 strongest men entered, including Ben. The challenge was that they were going to have to lift up an extremely heavy object of 1,005 kg for 5 minutes. Whoever didn't drop it until the target time would be the winner. If everyone did it, the judges would decide to give first place to the person who lifted it the most easily and stood still without any trouble at all. If Ben was the strongest, then he would have come out first, but instead, when the challenge was over, he placed second. Why did he place second and not first?",
-      solution:
-        "He was the most powerful and then not anymore. If you read the first sentence of this riddle again, it states that he was the strongest man in the world. Saying the word “was” is past tense, which means that someone is stronger than him now, which is why he placed second and not first.",
+      text: "What has no legs, is brown, and has a head and tail?",
+      solution: "A penny",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1093,8 +1119,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-117",
-      text: "There was a woman who wanted to treat her aunt from an illness, so they went to the doctor. The doctor told her that she would need to eat a single apple in order to cure her aunt. In the village where they were staying, no one had any apples, so she tried another village. When she got there, she realized that they had millions of apples in a garden, but when she tried to get in, the gatekeeper told her that all the apples that she brings out of the garden should be shared between them. So how many apples did the woman come out with from the garden to share with the gatekeeper while keeping an apple to cure her aunt?",
-      solution: "She would need 16 apples.",
+      text: "If a monkey and a squirrel are both climbing at the same time, which one will reach the banana first?",
+      solution: "Neither. It's a coconut tree, and not a banana tree.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1102,9 +1128,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-118",
-      text: "There were 4 men who walked to a desert. All 4 men are knocked out at the same time, and when they awaken, their bodies are buried in the sand. They cannot look anywhere but straight ahead of them. They were positioned in a way that each man can see another man's head before them. However, between the first and second man, there's a wall. Because of this, the only thing the first man can see is the desert, and the only thing the second man can see is the wall. The third man sees the second man's head and the wall, and the fourth man sees 2 heads and the wall. On top of each man's head is a hat; the underside of each hat is pink, but the outside of each hat is either of green or red. Before any of the men can speak, their kidnappers have told them that if they speak, they will die. If one of them can guess the color of their hat on the first try, then they get to live, and they can go free. The kidnappers have told them that there are 2 green hats and 2 red hats. Because we are smart, and we can observe the situation, we can deduce that the order of the hats is green then red and green then red again. We know the perspective that each man has and that they can only see the desert, the wall, or the color of the cap in front of them. Out of the 4 men, who knows for sure the color of his own hat, and more importantly, why does he know the color of his own hat?",
-      solution:
-        "The third man. The third man understands the color of his own hat as he deduced that there is only a duo of each of the colored hats. The man placed behind him saw a duo of hats that were the same in front of his vision, then he knows that his hat must be the other color. We are able to see that because of the alternating colors, the last man only has half of the odds of getting his own right. So the last man stays silent. The third understands why the last man is silent and deduces that he cannot view a duo that matches in front of his eyes. If he could, he would speak, but he hasn't. So the third man is able to presume his own hat must be a different color than the one in front of him, and his presumption is correct in this case. Under that same logic, after the third man tells the color of his hat, the second man, even though he only sees the wall, would be able to go free next because he knows his hat would be the opposite of whatever color the third man's hat was.",
+      text: "What is something that will cease to have its head every morning, but will be able to have it again when nightfall arrives?",
+      solution: "A pillow",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1112,9 +1137,9 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-119",
-      text: "A prison has 23 prisoners and 23 cells, so each prisoner is alone in their cell. The prisoners have no way to communicate with each other in any way. There is another room, though. They have a rec room. The rec room has 2 switches on the wall: An A switch and a B switch. The switches have both on and off positions, but they start in an unknown position. The prisoners are randomly taken to and from the rec room one at a time, and they must change the position of only one of the 2 switches every time they go into that room. At any point, a prisoner can yell out that every prisoner has been here. If the prisoner is correct that all of the prisoners have visited that room, they can all go free. If they were wrong, then they are all executed instead. Before they start, they are given one session to plan, during which they can discuss a method to understand how to win the game. What method could they use to make sure that they all go free instead of being executed?",
+      text: "You have one jug of milk, and you need to measure a single cup. How can you achieve this if you only have a three-cup measuring container and a five-cup container?",
       solution:
-        "The prisoners would have to choose a leader, and then everyone else would need to be a follower. If you are a follower, then you would need to make sure that switch A is in the on position and toggle switch B. Then you would not have been able to toggle switch A, and you would have been able to see the switch on during a previous visit. Then, you should toggle switch A. Instead, you would toggle switch B if you were the leader.Then you would need to turn switch A on. If it was off, turn",
+        "You will need to fill the 3-cup container and then pour the 3 cups into the 5 cups. Repeat the process and fill the 5cups all the way, and what’s left from the 3 cups would equal a single cup.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1122,9 +1147,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-120",
-      text: "You have been kidnapped and poisoned by a scientist who is pure evil. He has told you that the only antidote is the saliva of a lizard. He has the saliva of 6 different animals: An iguana, a lizard, a koala, a lemur, a giraffe, and a cow. He hasn't labeled the test tubes, so you have no way of knowing who is and what is what. On the left is a table where 4 of the test tubes are residing, and on the right, 2 test tubes are residing. The lizard saliva is what can save you, and the iguana is poisonous. The test tubes of the lizard and the iguana are on the same table. The table that has tubes on the left are labeled 1, 2, 3, and",
-      solution:
-        "You would walk to the left and drink the fourth and the third. There would be no point in going to the right, because there are only 2 test tubes on the right, and the iguana poison is going to override the antidote to the other poison. The cow is number 2, which means that the iguana is either in number one or number 4. If the cow is number 2, then that would mean that the lizard is number 1, 2, or 3. Since we have been able to deduce that the iguana is either 1 or 4, the iguana and the lizard cannot be beside each other, and we know that the cow is number 2. That makes it impossible for the iguana’s saliva to be 3 or 4. Using what we know, now that we understand the iguana’s number,we drink 3 and 4 because the lizard would be in either 3 or 4, and you would be safe from the poison.",
+      text: "If two fathers go fishing with their two sons, and they each catch a fish, why did they only bring home three fish?",
+      solution: "The group has a grandfather, father, and son.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1132,9 +1156,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-121",
-      text: "There is a cell of 100 prisoners, and each prisoner is kept out of contact with the others. In one area of the prison, there is a single light bulb. Every day, the warden picks a prisoner at random; it doesn't matter if they have been picked before. If he picks you, you will be taken to the lobby. The prisoner then has the choice to flip on the switch if they choose to do so. The light bulb will go off. When the prisoner is taken into the area with the lightbulb, he has the option of saying that every prisoner has been brought to the light bulb. If it's true, the prisoners go free, but if it's false, the prisoners die. A prisoner should only say this if he knows 100% that it's true. Before the first day of the process, all of the prisoners are allowed to get together to discuss a strategy that could possibly save themselves. What strategy should they use about the light bulb to ensure that they will go free?",
-      solution:
-        "One would allow a single person to flip the bulb off. The rest would turn it on if they had never turned it on before. If they have turned it on before, then, they will do nothing. The prisoner who can turn it off then knows that they have all been there, and he could save them all when he turns it off 99 times.",
+      text: "I was a stone inside the tree; I help your words live. If you push me when I stand, I will have less, the more that I move around.Can you deduce what I am?",
+      solution: "A pencil",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1142,9 +1165,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-122",
-      text: "A husband and wife are in the emergency room because the wife is in labor. When they arrive, the doctor says that he invented the new machine that could transfer part of the mother's labor pain to the baby's father. He then asked the couple if they're willing to try it. They were both very much in favor of this idea, so the doctor set the pain transfer to 10% and explained that 10% was probably more pain than the father had experienced before. However, as the labor progressed, the husband felt fine and asked the doctor to make it higher. The doctor adjusted the machine to 10% higher, and the husband was still feeling fine.The doctor checked the husband's blood pressure; he was amazed to see that he was doing amazingly well. At this point, they decided to try 50% of pain transfer. The husband continued to feel fine, and since the pain transfer was obviously helping the wife considerably, the husband encouraged the doctor to transfer every single ounce of pain to him instead of his wife. The wife delivered a healthy baby with no pain, and she and her husband were ecstatic. When they got home, they saw that their mailman was dead on the porch. Why did the mailman die instead of her husband?",
-      solution:
-        "The pain was transferred to the man who sired the infant. The mother had been unfaithful with the mailman. It was the mailman's baby. It never mentions that the husband is the baby's father, but because the mailman is dead on the porch, we can deduce that he was the baby’s father and that the pain killed him.",
+      text: "There is light, and it’s the only place I can live. If light shines on me, however, I will die.",
+      solution: "A shadow",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1152,8 +1174,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-123",
-      text: "There isa quintet of homes that were painted in a quintet of different colors. In each dwelling lives a person with a different nationality. The 5 people also drink a certain type of beverage, and they smoke a particular brand of cigar. They all have a particular pet, and none of them have the same pet. None of them smoke the same brand of the cigars, and none of them drink the same beverage. If the man living in the center house drinks milk, while the green homeowner drinks coffee, and the greenhouse is on the left of the white house, we can use these clues to determine who lives where. The British native lives in a red house, and the Dane drinks tea. The German only smokes Prince cigars, and the person who has Norwegian nationality lives next door to the blue house. The Norwegian lives in the first house and the owner of the yellow house only smokes Dunhill cigars. The Swede only keeps dogs as pets, and the man who only smokes Blend cigars has a neighbor who only drinks water. The owner of the house who only drinks beer smokes Blue master cigars. The person who smokes Pall Mall cigars only has birds, and the person who smokes the Blend cigars lives next to the owner who keeps the cats. The man who keeps the horse lives next to the man who smokes the Dunhill cigars. Keeping all of this in mind, who owns the fish?",
-      solution: "The German",
+      text: "What sits when it stands up and jumps when it walks?",
+      solution: "A kangaroo",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1161,9 +1183,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-124",
-      text: "Brandon went camping and realized he forgot his sleeping bag. He goes to get it, comes back, and realizes he forgot his flashlight. Brandon goes and gets it, but when he comes back, he finds that his sleeping bag is missing. Brandon then finds out he forgot his tent. When he goes back and gets it, he sees his sleeping bag, grabs it, and leaves his tent. He goes back to the campsite, remembering he left his tent at home. Brandon also finds out his flashlight is now missing. He goes to get his tent and see his flashlight and grabs that too. Brandon then sees his sleeping bag is gone. He is so exhausted; he leaves it at home. Why does everything keep going missing?",
-      solution:
-        "Brandon brings his sleeping bag home when he realizes he forgot his flashlight. He leaves his sleeping bag at home. He realized he did not bring his tent; Brandon then goes home with his flashlight. Instead of picking up his tent, he sees his sleeping bag and takes that instead, leaving",
+      text: "What has to be broken before you can use it?",
+      solution: "An egg",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1171,9 +1192,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-125",
-      text: 'Two guys go to get a drink. One gentleman has a baseball cap, and the other, a cowboy hat. The one with the baseball cap walks up the bar and says, "If I can shoot beer out of this tube to a glass on the other side of the room, you have to give me a five hundred dollars. If I miss, I will give you five hundred dollars." The bartender agrees. The guy with the baseball cap puts down a glass and goes to the other side of the room. He shoots beer out of the tube but sprays it everywhere. The bartender laughs. However, the baseball cap guy is also laughing. The bartender asks, “Why are you laughing?” Why was the guy with the baseball cap laughing?',
-      solution:
-        'Before they entered the bar, the gentleman with the baseball cap told the cowboy, "If I can spray beer everywhere in the bar and make the bartender laugh, you have to give me five thousand dollars."',
+      text: "What begins and ends with a T and has T inside it?",
+      solution: "A teapot",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1181,9 +1201,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-126",
-      text: "There are four guys: Chris, Brad, Mike, and Josh. There is a quartet of headgear: Two white and two black. They each get a hat. Chris gets the black, Brad gets the white, Mike gets the black, and Josh gets the white. They don't know what hat color they have. Chris goes into a room so that no one can see his hat. The others line up in front of the door in the order: Brad, Mike, and Josh (Brad can't see the other hats; Mike can see Brad's, and Josh can see Mike and Brad's hats). Whoever can figure out their hat color first wins $1,",
-      solution:
-        "Mike can figure it out. If Josh saw that Mike and Brad had their hats are in the same color, he would know his hat color. Since he doesn't quickly figure out his hat color, Mike knows that his hat and Brad’s don't have the same hat color. So all he has to do is say that his hat color is the opposite of Brad's hat color (after giving enough time to be sure that Josh doesn't know his own color).",
+      text: "What is something that you can hold without using your arms?",
+      solution: "Your breath",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1191,8 +1210,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-127",
-      text: "There once was a gentleman who was the director of acaravan, and he ran someone over, so he got sentenced to death. When he goes to the electric chair, the people who work there told him that it was his last day to live, so what would he like to eat? He says that he wants peanut butter and cereal, and when they turn on the electric chair, they aresurprised that nothing happens. The next day, he gets sent to an electric chair that they boast is 10 times better than the one before. They asked him again what he would like to eat, and he says the same thing. He eats the same meal, and they turn on the electric chair once more, and nothing happens.The next day, he gets sent to Alcatraz, and they ask him the same question, and he says the same answer. When they turn on the electric chair, still nothing happens, so the next day, they send him to the best electric chair in the entire world. They ask againwhat would he like to eat, and he answers the same as he had before. Once he eats the meal that he had eaten three times already, they turn on the electric chair, and nothing happens. Finally, they lose their patience and yell at him, demanding to know why he is not getting electrocuted, and the conductor replies with what?",
-      solution: "I am a bad conductor.",
+      text: "It has been around for years, but it is never older than a month. What is it?",
+      solution: "The moon",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1200,9 +1219,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-128",
-      text: "There is an island in which 201 inhabitants reside. Half have green eyes, while 100 have brown eyes, and the island leader has blue eyes. To leave the island, you have to know your own eye color. However, this is difficult because there are no reflective surfaces on the island, and no one can communicate with one another, other than the leader to the residents of the island. No one on the island knows how many of each eye color there is and everyone on the island is a perfect logician. This means that if there is a solution to be found, they will find it. Every morning, the leader gives everyone a chance to leave the island by guessing their eye color. One morning,the leader gathers all of the residents to make an announcement, and he says that one person on this island has green eyes. How many people are able to leave the island, and in how many days after the announcement can they leave?",
-      solution:
-        "Imagine thatonly one resident lives on the island. He will look to see that there are no green-eyed residents, and once this happens, he would realize that he knows his eye color. If there are 2, they will see that there is one person with one color, and if the person did not leave,it means that they would have the same eye color. The same logic is true for the other person’s viewpoint. With this knowledge, the green-eyed people would be able to leave in a certain number of days because each resident will need an additional day to know what color they have.",
+      text: "What has a single thumb, four fingers, but is not alive?",
+      solution: "A glove",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1210,8 +1228,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-129",
-      text: "I am the oldest child of my father; I can live without men, but men can't live without me. The next oldest child of my father has seen men rise and fall and have all of their secrets in his belly; the third child of my father can never give you his gift forever; he takes it from you when you corrupt it unknowingly, but men cry for his gift no matter what its cost is. The second youngest of my father is an obedient servant in the hands of men, but when he loses his master, he becomes an unmerciful god. The youngest child of my father is the center of our lives; he guides us, but he is a divine mystery. What are we?",
-      solution: "Water, earth, air, fire, and spirit.",
+      text: "Three doctors said that James was their brother. James himself has said he has no brothers. Is James lying, or is the doctor lying?",
+      solution: "No one was lying. The three doctors were James’ sisters.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1219,9 +1237,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-130",
-      text: "A man goes into a store and spends 15 dollars. He pays the manager with a 20 dollar bill, but the register doesn't have change because it is an especially slow day. The manager at the register goes to the thrift shop next to his own and trades the 20 dollar bill for a 10 dollar bill and two 5 dollar bills. Then he gives the man his 5-dollar change. Later, the woman from the thrift shop confronts the manager and tells him that the 20-dollar bill he gave her was counterfeit. The manager agrees, and he gives the lady a different 20-dollar bill. Later that day, the manager tries to figure out how much money he lost. What did he lose?",
-      solution:
-        "He lost $5. The woman from the thrift shop gave him $20 in change but eventually got $20 back. She broke even. The guy who spent 15 dollars gave the manager nothing (except counterfeit money) but got $5 back from the manager. So the manager lost only $5 and gave free products.",
+      text: "If you remove the first and second from me and then remove all of the others, I will still be unchanged. Can you deduce what it is that I am?",
+      solution: "A postman",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1229,9 +1246,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-131",
-      text: "A woman is on trial for murdering her spouse. In the final words, the woman's lawyer surprises everyone when he announces, \"Her husband was just missing. Everyone look at those doors; her husband is going to walk through those doors in about 30 seconds.”The entire court is silent, and the jury stares at the door as the lawyer and the defendant stare at them. After a couple of minutes, the lawyer says, “See! If you were so sure she killed her husband, you wouldn't be watching that door!”The jury goes into deliberation and comes back almost immediately with a guilty verdict.Why did the jury convict her?",
-      solution:
-        "The woman didn’t look at the entrance. She knew her husband wouldn’t come in.",
+      text: "I am a box that has no locks but holds keys. My keys have the power to unlock your deepest senses. What am I?",
+      solution: "A piano",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1239,9 +1255,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-132",
-      text: "One guy reveals that a prize of $1,000 will be given to whoever can prove that they deserve it. One woman posts (the post receives 1 point): Don't give it to me; others deserve it more. The next guy posts (this person also receives 1 point): If you give the money to me, I'll spend it to make this world a better place. The final guy posts a picture of a dog. His post gets -1 point. When posting, if somebody dislikes your comment, you lose a point, and when somebody likes it, you gain a point. You can also vote on your own. Who gets the money?",
-      solution:
-        "The individual with the canine photo. The other duo had voted the other’s post down and their own up. The canine photo owner voted each person’s up.",
+      text: "What has a single eye but is unable to see?",
+      solution: "A needle",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1249,9 +1264,9 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-133",
-      text: "A guilty person is placed in jail for felony misdeeds. The man in charge tells him that he will be killed in the middle of the prison by 10 of his guards. The criminal is fine with that, but he asks for some conditions: “All of your men must stand 10 feet away from me, and I must be able to select where each guard stands. If I survive, I get to leave.” The warden thinks about it and knows that all of his guards will still have an open shot at the criminal, so he agrees. The next day after the firing squad is positioned, the criminal walks out untouched. How did he do it?",
+      text: "A woman in a hotel room is startled by a knock on the door. When she opens it, a man apologizes and explains that he thought it was his own room. When he leaves, the woman instantly locks the door and phones hotel security. Why was she so frightened of the man?",
       solution:
-        "The criminal set up all the guards so that each person is directly across the other. If they fired, they would possibly shoot the other guards so they couldn’t shoot at all.",
+        "No one would ever knock on their own hotel room door, and the man did.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1259,9 +1274,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-134",
-      text: "There is a wagon filled with headgear. A trio of them are orange, and a duo of them are red. There are 3 men: Jack, James, and Jim. They each take a hat out of the basket and put it on their heads without seeing the hat they selected or the hats the other men selected. The men arrange themselves, so Jack can see James and Jim's hats, James can see Jim's hat, and Jim can't see anyone's hat. Jack is asked what color his hat is, and he says he doesn't know. James is asked the same question, and he also doesn't know. Jim is asked the question, and he does know. What color is his hat?",
-      solution:
-        "The hat is orange. If Jack doesn't know the color of his hat, then the other two men's hats cannot both be red; otherwise, he would know that his hat is orange. When James doesn't know his hat color either, that means Jim's hat could not be red; otherwise, Jack would have to know his hat was orange to fulfill the information discovered through Jack's answer.",
+      text: "I have the ability to fly, but I do not have wings. I am able to weep; however, I do not have what is necessary to see. The dark will always follow me, no matter where I go. Can you deduce what I am?",
+      solution: "Clouds",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1269,9 +1283,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-135",
-      text: 'Four mountain bikers are placed in a building in complete darkness because of a bad lightning storm. On the door of the cabin is a paper that reads, "Come in as you please, but fall asleep, and you will die." Being very superstitious, they all take this very seriously and devise a plan so they can keep each other awake. They each stand in separate corners, and one person walks from one corner, along the wall to the next and taps the person in that corner, making sure they are awake. They do this for many hours until one mountain biker suddenly runs out of the cabin, screaming along with all of the others. Why did they run out terrified?',
-      solution:
-        "They figured out that they needed 5 people to make the plan work.One person is in each corner, and one person needs to be moving at all times from one to the other.This means there is someone else in the building already.",
+      text: "I am often bought for consumption, but no one will ever consume me. Can you guess what I am?",
+      solution: "Cutlery and plates",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1279,9 +1292,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-136",
-      text: "Three guys, 1, 2, and 3, are spoken to. There is no sequence to how they were spoken to.Honest, Liar, and Both is one name they go by. The following are the others: True always speaks the truth, False always speaks lies, but whether Random speaks truth or lies in a completely random matter. Your task is to determine the identities of 1, 2, and 3 by asking three yes or no questions—each question must be put to exactly one guy. The guys understand English but will answer all questions in their own language, in which the words for “yes” and “no” are “da” and “ja”, in some order. You do not know which word means which. What three questions can you ask?",
-      solution:
-        "One answer is the following. Ask the second man, “If I were going to ask if you are Random, would you say ‘ja’?” If 2 answers “ja”, either 2 is Random (and is answering randomly), or 2 is not Random, and the answer indicates that 1 is indeed Random. Either way, 3 is not Random. If 2 answers “da”, either 2 is Random (and is answering randomly), or 2 is not Random, and the answer indicates that 1 is not Random. Either way, you know the identity of a guy who is not Random. Q2: Go to the guy who was identified as not being Random by the previous question (either 1 or 2), and ask him, “If I asked you ‘Are you False?’, would you say ‘ja’?” Since he is not Random, an answer of “da” indicates that he is True, and an answer of “ja” indicates that he is False. Q3: Ask the same guy the question: “If I asked you, ‘Is 2 Random?’, would you say ‘ja’?” If the answer is “ja”, 2 is Random; if the answer is da, the guy you have not yet spoken to is Random. The remaining guy can be identified by elimination.",
+      text: "I am hard at the beginning and soft in the middle, and if you use me to blow, you will need to have a good amount of air. What am I?",
+      solution: "Gum",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1289,9 +1301,9 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-137",
-      text: "A prince and princess want to have a get-together with friends whom they know, and with no strangers or sneak-ins. They decided to make a password to get into the party. On the day of the party, a man who wasn't invited wanted to get into the party, so he paid attention to what the people with the passwords were saying. Guard: “Pig” Person: “Farm” *next person* Guard: “Bear” Person: “Woods” *next person* Guard: “Frog” Person: “Water.” The intruder thought he had the password, so when the guard said “Bird,” the Intruder said “Tree.” He was thrown out of the party. Why?What could have he used for the password?",
+      text: "Mr. Owens was killed on a Friday afternoon. His wife said she was reading a magazine and was innocent. The chef claimed that he was making breakfast and was innocent, as well. The maid had been folding clothes, and the butler was taking a shower as his mother was helping the gardener plant carrots in the garden. Who killed Mr. Owens?",
       solution:
-        "It could be any word as long as it contained a quintet of letters. In each of the examples, the guard had said something, and then the person responded with something different. But the word they said had a single letter more than the word that the guard had said first.",
+        "The chef because he said he was making breakfast. Mr. Owens was killed in the afternoon, not in the morning.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1299,9 +1311,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-138",
-      text: "In a condo residents building in Los Angeles, there is a centuplicate of married couples. When one of the husbands cheats on his wife with one of the other wives, his wife has no idea.With a large amount of gossip in the complex, all of the other wives know he is cheating. If a wife finds out that her husband is cheating on her, she kills him the following morning. Someone anonymously sends an email to all of the wives in the building, saying that at least 1 man is cheating on his wife in the building. How many husbands will be killed, and how long will it take?",
-      solution:
-        "Each of the husbands who are unfaithful will be murdered, and it will take one less night than the number of cheating husbands for their wives to discover this. If one man was cheating, and that woman hadn't have heard of any other infidelity, she would know it was her husband who was cheating. If two husbands are cheating, both of their wives would think that since they have only heard of one man cheating, he should die the next morning. If he doesn't die, she knows her husband must also be cheating, and that's the reason the other husband didn't die. Following this logic, you know that all of the men will die after one less night than there are cheating men.",
+      text: "What is a seven-letter word that becomes a one when you remove four?",
+      solution: "Someone",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1309,9 +1320,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-139",
-      text: "There are 100 criminals lining up to go to jail. Each criminal is wearing a shirt that is either black or white. The criminals don't know their own shirt color—just the shirt color of those in front of them in line (the first criminal in line can't see anyone's shirt, and the last criminal can see everyone's shirt except his own). Starting from the back, one of the guards asks each criminal what color their shirt is. If they are correct, they get to go free, but if they are wrong, they go to jail. If everyone gets to discuss a plan, how can at least 99 of them be saved?",
-      solution:
-        'The black criminal will yell "black" if there is an uneven number of black shirts in front of him and "white" if there is an even number of black shirts in front of him. The next criminal will then count the number of black shirts in front of him, and if it was odd and is now even, or vice versa, then that person knows what color their shirt is. The next person then knows their shirt color based on what the people before them said and how many black shirts are in front of them. In this way, the front 99 criminals will know their shirt color and will be set free. The criminal in the back who goes first has a 50 percent chance of being set free.',
+      text: "I've been all around the world, and yet I never leave the corner. What am I?",
+      solution: "A stamp",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1319,9 +1329,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-140",
-      text: "A man is sitting down in a bar alone. A woman walks in, and he notices right away that she's extremely rich. She sits down next to him, and he tells her that he has an amazing talent and that he knows almost every song that has ever existed. The woman laughs at him. The homeless man tells her that he is willing to bet all the money that she has in her wallet that he can sing a popular song that includes a title of her choosing. She laughs again; then she says she wants him to sing a song about her daughter. Her daughter's name wasFrederica Armstrong Miller. The homeless man goes home rich. What song did he sing to the rich woman?",
-      solution:
-        "He sang the song “Happy Birthday” because any name can be put into it. The rich woman honored the deal, so he went home rich.",
+      text: "What is something that you have that, the more you make, the more you leave behind?",
+      solution: "Fingerprints",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1329,8 +1338,8 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-141",
-      text: "If a man rode into town on Friday and came back on Friday, how did he do it?",
-      solution: "His horse was named “Friday”.",
+      text: "What is something that breaks as soon as you speak its name?",
+      solution: "Silence",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1338,8 +1347,9 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-142",
-      text: "If an electric train is traveling south, which way will the smoke be going?",
-      solution: "It's an electric train; there's no smoke.",
+      text: "A King has no heirs and no Queen, and he holds a contest to see who his heir will be. He gives each child of the kingdom a seed and promises that whichever child has the largest and most beautiful plant will earn the throne. It's a metaphor for his kingdom. At the end of the contest, each of the children came back to the palace with an enormous and beautiful plant in their hand, each expecting to be the next ruler. He looks at all the children's plants, but finally decides that a little girl who has an empty pot is going to be the next Queen of the kingdom. If he had promised that the one with the most beautiful plant would win, why did he choose the little girl over all of the other children who had plants that grew?",
+      solution:
+        "The king had given each child a fake seed so that none of the plants would grow, and the little girl had been the only one honest enough to not switch the seeds to make herself look better.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
