@@ -120,7 +120,7 @@ function Home() {
             <nav className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in [animation-delay:400ms]">
                 <Link to="/search" className="group no-underline">
                     <div className="h-full p-8 bg-white border border-surface-200 rounded-3xl card-hover relative overflow-hidden">
-                        <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <div className={`absolute top-0 ${isRTL ? 'left-0' : 'right-0'} p-8 opacity-10 group-hover:opacity-20 transition-opacity`}>
                             <svg className="w-16 h-16 text-brand-primary" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
@@ -132,7 +132,7 @@ function Home() {
                 </Link>
                 <Link to="/categories" className="group no-underline">
                     <div className="h-full p-8 bg-white border border-surface-200 rounded-3xl card-hover relative overflow-hidden">
-                        <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <div className={`absolute top-0 ${isRTL ? 'left-0' : 'right-0'} p-8 opacity-10 group-hover:opacity-20 transition-opacity`}>
                             <svg className="w-16 h-16 text-brand-secondary" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
                             </svg>
@@ -143,7 +143,7 @@ function Home() {
                 </Link>
                 <Link to="/sources" className="group no-underline">
                     <div className="h-full p-8 bg-white border border-surface-200 rounded-3xl card-hover relative overflow-hidden">
-                        <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <div className={`absolute top-0 ${isRTL ? 'left-0' : 'right-0'} p-8 opacity-10 group-hover:opacity-20 transition-opacity`}>
                             <svg className="w-16 h-16 text-brand-accent" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 11.55C9.64 9.35 6.48 8 3 8v11c3.48 0 6.64 1.35 9 3.55 2.36-2.2 5.52-3.55 9-3.55V8c-3.48 0-6.64 1.35-9 3.55zM12 8c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3"/>

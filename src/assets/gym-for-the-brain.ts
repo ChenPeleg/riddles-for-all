@@ -2041,9 +2041,9 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-213",
-      text: 'Three men walk into a motel. The room they want is 30 dollars. Each guy pays ten dollars. Once they get to their room, the manager realizes that the room was only supposed to be 25 dollars. He sends an employee with five 1 dollar bills. On the way to the room, the employee thinks, "I can't split five 1s between 3 guys." So, he pockets 2 of the dollars and gives each of the men a dollar. Now, the men have only paid 9 dollars each. 9X3=27, and the employee pocketed 2 dollars, which makes',
+      text: 'Three men walk into a motel. The room they want is 30 dollars. Each guy pays ten dollars. Once they get to their room, the manager realizes that the room was only supposed to be 25 dollars. He sends an employee with five 1 dollar bills. On the way to the room, the employee thinks, \"I can\'t split five 1s between 3 guys." So, he pockets 2 of the dollars and gives each of the men a dollar. Now, the men have only paid 9 dollars each. 9X3=27, and the employee pocketed 2 dollars, which makes',
       solution:
-      "There is no lost dollar: The order of operation was not followed. The employee still had 5 dollars to bring to the men.",
+        "There is no lost dollar: The order of operation was not followed. The employee still had 5 dollars to bring to the men.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
