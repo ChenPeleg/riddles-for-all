@@ -366,7 +366,7 @@ export const riddlesDataGym: {
     {
       id: "gym-32",
       text: "What word has five letters but will become smaller if you add a duo of letters to it?",
-      textHe: "איזו מילה בת חמש אותיות אך תהיה 'קטנה' אם תוסיף לה שתי אותיות?",
+      textHe: "איזו מילה בת חמש אותיות תהיה 'קטנה' יותר (Shorter) אם תוסיף לה שתי אותיות?",
       solution: "Short",
       solutionHe: "Short (קצר)",
       categories: ["gym-for-the-brain"],
@@ -400,9 +400,9 @@ export const riddlesDataGym: {
     {
       id: "gym-35",
       text: "If Paul has a height of nine feet,and he works in a butcher shop while wearing size-twelve shoes, what would he weigh?",
-      textHe: "אם לפול יש גובה של תשע רגל והוא עובד בקצביה ונעליו מידה 12, מה הוא ישקול?",
+      textHe: "אם לפול יש גובה של תשע רגל והוא עובד בקצביה ונעליו מידה 12, מה הוא ישקול (Weigh)?",
       solution: "Meat",
-      solutionHe: "בשר",
+      solutionHe: "בשר (Meat)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -411,7 +411,7 @@ export const riddlesDataGym: {
     {
       id: "gym-36",
       text: "What has no legs, is brown, and has a head and tail?",
-      textHe: "מה אין לו רגליים, חום, ויש לו ראש וזנב?",
+      textHe: "מה אין לו רגליים, חום, ויש לו ראש וזנב (Head/Tail)?",
       solution: "A penny",
       solutionHe: "מטבע (פני)",
       categories: ["gym-for-the-brain"],
@@ -433,7 +433,7 @@ export const riddlesDataGym: {
     {
       id: "gym-38",
       text: "What is something that will cease to have its head every morning, but will be able to have it again when nightfall arrives?",
-      textHe: "מהו דבר שמוותר על ה'ראש' שלו כל בוקר, ושב לחדש אותו בלילה?",
+      textHe: "מהו דבר שמאבד את ה'ראש' שלו כל בוקר, ומקבל אותו בחזרה בלילה?",
       solution: "A pillow",
       solutionHe: "כרית",
       categories: ["gym-for-the-brain"],
@@ -468,7 +468,7 @@ export const riddlesDataGym: {
     {
       id: "gym-41",
       text: "I was a stone inside the tree; I help your words live. If you push me when I stand, I will have less, the more that I move around.Can you deduce what I am?",
-      textHe: "הייתי אבן בתוך העץ; אני עוזר למילים שלך לחיות. אם תדחף אותי כשאני עומד, יהיה לי פחות, ככל שאזוז יותר. האם תוכל להסיק מה אני?",
+      textHe: "הייתי אבן בתוך העץ; אני עוזר למילים שלך לחיות. אם תדחוף אותי כשאני עומד, יהיה לי פחות, ככל שאזוז יותר. האם תוכל להסיק מה אני?",
       solution: "A pencil",
       solutionHe: "עיפרון",
       categories: ["gym-for-the-brain"],
@@ -802,7 +802,9 @@ export const riddlesDataGym: {
     {
       id: "gym-71",
       text: "If a sundial has the least amount of moving parts of any timepiece, what has the most?",
+      textHe: "אם לשעון שמש יש הכי מעט חלקים נעים מכל שעון, מה יש בו הכי הרבה?",
       solution: "An hourglass, because of the grains of sand in it.",
+      solutionHe: "שעון חול, בגלל גרגרי החול שבו.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -811,7 +813,9 @@ export const riddlesDataGym: {
     {
       id: "gym-72",
       text: "What word has five letters but will become smaller if you add a duo of letters to it?",
+      textHe: "איזו מילה בת חמש אותיות תהיה 'קטנה' יותר (Shorter) אם תוסיף לה שתי אותיות?",
       solution: "Short",
+      solutionHe: "Short (קצר)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -820,8 +824,10 @@ export const riddlesDataGym: {
     {
       id: "gym-73",
       text: "If your parents have six sons and you are one of them, and each son has one sister, how many people are in your family?",
+      textHe: "אם להוריך יש שישה בנים ואתה אחד מהם, ולכל בן יש אחות אחת, כמה אנשים יש במשפחה?",
       solution:
         "Nine. There would be two parents, one daughter, and the six sons.",
+      solutionHe: "תשעה: שני הורים, בת אחת וששת הבנים.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -830,7 +836,9 @@ export const riddlesDataGym: {
     {
       id: "gym-74",
       text: "You have a class of students. Fourteen of the students are boys. Eight of the students wear blue shirts. Two of the students are neither male, nor wearing a blue shirt. If five of the children are boys who wear a blue shirt, then how many children would be in the class?",
+      textHe: "יש לך כיתה: 14 תלמידים הם בנים. 8 לובשים חולצות כחולות. שניים אינם זכר ואינם לובשים כחול. אם חמישה ילדים הם בנים שלובשים כחול — כמה ילדים בכיתה?",
       solution: "Nineteen",
+      solutionHe: "תשעה עשר",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -839,7 +847,9 @@ export const riddlesDataGym: {
     {
       id: "gym-75",
       text: "If Paul has a height of nine feet,and he works in a butcher shop while wearing size-twelve shoes, what would he weigh?",
+      textHe: "אם לפול יש גובה של תשע רגל והוא עובד בקצביה ונעליו מידה 12, מה הוא ישקול (Weigh)?",
       solution: "Meat",
+      solutionHe: "בשר (Meat)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -848,7 +858,9 @@ export const riddlesDataGym: {
     {
       id: "gym-76",
       text: "What has no legs, is brown, and has a head and tail?",
+      textHe: "מה אין לו רגליים, חום, ויש לו ראש וזנב (Head/Tail)?",
       solution: "A penny",
+      solutionHe: "מטבע (פני)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -857,7 +869,9 @@ export const riddlesDataGym: {
     {
       id: "gym-77",
       text: "If a monkey and a squirrel are both climbing at the same time, which one will reach the banana first?",
+      textHe: "אם קוף וסנאי מטפסים בו‑זמנית, מי יגיע לבננה ראשון?",
       solution: "Neither. It's a coconut tree, and not a banana tree.",
+      solutionHe: "אף אחד — זה עץ קוקוס, לא עץ בננות.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -866,7 +880,9 @@ export const riddlesDataGym: {
     {
       id: "gym-78",
       text: "What is something that will cease to have its head every morning, but will be able to have it again when nightfall arrives?",
+      textHe: "מהו דבר שמאבד את ה'ראש' שלו כל בוקר, ומקבל אותו בחזרה בלילה?",
       solution: "A pillow",
+      solutionHe: "כרית",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -875,8 +891,11 @@ export const riddlesDataGym: {
     {
       id: "gym-79",
       text: "You have one jug of milk, and you need to measure a single cup. How can you achieve this if you only have a three-cup measuring container and a five-cup container?",
+      textHe: "יש לך כד חלב ואתה צריך למדוד ספל אחד, אך יש לך רק כלי של 3 כוסות וכלי של 5 כוסות. איך תמדוד ספל אחד?",
       solution:
         "You will need to fill the 3-cup container and then pour the 3 cups into the 5 cups. Repeat the process and fill the 5cups all the way, and what’s left from the 3 cups would equal a single cup.",
+      solutionHe:
+        "ממלאים את המיכל של 3 כוסות ויוצקים אותו ל-5. חוזרים על הפעולה — לאחר שמילאתם את ה-5, מה שישאר בכלי ה-3 יהיה בדיוק כוס אחת.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -885,7 +904,9 @@ export const riddlesDataGym: {
     {
       id: "gym-80",
       text: "If two fathers go fishing with their two sons, and they each catch a fish, why did they only bring home three fish?",
+      textHe: "אם שני אבות הולכים לדוג עם שני בניהם וכל אחד תפס דג, מדוע חזרו רק עם שלושה דגים?",
       solution: "The group has a grandfather, father, and son.",
+      solutionHe: "הקבוצה כללה סבא, אב ובן (שלושה אנשים).",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -894,7 +915,7 @@ export const riddlesDataGym: {
     {
       id: "gym-81",
       text: "I was a stone inside the tree; I help your words live. If you push me when I stand, I will have less, the more that I move around.Can you deduce what I am?",
-      textHe: "הייתי אבן בתוך העץ; אני עוזר למילים שלך לחיות. אם תדחף אותי כשאני עומד, יהיה לי פחות, ככל שאזוז יותר. האם תוכל להסיק מה אני?",
+      textHe: "הייתי אבן בתוך העץ; אני עוזר למילים שלך לחיות. אם תדחוף אותי כשאני עומד, יהיה לי פחות, ככל שאזוז יותר. האם תוכל להסיק מה אני?",
       solution: "A pencil",
       solutionHe: "עיפרון",
       categories: ["gym-for-the-brain"],
@@ -1228,7 +1249,9 @@ export const riddlesDataGym: {
     {
       id: "gym-111",
       text: "If a sundial has the least amount of moving parts of any timepiece, what has the most?",
+      textHe: "אם לשעון שמש יש הכי מעט חלקים נעים מכל שעון, מה יש בו הכי הרבה?",
       solution: "An hourglass, because of the grains of sand in it.",
+      solutionHe: "שעון חול, בגלל גרגרי החול שבו.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1237,7 +1260,9 @@ export const riddlesDataGym: {
     {
       id: "gym-112",
       text: "What word has five letters but will become smaller if you add a duo of letters to it?",
+      textHe: "איזו מילה בת חמש אותיות תהיה 'קטנה' יותר (Shorter) אם תוסיף לה שתי אותיות?",
       solution: "Short",
+      solutionHe: "Short (קצר)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1246,8 +1271,10 @@ export const riddlesDataGym: {
     {
       id: "gym-113",
       text: "If your parents have six sons and you are one of them, and each son has one sister, how many people are in your family?",
+      textHe: "אם להוריך יש שישה בנים ואתה אחד מהם, ולכל בן יש אחות אחת, כמה אנשים יש במשפחה?",
       solution:
         "Nine. There would be two parents, one daughter, and the six sons.",
+      solutionHe: "תשעה: שני הורים, בת אחת וששת הבנים.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1256,7 +1283,9 @@ export const riddlesDataGym: {
     {
       id: "gym-114",
       text: "You have a class of students. Fourteen of the students are boys. Eight of the students wear blue shirts. Two of the students are neither male, nor wearing a blue shirt. If five of the children are boys who wear a blue shirt, then how many children would be in the class?",
+      textHe: "יש לך כיתה: 14 תלמידים הם בנים. 8 לובשים חולצות כחולות. שניים אינם זכר ואינם לובשים כחול. אם חמישה ילדים הם בנים שלובשים כחול — כמה ילדים בכיתה?",
       solution: "Nineteen",
+      solutionHe: "תשעה עשר",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1265,7 +1294,9 @@ export const riddlesDataGym: {
     {
       id: "gym-115",
       text: "If Paul has a height of nine feet,and he works in a butcher shop while wearing size-twelve shoes, what would he weigh?",
+      textHe: "אם לפול יש גובה של תשע רגל והוא עובד בקצביה ונעליו מידה 12, מה הוא ישקול (Weigh)?",
       solution: "Meat",
+      solutionHe: "בשר (Meat)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1274,7 +1305,9 @@ export const riddlesDataGym: {
     {
       id: "gym-116",
       text: "What has no legs, is brown, and has a head and tail?",
+      textHe: "מה אין לו רגליים, חום, ויש לו ראש וזנב (Head/Tail)?",
       solution: "A penny",
+      solutionHe: "מטבע (פני)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1283,7 +1316,9 @@ export const riddlesDataGym: {
     {
       id: "gym-117",
       text: "If a monkey and a squirrel are both climbing at the same time, which one will reach the banana first?",
+      textHe: "אם קוף וסנאי מטפסים בו‑זמנית, מי יגיע לבננה ראשון?",
       solution: "Neither. It's a coconut tree, and not a banana tree.",
+      solutionHe: "אף אחד — זה עץ קוקוס, לא עץ בננות.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1292,7 +1327,9 @@ export const riddlesDataGym: {
     {
       id: "gym-118",
       text: "What is something that will cease to have its head every morning, but will be able to have it again when nightfall arrives?",
+      textHe: "מהו דבר שמאבד את ה'ראש' שלו כל בוקר, ומקבל אותו בחזרה בלילה?",
       solution: "A pillow",
+      solutionHe: "כרית",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1301,8 +1338,11 @@ export const riddlesDataGym: {
     {
       id: "gym-119",
       text: "You have one jug of milk, and you need to measure a single cup. How can you achieve this if you only have a three-cup measuring container and a five-cup container?",
+      textHe: "יש לך כד חלב ואתה צריך למדוד ספל אחד, אך יש לך רק כלי של 3 כוסות וכלי של 5 כוסות. איך תמדוד ספל אחד?",
       solution:
         "You will need to fill the 3-cup container and then pour the 3 cups into the 5 cups. Repeat the process and fill the 5cups all the way, and what’s left from the 3 cups would equal a single cup.",
+      solutionHe:
+        "ממלאים את המיכל של 3 כוסות ויוצקים אותו ל-5. חוזרים על הפעולה — לאחר שמילאתם את ה-5, מה שישאר בכלי ה-3 יהיה בדיוק כוס אחת.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1311,7 +1351,9 @@ export const riddlesDataGym: {
     {
       id: "gym-120",
       text: "If two fathers go fishing with their two sons, and they each catch a fish, why did they only bring home three fish?",
+      textHe: "אם שני אבות הולכים לדוג עם שני בניהם וכל אחד תפס דג, מדוע חזרו רק עם שלושה דגים?",
       solution: "The group has a grandfather, father, and son.",
+      solutionHe: "הקבוצה כללה סבא, אב ובן (שלושה אנשים).",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1320,7 +1362,7 @@ export const riddlesDataGym: {
     {
       id: "gym-121",
       text: "I was a stone inside the tree; I help your words live. If you push me when I stand, I will have less, the more that I move around.Can you deduce what I am?",
-      textHe: "הייתי אבן בתוך העץ; אני עוזר למילים שלך לחיות. אם תדחף אותי כשאני עומד, יהיה לי פחות, ככל שאזוז יותר. האם תוכל להסיק מה אני?",
+      textHe: "הייתי אבן בתוך העץ; אני עוזר למילים שלך לחיות. אם תדחוף אותי כשאני עומד, יהיה לי פחות, ככל שאזוז יותר. האם תוכל להסיק מה אני?",
       solution: "A pencil",
       solutionHe: "עיפרון",
       categories: ["gym-for-the-brain"],
@@ -1565,7 +1607,9 @@ export const riddlesDataGym: {
     {
       id: "gym-143",
       text: "What is always at the center of a woman but in front of a man?",
+      textHe: "מה נמצא תמיד ב'אמצע' של אישה (Woman) אבל ב'חזית' של גבר (Man)?",
       solution: "The letter M",
+      solutionHe: "האות M",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1574,7 +1618,9 @@ export const riddlesDataGym: {
     {
       id: "gym-144",
       text: "I can be crushed into pieces with words or by physical pain, but this only happens if I am given away first. I can be clogged, or I can be attacked, but that is usually my own doing and not someone else's. You won't dare ever let me go no matter how many problems I have; you'll keep me forever. What am I?",
+      textHe: "אפשר לרסק אותי לרסיסים במילים או בכאב פיזי, אבל זה קורה רק אם נתת אותי קודם. אני יכול להיסתם או להיות מותקף, אבל בדרך כלל זו אשמתי. לעולם לא תעז לתת לי ללכת, תשמור עלי לתמיד. מה אני?",
       solution: "A heart",
+      solutionHe: "לב",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1583,7 +1629,9 @@ export const riddlesDataGym: {
     {
       id: "gym-145",
       text: "I can jump around on sticks, and if you think I've done well, you'll cheer me when I do this. White powder is a necessity in my life to make sure that I can do what I need to do. When you look at me, you might wonder why I look like I'm always about to go swimming. What am I?",
+      textHe: "אני יכול לקפוץ על מקלות... אבקה לבנה היא הכרח בחיים שלי... כשמסתכלים עלי נראה כאילו אני הולך לשחות. מה אני?",
       solution: "A gymnast",
+      solutionHe: "מתעמל",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1592,7 +1640,9 @@ export const riddlesDataGym: {
     {
       id: "gym-146",
       text: "I owna large space, but I also have a home. I have no locks, but I do have many keys. I have no mailbox, but I have a lot of letters. What am I?",
+      textHe: "יש לי חלל גדול (Space), אבל יש לי גם בית (Home). אין לי מנעולים, אבל יש לי הרבה מפתחות (Keys). אין לי תיבת דואר, אבל יש לי הרבה מכתבים/אותיות (Letters). מה אני?",
       solution: "A keyboard for a computer",
+      solutionHe: "מקלדת מחשב",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1601,7 +1651,9 @@ export const riddlesDataGym: {
     {
       id: "gym-147",
       text: "I have different nationalities, and I can be dark or white. I can be bitteror sweet. My nationality may be Swiss or Belgian. I even possess the ability to be other nationalities as well. What am I?",
+      textHe: "יש לי לאומים שונים, אני יכול להיות כהה או לבן. מריר או מתוק. הלאום שלי עשוי להיות שוויצרי או בלגי... מה אני?",
       solution: "Chocolate",
+      solutionHe: "שוקולד",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1610,7 +1662,9 @@ export const riddlesDataGym: {
     {
       id: "gym-148",
       text: "I'm attracted to treats, and I'm attracted to sugars. I am small but hard-working, and I sound like I would be a member of your family. What am I?",
+      textHe: "אני נמשכת לממתקים ולסוכרים. אני קטנה אבל עובדת קשה, ואני נשמעת כמו בת משפחה (Aunt/Ant). מה אני?",
       solution: "An ant",
+      solutionHe: "נמלה (Ant)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1619,7 +1673,9 @@ export const riddlesDataGym: {
     {
       id: "gym-149",
       text: "I have different nationalities. I can be Greek or Roman, English or Latin. I come in many different amounts, and I am unique in the fact that you can match me or mix me, and I can take on almost an infinite number of different forms. What am I?",
+      textHe: "יש לי לאומים שונים. אני יכול להיות יווני או רומי, אנגלי או לטיני... אפשר לערבב אותי ליצירת אינסוף צורות... מה אני?",
       solution: "The alphabet",
+      solutionHe: "האלפבית",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1628,8 +1684,11 @@ export const riddlesDataGym: {
     {
       id: "gym-150",
       text: "A quartetmust make it along a wire in just over 15 minutes, along with a duo of minutes added on. They must do this during the night. The wire can only hold two or fewer people at any time, and they only have one flashlight, so they must travel together (or alone). The flashlight can only travel with one person, so every time it crosses the bridge, it must be carried back. Jack can cross in 1 minute, Jason can cross in 2 minutes, Alex can cross in 5 minutes, and Cindy can cross in 10 minutes. If two people cross together, they go as fast as the slower person. How can they cross the wire in 17 minutes or less?",
+      textHe: "רביעייה צריכה לחצות גשר חבלים בלילה ב-17 דקות. יש פנס אחד ורק שניים יכולים לחצות יחד. ג'ק חוצה ב-1 דקה, ג'ייסון ב-2, אלכס ב-5, וסינדי ב-10. איך יחצו ב-17 דקות?",
       solution:
         "First, Jack and Jason will cross the wire (in a duo of minutes). Then Jack brings the flashlight back (1 minute). Next, Alex and Cindy will cross (10 minutes). Then Jason will bring the flashlight back (2 minutes). And finally, Jason and Jack will cross (2 minutes). 2 + 1 + 10 + 2 + 2 = 17 minutes.",
+      solutionHe:
+        "ג'ק וג'ייסון עוברים (2), ג'ק חוזר עם הפנס (1), אלכס וסינדי עוברים (10), ג'ייסון חוזר עם הפנס (2), ג'ק וג'ייסון עוברים (2). סה\"כ: 17 דקות.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1638,8 +1697,10 @@ export const riddlesDataGym: {
     {
       id: "gym-151",
       text: 'A woman taking a questionnaire approaches the home where a physicist resides. She questions if he has any kids, and how old they are. The physicist says, "I have three sons, and the product of their ages is 72." The woman tells the physicist that she needs more information, so the physicist tells her, "The sum of their ages is equal to our house number." The woman still needs more information, so the physicist tells her, “My oldest son has his own bed, and the other two share bunk beds.” How old are his sons?',
+      textHe: "אישה שואלת פיזיקאי לגיל ילדיו. 'מכפלת גילם 72'. האישה צריכה עוד מידע. 'סכום גילם שווה למספר הבית שלנו'. עדיין חסר מידע. 'הבן הבכור ישן במיטה משלו ושני האחרים במיטת קומותיים'. בני כמה הם?",
       solution:
         "His sons are 8, and the last two are 3 years of age. The prime factorization of 72 is 2 * 2 * 2 * 3 * 3, so the possible ages are 2, 3, 4, 6, 8, 9, 12, and 18. Using that knowledge again, and these numbers, the only combinations of numbers that would be able to work for the first clue are 18, 2, and 2; 9, 4, and 2; 6, 6, and 2; 6, 4, and 3; and 8, 3, and 3. Since she doesn't know the ages after this piece of information, the sum of the three numbers must not be unique. The sum of 8, 3, and 3 and 6, 6, and 2 are the same. Now, the final clue comes in handy. Since we know that the oldest son has his own bed, it is likely that he has the bed to himself, and is older than the other two, so their ages are 8, 3, and 3 rather than 2, 6, and 6.",
+      solutionHe: "הבנים בני 8, 3 ו-3. (8*3*3=72 וסכומם 14. גם 6*6*2=72 וסכומם 14 - לכן המידע על הבן ה'בכור' היה קריטי כדי לפסול את האפשרות של תאומים בני 6).",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1648,8 +1709,10 @@ export const riddlesDataGym: {
     {
       id: "gym-152",
       text: "A worker is employed for a network security company. He clocks in at night and gets on his computer. He types in his password, but it is incorrect. He remembers that the password changes every 2 weeks, so he calls his boss. The man says, “Boss, the old password is out of date.” The boss replies, “Yes, the new password is different. But if you listen closely, you can figure it out. It has the same number of letters but no spaces.” The man thanks the boss and types the password immediately. What is the new password and the old password?",
+      textHe: "עובד שכח סיסמה. הבוס אומר: 'הסיסמה הישנה היא 'לא בתוקף' (out of date), והחדשה היא 'שונה' (different). יש לה אותו מספר אותיות בלי רווחים'. מה הסיסמאות? (באנגלית)",
       solution:
         "The outdated password is “out of date,” and the current password is “different.”",
+      solutionHe: "הסיסמה הישנה היא 'outofdate' והחדשה היא 'different'.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1658,7 +1721,9 @@ export const riddlesDataGym: {
     {
       id: "gym-153",
       text: "A CEO is about to take a trip to Scotland. He is awoken in the middle of the night by his bodyguard, John, the night before he is supposed to leave. John tells him he needs to take a boat rather than a plane, because he just dreamt that the plane was going to crash. John then leaves because it's the end of his shift. The man listens to his bodyguard and takes a boat. Soon after arriving in Scotland, he hears that the plane he was supposed to take crashed. When he arrives home, he fires John. Why?",
+      textHe: "מנכ\"ל נוסע לסקוטלנד. שומר הראש שלו מעיר אותו ואומר שחלם שהמטוס יתרסק וכדאי שיקח סירה. המנכ\"ל מקשיב, והמטוס באמת מתרסק. כשהוא חוזר הוא מפטר את שומר הראש. למה?",
       solution: "John was sleeping on the job.",
+      solutionHe: "כי ג'ון ישן בזמן המשמרת (הוא חלם חלום).",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1667,7 +1732,9 @@ export const riddlesDataGym: {
     {
       id: "gym-154",
       text: "Five mercenaries are sharing 12 diamonds. They decide to proceed that way. The one with the most experience will suggest a diamond allotment. The rest will vote for or against it. If the majority accepts, the sharing is ratified. If not, he will be dismissed. So, the sharing would be done between the remaining mercenaries with the same rules. Knowing that they are set from left to right in diminishing order of their experience, how would be the allotment?",
+      textHe: "חמישה שכירי חרב מחלקים 12 יהלומים. הבכיר מציע חלוקה, אם אין רוב הוא מודח (ומת). הם חכמים ורוצים לשרוד ולמקסם רווח. מה החלוקה שהבכיר יציע?",
       solution: "9-0-1-0-2.",
+      solutionHe: "9-0-1-0-2 (הבכיר לוקח 9, נותן 1 לשלישי ו-2 לחמישי כדי להשיג רוב של 3 מצביעים).",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1676,7 +1743,9 @@ export const riddlesDataGym: {
     {
       id: "gym-155",
       text: "I can be solid or liquid; you can find me in any home, and sometimes, I bubble. What am I?",
+      textHe: "אני יכול להיות מוצק או נוזלי; תמצא אותי בכל בית, ולפעמים אני עושה בועות. מה אני?",
       solution: "I am soap.",
+      solutionHe: "סבון",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
