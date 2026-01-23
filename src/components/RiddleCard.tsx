@@ -69,16 +69,26 @@ const RiddleCard = ({riddle}: RiddleProps) => {
                         onClick={toggleDone}
                         aria-pressed={done}
                         title={done ? t('riddle.mark_not_done') : t('riddle.mark_done')}
-                        className="ml-2 inline-flex items-center justify-center p-2 rounded-lg hover:bg-surface-100"
+                        className="ml-2 inline-flex items-center justify-center px-3 py-2 rounded-lg hover:bg-surface-100 text-sm font-semibold"
                     >
-
-                        {done ? (<svg className="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                      xmlns="http://www.w3.org/2000/svg">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                            </svg>) : (<svg className="w-4 h-4 text-surface-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4"></path>
-                            </svg>)}
+                        {/* show icon + translated text so it's larger and clearer */}
+                        {done ? (
+                            <>
+                                <svg className="w-4 h-4 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span className="text-emerald-500">{t('riddle.mark_not_done')}</span>
+                            </>
+                        ) : (
+                            <>
+                                <svg className="w-4 h-4 text-surface-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4"></path>
+                                </svg>
+                                <span className="text-surface-700">{t('riddle.mark_done')}</span>
+                            </>
+                        )}
                     </button>
                 </div>
             </div>
