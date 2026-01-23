@@ -9,6 +9,12 @@ function Categories() {
   const { t } = useTranslationLegacy();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
+  function getCategoryLabel(category: string) {
+    const key = `categories.labels.${category}`;
+    const val = t(key);
+    return val === key ? category : val;
+  }
+
   if (loading) return <div className="p-8 max-w-3xl mx-auto">{t('categories.loading')}</div>;
 
   const categories = Array.from(new Set(riddles.flatMap(r => r.categories))).sort();
@@ -40,7 +46,7 @@ function Categories() {
                   : 'bg-white text-surface-600 border-surface-200 hover:border-brand-primary/30 hover:bg-brand-primary/5 active:scale-95'
               }`}
             >
-              <span className="mr-2 opacity-50">#</span>{category}
+              <span className="mr-2 opacity-50">#</span>{getCategoryLabel(category)}
             </button>
           ))}
         </div>
@@ -51,7 +57,7 @@ function Categories() {
               <div className="flex items-center gap-4">
                  <div className="w-10 h-10 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-primary font-bold text-xl">#</div>
                  <h2 className="text-2xl font-bold text-surface-900 tracking-tight">
-                    {selectedCategory}
+                    {getCategoryLabel(selectedCategory as string)}
                  </h2>
               </div>
               <p className="text-[10px] font-black uppercase tracking-[0.2em] text-surface-400 px-3 py-1 bg-surface-100 rounded-lg">
