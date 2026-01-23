@@ -25,6 +25,7 @@ export const translations: Record<Lang, Record<string, any>> = {
       categories: 'Categories',
       sources: 'Sources',
       back_to_home: 'Back to Home',
+      back: 'Back',
     },
     riddle: {
       reveal_solution: 'Reveal Solution',
@@ -80,7 +81,7 @@ export const translations: Record<Lang, Record<string, any>> = {
     // Added translations for book names
     books: {
       gym_for_the_brain:
-        'Gym for the Brain - 300 Riddles For Adults To Workout Their Mind Using Reason And Lateral Thinking',
+        'Gym for the Brain - 300 Riddles',
       riddle_me_this:
         'Riddle Me This - The Ultimate Collection Of Riddles & Brain Teasers',
       the_best_fun_riddles:
@@ -97,6 +98,14 @@ export const translations: Record<Lang, Record<string, any>> = {
       source_label: 'Source Book',
       riddles_count: '{count} riddles',
       select_book_prompt: 'Select a book above to explore its contents.',
+      goto_book: 'Go to book',
+    },
+    book: {
+      no_slug: 'No book specified.',
+      not_found: 'No riddles found for this book.',
+      back_to_sources: 'Back to sources',
+      prev: 'Previous',
+      next: 'Next',
     },
     categories: {
       heading: 'Browse by Categories',
@@ -142,6 +151,7 @@ export const translations: Record<Lang, Record<string, any>> = {
       categories: 'קטגוריות',
       sources: 'מקורות',
       back_to_home: 'חזרה לדף הבית',
+      back: 'חזרה',
     },
     riddle: {
       reveal_solution: 'הצג פתרון',
@@ -197,7 +207,7 @@ export const translations: Record<Lang, Record<string, any>> = {
     // Hebrew translations for book names
     books: {
       gym_for_the_brain:
-        'חדר כושר למוח - 300 חידות למבוגרים לאימון המחשבה באמצעות היגיון וחשיבה יצירתית',
+        'חדר כושר למוח - 300 חידות',
       riddle_me_this: 'חידו אותי - האוסף האולטימטיבי של חידות ואתגרים',
       the_best_fun_riddles:
         'החידות הכיפיות הטובות ביותר ושאלות תכסיס למשפחה וילדים - 3 ספרים ב-1 - 700 בדיחות ומתמטיקה',
@@ -213,6 +223,14 @@ export const translations: Record<Lang, Record<string, any>> = {
       source_label: 'ספר מקור',
       riddles_count: '{count} חידות',
       select_book_prompt: 'בחר ספר לעיל כדי לגלות את תכניו.',
+      goto_book: 'עבור אל הספר',
+    },
+    book: {
+      no_slug: 'לא צוין ספר.',
+      not_found: 'לא נמצאו חידות עבור ספר זה.',
+      back_to_sources: 'חזרה למקורות',
+      prev: 'הקודם',
+      next: 'הבא',
     },
     categories: {
       heading: 'עיין לפי קטגוריות',
