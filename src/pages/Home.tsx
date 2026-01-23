@@ -90,10 +90,10 @@ function Home() {
                             {/* In RTL, show caret on the left and point it left; otherwise text then right caret */}
                             {isRTL ? (
                                 <>
+                                    <span>{t('home.next_riddle') || 'Next'}</span>
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 5l-7 7 7 7" />
                                     </svg>
-                                    <span>{t('home.next_riddle') || 'Next'}</span>
                                 </>
                             ) : (
                                 <>
