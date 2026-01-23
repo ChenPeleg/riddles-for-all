@@ -62,27 +62,29 @@ function Home() {
             </header>
 
             <div className="mb-20 animate-fade-in [animation-delay:200ms]">
-                <div className="flex items-center gap-3 mb-8">
-                    <span className="w-8 h-px bg-brand-primary/30"></span>
-                    <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-surface-400">
-                        {t('home.riddle_of_the_moment')}
-                    </h2>
+                <div className="flex items-center justify-between gap-3 mb-8">
+                    <div className="flex items-center gap-3">
+                        <span className="w-8 h-px bg-brand-primary/30"></span>
+                        <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-surface-400">
+                            {t('home.riddle_of_the_moment')}
+                        </h2>
+                    </div>
+                    <div className="flex items-center">
+                        <button
+                            onClick={pickNext}
+                            aria-label={t('home.next_riddle')}
+                            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium border border-surface-200 rounded-2xl bg-white hover:bg-surface-100 transition"
+                        >
+                            <span>{t('home.next_riddle') || 'Next'}</span>
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 {randomRiddle ? (
                     <>
                         <RiddleCard riddle={randomRiddle}/>
-                        <div className="mt-4 flex justify-end">
-                            <button
-                                onClick={pickNext}
-                                aria-label={t('home.next_riddle')}
-                                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium border border-surface-200 rounded-2xl bg-white hover:bg-surface-100 transition"
-                            >
-                                <span>{t('home.next_riddle') || 'Next'}</span>
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                                </svg>
-                            </button>
-                        </div>
                     </>
                 ) : (
                     <div className="h-48 flex items-center justify-center bg-white rounded-3xl border border-surface-200">

@@ -18,6 +18,7 @@ export const translations: Record<Lang, Record<string, any>> = {
       search_card_desc: 'Discover mysteries across all categories and books.',
       categories_card_desc: 'Explore riddles grouped by themes and topics.',
       sources_card_desc: 'Browse the unique collections that power our riddles.',
+      next_riddle: 'Next',
     },
     navigation: {
       search: 'Search',
@@ -120,6 +121,7 @@ export const translations: Record<Lang, Record<string, any>> = {
       search_card_desc: 'גלה תעלומות בכל הקטגוריות והספרים.',
       categories_card_desc: 'חקור חידות מקובצות לפי נושאים וקטגוריות.',
       sources_card_desc: 'עיין באוספים הייחודיים שמניעים את החידות שלנו.',
+      next_riddle: 'הבא',
     },
     navigation: {
       search: 'חפש',
