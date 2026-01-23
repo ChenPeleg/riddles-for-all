@@ -53,8 +53,20 @@ function Home() {
                     </div>
                     <LanguageToggle/>
                 </div>
+                {/* For RTL languages (e.g. Hebrew) display the collection suffix before the title */}
                 <h1 className="text-5xl md:text-7xl font-bold text-surface-900 mb-6 tracking-tight">
-                    {t('common.title')} <span className="text-brand-primary">{t('home.collection_suffix')}</span>
+                    {isRTL ? (
+                        <>
+                            <span className="text-brand-primary">{t('home.collection_suffix')}</span>
+                            {" "}
+                            {t('common.title')}
+                        </>
+                    ) : (
+                        <>
+                            {t('common.title')} {" "}
+                            <span className="text-brand-primary">{t('home.collection_suffix')}</span>
+                        </>
+                    )}
                 </h1>
                 <p className="text-lg md:text-xl text-surface-800 max-w-2xl mx-auto leading-relaxed">
                     {t('common.description')}
