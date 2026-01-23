@@ -468,7 +468,9 @@ export const riddlesDataGym: {
     {
       id: "gym-41",
       text: "I was a stone inside the tree; I help your words live. If you push me when I stand, I will have less, the more that I move around.Can you deduce what I am?",
+      textHe: "הייתי אבן בתוך העץ; אני עוזר למילים שלך לחיות. אם תדחף אותי כשאני עומד, יהיה לי פחות, ככל שאזוז יותר. האם תוכל להסיק מה אני?",
       solution: "A pencil",
+      solutionHe: "עיפרון",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -477,7 +479,9 @@ export const riddlesDataGym: {
     {
       id: "gym-42",
       text: "There is light, and it’s the only place I can live. If light shines on me, however, I will die.",
+      textHe: "יש אור, וזה המקום היחיד שבו אני יכול לחיות. אבל אם אור מאיר עלי, אני אמות.",
       solution: "A shadow",
+      solutionHe: "צל",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -486,7 +490,9 @@ export const riddlesDataGym: {
     {
       id: "gym-43",
       text: "What sits when it stands up and jumps when it walks?",
+      textHe: "מה יושב כשהוא עומד וקופץ כשהוא הולך?",
       solution: "A kangaroo",
+      solutionHe: "קנגורו",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -495,7 +501,9 @@ export const riddlesDataGym: {
     {
       id: "gym-44",
       text: "What has to be broken before you can use it?",
+      textHe: "מה צריך לשבור לפני שאפשר להשתמש בו?",
       solution: "An egg",
+      solutionHe: "ביצה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -504,7 +512,9 @@ export const riddlesDataGym: {
     {
       id: "gym-45",
       text: "What begins and ends with a T and has T inside it?",
+      textHe: "מה מתחיל ומסתיים ב-T ויש לו T בפנים?",
       solution: "A teapot",
+      solutionHe: "קומקום (Teapot)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -513,7 +523,9 @@ export const riddlesDataGym: {
     {
       id: "gym-46",
       text: "What is something that you can hold without using your arms?",
+      textHe: "מה זה משהו שאתה יכול להחזיק בלי להשתמש בידיים?",
       solution: "Your breath",
+      solutionHe: "הנשימה שלך",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -522,7 +534,9 @@ export const riddlesDataGym: {
     {
       id: "gym-47",
       text: "It has been around for years, but it is never older than a month. What is it?",
+      textHe: "זה קיים שנים, אבל אף פעם לא בן יותר מחודש. מה זה?",
       solution: "The moon",
+      solutionHe: "הירח",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -531,7 +545,9 @@ export const riddlesDataGym: {
     {
       id: "gym-48",
       text: "What has a single thumb, four fingers, but is not alive?",
+      textHe: "למה יש אגודל אחד, ארבע אצבעות, אבל הוא לא חי?",
       solution: "A glove",
+      solutionHe: "כפפה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -540,7 +556,9 @@ export const riddlesDataGym: {
     {
       id: "gym-49",
       text: "Three doctors said that James was their brother. James himself has said he has no brothers. Is James lying, or is the doctor lying?",
+      textHe: "שלושה רופאים אמרו שג'יימס הוא אחיהם. ג'יימס עצמו אמר שאין לו אחים. האם ג'יימס משקר, או שהרופאים משקרים?",
       solution: "No one was lying. The three doctors were James’ sisters.",
+      solutionHe: "אף אחד לא משקר. שלושת הרופאים היו אחיותיו של ג'יימס.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -549,7 +567,9 @@ export const riddlesDataGym: {
     {
       id: "gym-50",
       text: "If you remove the first and second from me and then remove all of the others, I will still be unchanged. Can you deduce what it is that I am?",
+      textHe: "אם תסיר את הראשון והשני ממני ואז תסיר את כל האחרים, אני עדיין אשאר ללא שינוי. אתה יכול להסיק מה אני?",
       solution: "A postman",
+      solutionHe: "דוור (The Postman - אותיות)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -558,7 +578,9 @@ export const riddlesDataGym: {
     {
       id: "gym-51",
       text: "I am a box that has no locks but holds keys. My keys have the power to unlock your deepest senses. What am I?",
+      textHe: "אני תיבה שאין לה מנעולים אבל מחזיקה מפתחות. למפתחות שלי יש את הכוח לפתוח את החושים העמוקים ביותר שלך. מה אני?",
       solution: "A piano",
+      solutionHe: "פסנתר",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -567,7 +589,9 @@ export const riddlesDataGym: {
     {
       id: "gym-52",
       text: "What has a single eye but is unable to see?",
+      textHe: "למה יש עין אחת אבל לא יכול לראות?",
       solution: "A needle",
+      solutionHe: "מחט",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -588,7 +612,9 @@ export const riddlesDataGym: {
     {
       id: "gym-54",
       text: "I have the ability to fly, but I do not have wings. I am able to weep; however, I do not have what is necessary to see. The dark will always follow me, no matter where I go. Can you deduce what I am?",
+      textHe: "יש לי יכולת לעוף, אבל אין לי כנפיים. אני מסוגל לבכות; עם זאת, אין לי את מה שצריך כדי לראות. החושך תמיד ילך אחרי, לא משנה לאן אלך. אתה יכול להסיק מה אני?",
       solution: "Clouds",
+      solutionHe: "עננים",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -597,7 +623,9 @@ export const riddlesDataGym: {
     {
       id: "gym-55",
       text: "I am often bought for consumption, but no one will ever consume me. Can you guess what I am?",
+      textHe: "לפעמים קונים אותי לצריכה, אבל אף אחד לא יצרוך אותי לעולם. אתה יכול לנחש מה אני?",
       solution: "Cutlery and plates",
+      solutionHe: "סכו\"ם וצלחות",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -606,7 +634,9 @@ export const riddlesDataGym: {
     {
       id: "gym-56",
       text: "I am hard at the beginning and soft in the middle, and if you use me to blow, you will need to have a good amount of air. What am I?",
+      textHe: "אני קשה בהתחלה ורך באמצע, ואם תשתמש בי כדי לנשוף, תצטרך כמות טובה של אוויר. מה אני?",
       solution: "Gum",
+      solutionHe: "מסטיק",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -615,8 +645,10 @@ export const riddlesDataGym: {
     {
       id: "gym-57",
       text: "Mr. Owens was killed on a Friday afternoon. His wife said she was reading a magazine and was innocent. The chef claimed that he was making breakfast and was innocent, as well. The maid had been folding clothes, and the butler was taking a shower as his mother was helping the gardener plant carrots in the garden. Who killed Mr. Owens?",
+      textHe: "מר אואנס נהרג ביום שישי בצהריים. אשתו אמרה שהיא קוראת מגזין והיא חפה מפשע. השף טען שהוא מכין ארוחת בוקר וגם הוא חף מפשע. המשרתת קיפלה בגדים, והמשרת התקלח כשאמו עזרה לגנן לשתול גזר בגינה. מי הרג את מר אואנס?",
       solution:
         "The chef because he said he was making breakfast. Mr. Owens was killed in the afternoon, not in the morning.",
+      solutionHe: "השף כי הוא אמר שהוא מכין ארוחת בוקר. מר אואנס נהרג בצהריים, לא בבוקר.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -625,7 +657,9 @@ export const riddlesDataGym: {
     {
       id: "gym-58",
       text: "What is a seven-letter word that becomes a one when you remove four?",
+      textHe: "מהי מילה בת שבע אותיות שהופכת לאחת (One) כשמסירים ארבע?",
       solution: "Someone",
+      solutionHe: "Someone (שהופך ל-One)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -634,7 +668,9 @@ export const riddlesDataGym: {
     {
       id: "gym-59",
       text: "I've been all around the world, and yet I never leave the corner. What am I?",
+      textHe: "הייתי בכל העולם, ובכל זאת אני אף פעם לא עוזב את הפינה. מה אני?",
       solution: "A stamp",
+      solutionHe: "בול",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -643,7 +679,9 @@ export const riddlesDataGym: {
     {
       id: "gym-60",
       text: "What is something that you have that, the more you make, the more you leave behind?",
+      textHe: "מה זה משהו שיש לך שככל שאתה עושה יותר, אתה משאיר יותר מאחור?",
       solution: "Fingerprints",
+      solutionHe: "טביעות אצבע",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -652,7 +690,9 @@ export const riddlesDataGym: {
     {
       id: "gym-61",
       text: "What is something that breaks as soon as you speak its name?",
+      textHe: "מה זה משהו שנשבר ברגע שאתה אומר את שמו?",
       solution: "Silence",
+      solutionHe: "שתיקה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -661,8 +701,10 @@ export const riddlesDataGym: {
     {
       id: "gym-62",
       text: "A King has no heirs and no Queen, and he holds a contest to see who his heir will be. He gives each child of the kingdom a seed and promises that whichever child has the largest and most beautiful plant will earn the throne. It's a metaphor for his kingdom. At the end of the contest, each of the children came back to the palace with an enormous and beautiful plant in their hand, each expecting to be the next ruler. He looks at all the children's plants, but finally decides that a little girl who has an empty pot is going to be the next Queen of the kingdom. If he had promised that the one with the most beautiful plant would win, why did he choose the little girl over all of the other children who had plants that grew?",
+      textHe: "מלך ללא יורשים וללא מלכה עורך תחרות. הוא נותן לכל ילד זרע ומבטיח שמי שיהיה לו הצמח הכי יפה יזכה בכס המלכות. בסוף התחרות, המלך בוחר בילדה עם עציץ ריק. למה?",
       solution:
         "The king had given each child a fake seed so that none of the plants would grow, and the little girl had been the only one honest enough to not switch the seeds to make herself look better.",
+      solutionHe: "המלך נתן זרעים מזויפים שלא יכלו לצמוח, והילדה הייתה היחידה שהייתה ישרה.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -671,8 +713,10 @@ export const riddlesDataGym: {
     {
       id: "gym-63",
       text: "At a funeral for her mother, a woman met a man she had never seen before. Upon seeing the man, she immediately fell in love at first sight. When the funeral is over, she tried to find him, but couldn’t. Several days after the funeral, she killed her sister. Why would she kill her sister?",
+      textHe: "בהלוויה של אמה, אישה פגשה גבר שמעולם לא ראתה והתאהבה בו מיד. כמה ימים לאחר מכן היא הרגה את אחותה. למה?",
       solution:
         "She killed her sister because she wanted to see the man again, and she figured out that the only way she would be able to see him again was at her sister's funeral.",
+      solutionHe: "היא קיוותה לראות את הגבר שוב בהלוויה של אחותה.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -681,7 +725,9 @@ export const riddlesDataGym: {
     {
       id: "gym-64",
       text: "What is the type of dress that you were never able to wear?",
+      textHe: "איזה סוג של שמלה אי אפשר ללבוש?",
       solution: "An address",
+      solutionHe: "כתובת (Address - משחק מילים על Dress)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -690,7 +736,9 @@ export const riddlesDataGym: {
     {
       id: "gym-65",
       text: "What would you find at the end of a rainbow?",
+      textHe: "מה תמצאו בסוף קשת בענן (Rainbow)?",
       solution: "The letter “W”",
+      solutionHe: "האות W",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -699,7 +747,9 @@ export const riddlesDataGym: {
     {
       id: "gym-66",
       text: "If you have this and then share it with other people, it's instantly gone. What is it?",
+      textHe: "אם יש לך את זה ואתה משתף את זה, זה נעלם מיד. מה זה?",
       solution: "A secret",
+      solutionHe: "סוד",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -708,7 +758,9 @@ export const riddlesDataGym: {
     {
       id: "gym-67",
       text: "If you open me, you cannot see me without the use of a mirror. If you close me, you will not be able to see me at all. What am I?",
+      textHe: "אם תפתח אותי, לא תוכל לראות אותי בלי מראה. אם תסגור אותי, לא תוכל לראות אותי בכלל. מה אני?",
       solution: "Eyes",
+      solutionHe: "עיניים",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -717,7 +769,9 @@ export const riddlesDataGym: {
     {
       id: "gym-68",
       text: "What type of tree can you carry in your hand?",
+      textHe: "איזה סוג של עץ אתה יכול לשאת ביד?",
       solution: "A palm tree",
+      solutionHe: "כף יד (Palm tree)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -726,7 +780,9 @@ export const riddlesDataGym: {
     {
       id: "gym-69",
       text: "What is something that rich people need, poor people have, and if you eat it, you die?",
+      textHe: "מה עשירים צריכים, לעניים יש, ואם תאכל את זה תמות?",
       solution: "Nothing",
+      solutionHe: "שום דבר (Nothing)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -735,7 +791,9 @@ export const riddlesDataGym: {
     {
       id: "gym-70",
       text: "I am able to be cracked, and I am able to be made. You can play me, or you can tell me. What am I?",
+      textHe: "אפשר לפצח אותי, ואפשר לעשות אותי. אפשר לשחק בי, או לספר אותי. מה אני?",
       solution: "I am a joke.",
+      solutionHe: "בדיחה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -836,7 +894,9 @@ export const riddlesDataGym: {
     {
       id: "gym-81",
       text: "I was a stone inside the tree; I help your words live. If you push me when I stand, I will have less, the more that I move around.Can you deduce what I am?",
+      textHe: "הייתי אבן בתוך העץ; אני עוזר למילים שלך לחיות. אם תדחף אותי כשאני עומד, יהיה לי פחות, ככל שאזוז יותר. האם תוכל להסיק מה אני?",
       solution: "A pencil",
+      solutionHe: "עיפרון",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -845,7 +905,9 @@ export const riddlesDataGym: {
     {
       id: "gym-82",
       text: "There is light, and it’s the only place I can live. If light shines on me, however, I will die.",
+      textHe: "יש אור, וזה המקום היחיד שבו אני יכול לחיות. אבל אם אור מאיר עלי, אני אמות.",
       solution: "A shadow",
+      solutionHe: "צל",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -854,7 +916,9 @@ export const riddlesDataGym: {
     {
       id: "gym-83",
       text: "What sits when it stands up and jumps when it walks?",
+      textHe: "מה יושב כשהוא עומד וקופץ כשהוא הולך?",
       solution: "A kangaroo",
+      solutionHe: "קנגורו",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -863,7 +927,9 @@ export const riddlesDataGym: {
     {
       id: "gym-84",
       text: "What has to be broken before you can use it?",
+      textHe: "מה צריך לשבור לפני שאפשר להשתמש בו?",
       solution: "An egg",
+      solutionHe: "ביצה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -872,7 +938,9 @@ export const riddlesDataGym: {
     {
       id: "gym-85",
       text: "What begins and ends with a T and has T inside it?",
+      textHe: "מה מתחיל ומסתיים ב-T ויש לו T בפנים?",
       solution: "A teapot",
+      solutionHe: "קומקום (Teapot)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -881,7 +949,9 @@ export const riddlesDataGym: {
     {
       id: "gym-86",
       text: "What is something that you can hold without using your arms?",
+      textHe: "מה זה משהו שאתה יכול להחזיק בלי להשתמש בידיים?",
       solution: "Your breath",
+      solutionHe: "הנשימה שלך",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -890,7 +960,9 @@ export const riddlesDataGym: {
     {
       id: "gym-87",
       text: "It has been around for years, but it is never older than a month. What is it?",
+      textHe: "זה קיים שנים, אבל אף פעם לא בן יותר מחודש. מה זה?",
       solution: "The moon",
+      solutionHe: "הירח",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -899,7 +971,9 @@ export const riddlesDataGym: {
     {
       id: "gym-88",
       text: "What has a single thumb, four fingers, but is not alive?",
+      textHe: "למה יש אגודל אחד, ארבע אצבעות, אבל הוא לא חי?",
       solution: "A glove",
+      solutionHe: "כפפה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -908,7 +982,9 @@ export const riddlesDataGym: {
     {
       id: "gym-89",
       text: "Three doctors said that James was their brother. James himself has said he has no brothers. Is James lying, or is the doctor lying?",
+      textHe: "שלושה רופאים אמרו שג'יימס הוא אחיהם. ג'יימס עצמו אמר שאין לו אחים. האם ג'יימס משקר, או שהרופאים משקרים?",
       solution: "No one was lying. The three doctors were James’ sisters.",
+      solutionHe: "אף אחד לא משקר. שלושת הרופאים היו אחיותיו של ג'יימס.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -917,7 +993,9 @@ export const riddlesDataGym: {
     {
       id: "gym-90",
       text: "If you remove the first and second from me and then remove all of the others, I will still be unchanged. Can you deduce what it is that I am?",
+      textHe: "אם תסיר את הראשון והשני ממני ואז תסיר את כל האחרים, אני עדיין אשאר ללא שינוי. אתה יכול להסיק מה אני?",
       solution: "A postman",
+      solutionHe: "דוור (The Postman - אותיות)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -926,7 +1004,9 @@ export const riddlesDataGym: {
     {
       id: "gym-91",
       text: "I am a box that has no locks but holds keys. My keys have the power to unlock your deepest senses. What am I?",
+      textHe: "אני תיבה שאין לה מנעולים אבל מחזיקה מפתחות. למפתחות שלי יש את הכוח לפתוח את החושים העמוקים ביותר שלך. מה אני?",
       solution: "A piano",
+      solutionHe: "פסנתר",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -935,7 +1015,9 @@ export const riddlesDataGym: {
     {
       id: "gym-92",
       text: "What has a single eye but is unable to see?",
+      textHe: "למה יש עין אחת אבל לא יכול לראות?",
       solution: "A needle",
+      solutionHe: "מחט",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -944,8 +1026,10 @@ export const riddlesDataGym: {
     {
       id: "gym-93",
       text: "A woman in a hotel room is startled by a knock on the door. When she opens it, a man apologizes and explains that he thought it was his own room. When he leaves, the woman instantly locks the door and phones hotel security. Why was she so frightened of the man?",
+      textHe: "אישה בחדר במלון נבהלה כשהדופק בדלת. כשפתחה, גבר התנצל והסביר שחשב שזה החדר שלו. כשהוא עזב, האישה מיד נעלת את הדלת והתקשרה לאבטחה של המלון. מדוע היא כל כך נבהלה מהגבר?",
       solution:
         "No one would ever knock on their own hotel room door, and the man did.",
+      solutionHe: "כי אדם בדרך כלל לא ידפוק על דלת חדרו שלו — העובדה שהוא דפק הראתה שמשהו לא בסדר.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -954,7 +1038,9 @@ export const riddlesDataGym: {
     {
       id: "gym-94",
       text: "I have the ability to fly, but I do not have wings. I am able to weep; however, I do not have what is necessary to see. The dark will always follow me, no matter where I go. Can you deduce what I am?",
+      textHe: "יש לי יכולת לעוף, אבל אין לי כנפיים. אני מסוגל לבכות; עם זאת, אין לי את מה שצריך כדי לראות. החושך תמיד ילך אחרי, לא משנה לאן אלך. אתה יכול להסיק מה אני?",
       solution: "Clouds",
+      solutionHe: "עננים",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -963,7 +1049,9 @@ export const riddlesDataGym: {
     {
       id: "gym-95",
       text: "I am often bought for consumption, but no one will ever consume me. Can you guess what I am?",
+      textHe: "לפעמים קונים אותי לצריכה, אבל אף אחד לא יצרוך אותי לעולם. אתה יכול לנחש מה אני?",
       solution: "Cutlery and plates",
+      solutionHe: "סכו\"ם וצלחות",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -972,7 +1060,9 @@ export const riddlesDataGym: {
     {
       id: "gym-96",
       text: "I am hard at the beginning and soft in the middle, and if you use me to blow, you will need to have a good amount of air. What am I?",
+      textHe: "אני קשה בהתחלה ורך באמצע, ואם תשתמש בי כדי לנשוף, תצטרך כמות טובה של אוויר. מה אני?",
       solution: "Gum",
+      solutionHe: "מסטיק",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -981,8 +1071,10 @@ export const riddlesDataGym: {
     {
       id: "gym-97",
       text: "Mr. Owens was killed on a Friday afternoon. His wife said she was reading a magazine and was innocent. The chef claimed that he was making breakfast and was innocent, as well. The maid had been folding clothes, and the butler was taking a shower as his mother was helping the gardener plant carrots in the garden. Who killed Mr. Owens?",
+      textHe: "מר אואנס נהרג ביום שישי בצהריים. אשתו אמרה שהיא קוראת מגזין והיא חפה מפשע. השף טען שהוא מכין ארוחת בוקר וגם הוא חף מפשע. המשרתת קיפלה בגדים, והמשרת התקלח כשאמו עזרה לגנן לשתול גזר בגינה. מי הרג את מר אואנס?",
       solution:
         "The chef because he said he was making breakfast. Mr. Owens was killed in the afternoon, not in the morning.",
+      solutionHe: "השף כי הוא אמר שהוא מכין ארוחת בוקר. מר אואנס נהרג בצהריים, לא בבוקר.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -991,7 +1083,9 @@ export const riddlesDataGym: {
     {
       id: "gym-98",
       text: "What is a seven-letter word that becomes a one when you remove four?",
+      textHe: "מהי מילה בת שבע אותיות שהופכת לאחת (One) כשמסירים ארבע?",
       solution: "Someone",
+      solutionHe: "Someone (שהופך ל-One)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1000,7 +1094,9 @@ export const riddlesDataGym: {
     {
       id: "gym-99",
       text: "I've been all around the world, and yet I never leave the corner. What am I?",
+      textHe: "הייתי בכל העולם, ובכל זאת אני אף פעם לא עוזב את הפינה. מה אני?",
       solution: "A stamp",
+      solutionHe: "בול",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1009,7 +1105,9 @@ export const riddlesDataGym: {
     {
       id: "gym-100",
       text: "What is something that you have that, the more you make, the more you leave behind?",
+      textHe: "מה זה משהו שיש לך שככל שאתה עושה יותר, אתה משאיר יותר מאחור?",
       solution: "Fingerprints",
+      solutionHe: "טביעות אצבע",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1018,7 +1116,9 @@ export const riddlesDataGym: {
     {
       id: "gym-101",
       text: "What is something that breaks as soon as you speak its name?",
+      textHe: "מה זה משהו שנשבר ברגע שאתה אומר את שמו?",
       solution: "Silence",
+      solutionHe: "שתיקה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1027,8 +1127,10 @@ export const riddlesDataGym: {
     {
       id: "gym-102",
       text: "A King has no heirs and no Queen, and he holds a contest to see who his heir will be. He gives each child of the kingdom a seed and promises that whichever child has the largest and most beautiful plant will earn the throne. It's a metaphor for his kingdom. At the end of the contest, each of the children came back to the palace with an enormous and beautiful plant in their hand, each expecting to be the next ruler. He looks at all the children's plants, but finally decides that a little girl who has an empty pot is going to be the next Queen of the kingdom. If he had promised that the one with the most beautiful plant would win, why did he choose the little girl over all of the other children who had plants that grew?",
+      textHe: "מלך ללא יורשים וללא מלכה עורך תחרות. הוא נותן לכל ילד זרע ומבטיח שמי שיהיה לו הצמח הכי יפה יזכה בכס המלכות. בסוף התחרות, המלך בוחר בילדה עם עציץ ריק. למה?",
       solution:
         "The king had given each child a fake seed so that none of the plants would grow, and the little girl had been the only one honest enough to not switch the seeds to make herself look better.",
+      solutionHe: "המלך נתן זרעים מזויפים שלא יכלו לצמוח, והילדה הייתה היחידה שהייתה ישרה.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1037,8 +1139,10 @@ export const riddlesDataGym: {
     {
       id: "gym-103",
       text: "At a funeral for her mother, a woman met a man she had never seen before. Upon seeing the man, she immediately fell in love at first sight. When the funeral is over, she tried to find him, but couldn’t. Several days after the funeral, she killed her sister. Why would she kill her sister?",
+      textHe: "בהלוויה של אמה, אישה פגשה גבר שמעולם לא ראתה והתאהבה בו מיד. כמה ימים לאחר מכן היא הרגה את אחותה. למה?",
       solution:
         "She killed her sister because she wanted to see the man again, and she figured out that the only way she would be able to see him again was at her sister's funeral.",
+      solutionHe: "היא קיוותה לראות את הגבר שוב בהלוויה של אחותה.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1047,7 +1151,9 @@ export const riddlesDataGym: {
     {
       id: "gym-104",
       text: "What is the type of dress that you were never able to wear?",
+      textHe: "איזה סוג של שמלה אי אפשר ללבוש?",
       solution: "An address",
+      solutionHe: "כתובת (Address - משחק מילים על Dress)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1056,7 +1162,9 @@ export const riddlesDataGym: {
     {
       id: "gym-105",
       text: "What would you find at the end of a rainbow?",
+      textHe: "מה תמצאו בסוף קשת בענן (Rainbow)?",
       solution: "The letter “W”",
+      solutionHe: "האות W",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1065,7 +1173,9 @@ export const riddlesDataGym: {
     {
       id: "gym-106",
       text: "If you have this and then share it with other people, it's instantly gone. What is it?",
+      textHe: "אם יש לך את זה ואתה משתף את זה, זה נעלם מיד. מה זה?",
       solution: "A secret",
+      solutionHe: "סוד",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1074,7 +1184,9 @@ export const riddlesDataGym: {
     {
       id: "gym-107",
       text: "If you open me, you cannot see me without the use of a mirror. If you close me, you will not be able to see me at all. What am I?",
+      textHe: "אם תפתח אותי, לא תוכל לראות אותי בלי מראה. אם תסגור אותי, לא תוכל לראות אותי בכלל. מה אני?",
       solution: "Eyes",
+      solutionHe: "עיניים",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1083,7 +1195,9 @@ export const riddlesDataGym: {
     {
       id: "gym-108",
       text: "What type of tree can you carry in your hand?",
+      textHe: "איזה סוג של עץ אתה יכול לשאת ביד?",
       solution: "A palm tree",
+      solutionHe: "כף יד (Palm tree)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1092,7 +1206,9 @@ export const riddlesDataGym: {
     {
       id: "gym-109",
       text: "What is something that rich people need, poor people have, and if you eat it, you die?",
+      textHe: "מה עשירים צריכים, לעניים יש, ואם תאכל את זה תמות?",
       solution: "Nothing",
+      solutionHe: "שום דבר (Nothing)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1101,7 +1217,9 @@ export const riddlesDataGym: {
     {
       id: "gym-110",
       text: "I am able to be cracked, and I am able to be made. You can play me, or you can tell me. What am I?",
+      textHe: "אפשר לפצח אותי, ואפשר לעשות אותי. אפשר לשחק בי, או לספר אותי. מה אני?",
       solution: "I am a joke.",
+      solutionHe: "בדיחה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1202,7 +1320,9 @@ export const riddlesDataGym: {
     {
       id: "gym-121",
       text: "I was a stone inside the tree; I help your words live. If you push me when I stand, I will have less, the more that I move around.Can you deduce what I am?",
+      textHe: "הייתי אבן בתוך העץ; אני עוזר למילים שלך לחיות. אם תדחף אותי כשאני עומד, יהיה לי פחות, ככל שאזוז יותר. האם תוכל להסיק מה אני?",
       solution: "A pencil",
+      solutionHe: "עיפרון",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1211,7 +1331,9 @@ export const riddlesDataGym: {
     {
       id: "gym-122",
       text: "There is light, and it’s the only place I can live. If light shines on me, however, I will die.",
+      textHe: "יש אור, וזה המקום היחיד שבו אני יכול לחיות. אבל אם אור מאיר עלי, אני אמות.",
       solution: "A shadow",
+      solutionHe: "צל",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1220,7 +1342,9 @@ export const riddlesDataGym: {
     {
       id: "gym-123",
       text: "What sits when it stands up and jumps when it walks?",
+      textHe: "מה יושב כשהוא עומד וקופץ כשהוא הולך?",
       solution: "A kangaroo",
+      solutionHe: "קנגורו",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1229,7 +1353,9 @@ export const riddlesDataGym: {
     {
       id: "gym-124",
       text: "What has to be broken before you can use it?",
+      textHe: "מה צריך לשבור לפני שאפשר להשתמש בו?",
       solution: "An egg",
+      solutionHe: "ביצה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1238,7 +1364,9 @@ export const riddlesDataGym: {
     {
       id: "gym-125",
       text: "What begins and ends with a T and has T inside it?",
+      textHe: "מה מתחיל ומסתיים ב-T ויש לו T בפנים?",
       solution: "A teapot",
+      solutionHe: "קומקום (Teapot)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1247,7 +1375,9 @@ export const riddlesDataGym: {
     {
       id: "gym-126",
       text: "What is something that you can hold without using your arms?",
+      textHe: "מה זה משהו שאתה יכול להחזיק בלי להשתמש בידיים?",
       solution: "Your breath",
+      solutionHe: "הנשימה שלך",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1256,7 +1386,9 @@ export const riddlesDataGym: {
     {
       id: "gym-127",
       text: "It has been around for years, but it is never older than a month. What is it?",
+      textHe: "זה קיים שנים, אבל אף פעם לא בן יותר מחודש. מה זה?",
       solution: "The moon",
+      solutionHe: "הירח",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1265,7 +1397,9 @@ export const riddlesDataGym: {
     {
       id: "gym-128",
       text: "What has a single thumb, four fingers, but is not alive?",
+      textHe: "למה יש אגודל אחד, ארבע אצבעות, אבל הוא לא חי?",
       solution: "A glove",
+      solutionHe: "כפפה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1274,7 +1408,9 @@ export const riddlesDataGym: {
     {
       id: "gym-129",
       text: "Three doctors said that James was their brother. James himself has said he has no brothers. Is James lying, or is the doctor lying?",
+      textHe: "שלושה רופאים אמרו שג'יימס הוא אחיהם. ג'יימס עצמו אמר שאין לו אחים. האם ג'יימס משקר, או שהרופאים משקרים?",
       solution: "No one was lying. The three doctors were James’ sisters.",
+      solutionHe: "אף אחד לא משקר. שלושת הרופאים היו אחיותיו של ג'יימס.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1283,7 +1419,9 @@ export const riddlesDataGym: {
     {
       id: "gym-130",
       text: "If you remove the first and second from me and then remove all of the others, I will still be unchanged. Can you deduce what it is that I am?",
+      textHe: "אם תסיר את הראשון והשני ממני ואז תסיר את כל האחרים, אני עדיין אשאר ללא שינוי. אתה יכול להסיק מה אני?",
       solution: "A postman",
+      solutionHe: "דוור (The Postman - אותיות)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1292,7 +1430,9 @@ export const riddlesDataGym: {
     {
       id: "gym-131",
       text: "I am a box that has no locks but holds keys. My keys have the power to unlock your deepest senses. What am I?",
+      textHe: "אני תיבה שאין לה מנעולים אבל מחזיקה מפתחות. למפתחות שלי יש את הכוח לפתוח את החושים העמוקים ביותר שלך. מה אני?",
       solution: "A piano",
+      solutionHe: "פסנתר",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1301,7 +1441,9 @@ export const riddlesDataGym: {
     {
       id: "gym-132",
       text: "What has a single eye but is unable to see?",
+      textHe: "למה יש עין אחת אבל לא יכול לראות?",
       solution: "A needle",
+      solutionHe: "מחט",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1310,8 +1452,10 @@ export const riddlesDataGym: {
     {
       id: "gym-133",
       text: "A woman in a hotel room is startled by a knock on the door. When she opens it, a man apologizes and explains that he thought it was his own room. When he leaves, the woman instantly locks the door and phones hotel security. Why was she so frightened of the man?",
+      textHe: "אישה בחדר במלון נבהלה כשהדופק בדלת. כשפתחה, גבר התנצל והסביר שחשב שזה החדר שלו. כשהוא עזב, האישה מיד נעלת את הדלת והתקשרה לאבטחה של המלון. מדוע היא כל כך נבהלה מהגבר?",
       solution:
         "No one would ever knock on their own hotel room door, and the man did.",
+      solutionHe: "כי אדם בדרך כלל לא ידפוק על דלת חדרו שלו — העובדה שהוא דפק הראתה שמשהו לא בסדר.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1320,7 +1464,9 @@ export const riddlesDataGym: {
     {
       id: "gym-134",
       text: "I have the ability to fly, but I do not have wings. I am able to weep; however, I do not have what is necessary to see. The dark will always follow me, no matter where I go. Can you deduce what I am?",
+      textHe: "יש לי יכולת לעוף, אבל אין לי כנפיים. אני מסוגל לבכות; עם זאת, אין לי את מה שצריך כדי לראות. החושך תמיד ילך אחרי, לא משנה לאן אלך. אתה יכול להסיק מה אני?",
       solution: "Clouds",
+      solutionHe: "עננים",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1329,7 +1475,9 @@ export const riddlesDataGym: {
     {
       id: "gym-135",
       text: "I am often bought for consumption, but no one will ever consume me. Can you guess what I am?",
+      textHe: "לפעמים קונים אותי לצריכה, אבל אף אחד לא יצרוך אותי לעולם. אתה יכול לנחש מה אני?",
       solution: "Cutlery and plates",
+      solutionHe: "סכו\"ם וצלחות",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1338,7 +1486,9 @@ export const riddlesDataGym: {
     {
       id: "gym-136",
       text: "I am hard at the beginning and soft in the middle, and if you use me to blow, you will need to have a good amount of air. What am I?",
+      textHe: "אני קשה בהתחלה ורך באמצע, ואם תשתמש בי כדי לנשוף, תצטרך כמות טובה של אוויר. מה אני?",
       solution: "Gum",
+      solutionHe: "מסטיק",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1347,8 +1497,10 @@ export const riddlesDataGym: {
     {
       id: "gym-137",
       text: "Mr. Owens was killed on a Friday afternoon. His wife said she was reading a magazine and was innocent. The chef claimed that he was making breakfast and was innocent, as well. The maid had been folding clothes, and the butler was taking a shower as his mother was helping the gardener plant carrots in the garden. Who killed Mr. Owens?",
+      textHe: "מר אואנס נהרג ביום שישי בצהריים. אשתו אמרה שהיא קוראת מגזין והיא חפה מפשע. השף טען שהוא מכין ארוחת בוקר וגם הוא חף מפשע. המשרתת קיפלה בגדים, והמשרת התקלח כשאמו עזרה לגנן לשתול גזר בגינה. מי הרג את מר אואנס?",
       solution:
         "The chef because he said he was making breakfast. Mr. Owens was killed in the afternoon, not in the morning.",
+      solutionHe: "השף כי הוא אמר שהוא מכין ארוחת בוקר. מר אואנס נהרג בצהריים, לא בבוקר.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1357,7 +1509,9 @@ export const riddlesDataGym: {
     {
       id: "gym-138",
       text: "What is a seven-letter word that becomes a one when you remove four?",
+      textHe: "מהי מילה בת שבע אותיות שהופכת לאחת (One) כשמסירים ארבע?",
       solution: "Someone",
+      solutionHe: "Someone (שהופך ל-One)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1366,7 +1520,9 @@ export const riddlesDataGym: {
     {
       id: "gym-139",
       text: "I've been all around the world, and yet I never leave the corner. What am I?",
+      textHe: "הייתי בכל העולם, ובכל זאת אני אף פעם לא עוזב את הפינה. מה אני?",
       solution: "A stamp",
+      solutionHe: "בול",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1375,7 +1531,9 @@ export const riddlesDataGym: {
     {
       id: "gym-140",
       text: "What is something that you have that, the more you make, the more you leave behind?",
+      textHe: "מה זה משהו שיש לך שככל שאתה עושה יותר, אתה משאיר יותר מאחור?",
       solution: "Fingerprints",
+      solutionHe: "טביעות אצבע",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1384,7 +1542,9 @@ export const riddlesDataGym: {
     {
       id: "gym-141",
       text: "What is something that breaks as soon as you speak its name?",
+      textHe: "מה זה משהו שנשבר ברגע שאתה אומר את שמו?",
       solution: "Silence",
+      solutionHe: "שתיקה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1393,8 +1553,10 @@ export const riddlesDataGym: {
     {
       id: "gym-142",
       text: "A King has no heirs and no Queen, and he holds a contest to see who his heir will be. He gives each child of the kingdom a seed and promises that whichever child has the largest and most beautiful plant will earn the throne. It's a metaphor for his kingdom. At the end of the contest, each of the children came back to the palace with an enormous and beautiful plant in their hand, each expecting to be the next ruler. He looks at all the children's plants, but finally decides that a little girl who has an empty pot is going to be the next Queen of the kingdom. If he had promised that the one with the most beautiful plant would win, why did he choose the little girl over all of the other children who had plants that grew?",
+      textHe: "מלך ללא יורשים וללא מלכה עורך תחרות. הוא נותן לכל ילד זרע ומבטיח שמי שיהיה לו הצמח הכי יפה יזכה בכס המלכות. בסוף התחרות, המלך בוחר בילדה עם עציץ ריק. למה?",
       solution:
         "The king had given each child a fake seed so that none of the plants would grow, and the little girl had been the only one honest enough to not switch the seeds to make herself look better.",
+      solutionHe: "המלך נתן זרעים מזויפים שלא יכלו לצמוח, והילדה הייתה היחידה שהייתה ישרה.",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2041,7 +2203,7 @@ export const riddlesDataGym: {
     },
     {
       id: "gym-213",
-      text: 'Three men walk into a motel. The room they want is 30 dollars. Each guy pays ten dollars. Once they get to their room, the manager realizes that the room was only supposed to be 25 dollars. He sends an employee with five 1 dollar bills. On the way to the room, the employee thinks, \"I can\'t split five 1s between 3 guys." So, he pockets 2 of the dollars and gives each of the men a dollar. Now, the men have only paid 9 dollars each. 9X3=27, and the employee pocketed 2 dollars, which makes',
+      text: 'Three men walk into a motel. The room they want is 30 dollars. Each guy pays ten dollars. Once they get to their room, the manager realizes that the room was only supposed to be 25 dollars. He sends an employee with five 1 dollar bills. On the way to the room, the employee thinks, "I can\'t split five 1s between 3 guys." So, he pockets 2 of the dollars and gives each of the men a dollar. Now, the men have only paid 9 dollars each. 9X3=27, and the employee pocketed 2 dollars, which makes',
       solution:
         "There is no lost dollar: The order of operation was not followed. The employee still had 5 dollars to bring to the men.",
       categories: ["gym-for-the-brain"],
