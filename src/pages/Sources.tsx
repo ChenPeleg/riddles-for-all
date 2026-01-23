@@ -38,7 +38,7 @@ function Sources() {
             <button
               key={source}
               onClick={() => setSelectedSource(source === selectedSource ? null : source)}
-              className={`group p-6 rounded-[2rem] border-2 text-left transition-all duration-300 relative overflow-hidden ${
+              className={`group p-6 rounded-4xl border-2 text-left transition-all duration-300 relative overflow-hidden ${
                 selectedSource === source
                   ? 'bg-brand-accent text-white border-brand-accent shadow-[0_12px_24px_-8px_rgba(245,158,11,0.4)] scale-105 z-10'
                   : 'bg-white text-surface-900 border-surface-200 hover:border-brand-accent/30 active:scale-95'
