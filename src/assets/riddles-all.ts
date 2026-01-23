@@ -1,4 +1,4 @@
-import type { Riddle } from "../src/models/riddle";
+import type { Riddle } from "../models/riddle";
 
 export const riddlesData: {
   metadata: {
