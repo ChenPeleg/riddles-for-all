@@ -1788,7 +1788,9 @@ export const riddlesDataGym: {
     {
       id: "gym-159",
       text: "I only come out at night, but I can't come out every night. I am not sleeping in the day, though many people think that I do. I'm always there; you're just not able to see me. Some people think I look like a bunny, while other people think I look like a person. I can look big or small. What am I?",
+      textHe: "אני יוצא רק בלילה, אבל לא כל לילה. אני לא ישן ביום, למרות שרבים חושבים שכן. אני תמיד שם; אתה פשוט לא רואה אותי. יש שחושבים שאני נראה כמו ארנב, ויש שחושבים שאני מזכיר אדם. אני יכול להיראות גדול או קטן. מה אני?",
       solution: "The moon",
+      solutionHe: "הירח",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1797,7 +1799,9 @@ export const riddlesDataGym: {
     {
       id: "gym-160",
       text: "I come in second among a dozen, and I am very short. Every 4 years, I change in a way that none of the others do, which makes me unique and sets me apart. What am I?",
+      textHe: "אני בא שני מתוך תריסר, ואני מאוד קצר. כל ארבע שנים אני משתנה באופן שאף אחד מהשאר לא משתנה, וזה מה שמייחד אותי. מה אני?",
       solution: "February",
+      solutionHe: "פברואר",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1806,7 +1810,9 @@ export const riddlesDataGym: {
     {
       id: "gym-161",
       text: "I am able to cycle for many hours, but I never get tired. Even at the end of the day, I can keep going. What am I?",
+      textHe: "אני מסוגל להסתובב שעות על גבי שעות, אבל אף פעם לא מתעייף. אפילו בסוף היום, אני יכול להמשיך. מה אני?",
       solution: "A clock",
+      solutionHe: "שעון",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1815,7 +1821,9 @@ export const riddlesDataGym: {
     {
       id: "gym-162",
       text: "How many apples can you ingest if your abdomen is completely unoccupied?",
+      textHe: "כמה תפוחים אפשר לאכול אם הבטן שלך ריקה לחלוטין?",
       solution: "Only one. After that, your stomach will not be empty.",
+      solutionHe: "רק אחד. כי אחרי זה הבטן כבר לא תהיה ריקה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1824,7 +1832,9 @@ export const riddlesDataGym: {
     {
       id: "gym-163",
       text: "I do not have eyes, and I am completely white. Where I once had thoughts, I am now empty and hollow. What am I?",
+      textHe: "אין לי עיניים, ואני כולי לבן. היכן שפעם היו לי מחשבות, עכשיו אני ריק וחלול. מה אני?",
       solution: "A skull",
+      solutionHe: "גולגולת",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1833,7 +1843,9 @@ export const riddlesDataGym: {
     {
       id: "gym-164",
       text: "I have the ability to be both hot and cold. I am able to run and be completely still. I can be rigid,or I can be easy to mold. I can be high in volume, or I can be soft and more muted. Can you deduce what I am?",
+      textHe: "יש לי יכולת להיות גם חם וגם קר. אני יכול לזרום וגם להיות דומם. לפעמים אני קשיח, לפעמים ניתן לעצב אותי בקלות. אני יכול להיות רועש ומלא, או שקט ומרוסן. מה אני?",
       solution: "Water",
+      solutionHe: "מים",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1842,7 +1854,9 @@ export const riddlesDataGym: {
     {
       id: "gym-165",
       text: "Which automobile is spelled the same way forward as it is backward?",
+      textHe: "איזו מכונית נכתבת אותו הדבר מלפנים ומאחור?",
       solution: "A racecar",
+      solutionHe: "רייסקאר",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1851,7 +1865,9 @@ export const riddlesDataGym: {
     {
       id: "gym-166",
       text: "I am cylindrical and long. I live in a house that can make you fall down, but I am easily crushed in the palm of your hand. I am nourishing and delicious. What am I?",
+      textHe: "אני גלילי וארוך. אני גר בבית שיכול לגרום לך להחליק, אבל אפשר למעוך אותי ביד אחת. אני מזין וטעים. מה אני?",
       solution: "A banana",
+      solutionHe: "בננה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2361,8 +2377,10 @@ export const riddlesDataGym: {
     {
       id: "gym-213",
       text: 'Three men walk into a motel. The room they want is 30 dollars. Each guy pays ten dollars. Once they get to their room, the manager realizes that the room was only supposed to be 25 dollars. He sends an employee with five 1 dollar bills. On the way to the room, the employee thinks, "I can\'t split five 1s between 3 guys." So, he pockets 2 of the dollars and gives each of the men a dollar. Now, the men have only paid 9 dollars each. 9X3=27, and the employee pocketed 2 dollars, which makes',
+      textHe: "שלושה גברים שכרו חדר ב-30 דולר. הם שילמו כל אחד 10 דולר. לאחר מכן, בעל המקום החליט להוריד את המחיר ל-25 דולר, ושלח את העובד שלו להחזיר להם 5 דולרים. העובד לא ידע איך לחלק 5 בין שלושה, אז הוא נתן לכל אחד מהם דולר אחד, ושמר לעצמו 2 דולרים. עכשיו, כל גבר שילם 9 דולר (9x3=27), והעובד לקח 2 דולר, וזה 29 בסך הכל — לאן נעלם הדולר?",
       solution:
         "There is no lost dollar: The order of operation was not followed. The employee still had 5 dollars to bring to the men.",
+      solutionHe: "לא נעלם אף דולר. פשוט לא ביצעו נכון את סדר החשבון. לעובד עדיין נשארו 5 דולרים להחזיר לאנשים",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2371,8 +2389,10 @@ export const riddlesDataGym: {
     {
       id: "gym-214",
       text: "An explorer is traveling to a prehistoric land. He sees a quartet of paths to follow. The foremost path has really deep mud. When people go there, they never come back. The second path has broken tracks, which is really unsafe for anyone who takes this path. On the third path, there is a lion who hasn't eaten and drunk anything for 3 months, so it is really hungry by now. The last path has dinosaurs and volcanoes, so it's a very dangerous place. Which path is the best one for the traveler to take?",
+      textHe: "חוקר נוסע לארץ פרהיסטורית. הוא רואה ארבעה שבילים: השביל הקדמי מלא בבוץ עמוק ואף אחד לא חוזר ממנו. השביל השני שבור ומסוכן מאוד. השביל השלישי מוביל לאריה שלא אכל ולא שתה שלושה חודשים – אז הוא מאוד רעב. השביל האחרון מוביל לדינוזוארים ולהרי געש, שזה ממש מסוכן. איזה שביל עדיף לחוקר?",
       solution:
         "He should walk down the path with the lion. Having been deprived of food for three months, it would have succumbed to starvation and would be unable to kill him.",
+      solutionHe: "שיילך בשביל של האריה. אריה שלא אכל שלושה חודשים כבר מת מרעב ולא יוכל להרוג אותו",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2431,7 +2451,9 @@ export const riddlesDataGym: {
     {
       id: "gym-220",
       text: "I have wisdom and knowledge beyond the ages. I get what you want in a split second. I am known to man as endless wisdom. What am I?",
+      textHe: "יש לי חכמה וידע שחוצים את הדורות. אני משיג מה שתרצה בשבריר שנייה. ידועים בין בני האדם כחכמה אין-סופית. מה אני?",
       solution: "Computer",
+      solutionHe: "מחשב",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2440,7 +2462,9 @@ export const riddlesDataGym: {
     {
       id: "gym-221",
       text: "What does a scientist call a dog?",
+      textHe: "איך קורא מדען לכלב?",
       solution: "A canine",
+      solutionHe: "כלבני",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2449,7 +2473,9 @@ export const riddlesDataGym: {
     {
       id: "gym-222",
       text: "What is something that is always present but people can't see?",
+      textHe: "מה נמצא תמיד אך אי אפשר לראות?",
       solution: "Noise",
+      solutionHe: "רעש",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2458,7 +2484,9 @@ export const riddlesDataGym: {
     {
       id: "gym-223",
       text: "If I turn my head, you will be able to go wherever it is you want to. If I turned again, you're going to be stuck, and you can rot. What am I?",
+      textHe: "אם אסובב את הראש שלי, תוכל ללכת לאן שתרצה. אם אסובב שוב, תיתקע ותירקב. מה אני?",
       solution: "Key",
+      solutionHe: "מפתח",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2467,7 +2495,9 @@ export const riddlesDataGym: {
     {
       id: "gym-224",
       text: "The faster the horse will run, the shorter his tail will become—an iron horse with a tail that is flaxen.",
+      textHe: "ככל שהסוס ירוץ יותר מהר, כך זנבו יתקצר—סוס ברזל עם זנב פשתן.",
       solution: "A needle",
+      solutionHe: "מחט",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2476,7 +2506,9 @@ export const riddlesDataGym: {
     {
       id: "gym-225",
       text: "I cry but have no eyes, I rejoice but have no heart. What am I?",
+      textHe: "אני בוכה אך אין לי עיניים, אני שמח אך אין לי לב. מה אני?",
       solution: "A cloud",
+      solutionHe: "ענן",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2485,7 +2517,9 @@ export const riddlesDataGym: {
     {
       id: "gym-226",
       text: "I can run, but I am unable to walk. What am I?",
+      textHe: "אני יכול לרוץ, אך אני לא מסוגל ללכת. מה אני?",
       solution: "A nose",
+      solutionHe: "אף",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2494,7 +2528,9 @@ export const riddlesDataGym: {
     {
       id: "gym-227",
       text: "I never sing till a shot fires out. What am I?",
+      textHe: "אני אף פעם לא שר עד שיורים בי. מה אני?",
       solution: "A gun",
+      solutionHe: "רובה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2503,7 +2539,9 @@ export const riddlesDataGym: {
     {
       id: "gym-228",
       text: "I shed in one season and dress smartly for the next.",
+      textHe: "אני משיר בעונה אחת ומתלבש יפה לעונה אחרת.",
       solution: "A tree",
+      solutionHe: "עץ",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2512,7 +2550,9 @@ export const riddlesDataGym: {
     {
       id: "gym-229",
       text: "I see you beneath me, and I hear your sights and sounds. Memories come with me, and emotions are strong. What am I?",
+      textHe: "אני רואה אותך מתחתיי, שומע את מראותיך וקולותיך. זכרונות באים עמי, וריגשות חזקים. מה אני?",
       solution: "The past",
+      solutionHe: "העבר",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2521,7 +2561,9 @@ export const riddlesDataGym: {
     {
       id: "gym-230",
       text: "I get tagged with red or yellow stickers, and people come to me daily. What am I?",
+      textHe: "מדביקים עליי מדבקות אדומות או צהובות, ואנשים באים אליי מדי יום. מה אני?",
       solution: "The clearance section",
+      solutionHe: "אזור המבצעים",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2530,7 +2572,9 @@ export const riddlesDataGym: {
     {
       id: "gym-231",
       text: "I can destroy kings and make them feeble. I can bring down towns and cities. What am I?",
+      textHe: "אני יכול להשמיד מלכים ולהחליש אותם. אני יכול למוטט ערים ועיירות. מה אני?",
       solution: "Time",
+      solutionHe: "הזמן",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2548,7 +2592,9 @@ export const riddlesDataGym: {
     {
       id: "gym-233",
       text: "I can't be taken from you, but I am owned by all. What is it that I am?",
+      textHe: "אי אפשר לקחת אותי ממך, אבל אני שייך לכולם. מה אני?",
       solution: "Knowledge",
+      solutionHe: "ידע",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2557,7 +2603,9 @@ export const riddlesDataGym: {
     {
       id: "gym-234",
       text: "I have only a duo of words, and yet I possess thousands of letters.",
+      textHe: "יש לי רק שני מילים, ובכל זאת יש לי אלפי מכתבים.",
       solution: "The post office",
+      solutionHe: "הדואר",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2575,7 +2623,9 @@ export const riddlesDataGym: {
     {
       id: "gym-236",
       text: "You can hold me in your right hand but not the left. What am I?",
+      textHe: "אתה יכול להחזיק אותי ביד ימין שלך אבל לא ביד שמאל. מה אני?",
       solution: "Your left hand",
+      solutionHe: "יד שמאל שלך",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2584,7 +2634,9 @@ export const riddlesDataGym: {
     {
       id: "gym-237",
       text: "I can be broken or read, watched, or live. What am I?",
+      textHe: "אני יכול להישבר או להיקרא, להיצפות, או להיות בשידור חי. מה אני?",
       solution: "The news",
+      solutionHe: "החדשות",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2593,7 +2645,9 @@ export const riddlesDataGym: {
     {
       id: "gym-238",
       text: "What starts as black, then turns red before finally turning white?",
+      textHe: "מה מתחיל כשחור, אחר כך הופך לאדום ולבסוף ללבן?",
       solution: "Charcoal",
+      solutionHe: "פחם",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2602,7 +2656,9 @@ export const riddlesDataGym: {
     {
       id: "gym-239",
       text: "I have many colors, but you can't ever touch me.You may only see me.",
+      textHe: "יש לי הרבה צבעים, אך לעולם לא תוכל לגעת בי. תוכל רק לראות אותי.",
       solution: "A rainbow",
+      solutionHe: "קשת בענן",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2611,7 +2667,9 @@ export const riddlesDataGym: {
     {
       id: "gym-240",
       text: "I crack when you drop me. Even broken, I smile back.",
+      textHe: "אני נסדק כשאתה מפיל אותי. גם כשאני שבור, אני מחזיר חיוך.",
       solution: "A mirror",
+      solutionHe: "מראה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2620,7 +2678,9 @@ export const riddlesDataGym: {
     {
       id: "gym-241",
       text: "My love for Eliza will never know my first, but it will not be my secondeither. Instead, it will be my whole.",
+      textHe: "אהבתי לאליזה לעולם לא תדע את הראשון שלי, אך לא תהיה גם השנייה שלי. במקום זאת, היא תהיה כולה.",
       solution: "Endless",
+      solutionHe: "אינסופי",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2629,7 +2689,9 @@ export const riddlesDataGym: {
     {
       id: "gym-242",
       text: "What happens when your underwear attack you?",
+      textHe: "מה קורה כשהתחתונים שלך תוקפים אותך?",
       solution: "You have a wedgie.",
+      solutionHe: "יש לך וודג'י",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2638,7 +2700,9 @@ export const riddlesDataGym: {
     {
       id: "gym-243",
       text: "What can you add to water in a full bucket to make it lighter?",
+      textHe: "מה אפשר להוסיף למים בדלי מלא כדי שיהיה קל יותר?",
       solution: "A hole",
+      solutionHe: "חור",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2647,7 +2711,9 @@ export const riddlesDataGym: {
     {
       id: "gym-244",
       text: "I have no tracks and no paths for you to tread. I am a field that stretches wide, and I shimmer like diamonds in the light.",
+      textHe: "אין לי מסילות ואין לי שבילים בשבילך ללכת. אני שדה המתפרס לרוחב, ואני מנצנץ כמו יהלומים באור.",
       solution: "The ocean",
+      solutionHe: "האוקיינוס",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2656,7 +2722,9 @@ export const riddlesDataGym: {
     {
       id: "gym-245",
       text: "For hundreds, I am their true wake up call.",
+      textHe: "למאות אני היקיצה האמיתית שלהם.",
       solution: "Coffee",
+      solutionHe: "קפה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2665,7 +2733,9 @@ export const riddlesDataGym: {
     {
       id: "gym-246",
       text: "I have no heart, just a body. I have a tongue but not a head. What am I?",
+      textHe: "אין לי לב, רק גוף. יש לי לשון אך אין לי ראש. מה אני?",
       solution: "A bell",
+      solutionHe: "פעמון",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2674,7 +2744,9 @@ export const riddlesDataGym: {
     {
       id: "gym-247",
       text: "I thunder with a breech and weigh more than a dozen men. What am I?",
+      textHe: "אני רועם עם בית בליעה ושוקל יותר מתריסר אנשים. מה אני?",
       solution: "A cannon",
+      solutionHe: "תותח",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2683,7 +2755,9 @@ export const riddlesDataGym: {
     {
       id: "gym-248",
       text: "I rise on a pillar, and I can crawl all over the Earth but never stay for long. What am I?",
+      textHe: "אני קם על עמוד ויכול לזחול על פני כל הארץ אך אף פעם לא נשאר הרבה זמן. מה אני?",
       solution: "A shadow",
+      solutionHe: "צל",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2692,7 +2766,9 @@ export const riddlesDataGym: {
     {
       id: "gym-249",
       text: "You can find me where the sky has turned orange or where the blue oranges are present. Find me where the glass is red, or banana violets are present to your eyes.",
+      textHe: "אתה יכול למצוא אותי היכן שהשמים כתומים, או היכן שיש תפוזים כחולים. מצא אותי היכן שהזכוכית אדומה, או סיגליות בננה נראות לעיניך.",
       solution: "Negative",
+      solutionHe: "שלילה (נגטיב)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2701,7 +2777,9 @@ export const riddlesDataGym: {
     {
       id: "gym-250",
       text: "I hold months and weeks, but I come in sizes big and small.",
+      textHe: "אני מחזיק חודשים ושבועות, אך בא בגדלים גדולים וקטנים.",
       solution: "A calendar",
+      solutionHe: "לוח שנה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
