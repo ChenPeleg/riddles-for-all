@@ -1754,7 +1754,9 @@ export const riddlesDataGym: {
     {
       id: "gym-156",
       text: "How many hairs would you find in a rabbit's tail?",
+      textHe: "כמה שערות תמצא בזנב של ארנב?",
       solution: "You'd find none as they're all outside.",
+      solutionHe: "לא תמצא אף אחת כי כולן נמצאות מבחוץ",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1763,7 +1765,9 @@ export const riddlesDataGym: {
     {
       id: "gym-157",
       text: "I have no leaves, no trunk, no fruit, but I do have branches. What am I?",
+      textHe: "אין לי עלים, אין לי גזע, אין לי פירות, אבל יש לי סניפים. מה אני?",
       solution: "A bank",
+      solutionHe: "בנק",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1772,8 +1776,10 @@ export const riddlesDataGym: {
     {
       id: "gym-158",
       text: "According to the encyclopedia, which would come first? The chicken or the egg?",
+      textHe: "על פי האנציקלופדיה, מה יבוא קודם? התרנגולת או הביצה?",
       solution:
         "The chicken, because the encyclopedia always goes in alphabetical order, of course.",
+      solutionHe: "התרנגולת, כי האנציקלופדיה הולכת תמיד לפי סדר אלפביתי, כמובן",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2091,7 +2097,9 @@ export const riddlesDataGym: {
     {
       id: "gym-189",
       text: "I cause involuntary movements in the vehicle that you drive. What am I?",
+      textHe: "אני גורם לתנועות בלתי רצוניות ברכב שאתה נוהג בו. מה אני?",
       solution: "A tow truck",
+      solutionHe: "גרר",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2100,7 +2108,9 @@ export const riddlesDataGym: {
     {
       id: "gym-190",
       text: "What never walks that has a big mouth, is able to run but never talks?",
+      textHe: "מה אף פעם לא הולך, יש לו פה גדול, מסוגל לרוץ אך אף פעם לא מדבר?",
       solution: "A river",
+      solutionHe: "נהר",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2109,7 +2119,9 @@ export const riddlesDataGym: {
     {
       id: "gym-191",
       text: "I am skilled at hiding what is real, and I am able to hide what is true. Sometimes, I can actually help you find the courage that resides deep inside of you. Can you deduce what I am?",
+      textHe: "אני מומחה בהסתרת האמת וביכולת להסתיר את מה שאמיתי. לפעמים, אני אפילו מסוגל לעזור לך למצוא את האומץ שמתחבא עמוק בפנים. האם תוכל לנחש מה אני?",
       solution: "Makeup",
+      solutionHe: "איפור",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2118,7 +2130,9 @@ export const riddlesDataGym: {
     {
       id: "gym-192",
       text: "If you immerse a stone into water, what will it become?",
+      textHe: "אם תטביל אבן במים, למה היא תהפוך?",
       solution: "Whetstone",
+      solutionHe: "אבן משחזת",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2127,7 +2141,9 @@ export const riddlesDataGym: {
     {
       id: "gym-193",
       text: "It's shorter than the rest, but you can raise it up like it's the best when you are happy. What is it?",
+      textHe: "הוא קצר מכולם, אבל אפשר להרים אותו גבוה כאילו הוא הכי טוב כשאתה שמח. מה הוא?",
       solution: "A thumb",
+      solutionHe: "אגודל",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2136,7 +2152,9 @@ export const riddlesDataGym: {
     {
       id: "gym-194",
       text: "I have two legs, but they only touch the ground when I am ready to rest. What am I?",
+      textHe: "יש לי שתי רגליים, אך הן נוגעות באדמה רק כשאני מוכן לנוח. מה אני?",
       solution: "Wheelbarrow",
+      solutionHe: "מריצה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2145,7 +2163,9 @@ export const riddlesDataGym: {
     {
       id: "gym-195",
       text: "I have a tongue, but I am never able to talk, andeven though I have no legs, I can sometimes walk. What am I?",
+      textHe: "יש לי לשון, אך אינני מסוגל לדבר, ולמרות שאין לי רגליים, לפעמים אני בכל זאת הולך. מה אני?",
       solution: "A shoe",
+      solutionHe: "נעל",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2154,7 +2174,9 @@ export const riddlesDataGym: {
     {
       id: "gym-196",
       text: "I rarely get touched, but I am often held. If you are smart, you use me every day.",
+      textHe: "נדיר שנוגעים בי, אבל לעיתים קרובות מחזיקים בי. אם אתה חכם, אתה משתמש בי כל יום.",
       solution: "Tongue",
+      solutionHe: "לשון",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2163,7 +2185,9 @@ export const riddlesDataGym: {
     {
       id: "gym-197",
       text: "I have no legs to dance, nor lungs to sing. I dance to music all on my own and breathe with the same. What am I?",
+      textHe: "אין לי רגליים לרקוד, וגם לא ריאות לשיר. אני רוקדת למוזיקה לבד ונושמת איתה. מה אני?",
       solution: "A flame",
+      solutionHe: "להבה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2172,7 +2196,9 @@ export const riddlesDataGym: {
     {
       id: "gym-198",
       text: "I am always in front of you, but you cannot see me. What am I?",
+      textHe: "אני תמיד לפניך, אבל אינך יכול לראות אותי. מה אני?",
       solution: "Your future",
+      solutionHe: "העתיד שלך",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2181,7 +2207,9 @@ export const riddlesDataGym: {
     {
       id: "gym-199",
       text: "When you lose me, you may make others lose theirs. What am I?",
+      textHe: "כאשר אתה מאבד אותי, אתה עלול לגרום לאחרים לאבד את שלהם. מה אני?",
       solution: "Your temper",
+      solutionHe: "העצבנות שלך",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2190,7 +2218,9 @@ export const riddlesDataGym: {
     {
       id: "gym-200",
       text: "What is red but stops on green?",
+      textHe: "מה הוא אדום אבל עוצר בירוק?",
       solution: "A watermelon",
+      solutionHe: "אבטיח",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2199,7 +2229,9 @@ export const riddlesDataGym: {
     {
       id: "gym-201",
       text: "I am in a house and around it, but I never touch it. What am I?",
+      textHe: "אני בתוך הבית ומסביב לו, אבל אף פעם לא נוגע בו. מה אני?",
       solution: "The sun",
+      solutionHe: "השמש",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2208,7 +2240,9 @@ export const riddlesDataGym: {
     {
       id: "gym-202",
       text: "I stand upright, and I am quite grand. I am elegant, and people like to look at me. I am right at your hands. What am I?",
+      textHe: "אני עומד זקוף, ואני די מרשים. אני אלגנטי, ואנשים אוהבים להסתכל עלי. אני ממש ליד הידיים שלך. מה אני?",
       solution: "A piano",
+      solutionHe: "פסנתר",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2217,7 +2251,9 @@ export const riddlesDataGym: {
     {
       id: "gym-203",
       text: "I can enchant anyone I see, and I can bring out the best in you. I can brighten someone's day, and I can sparkle and shine. What am I?",
+      textHe: "אני יכולה להקסים כל אחד שאני רואה, ואני יכולה להוציא ממך את הטוב ביותר. אני יכולה להאיר למישהו את היום, ואני יכולה לנצנץ ולזהור. מה אני?",
       solution: "A smile",
+      solutionHe: "חיוך",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2226,7 +2262,9 @@ export const riddlesDataGym: {
     {
       id: "gym-204",
       text: "What has to take a bow before it can speak to you?",
+      textHe: "מה חייב לקוד קידה לפני שהוא יכול לדבר אליך?",
       solution: "A violin",
+      solutionHe: "כינור",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2235,7 +2273,9 @@ export const riddlesDataGym: {
     {
       id: "gym-205",
       text: "No man can ever see me, and no man ever will, but I will always be here. What am I?",
+      textHe: "איש אינו יכול לראות אותי, ואף פעם לא יראה, אבל אני תמיד אהיה כאן. מה אני?",
       solution: "Tomorrow",
+      solutionHe: "מחר",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2244,7 +2284,9 @@ export const riddlesDataGym: {
     {
       id: "gym-206",
       text: "I am a mother, and I support my children no matter what their weight. I can turn around without being called, and I have held use since the time you crawled. What am I?",
+      textHe: "אני אמא, ואני תומכת בילדיי לא משנה מה משקלם. אני יכולה להסתובב מבלי שיקראו לי, והחזקתי אותך מאז שלמדת לזחול. מה אני?",
       solution: "The Earth",
+      solutionHe: "כדור הארץ",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2253,7 +2295,9 @@ export const riddlesDataGym: {
     {
       id: "gym-207",
       text: "What is harder and harder to catch the faster you run?",
+      textHe: "מה נעשה קשה יותר ויותר לתפוס ככל שאתה רץ מהר יותר?",
       solution: "Your breath",
+      solutionHe: "הנשימה שלך",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2262,7 +2306,9 @@ export const riddlesDataGym: {
     {
       id: "gym-208",
       text: "Two brothers run, but no matter how much they try, they cannot reach each other. What are they?",
+      textHe: "שני אחים רצים, אך לא משנה כמה הם מנסים, הם אינם יכולים להיפגש. מה הם?",
       solution: "Wheels",
+      solutionHe: "גלגלים",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2271,7 +2317,9 @@ export const riddlesDataGym: {
     {
       id: "gym-209",
       text: "The roof is beneath, and the floor is on top. I rarely leave this place, and as each day passes, a new horizon greets my gaze. What am I?",
+      textHe: "הגג למטה והרצפה למעלה. אני כמעט לא יוצא מהמקום הזה, ובכל יום שעובר, אופק חדש נגלה לעיניי. מה אני?",
       solution: "A sailor",
+      solutionHe: "מלח",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2280,7 +2328,9 @@ export const riddlesDataGym: {
     {
       id: "gym-210",
       text: "What can pandas have that no other animal can have?",
+      textHe: "מה יש לפנדות שאין לשום חיה אחרת?",
       solution: "A family of baby pandas",
+      solutionHe: "משפחה של גורי פנדות",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2289,7 +2339,9 @@ export const riddlesDataGym: {
     {
       id: "gym-211",
       text: "I live for 7 monthsand sing as the breeze whips by. I have many different colors. What am I?",
+      textHe: "אני חי במשך שבעה חודשים ושר כאשר הרוח עוברת. יש לי הרבה צבעים שונים. מה אני?",
       solution: "A leaf",
+      solutionHe: "עלה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2298,7 +2350,9 @@ export const riddlesDataGym: {
     {
       id: "gym-212",
       text: "I can turn and twist, and I leave a loop. What am I?",
+      textHe: "אני יכול להסתובב ולהתלפף, ואני משאיר לולאה. מה אני?",
       solution: "A shoelace",
+      solutionHe: "שרוך נעליים",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
