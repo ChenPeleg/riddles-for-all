@@ -2788,7 +2788,9 @@ export const riddlesDataGym: {
     {
       id: "gym-251",
       text: "Slash me if you like, but I heal instantly.",
+      textHe: "חתוך אותי אם תרצה, אני מחלים מיד.",
       solution: "Water",
+      solutionHe: "מים",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2797,7 +2799,9 @@ export const riddlesDataGym: {
     {
       id: "gym-252",
       text: "Three heads I have got. Cut one; I am still stronger. Cut 2; I will rise and become",
+      textHe: "יש לי שלושה ראשים. תחתוך אחד; אני רק אתחזק. תחתוך שניים; אני אקום ואהיה",
       solution: "A fox",
+      solutionHe: "שועל",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2806,7 +2810,9 @@ export const riddlesDataGym: {
     {
       id: "gym-253",
       text: "I fly when I am born, and lay still when I am alive. I run as I die. What am I?",
+      textHe: "אני עף כשנולדתי, ונשאר שקט כשאני חי. אני רץ כשאני מת. מה אני?",
       solution: "Snow",
+      solutionHe: "שלג",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2815,7 +2821,9 @@ export const riddlesDataGym: {
     {
       id: "gym-254",
       text: "People see me without noticing I am there. I am beyond what you are seeking.",
+      textHe: "אנשים רואים אותי מבלי לשים לב שאני שם. אני מעבר למה שאתה מחפש.",
       solution: "A window",
+      solutionHe: "חלון",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2824,7 +2832,9 @@ export const riddlesDataGym: {
     {
       id: "gym-255",
       text: "Feathers will give me the ability to take flight. Though I possess a body, I am not living; you determine how far I go. What am I?",
+      textHe: "נוצות יאפשרו לי לעוף. על אף שיש לי גוף, אינני חי; אתה קובע כמה רחוק אלך. מה אני?",
       solution: "An arrow",
+      solutionHe: "חץ",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2842,7 +2852,9 @@ export const riddlesDataGym: {
     {
       id: "gym-257",
       text: "I have a big hump, and I spit, but I can take you where you need to get.",
+      textHe: "יש לי דבשת גדולה, ואני יורק, אך אני יכול לקחת אותך לאן שתרצה.",
       solution: "A camel",
+      solutionHe: "גמל",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2851,7 +2863,9 @@ export const riddlesDataGym: {
     {
       id: "gym-258",
       text: "What hole can be mended with other holes?",
+      textHe: "איזה חור אפשר לתקן עם חורים אחרים?",
       solution: "A net",
+      solutionHe: "רשת",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2860,7 +2874,9 @@ export const riddlesDataGym: {
     {
       id: "gym-259",
       text: "Getting into me is simple. Getting out of me is difficult. Do you know what I am?",
+      textHe: "להיכנס אליי זה פשוט. לצאת ממני זה קשה. אתה יודע מה אני?",
       solution: "Trouble",
+      solutionHe: "צרה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2869,7 +2885,9 @@ export const riddlesDataGym: {
     {
       id: "gym-260",
       text: "I point the way when I am filled. When I am empty, I am still. I have 2 skins. One within and one is without.",
+      textHe: "אני מראה את הדרך כשאני מלא. כשאני ריק, אני עומד דומם. יש לי שתי שכבות עור, אחת בפנים ואחת בחוץ.",
       solution: "Gloves",
+      solutionHe: "כפפות",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2878,7 +2896,9 @@ export const riddlesDataGym: {
     {
       id: "gym-261",
       text: "I travel from coast to coast and never move.",
+      textHe: "אני נוסע מחוף אל חוף אך לעולם אינני זז.",
       solution: "A highway",
+      solutionHe: "כביש",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2887,7 +2907,9 @@ export const riddlesDataGym: {
     {
       id: "gym-262",
       text: "I live in the ground. I may not be much now, but I will be someday.",
+      textHe: "אני חי באדמה. עכשיו אני לא הרבה, אך יום אחד אהיה.",
       solution: "A seed",
+      solutionHe: "זרע",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2896,7 +2918,9 @@ export const riddlesDataGym: {
     {
       id: "gym-263",
       text: "I only have one eye, but I see things better than those with two. I can save your memories and let you hold them dear.",
+      textHe: "יש לי רק עין אחת, אבל אני רואה דברים טוב יותר מאלה שיש להם שתיים. אני יכול לשמור את הזיכרונות שלך ולגרום לך להוקיר אותם.",
       solution: "Camera",
+      solutionHe: "מצלמה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2905,7 +2929,9 @@ export const riddlesDataGym: {
     {
       id: "gym-264",
       text: "Black within am I, and red without I am. I have 4 corners. What am I?",
+      textHe: "שחור מבפנים, ואדום מבחוץ. יש לי ארבע פינות. מה אני?",
       solution: "A chimney",
+      solutionHe: "ארובה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2914,7 +2940,9 @@ export const riddlesDataGym: {
     {
       id: "gym-265",
       text: "Through my wounds, you will see the water run. I once held many, but I have no more.",
+      textHe: "דרך פצעיי תראה את המים זורמים. פעם החזקתי רבים, אבל עכשיו אין לי עוד.",
       solution: "A shipwreck",
+      solutionHe: "שברי ספינה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2923,7 +2951,9 @@ export const riddlesDataGym: {
     {
       id: "gym-266",
       text: "I walked for miles, and I finally got it. When I saw it, I threw it away, realizing I did not want it.",
+      textHe: "הלכתי קילומטרים וסוף סוף השגתי את זה. כשמצאתי, זרקתי, כי הבנתי שאינני רוצה את זה.",
       solution: "A thorn",
+      solutionHe: "קוץ",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2932,7 +2962,9 @@ export const riddlesDataGym: {
     {
       id: "gym-267",
       text: "I am good and in a fine state. Unfortunately, those who are in are sadly out of it.",
+      textHe: "אני במצב טוב ובסדר גמור. למרבה הצער, אלה שנמצאים בו, לצערם לא נמצאים.",
       solution: "Sane",
+      solutionHe: "שפוי",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
