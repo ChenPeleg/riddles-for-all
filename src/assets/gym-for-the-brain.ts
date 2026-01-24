@@ -1854,8 +1854,10 @@ export const riddlesDataGym: {
     {
       id: "gym-167",
       text: "I have 2 different cases, but I will never win or lose. I also will never have use for a lawyer. What am I?",
+      textHe: "יש לי שני מקרים שונים, אבל לעולם לא אנצח או אפסיד. גם לעולם לא יהיה לי צורך בעורך דין. מה אני?",
       solution:
         "Letters, both uppercase and lowercase. This makes the two cases.",
+      solutionHe: "אותיות, גדולות וקטנות. אלו שני המקרים (Cases)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1864,7 +1866,9 @@ export const riddlesDataGym: {
     {
       id: "gym-168",
       text: "I sit and wait with pointed fangs. I have a piercing force, and I can crunch out fates. I grab my victims with all my might, but I only physically join you with one single bite. Can you deduce what I am?",
+      textHe: "אני יושב וממתין עם ניבים מחודדים. יש לי כוח חודר, ואני יכול לקבוע גורלות. אני תופס את הקורבנות שלי בכל כוחי, אבל אני מצרף אותך פיזית רק בנשיכה אחת. מה אני?",
       solution: "A stapler",
+      solutionHe: "מהדק",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1873,7 +1877,9 @@ export const riddlesDataGym: {
     {
       id: "gym-169",
       text: "What kind of jacket will always be damp when you place it on your shoulders?",
+      textHe: "איזה מעיל תמיד יהיה לח כשתניח אותו על הכתפיים?",
       solution: "A coat of paint",
+      solutionHe: "שכבת צבע (Coat of paint)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1882,7 +1888,9 @@ export const riddlesDataGym: {
     {
       id: "gym-170",
       text: "If you're in a dark cave and you only have one match, a single lump of coal, a kerosene lamp, and a stove, and you only have the option of lighting one, what would you light first to make sure that you're safe?",
+      textHe: "אם אתה במערה חשוכה ויש לך רק גפרור אחד, גוש פחם, מנורת נפט ותנור, ויש לך אפשרות להדליק רק דבר אחד, מה תדליק ראשון כדי להיות בטוח?",
       solution: "You would light the match first.",
+      solutionHe: "תדליק את הגפרור ראשון",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1900,7 +1908,9 @@ export const riddlesDataGym: {
     {
       id: "gym-172",
       text: "Can you guess what the moon and a single dollar bill have in common?",
+      textHe: "מה משותף לירח ולשטר דולר אחד?",
       solution: "4 quarters",
+      solutionHe: "4 רבעים (Quarters)",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1909,7 +1919,9 @@ export const riddlesDataGym: {
     {
       id: "gym-173",
       text: "What has no other organs but 13 hearts?",
+      textHe: "למה אין איברים אחרים מלבד 13 לבבות?",
       solution: "A deck of cards",
+      solutionHe: "חפיסת קלפים",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1918,7 +1930,9 @@ export const riddlesDataGym: {
     {
       id: "gym-174",
       text: "What are 2 things you would never eat after just waking up?",
+      textHe: "מהם שני דברים שלעולם לא תאכל מיד לאחר שהתעוררת?",
       solution: "Lunch and dinner",
+      solutionHe: "ארוחת צהריים וארוחת ערב",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1927,7 +1941,9 @@ export const riddlesDataGym: {
     {
       id: "gym-175",
       text: "If a rooster had laid a white and brown egg, what kind of chicks would hatch from the egg?",
+      textHe: "אם תרנגול הטיל ביצה לבנה וחומה, איזה סוג אפרוחים יבקע מהביצה?",
       solution: "None. Roosters can't lay eggs.",
+      solutionHe: "אף אחד. תרנגולים לא מטילים ביצים",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1936,7 +1952,9 @@ export const riddlesDataGym: {
     {
       id: "gym-176",
       text: "I am green, but I am not a lizard. I am white but without snow. I am bearded without being a man. What am I?",
+      textHe: "אני ירוק, אבל אני לא לטאה. אני לבן אבל בלי שלג. אני מזוקן בלי להיות גבר. מה אני?",
       solution: "A leek",
+      solutionHe: "כרישה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1963,7 +1981,9 @@ export const riddlesDataGym: {
     {
       id: "gym-179",
       text: "What gets bigger, the more you take away from it?",
+      textHe: "מה נהיה גדול יותר ככל שלוקחים ממנו?",
       solution: "A hole",
+      solutionHe: "חור",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1972,8 +1992,10 @@ export const riddlesDataGym: {
     {
       id: "gym-180",
       text: "I have two coins that will equal up to 30 cents. One of the coins is not a nickel. What are the 2 coins?",
+      textHe: "יש לי שני מטבעות ששווים 30 סנט. אחד מהמטבעות אינו ניקל. מהם שני המטבעות?",
       solution:
         "It's a trick question. One of the coins is not a nickel, but the other one is. So the answer is a nickel and a quarter.",
+      solutionHe: "זו שאלת טריק. אחד מהמטבעות אינו ניקל, אבל השני כן. אז התשובה היא ניקל ורבע דולר",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1982,7 +2004,9 @@ export const riddlesDataGym: {
     {
       id: "gym-181",
       text: "No gentlemen will possess me for their own, but I have the ability toencompass what they all need. I appear to be flat, but I am deep. Hidden realms, I shelter. I can be calm, angry, and turbulent. Lives I take, but the food I offer. At times, I am beautiful. I have no heart, but I offer pleasure as well as death.",
+      textHe: "אף אדון לא יחזיק בי לעצמו, אבל יש לי יכולת לכלול את מה שכולם צריכים. נראה שאני שטוח, אבל אני עמוק. ממלכות נסתרות אני מחסה. אני יכול להיות שקט, כועס וסוער. חיים אני לוקח, אבל מזון אני מציע. לפעמים אני יפה. אין לי לב, אבל אני מציע הנאה וגם מוות.",
       solution: "Ocean",
+      solutionHe: "אוקיינוס",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -1991,7 +2015,9 @@ export const riddlesDataGym: {
     {
       id: "gym-182",
       text: "What has only two words but hundreds of letters?",
+      textHe: "למה יש רק שתי מילים אבל מאות אותיות (מכתבים)?",
       solution: "Post office",
+      solutionHe: "סניף דואר",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2000,7 +2026,9 @@ export const riddlesDataGym: {
     {
       id: "gym-183",
       text: "How is Betty a half-century old in 1830, and yet 45 in 1835?",
+      textHe: "איך בטי בת חצי מאה ב-1830, ובכל זאת 45 ב-1835?",
       solution: "She was born in 1880 B.C.",
+      solutionHe: "היא נולדה ב-1880 לפני הספירה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2019,7 +2047,9 @@ export const riddlesDataGym: {
     {
       id: "gym-185",
       text: "A container without a lock, key, or hinges, inside there is a prize of gold. What is it that I am?",
+      textHe: "מיכל ללא מנעול, מפתח או צירים, בפנים יש פרס של זהב. מה אני?",
       solution: "An egg",
+      solutionHe: "ביצה",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2028,8 +2058,10 @@ export const riddlesDataGym: {
     {
       id: "gym-186",
       text: "What is something that is unable to be burned or drowned in flames and water?",
+      textHe: "מה זה משהו שלא ניתן לשרוף או להטביע בלהבות ומים?",
       solution:
         "Ice. It is capable of avoiding burning in flames as it melts instead, but it floats in liquid.",
+      solutionHe: "קרח. הוא נמנע משריפה כי הוא נמס במקום, והוא צף במים",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
@@ -2048,7 +2080,9 @@ export const riddlesDataGym: {
     {
       id: "gym-188",
       text: "What has green hair, a round head that is red, and a long, white beard that is very thin?",
+      textHe: "למה יש שיער ירוק, ראש עגול אדום וזקן לבן ודק מאוד?",
       solution: "A radish",
+      solutionHe: "צנון",
       categories: ["gym-for-the-brain"],
       source: {
         book: "Gym for the Brain",
