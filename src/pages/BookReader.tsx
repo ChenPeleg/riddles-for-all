@@ -92,8 +92,7 @@ function BookReader() {
 
     return (<div className="min-h-screen bg-surface-50">
         <div className="max-w-3xl mx-auto px-6 py-12">
-            {/* Mobile: header in one row, controls in another row */}
-            {/* Desktop: all in one row */}
+
             <div className="flex flex-col md:flex-row md:items-center gap-4 mb-8">
                 {/* Header row - full width on mobile, inline on desktop */}
                 <h1 className="text-2xl font-bold md:flex-1">{displayBookTitle(riddle.source.book, t)}</h1>
@@ -130,7 +129,7 @@ function BookReader() {
 
             <RiddleCard riddle={riddle}/>
 
-            {/* Bookmarks Section */}
+
             {bookmarks.length > 0 && (
                 <div className="mt-8 p-4 bg-white border border-surface-200 rounded-2xl">
                     <h3 className="text-sm font-semibold text-surface-700 mb-3 flex items-center gap-2">
@@ -187,7 +186,6 @@ function BookReader() {
                 >
                     {t('book.next')}
                 </button>
-
                 <Link to="/sources" className="ml-auto text-sm text-brand-accent hover:underline">{t('book.back_to_sources')}</Link>
             </div>
         </div>
