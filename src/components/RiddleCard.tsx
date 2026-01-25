@@ -10,8 +10,7 @@ interface RiddleProps {
 
 const RiddleCard = ({ riddle }: RiddleProps) => {
   const { t, lang, isRTL } = useTranslationLegacy();
-  const [showSolution, setShowSolution] = useState(false);
-  // Track whether this riddle is marked done (persisted in localStorage)
+  const [showSolution, setShowSolution] = useState(false); 
   const [done, setDone] = useState<boolean>(false);
 
   useEffect(() => {
@@ -21,12 +20,10 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
           ? localStorage.getItem(`riddle_done_${riddle.id}`)
           : null;
       setDone(v === "true");
-    } catch (e) {
-      // ignore localStorage errors
+    } catch (e) { 
     }
   }, [riddle.id]);
-
-  // Hide solution when the riddle changes
+ 
   useEffect(() => {
     setShowSolution(false);
   }, [riddle.id]);
@@ -39,12 +36,10 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
         `riddle_done_${riddle.id}`,
         newDone ? "true" : "false",
       );
-    } catch (e) {
-      // ignore localStorage write errors
+    } catch (e) { 
     }
   };
-
-  // Choose Hebrew fields when language is Hebrew and a Hebrew value exists; otherwise fall back to English
+ 
   const displayText =
     lang === "he" && riddle.textHe ? riddle.textHe : riddle.text;
   const displaySolution =

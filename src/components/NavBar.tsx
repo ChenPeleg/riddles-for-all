@@ -6,34 +6,45 @@ import LanguageToggle from './LanguageToggle';
 const NavBar = () => {
   const { t, isRTL } = useTranslationLegacy();
   const [open, setOpen] = useState(false);
+  const dialogRef = useRef<HTMLDialogElement | null>(null);
   const firstLinkRef = useRef<HTMLAnchorElement | null>(null);
 
   const linkBase = 'text-sm font-medium text-surface-700 px-3 py-2 rounded-md hover:bg-surface-50';
   const linkActive = 'bg-surface-100 text-brand-primary';
 
   useEffect(() => {
-    // focus the first link when opening mobile menu and lock body scroll
-    let prevOverflow: string | null = null;
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+
     if (open) {
-      firstLinkRef.current?.focus();
-      prevOverflow = document.body.style.overflow;
-      document.body.style.overflow = 'hidden';
+      dialog.showModal(); 
+      document.body.style.overflow = 'hidden'; 
+      setTimeout(() => {
+        firstLinkRef.current?.focus();
+      }, 0);
+    } else {
+      dialog.close();
+      document.body.style.overflow = '';
     }
-    // always return a cleanup function to satisfy TypeScript that all code paths return
-    return () => {
-      if (prevOverflow !== null) {
-        document.body.style.overflow = prevOverflow;
+
+    // Handle dialog close events (e.g., backdrop click, escape key)
+    const handleDialogClose = () => {
+      if (!dialog.open) {
+        setOpen(false);
       }
+    };
+
+    dialog.addEventListener('close', handleDialogClose);
+
+    return () => {
+      document.body.style.overflow = '';
+      dialog.removeEventListener('close', handleDialogClose);
     };
   }, [open]);
 
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && open) setOpen(false);
-    };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, [open]);
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <>
@@ -113,60 +124,77 @@ const NavBar = () => {
                   )}
                 </button>
               </div>
-
-              {/* Mobile menu panel */}
-              {open && (
-                <div className="absolute inset-x-0 top-14 z-50 md:hidden">
-                  <div className="bg-white shadow-md rounded-b-xl border-t border-surface-100 px-4 py-4">
-                    <ul id="mobile-menu" className={`flex flex-col gap-2 ${isRTL ? 'items-end' : 'items-start'}`}>
-                      <li>
-                        <NavLink
-                          to="/"
-                          end
-                          ref={firstLinkRef}
-                          onClick={() => setOpen(false)}
-                          className={({ isActive }) => linkBase + (isActive ? ` ${linkActive}` : '')}
-                        >
-                          {t('nav.home') || 'Home'}
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                          to="/search"
-                          onClick={() => setOpen(false)}
-                          className={({ isActive }) => linkBase + (isActive ? ` ${linkActive}` : '')}
-                        >
-                          {t('nav.search') || 'Search'}
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                          to="/categories"
-                          onClick={() => setOpen(false)}
-                          className={({ isActive }) => linkBase + (isActive ? ` ${linkActive}` : '')}
-                        >
-                          {t('nav.categories') || 'Categories'}
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                          to="/sources"
-                          onClick={() => setOpen(false)}
-                          className={({ isActive }) => linkBase + (isActive ? ` ${linkActive}` : '')}
-                        >
-                          {t('nav.sources') || 'Sources'}
-                        </NavLink>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              )}
             </div>
           </div>
         </div>
       </header>
       {/* spacer to offset fixed header height so content isn't covered */}
       <div aria-hidden="true" className="h-14" />
+
+      {/* Mobile menu dialog */}
+      <dialog
+        ref={dialogRef}
+        onClose={handleClose}
+        className="mobile-menu-dialog md:hidden fixed inset-0 z-50 w-full h-full bg-transparent p-0 m-0 backdrop:bg-black/50 backdrop:backdrop-blur-sm"
+        aria-label={t('nav.main_nav') || 'Main navigation'}
+      >
+        <div className={`mobile-menu-content fixed top-0 ${isRTL ? 'left-0' : 'right-0'} w-80 max-w-[85vw] h-full bg-white shadow-xl overflow-y-auto`}>
+          <div className="flex items-center justify-between p-4 border-b border-surface-100">
+            <div className="text-lg font-bold text-surface-900">{t('common.title')}</div>
+            <button
+              aria-label={t('nav.close_menu') || 'Close menu'}
+              onClick={handleClose}
+              className="inline-flex items-center justify-center p-2 rounded-md text-surface-700 hover:bg-surface-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary"
+            >
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <nav id="mobile-menu" className="p-4">
+            <ul className={`flex flex-col gap-2 ${isRTL ? 'items-end' : 'items-start'}`}>
+              <li>
+                <NavLink
+                  to="/"
+                  end
+                  ref={firstLinkRef}
+                  onClick={handleClose}
+                  className={({ isActive }) => linkBase + (isActive ? ` ${linkActive}` : '')}
+                >
+                  {t('nav.home') || 'Home'}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/search"
+                  onClick={handleClose}
+                  className={({ isActive }) => linkBase + (isActive ? ` ${linkActive}` : '')}
+                >
+                  {t('nav.search') || 'Search'}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/categories"
+                  onClick={handleClose}
+                  className={({ isActive }) => linkBase + (isActive ? ` ${linkActive}` : '')}
+                >
+                  {t('nav.categories') || 'Categories'}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/sources"
+                  onClick={handleClose}
+                  className={({ isActive }) => linkBase + (isActive ? ` ${linkActive}` : '')}
+                >
+                  {t('nav.sources') || 'Sources'}
+                </NavLink>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </dialog>
     </>
   );
 };
