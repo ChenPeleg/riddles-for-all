@@ -108,7 +108,7 @@ body {
 }
 
 /* RTL support - slide from left */
-[dir="rtl"] .mobile-menu-dialog[open] .mobile-menu-content {
+.mobile-menu-dialog[dir="rtl"][open] .mobile-menu-content {
   animation: slideInFromLeft 0.3s ease-out;
 }
 

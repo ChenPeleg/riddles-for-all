@@ -78,8 +78,7 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
             aria-pressed={done}
             title={done ? t("riddle.mark_not_done") : t("riddle.mark_done")}
             className="md:ml-2 inline-flex items-center justify-center px-3 py-2 rounded-lg hover:bg-surface-100 text-sm font-semibold"
-          >
-            {/* show icon + translated text so it's larger and clearer */}
+          > 
             {done ? (
               <>
                 <svg

@@ -137,6 +137,7 @@ const NavBar = () => {
         onClose={handleClose}
         className="mobile-menu-dialog md:hidden fixed inset-0 z-50 w-full h-full bg-transparent p-0 m-0 backdrop:bg-black/50 backdrop:backdrop-blur-sm"
         aria-label={t('nav.main_nav') || 'Main navigation'}
+        dir={isRTL ? 'rtl' : 'ltr'}
       >
         <div className={`mobile-menu-content fixed top-0 ${isRTL ? 'left-0' : 'right-0'} w-80 max-w-[85vw] h-full bg-white shadow-xl overflow-y-auto`}>
           <div className="flex items-center justify-between p-4 border-b border-surface-100">
