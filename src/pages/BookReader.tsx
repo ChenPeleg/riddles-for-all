@@ -91,45 +91,52 @@ function BookReader() {
 
     return (<div className="min-h-screen bg-surface-50">
         <div className="max-w-3xl mx-auto px-6 py-12">
-            <div className="flex items-center gap-4 mb-8">
-                <button onClick={() => navigate(-1)}
-                        className="text-surface-400 hover:text-brand-accent">{t('navigation.back')}</button>
-                <h1 className="text-2xl font-bold">{displayBookTitle(riddle.source.book, t)}</h1>
-                <div className="ml-auto flex items-center gap-3">
-                    <div className="text-sm text-surface-500">{index + 1} / {bookRiddles.length}</div>
-                    <button
-                        onClick={handleToggleBookmark}
-                        disabled={!isBookmarked(riddle.id) && !canAddBookmark}
-                        title={
-                            isBookmarked(riddle.id)
-                                ? t('book.remove_bookmark')
-                                : canAddBookmark
-                                ? t('book.add_bookmark')
-                                : t('book.bookmark_limit_reached')
-                        }
-                        className={`p-2 rounded-lg transition-colors ${
-                            isBookmarked(riddle.id)
-                                ? 'text-yellow-500 hover:bg-yellow-50'
-                                : canAddBookmark
-                                ? 'text-surface-400 hover:bg-surface-100 hover:text-surface-600'
-                                : 'text-surface-300 cursor-not-allowed'
-                        }`}
-                    >
-                        <svg
-                            className="w-5 h-5"
-                            fill={isBookmarked(riddle.id) ? 'currentColor' : 'none'}
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
+            {/* Mobile: header in one row, controls in another row */}
+            {/* Desktop: all in one row */}
+            <div className="flex flex-col md:flex-row md:items-center gap-4 mb-8">
+                {/* Header row - full width on mobile, inline on desktop */}
+                <h1 className="text-2xl font-bold md:flex-1">{displayBookTitle(riddle.source.book, t)}</h1>
+                
+                {/* Controls row - back button, pages, bookmark */}
+                <div className="flex items-center gap-6 md:ml-auto">
+                    <button onClick={() => navigate(-1)}
+                            className="text-surface-400 hover:text-brand-accent">{t('navigation.back')}</button>
+                    <div className="flex items-center gap-3">
+                        <div className="text-sm text-surface-500">{index + 1} / {bookRiddles.length}</div>
+                        <button
+                            onClick={handleToggleBookmark}
+                            disabled={!isBookmarked(riddle.id) && !canAddBookmark}
+                            title={
+                                isBookmarked(riddle.id)
+                                    ? t('book.remove_bookmark')
+                                    : canAddBookmark
+                                    ? t('book.add_bookmark')
+                                    : t('book.bookmark_limit_reached')
+                            }
+                            className={`p-2 rounded-lg transition-colors ${
+                                isBookmarked(riddle.id)
+                                    ? 'text-yellow-500 hover:bg-yellow-50'
+                                    : canAddBookmark
+                                    ? 'text-surface-400 hover:bg-surface-100 hover:text-surface-600'
+                                    : 'text-surface-300 cursor-not-allowed'
+                            }`}
                         >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
-                            />
-                        </svg>
-                    </button>
+                            <svg
+                                className="w-5 h-5"
+                                fill={isBookmarked(riddle.id) ? 'currentColor' : 'none'}
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
+                                />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
