@@ -8,7 +8,7 @@ import AppImage from '../components/AppImage';
 
 // new imports
 import { useReaderState } from '../hooks/useReaderState';
-import BookReaderShell from '../components/BookReader/BookReaderMain';
+import   {BookReaderMain} from '../components/BookReader/BookReaderMain';
 import { BookReaderPageViewer } from '../components/BookReader/BookReaderPageViewer';
 
 function BookReader() {
@@ -61,7 +61,7 @@ function BookReader() {
     };
 
     return (
-        <BookReaderShell
+        <BookReaderMain
             title={displayBookTitle(riddle.source.book, t)}
             currentPage={index}
             totalPages={bookRiddles.length}
@@ -75,10 +75,8 @@ function BookReader() {
         >
             <BookReaderPageViewer riddle={riddle} />
 
-            {/* Scrollable content area */}
             <div className="flex-1 overflow-y-auto">
                 <div className="max-w-3xl mx-auto px-6 py-12">
-                    {/* RiddleCard moved to BookReaderPageViewer; bookmarks remain here */}
 
 
                     {bookmarks.length > 0 && (
@@ -122,7 +120,7 @@ function BookReader() {
                     )}
                 </div>
             </div>
-        </BookReaderShell>
+        </BookReaderMain>
     );
  }
 

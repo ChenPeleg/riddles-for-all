@@ -16,7 +16,7 @@ type Props = {
     children: React.ReactNode;
 };
 
-export   function BookReaderShell({ title, currentPage, totalPages, onPrev, onNext, onGoToPage, onBack, isBookmarked, canAddBookmark, onToggleBookmark, children }: Props) {
+export   function BookReaderMain({ title, currentPage, totalPages, onPrev, onNext, onGoToPage, onBack, isBookmarked, canAddBookmark, onToggleBookmark, children }: Props) {
     return (
         <div className="min-h-screen bg-surface-50">
             <div className="max-w-3xl mx-auto px-6 py-12">
