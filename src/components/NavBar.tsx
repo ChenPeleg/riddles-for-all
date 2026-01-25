@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { useTranslationLegacy } from '../hooks/useTranslationLegacy';
 import { useEffect, useRef, useState } from 'react';
 import LanguageToggle from './LanguageToggle';
+import AppImage from './AppImage';
 
 const NavBar = () => {
   const { t, isRTL } = useTranslationLegacy();
@@ -113,14 +114,10 @@ const NavBar = () => {
                 >
                   {open ? (
                     // X icon
-                    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
+                    <AppImage name="close" className="w-6 h-6" title={t('nav.close_menu') || 'Close menu'} />
                   ) : (
                     // Hamburger icon
-                    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
+                    <AppImage name="menu" className="w-6 h-6" title={t('nav.open_menu') || 'Open menu'} />
                   )}
                 </button>
               </div>
@@ -147,9 +144,7 @@ const NavBar = () => {
               onClick={handleClose}
               className="inline-flex items-center justify-center p-2 rounded-md text-surface-700 hover:bg-surface-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary"
             >
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
+              <AppImage name="close" className="w-6 h-6" title={t('nav.close_menu') || 'Close menu'} />
             </button>
           </div>
           <nav id="mobile-menu" className="p-4">

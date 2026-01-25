@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import AppImage from './AppImage';
 
 import { Riddle } from "../models/riddle";
 import { useTranslationLegacy } from "../hooks/useTranslationLegacy";
@@ -81,45 +82,19 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
           > 
             {done ? (
               <>
-                <svg
-                  className="w-4 h-4 text-emerald-500 mr-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  ></path>
-                </svg>
-                <span className="text-emerald-500">
-                  {t("riddle.mark_not_done")}
-                </span>
-              </>
-            ) : (
-              <>
-                <svg
-                  className="w-4 h-4 text-surface-400 mr-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 4v16m8-8H4"
-                  ></path>
-                </svg>
-                <span className="text-surface-700">
-                  {t("riddle.mark_done")}
-                </span>
-              </>
-            )}
+                <AppImage name="checkmark" className="w-4 h-4 text-emerald-500 mr-2" />
+                 <span className="text-emerald-500">
+                   {t("riddle.mark_not_done")}
+                 </span>
+               </>
+             ) : (
+               <>
+                <AppImage name="plus" className="w-4 h-4 text-surface-400 mr-2" />
+                 <span className="text-surface-700">
+                   {t("riddle.mark_done")}
+                 </span>
+               </>
+             )}
           </button>
           </div>
     
@@ -139,27 +114,8 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
             className="group relative w-full inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-brand-primary rounded-2xl shadow-md"
           >
             <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white bg-brand-primary opacity-0 transition-opacity duration-300 ease-in-out motion-reduce:transition-none group-hover:opacity-100">
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                ></path>
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                ></path>
-              </svg>
-            </span>
+              <AppImage name="eye" className="w-6 h-6" />
+             </span>
             <span className="absolute flex items-center justify-center w-full h-full text-brand-primary opacity-100 transition-opacity duration-300 ease-in-out motion-reduce:transition-none group-hover:opacity-0">
               {t("riddle.reveal_solution")}
             </span>
@@ -170,24 +126,11 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
         ) : (
           <div className="p-6 bg-brand-primary/5 rounded-2xl border-2 border-brand-primary/20 mt-4 animate-fade-in">
             <div className="flex items-center gap-2 mb-3">
-              <svg
-                className="w-5 h-5 text-brand-primary"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                ></path>
-              </svg>
-              <p className="font-bold text-brand-primary uppercase tracking-widest text-[10px]">
-                {t("riddle.solution_title")}
-              </p>
-            </div>
+              <AppImage name="flash" className="w-5 h-5 text-brand-primary" />
+               <p className="font-bold text-brand-primary uppercase tracking-widest text-[10px]">
+                 {t("riddle.solution_title")}
+               </p>
+             </div>
             <p
               className={`text-surface-900 text-lg md:text-xl font-medium leading-relaxed ${isRTL ? "text-right" : ""}`}
             >
@@ -199,20 +142,7 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
 
       <div className="mt-8 pt-6 border-t border-surface-100 flex items-center justify-between">
         <div className="text-[10px] text-surface-400 font-bold uppercase tracking-widest flex items-center gap-1.5">
-          <svg
-            className="w-3.5 h-3.5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-            ></path>
-          </svg>
+          <AppImage name="book-open" className="w-3.5 h-3.5" />
           {displayBookTitle(riddle.source.book, t)}
         </div>
       </div>
