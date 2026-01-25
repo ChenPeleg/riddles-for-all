@@ -12,9 +12,9 @@ function App() {
   return (
     <RiddleProvider>
       <Router>
-        <div className="min-h-screen">
+        <div className="h-screen  overflow-y-hidden">
           <NavBar />
-          <main id="main" tabIndex={-1}>
+          <main className={'h-screen   overflow-scroll'} id="main" tabIndex={-1}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/search" element={<Search />} />
