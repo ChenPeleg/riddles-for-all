@@ -78,7 +78,6 @@ function Home() {
             <div className="mb-20 animate-fade-in [animation-delay:200ms]">
                 <div className="flex items-center justify-between gap-3 mb-8">
                     <div className="flex items-center gap-3">
-                        <span className="w-8 h-px bg-brand-primary/30"></span>
                         <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-surface-400">
                             {t('home.riddle_of_the_moment')}
                         </h2>
