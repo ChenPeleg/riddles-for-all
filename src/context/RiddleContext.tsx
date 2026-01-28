@@ -2,6 +2,7 @@ import React, {createContext, ReactNode, useContext, useMemo, useState} from 're
 
 import {riddlesData} from '../assets/riddles-all';
 import {riddlesDataGym} from '../assets/gym-for-the-brain';
+import {ultimateRiddleCollection} from '../assets/ultimate-collection';
 import {Riddle} from '../models/riddle';
 import { useI18n } from './I18nContext';
 
@@ -13,8 +14,13 @@ interface RiddleContextType {
 
 const RiddleContext = createContext<RiddleContextType | undefined>(undefined);
 
-
-const allRiddles: Riddle[] = [...riddlesData.riddles, ...riddlesDataGym.riddles];
+const ultimateCollection : Riddle[] = ultimateRiddleCollection.riddles.map(r => ({
+    ...r,
+    categories: [],
+    source:  { book: 'Ultimate Collection' }
+}) satisfies Riddle);
+console.log('Ultimate collection riddles loaded:', ultimateCollection.length);
+const allRiddles: Riddle[] = [...riddlesData.riddles, ...riddlesDataGym.riddles, ...ultimateCollection ];
 
 export function RiddleProvider({children}: { children: ReactNode }) {
 
