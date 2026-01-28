@@ -1,0 +1,54 @@
+{
+  "riddles": [
+    {
+      "id": "1",
+      "riddle": "One strand dangles. Two strands twist. Three or more can fashion this.",
+      "answer": "Braids"
+    },
+    {
+      "id": "2",
+      "riddle": "A home of wood in a wooded place, but built not by hand. High above the earthen ground, it holds its pale blue gems. What is it?",
+      "answer": "A nest"
+    },
+    {
+      "id": "3",
+      "riddle": "Three or four, I can stab through or rule the seas. You know my cousins. What am I?",
+      "answer": "Fork"
+    },
+    {
+      "id": "4",
+      "riddle": "What can be swallowed, but can swallow you?",
+      "answer": "Pride"
+    },
+    {
+      "id": "5",
+      "riddle": "Guided, I am scraping along, leaving behind my snow-white dust against that which I am scraping, for when I am scraping, I must.",
+      "answer": "Chalk"
+    },
+    {
+      "id": "6",
+      "riddle": "What word of five letters has only one left when two letters are removed?",
+      "answer": "A stone"
+    },
+    {
+      "id": "7",
+      "riddle": "What gets easier to pick up the larger it gets?",
+      "answer": "A woman"
+    },
+    {
+      "id": "8",
+      "riddle": "You can tumble in it, Roll in it, Burn it, Animals eat it, Used to cover floors, Still used beyond stall doors. Freshens whatever it is placed on, Absorbs whatever is poured into it. What is it?",
+      "answer": "Hay"
+    },
+    {
+      "id": "9",
+      "riddle": "What's red and bad for your teeth?",
+      "answer": "A brick"
+    },
+    {
+      "id": "10",
+      "riddle": "What kind of cup doesn't hold water?",
+      "answer": "Cupcake"
+    }
+  ]
+}
