@@ -33,6 +33,7 @@ function Sources() {
   );
 
   const sources = Array.from(new Set(riddles.map(r => r.source.book))).sort();
+  console.log('Available sources:', riddles);
 
   const filteredRiddles = selectedSource 
     ? riddles.filter(r => r.source.book === selectedSource)
