@@ -46,7 +46,7 @@ function Home() {
 
     return (
         <div className="min-h-screen bg-surface-50">
-        <div className="max-w-5xl mx-auto px-6 py-12 md:py-24">
+        <div className="max-w-5xl mx-auto px-6 pt-12 md:pt-24 pb-24">
             <header className="text-center mb-16 md:mb-24 animate-fade-in">
                 <div className="flex justify-center items-center gap-4 mb-6">
                     <div
