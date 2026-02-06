@@ -26,7 +26,7 @@ function Categories() {
 
   return (
     <div className="min-h-screen bg-surface-50">
-      <div className="max-w-5xl mx-auto px-6 py-12">
+      <div className="max-w-5xl mx-auto px-6 py-12 pb-24">
         <header className="mb-12 animate-fade-in">
           <Link to="/" className="inline-flex items-center gap-2 text-surface-400 hover:text-brand-primary transition-colors mb-8 group">
             <AppImage name="chevron-left" className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform" />
