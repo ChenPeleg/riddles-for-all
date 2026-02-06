@@ -13,10 +13,16 @@ type Props = {
     isBookmarked?: boolean;
     canAddBookmark?: boolean;
     onToggleBookmark?: () => void;
+    isTrackingEnabled?: boolean;
+    onToggleTracking?: () => void;
+    trackingEnabledLabel?: string;
+    trackReadingLabel?: string;
+    enableTrackingAriaLabel?: string;
+    disableTrackingAriaLabel?: string;
     children: React.ReactNode;
 };
 
-export   function BookReaderMain({ title, currentPage, totalPages, onPrev, onNext, onGoToPage, onBack, isBookmarked, canAddBookmark, onToggleBookmark, children }: Props) {
+export   function BookReaderMain({ title, currentPage, totalPages, onPrev, onNext, onGoToPage, onBack, isBookmarked, canAddBookmark, onToggleBookmark, isTrackingEnabled, onToggleTracking, trackingEnabledLabel, trackReadingLabel, enableTrackingAriaLabel, disableTrackingAriaLabel, children }: Props) {
     return (
         <div className="min-h-screen bg-surface-50">
             <div className="max-w-3xl mx-auto px-6 py-12">
@@ -31,6 +37,12 @@ export   function BookReaderMain({ title, currentPage, totalPages, onPrev, onNex
                     isBookmarked={isBookmarked}
                     canAddBookmark={canAddBookmark}
                     onToggleBookmark={onToggleBookmark}
+                    isTrackingEnabled={isTrackingEnabled}
+                    onToggleTracking={onToggleTracking}
+                    trackingEnabledLabel={trackingEnabledLabel}
+                    trackReadingLabel={trackReadingLabel}
+                    enableTrackingAriaLabel={enableTrackingAriaLabel}
+                    disableTrackingAriaLabel={disableTrackingAriaLabel}
                 >
                     {children}
                 </BookReaderLayout>
