@@ -16,6 +16,10 @@ type Props = {
     onToggleTracking?: () => void;
     backLabel?: string;
     sourcesLabel?: string;
+    trackingEnabledLabel?: string;
+    trackReadingLabel?: string;
+    enableTrackingAriaLabel?: string;
+    disableTrackingAriaLabel?: string;
 };
 
 export function BookReaderToolbar({
@@ -28,7 +32,11 @@ export function BookReaderToolbar({
                                       isTrackingEnabled,
                                       onToggleTracking,
                                       sourcesLabel = 'Sources',
-                                      backLabel = 'Back'
+                                      backLabel = 'Back',
+                                      trackingEnabledLabel = 'Tracking enabled - Click to disable',
+                                      trackReadingLabel = 'Track reading progress',
+                                      enableTrackingAriaLabel = 'Enable reading progress tracking',
+                                      disableTrackingAriaLabel = 'Disable reading progress tracking'
                                   }: Props) {
     return (<div className="flex items-center gap-6 md:ml-auto">
             <button onClick={() => onBack && onBack()} className="text-surface-400 hover:text-brand-accent">{backLabel}</button>
@@ -37,8 +45,8 @@ export function BookReaderToolbar({
                 <button
                     onClick={() => onToggleTracking && onToggleTracking()}
                     className={`p-2 rounded-lg transition-colors ${isTrackingEnabled ? 'text-blue-500 hover:bg-blue-50' : 'text-surface-400 hover:bg-surface-100 hover:text-surface-600'}`}
-                    title={isTrackingEnabled ? 'Tracking enabled - Click to disable' : 'Track reading progress'}
-                    aria-label={isTrackingEnabled ? 'Disable reading progress tracking' : 'Enable reading progress tracking'}
+                    title={isTrackingEnabled ? trackingEnabledLabel : trackReadingLabel}
+                    aria-label={isTrackingEnabled ? disableTrackingAriaLabel : enableTrackingAriaLabel}
                 >
                     <AppImage name="eye" className="w-5 h-5" fill={isTrackingEnabled ? 'currentColor' : 'none'}/>
                 </button>

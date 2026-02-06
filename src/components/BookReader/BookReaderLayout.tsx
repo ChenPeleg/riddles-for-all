@@ -14,6 +14,10 @@ type Props = {
     onToggleBookmark?: () => void;
     isTrackingEnabled?: boolean;
     onToggleTracking?: () => void;
+    trackingEnabledLabel?: string;
+    trackReadingLabel?: string;
+    enableTrackingAriaLabel?: string;
+    disableTrackingAriaLabel?: string;
     children: React.ReactNode;
 };
 
@@ -30,6 +34,10 @@ export function BookReaderLayout({
                                      onToggleBookmark,
                                      isTrackingEnabled,
                                      onToggleTracking,
+                                     trackingEnabledLabel,
+                                     trackReadingLabel,
+                                     enableTrackingAriaLabel,
+                                     disableTrackingAriaLabel,
                                      children
                                  }: Props) {
     return (<>
@@ -47,6 +55,10 @@ export function BookReaderLayout({
                     onToggleBookmark={onToggleBookmark}
                     isTrackingEnabled={isTrackingEnabled}
                     onToggleTracking={onToggleTracking}
+                    trackingEnabledLabel={trackingEnabledLabel}
+                    trackReadingLabel={trackReadingLabel}
+                    enableTrackingAriaLabel={enableTrackingAriaLabel}
+                    disableTrackingAriaLabel={disableTrackingAriaLabel}
                 />
             </div>
 

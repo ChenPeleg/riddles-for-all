@@ -39,8 +39,9 @@ function BookReader() {
         return riddles.filter(r => getBookSlug(r.source.book) === slug);
     }, [slug]);
 
-    // Get the last saved page if tracking is enabled
-    const initialPage = isTrackingEnabled ? getLastPage() : null;
+    // Get the last saved page if tracking is enabled, and validate it's within bounds
+    const rawInitialPage = isTrackingEnabled ? getLastPage() : null;
+    const initialPage = rawInitialPage != null && rawInitialPage <= bookRiddles.length ? rawInitialPage : null;
 
     // reader state hook handles index and url sync
     const { index, goPrev, goNext, goToPage } = useReaderState(bookRiddles.length, slug, initialPage);
@@ -92,6 +93,10 @@ function BookReader() {
             onToggleBookmark={handleToggleBookmark}
             isTrackingEnabled={isTrackingEnabled}
             onToggleTracking={toggleTracking}
+            trackingEnabledLabel={t('book.tracking_enabled')}
+            trackReadingLabel={t('book.track_reading')}
+            enableTrackingAriaLabel={t('book.enable_tracking_aria')}
+            disableTrackingAriaLabel={t('book.disable_tracking_aria')}
         >
             <BookReaderPageViewer riddle={riddle} />
 
