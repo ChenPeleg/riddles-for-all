@@ -127,6 +127,10 @@ export const translations: Record<Lang, Record<string, any>> = {
       no_bookmarks: "No bookmarks yet",
       go_to_bookmark: "Go to bookmark",
       page: "Page",
+      track_reading: "Track reading progress",
+      tracking_enabled: "Reading tracking enabled",
+      tracking_disabled: "Reading tracking disabled",
+      resume_reading: "Resume from last page",
     },
     categories: {
       heading: "Browse by Categories",
@@ -271,6 +275,10 @@ export const translations: Record<Lang, Record<string, any>> = {
       no_bookmarks: "אין סימניות עדיין",
       go_to_bookmark: "עבור לסימנייה",
       page: "עמוד",
+      track_reading: "עקוב אחר התקדמות קריאה",
+      tracking_enabled: "מעקב קריאה מופעל",
+      tracking_disabled: "מעקב קריאה כבוי",
+      resume_reading: "המשך מהעמוד האחרון",
     },
     categories: {
       heading: "עיין לפי קטגוריות",

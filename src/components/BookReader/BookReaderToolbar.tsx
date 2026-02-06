@@ -12,6 +12,8 @@ type Props = {
     isBookmarked?: boolean;
     canAddBookmark?: boolean;
     onToggleBookmark?: () => void;
+    isTrackingEnabled?: boolean;
+    onToggleTracking?: () => void;
     backLabel?: string;
     sourcesLabel?: string;
 };
@@ -23,6 +25,8 @@ export function BookReaderToolbar({
                                       isBookmarked,
                                       canAddBookmark,
                                       onToggleBookmark,
+                                      isTrackingEnabled,
+                                      onToggleTracking,
                                       sourcesLabel = 'Sources',
                                       backLabel = 'Back'
                                   }: Props) {
@@ -30,6 +34,13 @@ export function BookReaderToolbar({
             <button onClick={() => onBack && onBack()} className="text-surface-400 hover:text-brand-accent">{backLabel}</button>
             <div className="flex items-center gap-3">
                 <div className="text-sm text-surface-500">{currentPage + 1} / {totalPages}</div>
+                <button
+                    onClick={() => onToggleTracking && onToggleTracking()}
+                    className={`p-2 rounded-lg transition-colors ${isTrackingEnabled ? 'text-blue-500 hover:bg-blue-50' : 'text-surface-400 hover:bg-surface-100 hover:text-surface-600'}`}
+                    title={isTrackingEnabled ? 'Tracking enabled - Click to disable' : 'Track reading progress'}
+                >
+                    <AppImage name="eye" className="w-5 h-5" fill={isTrackingEnabled ? 'currentColor' : 'none'}/>
+                </button>
                 <button
                     onClick={() => onToggleBookmark && onToggleBookmark()}
                     disabled={!isBookmarked && !canAddBookmark}
