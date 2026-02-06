@@ -44,9 +44,7 @@ export function BookReaderLayout({
                 />
             </div>
 
-            <div>{children}</div>
-
-            <div className="flex items-center gap-4 mt-8">
+            <div className="flex items-center gap-4 mb-8">
                 <button
                     onClick={onPrev}
                     disabled={currentPage === 0}
@@ -63,5 +61,7 @@ export function BookReaderLayout({
                     Next
                 </button>
             </div>
+
+            <div>{children}</div>
         </>);
 }
