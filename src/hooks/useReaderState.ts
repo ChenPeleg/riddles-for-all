@@ -22,7 +22,7 @@ export function useReaderState(totalPages: number, slug?: string, initialPage?: 
         if (!isNaN(p)) {
             const idx = Math.max(0, Math.min(totalPages - 1, p - 1));
             setIndex(idx);
-        } else if (initialPage !== null && initialPage !== undefined) {
+        } else if (initialPage != null) {
             // If no page in URL but we have an initial page from tracking, use that
             const idx = Math.max(0, Math.min(totalPages - 1, initialPage - 1));
             setIndex(idx);

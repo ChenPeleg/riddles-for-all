@@ -77,7 +77,7 @@ export function useReadingTracker(bookSlug: string | undefined) {
     try {
       const stored = localStorage.getItem(TRACKING_STATE_KEY);
       const trackingState = stored ? JSON.parse(stored) : {};
-      const newState = !trackingState[bookSlug];
+      const newState = !(trackingState[bookSlug] ?? false);
       
       trackingState[bookSlug] = newState;
       localStorage.setItem(TRACKING_STATE_KEY, JSON.stringify(trackingState));

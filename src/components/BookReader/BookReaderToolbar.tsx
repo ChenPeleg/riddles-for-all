@@ -38,6 +38,7 @@ export function BookReaderToolbar({
                     onClick={() => onToggleTracking && onToggleTracking()}
                     className={`p-2 rounded-lg transition-colors ${isTrackingEnabled ? 'text-blue-500 hover:bg-blue-50' : 'text-surface-400 hover:bg-surface-100 hover:text-surface-600'}`}
                     title={isTrackingEnabled ? 'Tracking enabled - Click to disable' : 'Track reading progress'}
+                    aria-label={isTrackingEnabled ? 'Disable reading progress tracking' : 'Enable reading progress tracking'}
                 >
                     <AppImage name="eye" className="w-5 h-5" fill={isTrackingEnabled ? 'currentColor' : 'none'}/>
                 </button>
