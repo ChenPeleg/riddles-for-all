@@ -1,9 +1,10 @@
-import {useMemo} from 'react';
+import {useMemo, useEffect} from 'react';
 import {Link, useParams} from 'react-router-dom';
 import {useRiddles} from '../context/RiddleContext';
 import {displayBookTitle, getBookSlug} from '../i18n/bookKeys';
 import {useTranslationLegacy} from '../hooks/useTranslationLegacy';
 import {useBookmarks} from '../hooks/useBookmarks';
+import {useReadingTracker} from '../hooks/useReadingTracker';
 import AppImage from '../components/AppImage';
 
 // new imports
@@ -22,6 +23,13 @@ function BookReader() {
         isBookmarked,
         canAddBookmark,
     } = useBookmarks(slug);
+    
+    const {
+        isTrackingEnabled,
+        toggleTracking,
+        saveProgress,
+        getLastPage,
+    } = useReadingTracker(slug);
 
     // Find riddles that match the slug (use same slug generation)
     const bookRiddles = useMemo(() => {
@@ -31,8 +39,19 @@ function BookReader() {
         return riddles.filter(r => getBookSlug(r.source.book) === slug);
     }, [slug]);
 
+    // Get the last saved page if tracking is enabled, and validate it's within bounds
+    const rawInitialPage = isTrackingEnabled ? getLastPage() : null;
+    const initialPage = rawInitialPage != null && rawInitialPage <= bookRiddles.length ? rawInitialPage : null;
+
     // reader state hook handles index and url sync
-    const { index, goPrev, goNext, goToPage } = useReaderState(bookRiddles.length, slug);
+    const { index, goPrev, goNext, goToPage } = useReaderState(bookRiddles.length, slug, initialPage);
+
+    // Save progress whenever the page changes if tracking is enabled
+    useEffect(() => {
+        if (isTrackingEnabled && bookRiddles.length > 0) {
+            saveProgress(index + 1);
+        }
+    }, [index, isTrackingEnabled, bookRiddles.length, saveProgress]);
 
     if (!slug) {
         return <div className="p-6">{t('book.no_slug')}</div>;
@@ -72,6 +91,12 @@ function BookReader() {
             isBookmarked={isBookmarked(riddle.id)}
             canAddBookmark={canAddBookmark}
             onToggleBookmark={handleToggleBookmark}
+            isTrackingEnabled={isTrackingEnabled}
+            onToggleTracking={toggleTracking}
+            trackingEnabledLabel={t('book.tracking_enabled')}
+            trackReadingLabel={t('book.track_reading')}
+            enableTrackingAriaLabel={t('book.enable_tracking_aria')}
+            disableTrackingAriaLabel={t('book.disable_tracking_aria')}
         >
             <BookReaderPageViewer riddle={riddle} />
 
