@@ -3,6 +3,7 @@ import { useTranslationLegacy } from '../hooks/useTranslationLegacy';
 import { useEffect, useRef, useState } from 'react';
 import LanguageToggle from './LanguageToggle';
 import AppImage from './AppImage';
+import { formatBuildVersion } from '../utils/version';
 
 const NavBar = () => {
   const { t, isRTL } = useTranslationLegacy();
@@ -190,11 +191,7 @@ const NavBar = () => {
             </ul>
           </nav>
           <div className="absolute bottom-0 left-0 right-0 p-4 text-center text-xs text-surface-500 border-t border-surface-200">
-            {t('common.version') || 'Version'}: {new Date(__BUILD_DATE__).toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: '2-digit',
-              day: '2-digit'
-            }).replace(/\//g, '.')}
+            {t('common.version') || 'Version'}: {formatBuildVersion(__BUILD_DATE__)}
           </div>
         </div>
       </dialog>
