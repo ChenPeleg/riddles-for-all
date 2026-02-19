@@ -1,7 +1,5 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useRiddles } from '../context/RiddleContext';
-import RiddleCard from '../components/RiddleCard';
 import { useTranslationLegacy } from '../hooks/useTranslationLegacy';
 import { displayBookTitle, BOOK_KEY_MAP } from '../i18n/bookKeys';
 import AppImage from '../components/AppImage';
@@ -9,7 +7,6 @@ import AppImage from '../components/AppImage';
 function Sources() {
   const { riddles, loading } = useRiddles();
   const { t, isRTL } = useTranslationLegacy();
-  const [selectedSource, setSelectedSource] = useState<string | null>(null);
 
   // Simple helper to produce a stable book slug. Prefer the i18n key map when available.
   const getBookSlug = (raw: string) => {
@@ -21,11 +18,6 @@ function Sources() {
       .replace(/(^-|-$)/g, '');
   };
 
-  const gotoLabel = (() => {
-    const s = t('sources.goto_book');
-    return typeof s === 'string' && s.startsWith('sources.') ? 'Go to book' : s;
-  })();
-
   if (loading) return (
     <div className="min-h-screen bg-surface-50 flex items-center justify-center">
       <div className="w-12 h-12 border-4 border-brand-accent border-t-transparent rounded-full animate-spin"></div>
@@ -33,11 +25,6 @@ function Sources() {
   );
 
   const sources = Array.from(new Set(riddles.map(r => r.source.book))).sort();
-  console.log('Available sources:', riddles);
-
-  const filteredRiddles = selectedSource 
-    ? riddles.filter(r => r.source.book === selectedSource)
-    : [];
 
   return (
     <div className="min-h-screen bg-surface-50">
@@ -53,72 +40,21 @@ function Sources() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 animate-fade-in [animation-delay:100ms]">
           {sources.map(source => (
-            // Changed from <button> to a div with role=button so we can safely nest a Link inside.
-            <div
+            <Link
               key={source}
-              role="button"
-              tabIndex={0}
-              onClick={() => setSelectedSource(source === selectedSource ? null : source)}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  setSelectedSource(source === selectedSource ? null : source);
-                  e.preventDefault();
-                }
-              }}
-              className={`group p-6 rounded-4xl border-2 ${isRTL ? 'text-right' : 'text-left'} transition-all duration-300 relative overflow-hidden ${
-                selectedSource === source
-                  ? 'bg-brand-accent text-white border-brand-accent shadow-[0_12px_24px_-8px_rgba(245,158,11,0.4)] scale-105 z-10'
-                  : 'bg-white text-surface-900 border-surface-200 hover:border-brand-accent/30 active:scale-95'
-              }`}
+              to={`/books/${getBookSlug(source)}`}
+              className={`group p-6 rounded-4xl border-2 ${isRTL ? 'text-right' : 'text-left'} transition-all duration-300 relative overflow-hidden bg-white text-surface-900 border-surface-200 hover:border-brand-accent/30 active:scale-95`}
             >
-               <div className={`absolute top-0 ${isRTL ? 'left-0' : 'right-0'} p-4 opacity-5 group-hover:opacity-10 transition-opacity`}>
+              <div className={`absolute top-0 ${isRTL ? 'left-0' : 'right-0'} p-4 opacity-5 group-hover:opacity-10 transition-opacity`}>
                 <AppImage name="book" className="w-12 h-12" fill="currentColor" />
-               </div>
-              <div className={`text-[10px] font-black uppercase tracking-[0.2em] mb-3 ${selectedSource === source ? 'text-white/70' : 'text-surface-400'}`}>
+              </div>
+              <div className="text-[10px] font-black uppercase tracking-[0.2em] mb-3 text-surface-400">
                 {t('sources.source_label')}
               </div>
-              <div className={`font-bold text-lg leading-tight line-clamp-2`}>{displayBookTitle(source, t)}</div>
-
-              <div className="mt-4">
-                <Link
-                  to={`/books/${getBookSlug(source)}`}
-                  onClick={(e) => e.stopPropagation()}
-                  className="text-sm font-medium text-brand-accent hover:underline"
-                >
-                  {gotoLabel}
-                </Link>
-              </div>
-            </div>
+              <div className="font-bold text-lg leading-tight line-clamp-2">{displayBookTitle(source, t)}</div>
+            </Link>
           ))}
         </div>
-
-        {selectedSource ? (
-          <div className="animate-fade-in">
-            <div className="flex items-center justify-between mb-8">
-               <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-brand-accent/10 flex items-center justify-center text-brand-accent">
-                      <AppImage name="book-open" className="w-6 h-6" />
-                    </div>
-                  <h2 className="text-2xl font-bold text-surface-900 tracking-tight">{displayBookTitle(selectedSource || '', t)}</h2>
-               </div>
-               <p className="text-[10px] font-black uppercase tracking-[0.2em] text-surface-400 px-3 py-1 bg-surface-100 rounded-lg">
-                {t('sources.riddles_count').replace('{count}', String(filteredRiddles.length))}
-              </p>
-            </div>
-            <div className="grid grid-cols-1 gap-6">
-              {filteredRiddles.map(riddle => (
-                <RiddleCard key={riddle.id} riddle={riddle} />
-              ))}
-            </div>
-          </div>
-        ) : (
-          <div className="text-center py-24 bg-white rounded-[2.5rem] border-2 border-dashed border-surface-200 animate-fade-in [animation-delay:200ms]">
-            <div className="w-16 h-16 bg-surface-50 rounded-2xl flex items-center justify-center mx-auto mb-6 text-surface-200">
-               <AppImage name="book-open" className="w-8 h-8" />
-            </div>
-            <p className="text-surface-400 text-lg font-medium">{t('sources.select_book_prompt')}</p>
-          </div>
-        )}
       </div>
     </div>
   );
