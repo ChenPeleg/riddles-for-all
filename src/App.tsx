@@ -7,6 +7,7 @@ import Sources from './pages/Sources'
 import { RiddleProvider } from './context/RiddleContext'
 import BookReader from './pages/BookReader'
 import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Route path="/sources" element={<Sources />} />
               <Route path="/books/:slug" element={<BookReader />} />
             </Routes>
+            <Footer />
           </main>
         </div>
       </Router>
