@@ -11,7 +11,7 @@ export const riddlesData: {
 } = {
   metadata: {
     totalRiddles: 21,
-    sources: ["Sample Riddles Collection", "Classic Riddles", "Nature Riddles"],
+    sources: ["Sample Riddles Collection", "Sample Riddles Collection", "Sample Riddles Collection"],
     generatedAt: "2026-01-20T17:20:17.079Z",
     version: "1.0.0",
   },
@@ -37,7 +37,7 @@ export const riddlesData: {
       categories: ["wordplay", "tricky"],
       difficulty: "medium",
       source: {
-        book: "Classic Riddles",
+        book: "Sample Riddles Collection",
       },
     },
     {
@@ -62,7 +62,7 @@ export const riddlesData: {
       categories: ["logic", "nature"],
       difficulty: "medium",
       source: {
-        book: "Classic Riddles",
+        book: "Sample Riddles Collection",
       },
     },
     {
@@ -86,7 +86,7 @@ export const riddlesData: {
       categories: ["wordplay", "everyday"],
       difficulty: "easy",
       source: {
-        book: "Classic Riddles",
+        book: "Sample Riddles Collection",
       },
     },
     {
@@ -111,7 +111,7 @@ export const riddlesData: {
       categories: ["wordplay", "everyday"],
       difficulty: "easy",
       source: {
-        book: "Classic Riddles",
+        book: "Sample Riddles Collection",
       },
     },
     {
@@ -135,7 +135,7 @@ export const riddlesData: {
       categories: ["logic", "everyday"],
       difficulty: "medium",
       source: {
-        book: "Classic Riddles",
+        book: "Sample Riddles Collection",
       },
     },
     {
@@ -148,7 +148,7 @@ export const riddlesData: {
       categories: ["wordplay", "nature"],
       difficulty: "hard",
       source: {
-        book: "Nature Riddles",
+        book: "Sample Riddles Collection",
       },
     },
     {
@@ -172,7 +172,7 @@ export const riddlesData: {
       categories: ["wordplay", "tricky"],
       difficulty: "easy",
       source: {
-        book: "Classic Riddles",
+        book: "Sample Riddles Collection",
       },
     },
     {
@@ -197,7 +197,7 @@ export const riddlesData: {
       categories: ["logic", "everyday"],
       difficulty: "easy",
       source: {
-        book: "Classic Riddles",
+        book: "Sample Riddles Collection",
       },
     },
     {
@@ -221,7 +221,7 @@ export const riddlesData: {
       categories: ["wordplay", "everyday"],
       difficulty: "easy",
       source: {
-        book: "Classic Riddles",
+        book: "Sample Riddles Collection",
       },
     },
     {
@@ -257,7 +257,7 @@ export const riddlesData: {
       categories: ["wordplay", "everyday"],
       difficulty: "easy",
       source: {
-        book: "Classic Riddles",
+        book: "Sample Riddles Collection",
       },
     },
     {
