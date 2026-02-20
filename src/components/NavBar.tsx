@@ -82,6 +82,11 @@ const NavBar = () => {
                   </NavLink>
                 </li>
                 <li>
+                  <NavLink to="/sources" className={({ isActive }) => linkBase + (isActive ? ` ${linkActive}` : '')}>
+                    {t('nav.sources') || 'Sources'}
+                  </NavLink>
+                </li>
+                <li>
                   <NavLink to="/search" className={({ isActive }) => linkBase + (isActive ? ` ${linkActive}` : '')}>
                     {t('nav.search') || 'Search'}
                   </NavLink>
@@ -89,11 +94,6 @@ const NavBar = () => {
                 <li>
                   <NavLink to="/categories" className={({ isActive }) => linkBase + (isActive ? ` ${linkActive}` : '')}>
                     {t('nav.categories') || 'Categories'}
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/sources" className={({ isActive }) => linkBase + (isActive ? ` ${linkActive}` : '')}>
-                    {t('nav.sources') || 'Sources'}
                   </NavLink>
                 </li>
               </ul>
@@ -163,6 +163,15 @@ const NavBar = () => {
               </li>
               <li>
                 <NavLink
+                  to="/sources"
+                  onClick={handleClose}
+                  className={({ isActive }) => linkBase + (isActive ? ` ${linkActive}` : '')}
+                >
+                  {t('nav.sources') || 'Sources'}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
                   to="/search"
                   onClick={handleClose}
                   className={({ isActive }) => linkBase + (isActive ? ` ${linkActive}` : '')}
@@ -177,15 +186,6 @@ const NavBar = () => {
                   className={({ isActive }) => linkBase + (isActive ? ` ${linkActive}` : '')}
                 >
                   {t('nav.categories') || 'Categories'}
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/sources"
-                  onClick={handleClose}
-                  className={({ isActive }) => linkBase + (isActive ? ` ${linkActive}` : '')}
-                >
-                  {t('nav.sources') || 'Sources'}
                 </NavLink>
               </li>
             </ul>
