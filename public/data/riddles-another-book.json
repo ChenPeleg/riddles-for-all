@@ -1,0 +1,26 @@
+{
+  "metadata": {
+    "totalRiddles": 1,
+    "sources": [
+      "Another Book"
+    ],
+    "generatedAt": "2026-02-21T09:38:31.570Z",
+    "version": "1.0.0"
+  },
+  "riddles": [
+    {
+      "id": "sample-4",
+      "text": "What is full of holes but still holds water?",
+      "solution": "A sponge",
+      "categories": [
+        "objects",
+        "common"
+      ],
+      "difficulty": "medium",
+      "source": {
+        "book": "Another Book",
+        "page": 1
+      }
+    }
+  ]
+}
