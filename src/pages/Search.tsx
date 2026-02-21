@@ -16,15 +16,15 @@ function Search() {
   );
 
   return (
-    <div className="min-h-screen bg-surface-50">
+    <div className="min-h-screen bg-surface-50 dark:bg-surface-900 transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-6 pt-12 pb-24">
         <header className="mb-12 animate-fade-in">
           <Link to="/" className="inline-flex items-center gap-2 text-surface-400 hover:text-brand-primary transition-colors mb-8 group">
             <AppImage name="chevron-left" className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform" />
             <span className="text-xs font-bold uppercase tracking-widest">{t('navigation.back_to_home')}</span>
           </Link>
-          <h1 className="text-4xl md:text-5xl font-bold text-surface-900 tracking-tight mb-4">{t('search.heading').split(' ')[0]} <span className="text-brand-primary">{t('search.heading').split(' ').slice(1).join(' ')}</span></h1>
-          <p className="text-surface-600">{t('search.description') || t('common.description')}</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-surface-900 dark:text-white tracking-tight mb-4 transition-colors">{t('search.heading').split(' ')[0]} <span className="text-brand-primary">{t('search.heading').split(' ').slice(1).join(' ')}</span></h1>
+          <p className="text-surface-600 dark:text-surface-400 transition-colors">{t('search.description') || t('common.description')}</p>
         </header>
         
         <div className="mb-12 animate-fade-in [animation-delay:100ms]">
@@ -37,7 +37,7 @@ function Search() {
               placeholder={t('search.placeholder') || 'Search by text or category...'}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-5 text-lg rounded-2xl border-2 border-surface-200 bg-white shadow-sm focus:outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all placeholder:text-surface-300"
+              className="w-full pl-12 pr-4 py-5 text-lg rounded-2xl border-2 border-surface-200 dark:border-surface-700 bg-white dark:bg-surface-800 text-surface-900 dark:text-white shadow-sm focus:outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all placeholder:text-surface-300 dark:placeholder:text-surface-500"
             />
           </div>
         </div>
@@ -53,7 +53,7 @@ function Search() {
               <p className="text-xs font-bold uppercase tracking-widest text-surface-400">
                 {t('search.found_results').replace('{count}', String(filteredRiddles.length))}
                </p>
-               <div className="h-px flex-1 bg-surface-100 mx-4"></div>
+               <div className="h-px flex-1 bg-surface-100 dark:bg-surface-800 mx-4"></div>
             </div>
             
             {filteredRiddles.length > 0 ? (
@@ -63,7 +63,7 @@ function Search() {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-24 bg-white rounded-3xl border-2 border-dashed border-surface-200">
+              <div className="text-center py-24 bg-white dark:bg-surface-800/50 rounded-3xl border-2 border-dashed border-surface-200 dark:border-surface-700">
                 <p className="text-surface-400 text-lg font-medium">{t('search.no_results_match')}</p>
                 <button onClick={() => setSearchTerm('')} className="mt-4 text-brand-primary font-bold hover:underline">{t('search.clear_search')}</button>
               </div>

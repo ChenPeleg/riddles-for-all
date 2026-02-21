@@ -105,9 +105,9 @@ function BookReader() {
 
 
                     {bookmarks.length > 0 && (
-                        <div className="mt-8 p-4 bg-white border border-surface-200 rounded-2xl">
-                            <h3 className="text-sm font-semibold text-surface-700 mb-3 flex items-center gap-2">
-                                <AppImage name="bookmark" className="w-4 h-4 text-yellow-500" fill="currentColor" />
+                        <div className="mt-8 p-4 bg-white dark:bg-surface-800 border border-surface-200 dark:border-surface-700 rounded-2xl transition-colors">
+                            <h3 className="text-sm font-semibold text-surface-700 dark:text-surface-300 mb-3 flex items-center gap-2">
+                                <AppImage name="bookmark" className="w-4 h-4 text-yellow-500 dark:text-yellow-400" fill="currentColor" />
                                 {t('book.bookmarks')} ({bookmarks.length}/5)
                             </h3>
                             <div className="flex flex-wrap gap-2">
@@ -119,8 +119,8 @@ function BookReader() {
                                             onClick={() => goToPage(bookmark.pageNumber)}
                                             className={`px-3 py-1.5 rounded-lg text-sm border transition-colors flex items-center gap-2 ${
                                                 isCurrentPage
-                                                    ? 'bg-yellow-50 border-yellow-300 text-yellow-700'
-                                                    : 'bg-surface-50 border-surface-200 text-surface-700 hover:bg-surface-100'
+                                                    ? 'bg-yellow-50 dark:bg-yellow-900/30 border-yellow-300 dark:border-yellow-700 text-yellow-700 dark:text-yellow-400'
+                                                    : 'bg-surface-50 dark:bg-surface-900 border-surface-200 dark:border-surface-700 text-surface-700 dark:text-surface-300 hover:bg-surface-100 dark:hover:bg-surface-800'
                                             }`}
                                         >
                                             <span>{t('book.page')} {bookmark.pageNumber}</span>

@@ -14,11 +14,18 @@
   --color-surface-900: #0f172a;
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   font-family: var(--font-sans);
   background-color: var(--color-surface-50);
   color: var(--color-surface-900);
   -webkit-font-smoothing: antialiased;
+}
+
+.dark {
+  background-color: var(--color-surface-900);
+  color: var(--color-surface-50);
 }
 
 body {
@@ -48,6 +55,10 @@ body {
 
 ::-webkit-scrollbar-track {
   background: var(--color-surface-100);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: var(--color-surface-800);
 }
 
 ::-webkit-scrollbar-thumb {

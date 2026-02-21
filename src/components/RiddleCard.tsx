@@ -51,14 +51,14 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
   return (
     <div
       dir={isRTL ? "rtl" : "ltr"}
-      className="card-hover border border-surface-200 rounded-3xl p-8 mb-6 bg-white shadow-sm animate-fade-in"
+      className="card-hover border border-surface-200 dark:border-surface-800 rounded-3xl p-8 mb-6 bg-white dark:bg-surface-800/50 shadow-sm animate-fade-in transition-colors duration-300"
     >
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
         <div className="flex flex-wrap gap-2">
           {riddle.categories.map((cat) => (
             <span
               key={cat}
-              className="text-[10px] px-2.5 py-1 bg-surface-100 rounded-lg text-surface-800 font-bold uppercase tracking-widest"
+              className="text-[10px] px-2.5 py-1 bg-surface-100 dark:bg-surface-800 rounded-lg text-surface-800 dark:text-surface-200 font-bold uppercase tracking-widest"
             >
               {cat}
             </span>
@@ -78,7 +78,7 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
             onClick={toggleDone}
             aria-pressed={done}
             title={done ? t("riddle.mark_not_done") : t("riddle.mark_done")}
-            className="md:ml-2 inline-flex items-center justify-center px-3 py-2 rounded-lg hover:bg-surface-100 text-sm font-semibold"
+            className="md:ml-2 inline-flex items-center justify-center px-3 py-2 rounded-lg hover:bg-surface-100 dark:hover:bg-surface-800 text-sm font-semibold transition-colors"
           > 
             {done ? (
               <>
@@ -89,8 +89,8 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
                </>
              ) : (
                <>
-                <AppImage name="plus" className="w-4 h-4 text-surface-400 mr-2" />
-                 <span className="text-surface-700">
+                <AppImage name="plus" className="w-4 h-4 text-surface-400 dark:text-surface-500 mr-2" />
+                 <span className="text-surface-700 dark:text-surface-300">
                    {t("riddle.mark_done")}
                  </span>
                </>
@@ -102,7 +102,7 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
       </div>
 
       <h3
-        className={`text-xl md:text-2xl font-medium leading-relaxed mb-8 text-surface-900 tracking-tight ${done ? "opacity-60" : ""} ${isRTL ? "text-right" : ""}`}
+        className={`text-xl md:text-2xl font-medium leading-relaxed mb-8 text-surface-900 dark:text-surface-100 tracking-tight transition-colors duration-300 ${done ? "opacity-60" : ""} ${isRTL ? "text-right" : ""}`}
       >
         {displayText}
       </h3>
@@ -124,7 +124,7 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
             </span>
           </button>
         ) : (
-          <div className="p-6 bg-brand-primary/5 rounded-2xl border-2 border-brand-primary/20 mt-4 animate-fade-in">
+          <div className="p-6 bg-brand-primary/5 dark:bg-brand-primary/10 rounded-2xl border-2 border-brand-primary/20 mt-4 animate-fade-in transition-colors duration-300">
             <div className="flex items-center gap-2 mb-3">
               <AppImage name="flash" className="w-5 h-5 text-brand-primary" />
                <p className="font-bold text-brand-primary uppercase tracking-widest text-[10px]">
@@ -132,7 +132,7 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
                </p>
              </div>
             <p
-              className={`text-surface-900 text-lg md:text-xl font-medium leading-relaxed ${isRTL ? "text-right" : ""}`}
+              className={`text-surface-900 dark:text-surface-100 text-lg md:text-xl font-medium leading-relaxed transition-colors duration-300 ${isRTL ? "text-right" : ""}`}
             >
               {displaySolution || t("riddle.no_solution")}
             </p>
@@ -140,9 +140,9 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
         )}
       </div>
 
-      <div className="mt-8 pt-6 border-t border-surface-100 flex items-center justify-between">
-        <div className="text-[10px] text-surface-400 font-bold uppercase tracking-widest flex items-center gap-1.5">
-          <AppImage name="book-open" className="w-3.5 h-3.5" />
+      <div className="mt-8 pt-6 border-t border-surface-100 dark:border-surface-800 flex items-center justify-between transition-colors duration-300">
+        <div className="text-[10px] text-surface-400 dark:text-surface-500 font-bold uppercase tracking-widest flex items-center gap-1.5">
+          <AppImage name="book-open" className="w-3.5 h-3.5" stroke="currentColor" />
           {displayBookTitle(riddle.source.book, t)}
         </div>
       </div>
