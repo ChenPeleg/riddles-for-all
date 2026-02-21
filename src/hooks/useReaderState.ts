@@ -1,17 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
-export function useReaderState(totalPages: number, slug?: string, initialPage?: number | null) {
+export function useReaderState(totalPages: number, slug?: string) {
     const [searchParams, setSearchParams] = useSearchParams();
     const [index, setIndex] = useState(0);
 
     // Initialize index from `page` search param when totalPages or slug changes
     useEffect(() => {
-        if (!slug) {
-            setIndex(0);
-            return;
-        }
-        if (totalPages === 0) {
+        if (!slug || totalPages === 0) {
             setIndex(0);
             return;
         }
@@ -22,14 +18,10 @@ export function useReaderState(totalPages: number, slug?: string, initialPage?: 
         if (!isNaN(p)) {
             const idx = Math.max(0, Math.min(totalPages - 1, p - 1));
             setIndex(idx);
-        } else if (initialPage != null) {
-            // If no page in URL but we have an initial page from tracking, use that
-            const idx = Math.max(0, Math.min(totalPages - 1, initialPage - 1));
-            setIndex(idx);
         } else {
             setIndex(0);
         }
-    }, [slug, totalPages, initialPage]);
+    }, [slug, totalPages]);
 
     // Keep the URL search param in sync with the current index
     useEffect(() => {

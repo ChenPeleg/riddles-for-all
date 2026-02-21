@@ -1,4 +1,4 @@
-import {useMemo, useEffect} from 'react';
+import {useMemo, useEffect, useState} from 'react';
 import {Link, useParams} from 'react-router-dom';
 import {useRiddles} from '../context/RiddleContext';
 import {displayBookTitle, getBookSlug} from '../i18n/bookKeys';
@@ -44,14 +44,30 @@ function BookReader() {
     const initialPage = rawInitialPage != null && rawInitialPage <= bookRiddles.length ? rawInitialPage : null;
 
     // reader state hook handles index and url sync
-    const { index, goPrev, goNext, goToPage } = useReaderState(bookRiddles.length, slug, initialPage);
+    const { index, goPrev, goNext, goToPage } = useReaderState(bookRiddles.length, slug);
 
-    // Save progress whenever the page changes if tracking is enabled
+    const [showResumeOffer, setShowResumeOffer] = useState(false);
+
+    // Show resume offer if there's a last page and we're at the start
     useEffect(() => {
-        if (isTrackingEnabled && bookRiddles.length > 0) {
+        if (isTrackingEnabled && initialPage && initialPage > 1 && index === 0) {
+            setShowResumeOffer(true);
+        } else {
+            setShowResumeOffer(false);
+        }
+    }, [isTrackingEnabled, initialPage, index]);
+
+    // Save progress whenever the page changes
+    useEffect(() => {
+        if (bookRiddles.length > 0) {
+            // Don't overwrite saved progress with page 1 if we are about to offer a resume
+            const isOfferingResume = isTrackingEnabled && initialPage && initialPage > 1 && index === 0;
+            if (isOfferingResume) {
+                return;
+            }
             saveProgress(index + 1);
         }
-    }, [index, isTrackingEnabled, bookRiddles.length, saveProgress]);
+    }, [index, bookRiddles.length, saveProgress, isTrackingEnabled, initialPage]);
 
     if (!slug) {
         return <div className="p-6">{t('book.no_slug')}</div>;
@@ -98,6 +114,36 @@ function BookReader() {
             enableTrackingAriaLabel={t('book.enable_tracking_aria')}
             disableTrackingAriaLabel={t('book.disable_tracking_aria')}
         >
+            {showResumeOffer && (
+                <div className="mb-8 p-4 bg-brand-accent/10 border border-brand-accent/20 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 animate-fade-in transition-colors">
+                    <div className="flex items-center gap-3">
+                        <div className="p-2 bg-brand-accent/20 rounded-xl">
+                            <AppImage name="book-open" className="w-5 h-5 text-brand-accent" />
+                        </div>
+                        <p className="text-sm font-medium text-surface-700 dark:text-surface-200">
+                            {t('book.resume_offer').replace('{page}', String(initialPage))}
+                        </p>
+                    </div>
+                    <div className="flex items-center gap-2 w-full sm:w-auto">
+                        <button
+                            onClick={() => {
+                                goToPage(initialPage!);
+                                setShowResumeOffer(false);
+                            }}
+                            className="flex-1 sm:flex-none px-4 py-2 bg-brand-accent text-white text-sm font-bold rounded-xl hover:opacity-90 active:scale-95 transition-all shadow-sm shadow-brand-accent/20"
+                        >
+                            {t('book.resume_button')}
+                        </button>
+                        <button
+                            onClick={() => setShowResumeOffer(false)}
+                            className="px-4 py-2 text-sm font-semibold text-surface-500 hover:text-surface-700 dark:hover:text-surface-300 transition-colors"
+                        >
+                            {t('book.dismiss_button')}
+                        </button>
+                    </div>
+                </div>
+            )}
+
             <BookReaderPageViewer riddle={riddle} />
 
             <div className="flex-1 overflow-y-auto">
