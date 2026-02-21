@@ -10,43 +10,50 @@ const STORAGE_KEY = 'riddles_reading_tracker';
 const TRACKING_STATE_KEY = 'riddles_tracking_enabled';
 
 export function useReadingTracker(bookSlug: string | undefined) {
-  const [isTrackingEnabled, setIsTrackingEnabled] = useState(false);
-  const [progress, setProgress] = useState<ReadingProgress | null>(null);
-
-  // Load tracking enabled state from localStorage on mount
-  useEffect(() => {
+  const [isTrackingEnabled, setIsTrackingEnabled] = useState(() => {
     try {
       const stored = localStorage.getItem(TRACKING_STATE_KEY);
-      if (stored) {
+      if (stored && bookSlug) {
         const parsed = JSON.parse(stored);
-        const trackingState = bookSlug ? parsed[bookSlug] ?? false : false;
-        setIsTrackingEnabled(trackingState);
+        return parsed[bookSlug] ?? true;
       }
-    } catch (e) {
-      console.error('Failed to load tracking state:', e);
-    }
-  }, [bookSlug]);
+    } catch (e) {}
+    return true;
+  });
 
-  // Load progress from localStorage on mount
-  useEffect(() => {
-    if (!bookSlug || !isTrackingEnabled) {
-      setProgress(null);
-      return;
-    }
-
+  const [progress, setProgress] = useState<ReadingProgress | null>(() => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) {
-        const parsed = JSON.parse(stored) as Record<string, ReadingProgress>;
-        const bookProgress = parsed[bookSlug];
-        if (bookProgress) {
-          setProgress(bookProgress);
-        }
+      if (stored && bookSlug) {
+        const parsed = JSON.parse(stored);
+        return parsed[bookSlug] || null;
+      }
+    } catch (e) {}
+    return null;
+  });
+
+  // Keep state in sync with bookSlug changes
+  useEffect(() => {
+    try {
+      const storedTracking = localStorage.getItem(TRACKING_STATE_KEY);
+      if (storedTracking) {
+        const parsed = JSON.parse(storedTracking);
+        setIsTrackingEnabled(bookSlug ? parsed[bookSlug] ?? true : true);
+      } else {
+        setIsTrackingEnabled(true);
+      }
+
+      const storedProgress = localStorage.getItem(STORAGE_KEY);
+      if (storedProgress && bookSlug) {
+        const parsed = JSON.parse(storedProgress);
+        setProgress(parsed[bookSlug] || null);
+      } else {
+        setProgress(null);
       }
     } catch (e) {
-      console.error('Failed to load reading progress:', e);
+      console.error('Failed to sync reading tracker:', e);
     }
-  }, [bookSlug, isTrackingEnabled]);
+  }, [bookSlug]);
 
   // Save progress to localStorage
   const saveProgress = useCallback((pageNumber: number) => {
@@ -77,7 +84,7 @@ export function useReadingTracker(bookSlug: string | undefined) {
     try {
       const stored = localStorage.getItem(TRACKING_STATE_KEY);
       const trackingState = stored ? JSON.parse(stored) : {};
-      const newState = !(trackingState[bookSlug] ?? false);
+      const newState = !(trackingState[bookSlug] ?? true);
       
       trackingState[bookSlug] = newState;
       localStorage.setItem(TRACKING_STATE_KEY, JSON.stringify(trackingState));
