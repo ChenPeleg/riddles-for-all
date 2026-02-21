@@ -14,7 +14,9 @@ export type IconName =
   | 'plus'
   | 'eye'
   | 'flash'
-  | 'archive';
+  | 'archive'
+  | 'sun'
+  | 'moon';
 
 export interface AppImageProps extends React.SVGProps<SVGSVGElement> {
   name: IconName;
@@ -158,6 +160,27 @@ const AppImage = React.forwardRef<SVGSVGElement, AppImageProps>(function AppImag
         <svg {...common} fill="none" stroke={stroke ?? 'currentColor'}>
           {title ? <title id={id}>{title}</title> : null}
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
+      );
+
+    case 'sun':
+      return (
+        <svg {...common} fill="none" stroke={stroke ?? 'currentColor'}>
+          {title ? <title id={id}>{title}</title> : null}
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+          />
+        </svg>
+      );
+
+    case 'moon':
+      return (
+        <svg {...common} fill="none" stroke={stroke ?? 'currentColor'}>
+          {title ? <title id={id}>{title}</title> : null}
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
         </svg>
       );
 

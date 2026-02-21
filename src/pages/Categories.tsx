@@ -25,15 +25,15 @@ function Categories() {
     : [];
 
   return (
-    <div className="min-h-screen bg-surface-50">
+    <div className="min-h-screen bg-surface-50 dark:bg-surface-900 transition-colors duration-300">
       <div className="max-w-5xl mx-auto px-6 pt-12 pb-24">
         <header className="mb-12 animate-fade-in">
           <Link to="/" className="inline-flex items-center gap-2 text-surface-400 hover:text-brand-primary transition-colors mb-8 group">
             <AppImage name="chevron-left" className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform" />
             <span className="text-xs font-bold uppercase tracking-widest">{t('navigation.back_to_home')}</span>
           </Link>
-          <h1 className="text-4xl md:text-5xl font-bold text-surface-900 tracking-tight mb-4">{t('categories.heading').split(' ')[0]} <span className="text-brand-primary">{t('navigation.categories')}</span></h1>
-          <p className="text-surface-600">{t('categories.description')}</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-surface-900 dark:text-white tracking-tight mb-4 transition-colors">{t('categories.heading').split(' ')[0]} <span className="text-brand-primary">{t('navigation.categories')}</span></h1>
+          <p className="text-surface-600 dark:text-surface-400 transition-colors">{t('categories.description')}</p>
         </header>
 
         <div className="flex flex-wrap gap-3 mb-16 animate-fade-in [animation-delay:100ms]">
@@ -44,7 +44,7 @@ function Categories() {
               className={`px-6 py-2.5 rounded-2xl border-2 font-medium transition-all duration-300 ${
                 selectedCategory === category
                   ? 'bg-brand-primary text-white border-brand-primary shadow-[0_8px_16px_-4px_rgba(99,102,241,0.4)] scale-105'
-                  : 'bg-white text-surface-600 border-surface-200 hover:border-brand-primary/30 hover:bg-brand-primary/5 active:scale-95'
+                  : 'bg-white dark:bg-surface-800 text-surface-600 dark:text-surface-300 border-surface-200 dark:border-surface-700 hover:border-brand-primary/30 hover:bg-brand-primary/5 active:scale-95'
               }`}
             >
               <span className="mr-2 opacity-50">#</span>{getCategoryLabel(category)}
@@ -56,12 +56,12 @@ function Categories() {
           <div className="animate-fade-in">
             <div className="flex items-center justify-between mb-8">
               <div className="flex items-center gap-4">
-                 <div className="w-10 h-10 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-primary font-bold text-xl">#</div>
-                 <h2 className="text-2xl font-bold text-surface-900 tracking-tight">
+                 <div className="w-10 h-10 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-primary font-bold text-xl transition-colors">#</div>
+                 <h2 className="text-2xl font-bold text-surface-900 dark:text-white tracking-tight transition-colors">
                     {getCategoryLabel(selectedCategory as string)}
                  </h2>
               </div>
-              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-surface-400 px-3 py-1 bg-surface-100 rounded-lg">
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-surface-400 dark:text-surface-300 px-3 py-1 bg-surface-100 dark:bg-surface-800 rounded-lg transition-colors">
                 {t('categories.riddles_count').replace('{count}', String(filteredRiddles.length))}
               </p>
             </div>
@@ -72,9 +72,9 @@ function Categories() {
             </div>
           </div>
         ) : (
-          <div className="text-center py-24 bg-white rounded-4xl border-2 border-dashed border-surface-200 animate-fade-in [animation-delay:200ms]">
-            <div className="w-16 h-16 bg-surface-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
-               <AppImage name="archive" className="w-8 h-8 text-surface-200" />
+          <div className="text-center py-24 bg-white dark:bg-surface-800/50 rounded-4xl border-2 border-dashed border-surface-200 dark:border-surface-700 animate-fade-in [animation-delay:200ms] transition-colors duration-300">
+            <div className="w-16 h-16 bg-surface-50 dark:bg-surface-800 rounded-2xl flex items-center justify-center mx-auto mb-6 transition-colors">
+               <AppImage name="archive" className="w-8 h-8 text-surface-200 dark:text-surface-600" />
              </div>
             <p className="text-surface-400 text-lg font-medium">{t('categories.select_prompt')}</p>
           </div>

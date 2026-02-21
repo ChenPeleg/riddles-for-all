@@ -1,18 +1,20 @@
 import { NavLink } from 'react-router-dom';
 import { useTranslationLegacy } from '../hooks/useTranslationLegacy';
 import { useEffect, useRef, useState } from 'react';
+import { useTheme } from '../context/ThemeContext';
 import LanguageToggle from './LanguageToggle';
 import AppImage from './AppImage';
 import { formatBuildVersion } from '../utils/version';
 
 const NavBar = () => {
   const { t, isRTL } = useTranslationLegacy();
+  const { theme, toggleTheme } = useTheme();
   const [open, setOpen] = useState(false);
   const dialogRef = useRef<HTMLDialogElement | null>(null);
   const firstLinkRef = useRef<HTMLAnchorElement | null>(null);
 
-  const linkBase = 'text-sm font-medium text-surface-700 px-3 py-2 rounded-md hover:bg-surface-50';
-  const linkActive = 'bg-surface-100 text-brand-primary';
+  const linkBase = 'text-sm font-medium text-surface-700 dark:text-surface-200 px-3 py-2 rounded-md hover:bg-surface-50 dark:hover:bg-surface-800 transition-colors';
+  const linkActive = 'bg-surface-100 dark:bg-surface-800 text-brand-primary dark:text-brand-primary';
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -51,7 +53,7 @@ const NavBar = () => {
   return (
     <>
       {/* fixed header */}
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-surface-100 bg-white shadow-sm" dir={isRTL ? 'rtl' : 'ltr'}>
+      <header className="fixed top-0 left-0 right-0 z-50 border-b border-surface-100 dark:border-surface-800 bg-white/80 dark:bg-surface-900/80 backdrop-blur-md shadow-sm transition-colors duration-300" dir={isRTL ? 'rtl' : 'ltr'}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-14">
             <button
@@ -66,10 +68,17 @@ const NavBar = () => {
             </button>
 
             <div className="flex items-center gap-4">
-              <div className="text-lg font-bold text-surface-900">{t('common.title')}</div>
-              {/* Language toggle visible on desktop */}
-              <div className="hidden md:block">
+              <div className="text-lg font-bold text-surface-900 dark:text-white">{t('common.title')}</div>
+              {/* Desktop Toggles */}
+              <div className="hidden md:flex items-center gap-2">
                 <LanguageToggle />
+                <button
+                  onClick={toggleTheme}
+                  className="p-2 rounded-md text-surface-700 dark:text-surface-200 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none focus:ring-2 focus:ring-brand-primary transition-colors"
+                  aria-label={theme === 'light' ? t('nav.dark_mode') || 'Dark Mode' : t('nav.light_mode') || 'Light Mode'}
+                >
+                  <AppImage name={theme === 'light' ? 'moon' : 'sun'} className="w-5 h-5" />
+                </button>
               </div>
             </div>
 
@@ -99,9 +108,15 @@ const NavBar = () => {
               </ul>
             </nav>
 
-            {/* Mobile: hamburger */}
+            {/* Mobile: hamburger & toggles */}
             <div className="md:hidden flex items-center gap-2">
-              {/* Language toggle visible on mobile */}
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-md text-surface-700 dark:text-surface-200 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none transition-colors"
+                aria-label={theme === 'light' ? t('nav.dark_mode') || 'Dark Mode' : t('nav.light_mode') || 'Light Mode'}
+              >
+                <AppImage name={theme === 'light' ? 'moon' : 'sun'} className="w-5 h-5" />
+              </button>
               <div>
                 <LanguageToggle />
               </div>
@@ -111,14 +126,14 @@ const NavBar = () => {
                   aria-expanded={open}
                   aria-controls="mobile-menu"
                   onClick={() => setOpen(prev => !prev)}
-                  className="inline-flex items-center justify-center p-2 rounded-md text-surface-700 hover:bg-surface-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary"
+                  className="inline-flex items-center justify-center p-2 rounded-md text-surface-700 dark:text-surface-200 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary transition-colors"
                 >
                   {open ? (
                     // X icon
-                    <AppImage name="close" className="w-6 h-6" title={t('nav.close_menu') || 'Close menu'} />
+                    <AppImage name="close" className="w-6 h-6" title={t('nav.close_menu') || 'Close menu'} stroke="currentColor" />
                   ) : (
                     // Hamburger icon
-                    <AppImage name="menu" className="w-6 h-6" title={t('nav.open_menu') || 'Open menu'} />
+                    <AppImage name="menu" className="w-6 h-6" title={t('nav.open_menu') || 'Open menu'} stroke="currentColor" />
                   )}
                 </button>
               </div>
@@ -137,15 +152,15 @@ const NavBar = () => {
         aria-label={t('nav.main_nav') || 'Main navigation'}
         dir={isRTL ? 'rtl' : 'ltr'}
       >
-        <div className={`mobile-menu-content fixed top-0 ${isRTL ? 'left-0' : 'right-0'} w-80 max-w-[85vw] h-full bg-white shadow-xl overflow-y-auto`}>
-          <div className="flex items-center justify-between p-4 border-b border-surface-100">
-            <div className="text-lg font-bold text-surface-900">{t('common.title')}</div>
+        <div className={`mobile-menu-content fixed top-0 ${isRTL ? 'left-0' : 'right-0'} w-80 max-w-[85vw] h-full bg-white dark:bg-surface-900 shadow-xl overflow-y-auto transition-colors duration-300`}>
+          <div className="flex items-center justify-between p-4 border-b border-surface-100 dark:border-surface-800">
+            <div className="text-lg font-bold text-surface-900 dark:text-white">{t('common.title')}</div>
             <button
               aria-label={t('nav.close_menu') || 'Close menu'}
               onClick={handleClose}
-              className="inline-flex items-center justify-center p-2 rounded-md text-surface-700 hover:bg-surface-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary"
+              className="inline-flex items-center justify-center p-2 rounded-md text-surface-700 dark:text-surface-200 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary"
             >
-              <AppImage name="close" className="w-6 h-6" title={t('nav.close_menu') || 'Close menu'} />
+              <AppImage name="close" className="w-6 h-6" title={t('nav.close_menu') || 'Close menu'} stroke="currentColor" />
             </button>
           </div>
           <nav id="mobile-menu" className="p-4">
@@ -190,7 +205,7 @@ const NavBar = () => {
               </li>
             </ul>
           </nav>
-          <div className="absolute bottom-0 left-0 right-0 p-4 text-center text-xs text-surface-500 border-t border-surface-200">
+          <div className="absolute bottom-0 left-0 right-0 p-4 text-center text-xs text-surface-500 dark:text-surface-400 border-t border-surface-200 dark:border-surface-800">
             {t('common.version') || 'Version'}: {formatBuildVersion(__BUILD_DATE__)}
           </div>
         </div>
