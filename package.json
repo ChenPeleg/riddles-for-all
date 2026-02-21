@@ -18,7 +18,8 @@
     "pipeline": "tsx backend/scripts/pipeline.ts",
     "search": "npm run cli search",
     "riddles": "npm run cli",
-    "backend:clear": "git clean -fdX data/"
+    "backend:clear": "git clean -fdX data/",
+    "test:e2e": "playwright test"
   },
   "keywords": [
     "riddles",
@@ -35,6 +36,7 @@
     "react-router-dom": "^6.22.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.58.2",
     "@tailwindcss/vite": "^4.1.18",
     "@types/jszip": "^3.4.0",
     "@types/node": "^20.0.0",
