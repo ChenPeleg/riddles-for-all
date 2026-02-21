@@ -12,8 +12,34 @@ const __dirname = path.dirname(__filename);
 
 const storage = new JsonStorage();
 
-// Sample riddles for testing
-const sampleRiddles: Riddle[] =  []
+// Sample riddles for testing - matching the ones in src/assets/riddles-all.ts
+// to ensure consistency between different data sources.
+const sampleRiddles: Riddle[] = [
+  {
+    id: 'riddle-001',
+    text: 'What has keys but no locks, space but no room, and you can enter but not go inside?',
+    solution: 'A keyboard',
+    categories: ['wordplay', 'everyday', 'technology'],
+    difficulty: 'easy',
+    source: { book: 'Sample Riddles Collection', page: 1 }
+  },
+  {
+    id: 'riddle-002',
+    text: 'What comes once in a minute, twice in a moment, but never in a thousand years?',
+    solution: 'The letter M',
+    categories: ['wordplay', 'tricky'],
+    difficulty: 'medium',
+    source: { book: 'Sample Riddles Collection', page: 2 }
+  },
+  {
+    id: 'riddle-003',
+    text: 'What has a head and a tail but no body?',
+    solution: 'A coin',
+    categories: ['wordplay', 'everyday'],
+    difficulty: 'easy',
+    source: { book: 'Sample Riddles Collection', page: 3 }
+  }
+];
 
 // Generate the sample data
 console.log('🎲 Generating sample riddles...\n');

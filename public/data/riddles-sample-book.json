@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "totalRiddles": 3,
+    "sources": [
+      "Sample Book"
+    ],
+    "generatedAt": "2026-02-21T09:38:31.570Z",
+    "version": "1.0.0"
+  },
+  "riddles": [
+    {
+      "id": "sample-1",
+      "text": "What has keys but can’t open locks?",
+      "solution": "A piano",
+      "categories": [
+        "musical",
+        "common"
+      ],
+      "difficulty": "easy",
+      "source": {
+        "book": "Sample Book",
+        "page": 1
+      }
+    },
+    {
+      "id": "sample-2",
+      "text": "What has to be broken before you can use it?",
+      "solution": "An egg",
+      "categories": [
+        "food",
+        "common"
+      ],
+      "difficulty": "easy",
+      "source": {
+        "book": "Sample Book",
+        "page": 2
+      }
+    },
+    {
+      "id": "sample-3",
+      "text": "I’m tall when I’m young, and I’m short when I’m old. What am I?",
+      "solution": "A candle",
+      "categories": [
+        "objects",
+        "common"
+      ],
+      "difficulty": "easy",
+      "source": {
+        "book": "Sample Book",
+        "page": 3
+      }
+    }
+  ]
+}
