@@ -20,6 +20,7 @@ export const translations: Record<Lang, Record<string, any>> = {
       sources_card_desc:
         "Browse the unique collections that power our riddles.",
       next_riddle: "Next",
+      continue_reading: "Continue reading",
     },
     // Nav translations used by NavBar component
     nav: {
@@ -175,6 +176,7 @@ export const translations: Record<Lang, Record<string, any>> = {
       categories_card_desc: "חקור חידות מקובצות לפי נושאים וקטגוריות.",
       sources_card_desc: "עיין באוספים הייחודיים שמניעים את החידות שלנו.",
       next_riddle: "הבא",
+      continue_reading: "המשך קריאה",
     },
     // Nav translations used by NavBar component
     nav: {
