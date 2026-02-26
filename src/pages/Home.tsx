@@ -1,15 +1,37 @@
 import {Link} from 'react-router-dom'
-import {useEffect, useState} from 'react'
+import {useEffect, useMemo, useState} from 'react'
 import RiddleCard from '../components/RiddleCard'
 import {useRiddles} from '../context/RiddleContext'
 import LanguageToggle from '../components/LanguageToggle'
 import AppImage from '../components/AppImage'
 import {useTranslationLegacy} from '../hooks/useTranslationLegacy';
 
+const READING_STORAGE_KEY = 'riddles_reading_tracker';
+
+interface ReadingProgress {
+    bookSlug: string;
+    lastPage: number;
+    updatedAt: number;
+}
+
+function getLastStop(): ReadingProgress | null {
+    try {
+        const stored = localStorage.getItem(READING_STORAGE_KEY);
+        if (!stored) return null;
+        const all: Record<string, ReadingProgress> = JSON.parse(stored);
+        const entries = Object.values(all);
+        if (entries.length === 0) return null;
+        return entries.reduce((a, b) => (a.updatedAt > b.updatedAt ? a : b));
+    } catch {
+        return null;
+    }
+}
+
 function Home() {
     const {riddles} = useRiddles();
     const {t, isRTL} = useTranslationLegacy();
     const [randomRiddle, setRandomRiddle] = useState(null as any);
+    const lastStop = useMemo(() => getLastStop(), []);
 
     useEffect(() => {
         if (riddles.length > 0 && !randomRiddle) {
@@ -71,7 +93,23 @@ function Home() {
                     )}
                 </h1>
                 <p className="text-lg md:text-xl text-surface-800 dark:text-surface-300 max-w-2xl mx-auto leading-relaxed transition-colors">
-                    {t('common.description')}
+                    {lastStop ? (() => {
+                        const bookTitle = t(`books.${lastStop.bookSlug}`);
+                        const displayTitle = bookTitle.startsWith('books.')
+                            ? lastStop.bookSlug.replace(/_/g, ' ')
+                            : bookTitle;
+                        return (
+                            <Link
+                                to={`/books/${lastStop.bookSlug}?page=${lastStop.lastPage}`}
+                                className="inline-flex items-center gap-3 px-5 py-3 bg-brand-accent/10 dark:bg-brand-accent/20 text-brand-accent rounded-2xl hover:bg-brand-accent/20 dark:hover:bg-brand-accent/30 transition-colors"
+                            >
+                                <AppImage name="book-open" className="w-5 h-5 shrink-0" />
+                                <span className="text-base font-medium leading-snug">
+                                    {t('home.continue_reading')} · {displayTitle} · {t('book.page')} {lastStop.lastPage}
+                                </span>
+                            </Link>
+                        );
+                    })() : null}
                 </p>
             </header>
 
