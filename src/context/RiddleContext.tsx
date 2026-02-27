@@ -1,6 +1,5 @@
 import React, {createContext, ReactNode, useContext, useMemo, useState} from 'react';
-
-import {riddlesData} from '../assets/riddles-all';
+ 
 import {riddlesDataGym} from '../assets/gym-for-the-brain';
 import {ultimateRiddleCollection} from '../assets/ultimate-collection';
 import {Riddle} from '../models/riddle';
@@ -19,7 +18,7 @@ const ultimateCollection: Riddle[] = ultimateRiddleCollection.riddles.map(r => (
     categories: [],
     source: {book: 'Ultimate 500 Riddles Collection'}
 }) satisfies Riddle);
-const allRiddles: Riddle[] = [...riddlesData.riddles, ...riddlesDataGym.riddles, ...ultimateCollection];
+const allRiddles: Riddle[] = [  ...riddlesDataGym.riddles, ...ultimateCollection];
 
 export function RiddleProvider({children}: { children: ReactNode }) {
 
