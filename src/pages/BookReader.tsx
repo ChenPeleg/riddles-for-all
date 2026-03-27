@@ -5,12 +5,13 @@ import {displayBookTitle, getBookSlug} from '../i18n/bookKeys';
 import {useTranslationLegacy} from '../hooks/useTranslationLegacy';
 import {useBookmarks} from '../hooks/useBookmarks';
 import {useReadingTracker} from '../hooks/useReadingTracker';
-import AppImage from '../components/AppImage';
 
 // new imports
 import { useReaderState } from '../hooks/useReaderState';
-import   {BookReaderMain} from '../components/BookReader/BookReaderMain';
-import { BookReaderPageViewer } from '../components/BookReader/BookReaderPageViewer';
+import {BookReaderContainer} from '../components/BookReader/BookReaderContainer';
+import {ResumeOfferDialog} from '../components/BookReader/ResumeOfferDialog';
+import {BookmarksPanel} from '../components/BookReader/BookmarksPanel';
+import RiddleCard from '../components/RiddleCard';
 
 function BookReader() {
     const {slug} = useParams<{ slug: string }>();
@@ -96,7 +97,7 @@ function BookReader() {
     };
 
     return (
-        <BookReaderMain
+        <BookReaderContainer
             title={displayBookTitle(riddle.source.book, t)}
             currentPage={index}
             totalPages={bookRiddles.length}
@@ -114,84 +115,36 @@ function BookReader() {
             enableTrackingAriaLabel={t('book.enable_tracking_aria')}
             disableTrackingAriaLabel={t('book.disable_tracking_aria')}
         >
-            {showResumeOffer && (
-                <div className="mb-8 p-4 bg-brand-accent/10 border border-brand-accent/20 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 animate-fade-in transition-colors">
-                    <div className="flex items-center gap-3">
-                        <div className="p-2 bg-brand-accent/20 rounded-xl">
-                            <AppImage name="book-open" className="w-5 h-5 text-brand-accent" />
-                        </div>
-                        <p className="text-sm font-medium text-surface-700 dark:text-surface-200">
-                            {t('book.resume_offer').replace('{page}', String(initialPage))}
-                        </p>
-                    </div>
-                    <div className="flex items-center gap-2 w-full sm:w-auto">
-                        <button
-                            onClick={() => {
-                                goToPage(initialPage!);
-                                setShowResumeOffer(false);
-                            }}
-                            className="flex-1 sm:flex-none px-4 py-2 bg-brand-accent text-white text-sm font-bold rounded-xl hover:opacity-90 active:scale-95 transition-all shadow-sm shadow-brand-accent/20"
-                        >
-                            {t('book.resume_button')}
-                        </button>
-                        <button
-                            onClick={() => setShowResumeOffer(false)}
-                            className="px-4 py-2 text-sm font-semibold text-surface-500 hover:text-surface-700 dark:hover:text-surface-300 transition-colors"
-                        >
-                            {t('book.dismiss_button')}
-                        </button>
-                    </div>
-                </div>
+            {showResumeOffer && initialPage && (
+                <ResumeOfferDialog
+                    lastPage={initialPage}
+                    onResume={() => {
+                        goToPage(initialPage);
+                        setShowResumeOffer(false);
+                    }}
+                    onDismiss={() => setShowResumeOffer(false)}
+                    resumeOfferText={t('book.resume_offer')}
+                    resumeButtonText={t('book.resume_button')}
+                    dismissButtonText={t('book.dismiss_button')}
+                />
             )}
 
-            <BookReaderPageViewer riddle={riddle} />
+            <RiddleCard riddle={riddle} />
 
             <div className="flex-1 overflow-y-auto">
                 <div className="max-w-3xl mx-auto px-6 pt-12 pb-24">
-
-
-                    {bookmarks.length > 0 && (
-                        <div className="mt-8 p-4 bg-white dark:bg-surface-800 border border-surface-200 dark:border-surface-700 rounded-2xl transition-colors">
-                            <h3 className="text-sm font-semibold text-surface-700 dark:text-surface-300 mb-3 flex items-center gap-2">
-                                <AppImage name="bookmark" className="w-4 h-4 text-yellow-500 dark:text-yellow-400" fill="currentColor" />
-                                {t('book.bookmarks')} ({bookmarks.length}/5)
-                            </h3>
-                            <div className="flex flex-wrap gap-2">
-                                {bookmarks.map((bookmark) => {
-                                    const isCurrentPage = bookmark.pageNumber === index + 1;
-                                    return (
-                                        <button
-                                            key={bookmark.id}
-                                            onClick={() => goToPage(bookmark.pageNumber)}
-                                            className={`px-3 py-1.5 rounded-lg text-sm border transition-colors flex items-center gap-2 ${
-                                                isCurrentPage
-                                                    ? 'bg-yellow-50 dark:bg-yellow-900/30 border-yellow-300 dark:border-yellow-700 text-yellow-700 dark:text-yellow-400'
-                                                    : 'bg-surface-50 dark:bg-surface-900 border-surface-200 dark:border-surface-700 text-surface-700 dark:text-surface-300 hover:bg-surface-100 dark:hover:bg-surface-800'
-                                            }`}
-                                        >
-                                            <span>{t('book.page')} {bookmark.pageNumber}</span>
-                                            {isCurrentPage && (
-                                                <span className="text-xs">•</span>
-                                            )}
-                                            <button
-                                                onClick={(e) => {
-                                                    e.stopPropagation();
-                                                    removeBookmark(bookmark.id);
-                                                }}
-                                                className="ml-1 text-surface-400 hover:text-red-500 transition-colors"
-                                                title={t('book.remove_bookmark')}
-                                            >
-                                                <AppImage name="close" className="w-3.5 h-3.5" />
-                                            </button>
-                                        </button>
-                                    );
-                                })}
-                            </div>
-                        </div>
-                    )}
+                    <BookmarksPanel
+                        bookmarks={bookmarks}
+                        currentPage={index + 1}
+                        onGoToPage={goToPage}
+                        onRemoveBookmark={removeBookmark}
+                        bookmarksLabel={t('book.bookmarks')}
+                        pageLabel={t('book.page')}
+                        removeBookmarkLabel={t('book.remove_bookmark')}
+                    />
                 </div>
             </div>
-        </BookReaderMain>
+        </BookReaderContainer>
     );
  }
 
