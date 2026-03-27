@@ -1,37 +1,17 @@
 import {Link} from 'react-router-dom'
-import {useEffect, useMemo, useState} from 'react'
+import {useEffect, useState} from 'react'
 import RiddleCard from '../components/RiddleCard'
 import {useRiddles} from '../context/RiddleContext'
 import LanguageToggle from '../components/LanguageToggle'
 import AppImage from '../components/AppImage'
 import {useTranslationLegacy} from '../hooks/useTranslationLegacy';
-
-const READING_STORAGE_KEY = 'riddles_reading_tracker';
-
-interface ReadingProgress {
-    bookSlug: string;
-    lastPage: number;
-    updatedAt: number;
-}
-
-function getLastStop(): ReadingProgress | null {
-    try {
-        const stored = localStorage.getItem(READING_STORAGE_KEY);
-        if (!stored) return null;
-        const all: Record<string, ReadingProgress> = JSON.parse(stored);
-        const entries = Object.values(all);
-        if (entries.length === 0) return null;
-        return entries.reduce((a, b) => (a.updatedAt > b.updatedAt ? a : b));
-    } catch {
-        return null;
-    }
-}
+import {useGlobalReadingProgress} from '../hooks/useGlobalReadingProgress';
 
 function Home() {
     const {riddles} = useRiddles();
     const {t, isRTL} = useTranslationLegacy();
     const [randomRiddle, setRandomRiddle] = useState(null as any);
-    const lastStop = useMemo(() => getLastStop(), []);
+    const { lastStop } = useGlobalReadingProgress();
 
     useEffect(() => {
         if (riddles.length > 0 && !randomRiddle) {
