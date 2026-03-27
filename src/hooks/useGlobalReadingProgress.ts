@@ -1,6 +1,5 @@
 import { useMemo } from 'react';
-
-const READING_STORAGE_KEY = 'riddles_reading_tracker';
+import { APP_CONSTANTS } from '../constants/app';
 
 export interface ReadingProgress {
     bookSlug: string;
@@ -15,7 +14,7 @@ export interface ReadingProgress {
 export function useGlobalReadingProgress() {
     const lastStop = useMemo<ReadingProgress | null>(() => {
         try {
-            const stored = localStorage.getItem(READING_STORAGE_KEY);
+            const stored = localStorage.getItem(APP_CONSTANTS.STORAGE_KEYS.READING_TRACKER);
             if (!stored) return null;
 
             const all: Record<string, ReadingProgress> = JSON.parse(stored);

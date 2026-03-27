@@ -7,6 +7,7 @@ import AppImage from '../components/AppImage'
 import {useTranslationLegacy} from '../hooks/useTranslationLegacy';
 import {useGlobalReadingProgress} from '../hooks/useGlobalReadingProgress';
 import {useDirection} from '../hooks/useDirection';
+import {APP_CONSTANTS} from '../constants/app';
 
 function Home() {
     const {riddles} = useRiddles();
@@ -35,7 +36,7 @@ function Home() {
             const currentIndex = riddles.findIndex(r => r.id === randomRiddle.id);
             // Try a few times to avoid selecting the same riddle
             let attempts = 0;
-            while (riddles[idx].id === randomRiddle.id && attempts < 8) {
+            while (riddles[idx].id === randomRiddle.id && attempts < APP_CONSTANTS.RIDDLES.RANDOM_SELECTION_ATTEMPTS) {
                 idx = Math.floor(Math.random() * riddles.length);
                 attempts++;
             }

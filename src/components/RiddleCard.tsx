@@ -5,6 +5,7 @@ import { Riddle } from "../models/riddle";
 import { useTranslationLegacy } from "../hooks/useTranslationLegacy";
 import { useDirection } from "../hooks/useDirection";
 import { displayBookTitle } from "../i18n/bookKeys";
+import { APP_CONSTANTS } from "../constants/app";
 
 interface RiddleProps {
   riddle: Riddle;
@@ -13,17 +14,17 @@ interface RiddleProps {
 const RiddleCard = ({ riddle }: RiddleProps) => {
   const { t, lang } = useTranslationLegacy();
   const { dir, getTextAlign } = useDirection();
-  const [showSolution, setShowSolution] = useState(false); 
+  const [showSolution, setShowSolution] = useState(false);
   const [done, setDone] = useState<boolean>(false);
 
   useEffect(() => {
     try {
       const v =
         typeof window !== "undefined"
-          ? localStorage.getItem(`riddle_done_${riddle.id}`)
+          ? localStorage.getItem(`${APP_CONSTANTS.STORAGE_KEYS.RIDDLE_DONE_PREFIX}${riddle.id}`)
           : null;
       setDone(v === "true");
-    } catch (e) { 
+    } catch (e) {
     }
   }, [riddle.id]);
  
@@ -36,10 +37,10 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
     setDone(newDone);
     try {
       localStorage.setItem(
-        `riddle_done_${riddle.id}`,
+        `${APP_CONSTANTS.STORAGE_KEYS.RIDDLE_DONE_PREFIX}${riddle.id}`,
         newDone ? "true" : "false",
       );
-    } catch (e) { 
+    } catch (e) {
     }
   };
  
