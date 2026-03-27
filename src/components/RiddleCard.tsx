@@ -3,6 +3,7 @@ import AppImage from './AppImage';
 
 import { Riddle } from "../models/riddle";
 import { useTranslationLegacy } from "../hooks/useTranslationLegacy";
+import { useDirection } from "../hooks/useDirection";
 import { displayBookTitle } from "../i18n/bookKeys";
 
 interface RiddleProps {
@@ -10,7 +11,8 @@ interface RiddleProps {
 }
 
 const RiddleCard = ({ riddle }: RiddleProps) => {
-  const { t, lang, isRTL } = useTranslationLegacy();
+  const { t, lang } = useTranslationLegacy();
+  const { dir, getTextAlign } = useDirection();
   const [showSolution, setShowSolution] = useState(false); 
   const [done, setDone] = useState<boolean>(false);
 
@@ -50,7 +52,7 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
 
   return (
     <div
-      dir={isRTL ? "rtl" : "ltr"}
+      dir={dir}
       className="card-hover border border-surface-200 dark:border-surface-800 rounded-3xl p-8 mb-6 bg-white dark:bg-surface-800/50 shadow-sm animate-fade-in transition-colors duration-300"
     >
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
@@ -102,7 +104,7 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
       </div>
 
       <h3
-        className={`text-xl md:text-2xl font-medium leading-relaxed mb-8 text-surface-900 dark:text-surface-100 tracking-tight transition-colors duration-300 ${done ? "opacity-60" : ""} ${isRTL ? "text-right" : ""}`}
+        className={`text-xl md:text-2xl font-medium leading-relaxed mb-8 text-surface-900 dark:text-surface-100 tracking-tight transition-colors duration-300 ${done ? "opacity-60" : ""} ${getTextAlign()}`}
       >
         {displayText}
       </h3>
@@ -132,7 +134,7 @@ const RiddleCard = ({ riddle }: RiddleProps) => {
                </p>
              </div>
             <p
-              className={`text-surface-900 dark:text-surface-100 text-lg md:text-xl font-medium leading-relaxed transition-colors duration-300 ${isRTL ? "text-right" : ""}`}
+              className={`text-surface-900 dark:text-surface-100 text-lg md:text-xl font-medium leading-relaxed transition-colors duration-300 ${getTextAlign()}`}
             >
               {displaySolution || t("riddle.no_solution")}
             </p>
