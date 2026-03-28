@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "totalRiddles": 3,
+    "sources": ["Gym for the Brain - 300 Riddles"],
+    "generatedAt": "2024-01-01T00:00:00.000Z",
+    "version": "1.0.0"
+  },
+  "riddles": [
+    {
+      "id": "gym-001",
+      "text": "I have cities, but no houses live there. I have mountains, but no trees grow there. I have water, but no fish swim there. What am I?",
+      "textHe": "יש לי ערים, אבל אף בית לא גר שם. יש לי הרים, אבל אף עץ לא גדל שם. יש לי מים, אבל אף דג לא שוחה שם. מה אני?",
+      "solution": "A map",
+      "solutionHe": "מפה",
+      "categories": ["logic", "wordplay"],
+      "difficulty": "easy",
+      "source": { "book": "Gym for the Brain - 300 Riddles", "page": 1 }
+    },
+    {
+      "id": "gym-002",
+      "text": "The more you take, the more you leave behind. What am I?",
+      "textHe": "ככל שאתה לוקח יותר, אתה משאיר יותר מאחור. מה אני?",
+      "solution": "Footsteps",
+      "solutionHe": "צעדים",
+      "categories": ["logic"],
+      "difficulty": "medium",
+      "source": { "book": "Gym for the Brain - 300 Riddles", "page": 5 }
+    },
+    {
+      "id": "gym-003",
+      "text": "What has keys but no locks, space but no room, and you can enter but can't go inside?",
+      "solution": "A keyboard",
+      "categories": ["technology", "wordplay"],
+      "difficulty": "hard",
+      "source": { "book": "Gym for the Brain - 300 Riddles", "page": 10 }
+    }
+  ]
+}

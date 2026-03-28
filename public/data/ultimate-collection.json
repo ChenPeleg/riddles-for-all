@@ -1,0 +1,26 @@
+{
+  "metadata": {
+    "totalRiddles": 2,
+    "sources": ["Ultimate 500 Riddles Collection"],
+    "generatedAt": "2024-01-01T00:00:00.000Z",
+    "version": "1.0.0"
+  },
+  "riddles": [
+    {
+      "id": "ult-001",
+      "text": "What can travel around the world while staying in a corner?",
+      "solution": "A stamp",
+      "categories": [],
+      "difficulty": "easy",
+      "source": { "book": "Ultimate 500 Riddles Collection" }
+    },
+    {
+      "id": "ult-002",
+      "text": "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?",
+      "solution": "An echo",
+      "categories": [],
+      "difficulty": "medium",
+      "source": { "book": "Ultimate 500 Riddles Collection" }
+    }
+  ]
+}
