@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback } from 'react';
-import { APP_CONSTANTS } from '../constants/app';
 
 export interface ReadingProgress {
   bookSlug: string;
@@ -7,10 +6,13 @@ export interface ReadingProgress {
   updatedAt: number; // timestamp
 }
 
+const STORAGE_KEY = 'riddles_reading_tracker';
+const TRACKING_STATE_KEY = 'riddles_tracking_enabled';
+
 export function useReadingTracker(bookSlug: string | undefined) {
   const [isTrackingEnabled, setIsTrackingEnabled] = useState(() => {
     try {
-      const stored = localStorage.getItem(APP_CONSTANTS.STORAGE_KEYS.TRACKING_STATE);
+      const stored = localStorage.getItem(TRACKING_STATE_KEY);
       if (stored && bookSlug) {
         const parsed = JSON.parse(stored);
         return parsed[bookSlug] ?? true;
@@ -21,7 +23,7 @@ export function useReadingTracker(bookSlug: string | undefined) {
 
   const [progress, setProgress] = useState<ReadingProgress | null>(() => {
     try {
-      const stored = localStorage.getItem(APP_CONSTANTS.STORAGE_KEYS.READING_TRACKER);
+      const stored = localStorage.getItem(STORAGE_KEY);
       if (stored && bookSlug) {
         const parsed = JSON.parse(stored);
         return parsed[bookSlug] || null;
@@ -33,7 +35,7 @@ export function useReadingTracker(bookSlug: string | undefined) {
   // Keep state in sync with bookSlug changes
   useEffect(() => {
     try {
-      const storedTracking = localStorage.getItem(APP_CONSTANTS.STORAGE_KEYS.TRACKING_STATE);
+      const storedTracking = localStorage.getItem(TRACKING_STATE_KEY);
       if (storedTracking) {
         const parsed = JSON.parse(storedTracking);
         setIsTrackingEnabled(bookSlug ? parsed[bookSlug] ?? true : true);
@@ -41,7 +43,7 @@ export function useReadingTracker(bookSlug: string | undefined) {
         setIsTrackingEnabled(true);
       }
 
-      const storedProgress = localStorage.getItem(APP_CONSTANTS.STORAGE_KEYS.READING_TRACKER);
+      const storedProgress = localStorage.getItem(STORAGE_KEY);
       if (storedProgress && bookSlug) {
         const parsed = JSON.parse(storedProgress);
         setProgress(parsed[bookSlug] || null);
@@ -58,9 +60,9 @@ export function useReadingTracker(bookSlug: string | undefined) {
     if (!bookSlug || !isTrackingEnabled) return;
 
     try {
-      const stored = localStorage.getItem(APP_CONSTANTS.STORAGE_KEYS.READING_TRACKER);
+      const stored = localStorage.getItem(STORAGE_KEY);
       const allProgress = stored ? JSON.parse(stored) : {};
-
+      
       const newProgress: ReadingProgress = {
         bookSlug,
         lastPage: pageNumber,
@@ -68,7 +70,7 @@ export function useReadingTracker(bookSlug: string | undefined) {
       };
 
       allProgress[bookSlug] = newProgress;
-      localStorage.setItem(APP_CONSTANTS.STORAGE_KEYS.READING_TRACKER, JSON.stringify(allProgress));
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(allProgress));
       setProgress(newProgress);
     } catch (e) {
       console.error('Failed to save reading progress:', e);
@@ -80,21 +82,21 @@ export function useReadingTracker(bookSlug: string | undefined) {
     if (!bookSlug) return;
 
     try {
-      const stored = localStorage.getItem(APP_CONSTANTS.STORAGE_KEYS.TRACKING_STATE);
+      const stored = localStorage.getItem(TRACKING_STATE_KEY);
       const trackingState = stored ? JSON.parse(stored) : {};
       const newState = !(trackingState[bookSlug] ?? true);
-
+      
       trackingState[bookSlug] = newState;
-      localStorage.setItem(APP_CONSTANTS.STORAGE_KEYS.TRACKING_STATE, JSON.stringify(trackingState));
+      localStorage.setItem(TRACKING_STATE_KEY, JSON.stringify(trackingState));
       setIsTrackingEnabled(newState);
 
       // If disabling tracking, remove progress for this book
       if (!newState) {
-        const progressStored = localStorage.getItem(APP_CONSTANTS.STORAGE_KEYS.READING_TRACKER);
+        const progressStored = localStorage.getItem(STORAGE_KEY);
         if (progressStored) {
           const allProgress = JSON.parse(progressStored);
           delete allProgress[bookSlug];
-          localStorage.setItem(APP_CONSTANTS.STORAGE_KEYS.READING_TRACKER, JSON.stringify(allProgress));
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(allProgress));
           setProgress(null);
         }
       }

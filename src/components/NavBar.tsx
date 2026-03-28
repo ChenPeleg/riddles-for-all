@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router-dom';
 import { useTranslationLegacy } from '../hooks/useTranslationLegacy';
-import { useDirection } from '../hooks/useDirection';
 import { useEffect, useRef, useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import LanguageToggle from './LanguageToggle';
@@ -8,8 +7,7 @@ import AppImage from './AppImage';
 import { formatBuildVersion } from '../utils/version';
 
 const NavBar = () => {
-  const { t } = useTranslationLegacy();
-  const { dir, getFlexDirection, getPositionClass } = useDirection();
+  const { t, isRTL } = useTranslationLegacy();
   const { theme, toggleTheme } = useTheme();
   const [open, setOpen] = useState(false);
   const dialogRef = useRef<HTMLDialogElement | null>(null);
@@ -55,7 +53,7 @@ const NavBar = () => {
   return (
     <>
       {/* fixed header */}
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-surface-100 dark:border-surface-800 bg-white/80 dark:bg-surface-900/80 backdrop-blur-md shadow-sm transition-colors duration-300" dir={dir}>
+      <header className="fixed top-0 left-0 right-0 z-50 border-b border-surface-100 dark:border-surface-800 bg-white/80 dark:bg-surface-900/80 backdrop-blur-md shadow-sm transition-colors duration-300" dir={isRTL ? 'rtl' : 'ltr'}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-14">
             <button
@@ -86,7 +84,7 @@ const NavBar = () => {
 
             {/* Desktop nav */}
             <nav aria-label={t('nav.main_nav') || 'Main navigation'} className="hidden md:block">
-              <ul className={`flex items-center gap-1 ${getFlexDirection()}`}>
+              <ul className={`flex items-center gap-1 ${isRTL ? 'flex-row-reverse' : ''}`}>
                 <li>
                   <NavLink to="/" end className={({ isActive }) => linkBase + (isActive ? ` ${linkActive}` : '')}>
                     {t('nav.home') || 'Home'}
@@ -152,9 +150,9 @@ const NavBar = () => {
         onClose={handleClose}
         className="mobile-menu-dialog md:hidden fixed inset-0 z-50 w-full h-full bg-transparent p-0 m-0 backdrop:bg-black/50 backdrop:backdrop-blur-sm"
         aria-label={t('nav.main_nav') || 'Main navigation'}
-        dir={dir}
+        dir={isRTL ? 'rtl' : 'ltr'}
       >
-        <div className={`mobile-menu-content fixed top-0 ${getPositionClass('end')} w-80 max-w-[85vw] h-full bg-white dark:bg-surface-900 shadow-xl overflow-y-auto transition-colors duration-300`}>
+        <div className={`mobile-menu-content fixed top-0 ${isRTL ? 'left-0' : 'right-0'} w-80 max-w-[85vw] h-full bg-white dark:bg-surface-900 shadow-xl overflow-y-auto transition-colors duration-300`}>
           <div className="flex items-center justify-between p-4 border-b border-surface-100 dark:border-surface-800">
             <div className="text-lg font-bold text-surface-900 dark:text-white">{t('common.title')}</div>
             <button
@@ -166,7 +164,7 @@ const NavBar = () => {
             </button>
           </div>
           <nav id="mobile-menu" className="p-4">
-            <ul className={`flex flex-col gap-2 ${getFlexDirection('col')}`}>
+            <ul className={`flex flex-col gap-2 ${isRTL ? 'items-end' : 'items-start'}`}>
               <li>
                 <NavLink
                   to="/"
