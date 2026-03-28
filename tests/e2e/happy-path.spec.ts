@@ -97,7 +97,8 @@ test.describe('Happy path tests', () => {
 
     const html = page.locator('html');
 
-    // The theme button aria-label falls back to the raw key 'nav.dark_mode'
+    // The theme button uses t('nav.dark_mode') for aria-label, but that key is not
+    // in translations, so the raw key string is used as the accessible name.
     const themeToggle = page.locator('header').getByRole('button', { name: 'nav.dark_mode' }).first();
     await themeToggle.click();
 
