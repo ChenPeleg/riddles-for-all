@@ -1,20 +1,37 @@
 import {Link} from 'react-router-dom'
-import {useEffect, useState} from 'react'
+import {useEffect, useMemo, useState} from 'react'
 import RiddleCard from '../components/RiddleCard'
 import {useRiddles} from '../context/RiddleContext'
 import LanguageToggle from '../components/LanguageToggle'
 import AppImage from '../components/AppImage'
 import {useTranslationLegacy} from '../hooks/useTranslationLegacy';
-import {useGlobalReadingProgress} from '../hooks/useGlobalReadingProgress';
-import {useDirection} from '../hooks/useDirection';
-import {APP_CONSTANTS} from '../constants/app';
+
+const READING_STORAGE_KEY = 'riddles_reading_tracker';
+
+interface ReadingProgress {
+    bookSlug: string;
+    lastPage: number;
+    updatedAt: number;
+}
+
+function getLastStop(): ReadingProgress | null {
+    try {
+        const stored = localStorage.getItem(READING_STORAGE_KEY);
+        if (!stored) return null;
+        const all: Record<string, ReadingProgress> = JSON.parse(stored);
+        const entries = Object.values(all);
+        if (entries.length === 0) return null;
+        return entries.reduce((a, b) => (a.updatedAt > b.updatedAt ? a : b));
+    } catch {
+        return null;
+    }
+}
 
 function Home() {
     const {riddles} = useRiddles();
-    const {t} = useTranslationLegacy();
-    const { isRTL, getPositionClass } = useDirection();
+    const {t, isRTL} = useTranslationLegacy();
     const [randomRiddle, setRandomRiddle] = useState(null as any);
-    const { lastStop } = useGlobalReadingProgress();
+    const lastStop = useMemo(() => getLastStop(), []);
 
     useEffect(() => {
         if (riddles.length > 0 && !randomRiddle) {
@@ -36,7 +53,7 @@ function Home() {
             const currentIndex = riddles.findIndex(r => r.id === randomRiddle.id);
             // Try a few times to avoid selecting the same riddle
             let attempts = 0;
-            while (riddles[idx].id === randomRiddle.id && attempts < APP_CONSTANTS.RIDDLES.RANDOM_SELECTION_ATTEMPTS) {
+            while (riddles[idx].id === randomRiddle.id && attempts < 8) {
                 idx = Math.floor(Math.random() * riddles.length);
                 attempts++;
             }
@@ -138,7 +155,7 @@ function Home() {
             <nav className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in [animation-delay:400ms]">
                 <Link to="/search" className="group no-underline">
                     <div className="h-full p-8 bg-white dark:bg-surface-800/50 border border-surface-200 dark:border-surface-800 rounded-3xl card-hover relative overflow-hidden transition-colors duration-300">
-                        <div className={`absolute top-0 ${getPositionClass('end')} p-8 opacity-10 group-hover:opacity-20 transition-opacity`}>
+                        <div className={`absolute top-0 ${isRTL ? 'left-0' : 'right-0'} p-8 opacity-10 group-hover:opacity-20 transition-opacity`}>
                             <AppImage name="search" className="w-16 h-16 text-brand-primary" fill="currentColor" />
                         </div>
                         <h3 className="text-xl font-bold text-surface-900 dark:text-white mb-2">{t('navigation.search')}</h3>
@@ -147,7 +164,7 @@ function Home() {
                 </Link>
                 <Link to="/categories" className="group no-underline">
                     <div className="h-full p-8 bg-white dark:bg-surface-800/50 border border-surface-200 dark:border-surface-800 rounded-3xl card-hover relative overflow-hidden transition-colors duration-300">
-                        <div className={`absolute top-0 ${getPositionClass('end')} p-8 opacity-10 group-hover:opacity-20 transition-opacity`}>
+                        <div className={`absolute top-0 ${isRTL ? 'left-0' : 'right-0'} p-8 opacity-10 group-hover:opacity-20 transition-opacity`}>
                             <AppImage name="folder" className="w-16 h-16 text-brand-secondary" fill="currentColor" />
                         </div>
                         <h3 className="text-xl font-bold text-surface-900 dark:text-white mb-2">{t('navigation.categories')}</h3>
@@ -156,7 +173,7 @@ function Home() {
                 </Link>
                 <Link to="/sources" className="group no-underline">
                     <div className="h-full p-8 bg-white dark:bg-surface-800/50 border border-surface-200 dark:border-surface-800 rounded-3xl card-hover relative overflow-hidden transition-colors duration-300">
-                        <div className={`absolute top-0 ${getPositionClass('end')} p-8 opacity-10 group-hover:opacity-20 transition-opacity`}>
+                        <div className={`absolute top-0 ${isRTL ? 'left-0' : 'right-0'} p-8 opacity-10 group-hover:opacity-20 transition-opacity`}>
                             <AppImage name="book" className="w-16 h-16 text-brand-accent" fill="currentColor" />
                         </div>
                         <h3 className="text-xl font-bold text-surface-900 dark:text-white mb-2">{t('navigation.sources')}</h3>
