@@ -32,6 +32,8 @@ export const translations: Record<Lang, Record<string, any>> = {
       search: "Search",
       categories: "Categories",
       sources: "Sources",
+      dark_mode: "Dark mode",
+      light_mode: "Light mode",
     },
     navigation: {
       search: "Search",
@@ -188,6 +190,8 @@ export const translations: Record<Lang, Record<string, any>> = {
       search: "חפש",
       categories: "קטגוריות",
       sources: "מקורות",
+      dark_mode: "מצב כהה",
+      light_mode: "מצב בהיר",
     },
     navigation: {
       search: "חפש",
