@@ -146,7 +146,7 @@ Split into smaller, focused components:
 
 **Estimated effort:** 2-3 hours
 
-**Note:** This is already covered in `01_refactor_all_svg_into_a_component.md`, so coordinate with that plan.
+**Note:** This is already covered in `archive/01_refactor_all_svg_into_a_component.md`, so coordinate with that plan.
 
 ---
 
@@ -462,8 +462,8 @@ For each refactoring task:
 ## Notes
 
 - This plan complements the existing refactoring plans:
-  - `01_refactor_all_svg_into_a_component.md` - SVG refactoring
-  - `02_refactor_book_reader_page.md` - BookReader component refactoring
+  - `archive/01_refactor_all_svg_into_a_component.md` - SVG refactoring
+  - `archive/02_refactor_book_reader_page.md` - BookReader component refactoring
 
 - Coordinate with those plans to avoid conflicts
 - Consider implementing changes in parallel where possible

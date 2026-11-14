@@ -1,3 +1,5 @@
+> **Status: ✅ Done** — BookReader split into `src/components/BookReader/` (BookReaderContainer, BookReaderToolbar, BookmarksPanel, ResumeOfferDialog) with logic in `useReaderState`, `useBookmarks`, `useReadingTracker`.
+
 # Refactor plan — Split BookReader route into smaller components
 
 Goal
@@ -8,14 +10,14 @@ Goal
 
 Checklist (start -> done):
 
-1. [ ] Inspect current `BookReader` implementation and list responsibilities
-2. [ ] Identify candidate subcomponents and hooks
-3. [ ] Create a folder layout and file checklist for extraction
-4. [ ] Implement components and hooks incrementally (one at a time)
-5. [ ] Add/adjust types and small unit tests for each piece
-6. [ ] Run build/lint/typecheck after each extraction
-7. [ ] Run a manual smoke test and automated tests
-8. [ ] Cleanup deprecated code and exports
+1. [x] Inspect current `BookReader` implementation and list responsibilities
+2. [x] Identify candidate subcomponents and hooks
+3. [x] Create a folder layout and file checklist for extraction
+4. [x] Implement components and hooks incrementally (one at a time)
+5. [x] Add/adjust types and small unit tests for each piece
+6. [x] Run build/lint/typecheck after each extraction
+7. [x] Run a manual smoke test and automated tests
+8. [x] Cleanup deprecated code and exports
 
 Assumptions
 

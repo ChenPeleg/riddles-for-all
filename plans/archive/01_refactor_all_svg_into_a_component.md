@@ -1,3 +1,5 @@
+> **Status: ✅ Done** — `src/components/AppImage.tsx` holds all icons; no inline `<svg>` remains elsewhere in `src/`.
+
 Refactor all SVG into a component
  
  ## Plan: Refactor all SVG into a component
