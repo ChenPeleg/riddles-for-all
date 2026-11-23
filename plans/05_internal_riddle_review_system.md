@@ -1,5 +1,7 @@
 # Internal Riddle Review System (Level + Translation Compliance)
 
+> **Implementation:** see `06_review_and_difficulty_implementation.md` (combined with plan 04).
+
 ## Overview
 
 Some Hebrew translations are poor (e.g. `gym-2`: `"...ויש עליו זבובים אךiano לא מטוס?"`, which has stray Latin

@@ -1,5 +1,7 @@
 # Riddle Difficulty Leveling System Plan
 
+> **Implementation:** see `06_review_and_difficulty_implementation.md` (combined with plan 05).
+
 ## Overview
 
 This plan outlines various approaches to programmatically assign difficulty levels (easy, medium, hard) to riddles in the collection. Currently, all riddles default to "easy" or have no difficulty assigned. The goal is to implement an automated system that can intelligently categorize riddles based on objective, measurable criteria.
